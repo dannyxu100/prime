@@ -1,0 +1,22 @@
+//====================================================
+//
+//		prefix
+//
+//====================================================
+
+
+//边距和边框都将在已设定的宽度和高度内进行绘制
+.box-sizing(@){
+	*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	}
+
+	*:before,
+	*:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+}
