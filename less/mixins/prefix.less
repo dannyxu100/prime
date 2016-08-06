@@ -4,10 +4,83 @@
 //
 //====================================================
 
+//字体大小
+.prefix-font-size( @rem ) {
+	font-size: unit( @rem/@rem2px, px );	//兼容不支持rem单位的浏览器
+	font-size: unit( @rem, rem );
+}
 
 //边距和边框都将在已设定的宽度和高度内进行绘制
-.box-sizing(@mode){
+.prefix-box-sizing( @mode ) {
 	-webkit-box-sizing: @mode;
 	-moz-box-sizing: @mode;
-	box-sizing: @mode;
+	box-sizing:	@mode;
+}
+
+//圆角边框
+//左上角
+.prefix-border-top-left-radius(@angle) {
+	-moz-border-top-left-radius: @angle;
+	-webkit-border-top-left-radius: @angle;
+	border-top-left-radius: @angle;
+}
+//右上角
+.prefix-border-top-right-radius(@angle) {
+	-moz-border-top-right-radius: @angle;
+	-webkit-border-top-right-radius: @angle;
+	border-top-right-radius: @angle;
+}
+//左下角
+.prefix-border-bottom-left-radius(@angle) {
+	-moz-border-bottom-left-radius:	@angle;
+	-webkit-border-bottom-left-radius: @angle;
+	border-bottom-left-radius: @angle;
+}
+//右下角
+.prefix-border-bottom-right-radius(@angle) {
+	-moz-border-bottom-right-radius: @angle;
+	-webkit-border-bottom-right-radius:	@angle;
+	border-bottom-right-radius:	@angle;
+}
+//上
+.prefix-border-top-radius(@angle) {
+	-moz-border-top-right-radius: @angle;
+	-moz-border-top-left-radius: @angle;
+	-webkit-border-top-right-radius: @angle;
+	-webkit-border-top-left-radius: @angle;
+	border-top-right-radius: @angle;
+	border-top-left-radius: @angle;
+}
+//右
+.prefix-border-right-radius(@angle) {
+	-moz-border-bottom-right-radius: @angle;
+	-moz-border-top-right-radius: @angle;
+	-webkit-border-bottom-right-radius:	@angle;
+	-webkit-border-top-right-radius: @angle;
+	border-bottom-right-radius:	@angle;
+	border-top-right-radius: @angle;
+}
+//下
+.prefix-border-bottom-radius(@angle) {
+	-moz-border-bottom-right-radius: @angle;
+	-moz-border-bottom-left-radius:	@angle;
+	-webkit-border-bottom-right-radius:	@angle;
+	-webkit-border-bottom-left-radius:	@angle;
+	border-bottom-right-radius:	@angle;
+	border-bottom-left-radius:	@angle;
+}
+//左
+.prefix-border-left-radius(@angle) {
+	-moz-border-bottom-left-radius:	@angle;
+	-moz-border-top-left-radius: @angle;
+	-webkit-border-bottom-left-radius: @angle;
+	-webkit-border-top-left-radius: @angle;
+	border-bottom-left-radius: @angle;
+	border-top-left-radius: @angle;
+}
+//全部
+.prefix-border-radius(@angle) {
+	-moz-border-radius: @angle;   
+	-webkit-border-radius: @angle;   
+	border-radius: @angle;
 }

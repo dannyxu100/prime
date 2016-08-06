@@ -6,6 +6,8 @@
 
 
 //=========== framework ==============================
+//prime类名前缀（一般用于自定义样式库和解决css类名冲突）
+@prefix:				;
 
 //颜色
 @black-darker:			#000;
@@ -33,12 +35,48 @@
 @brand-danger:			#d9534f;
 
 @color-def:				@black;
+@color-title:			inherit;
+@color-hr:				@gray-light;
+@color-small:			@gray-darker;
+
+
 @backgroundcolor-def:	@white-light;
+
 
 //排版
 @fontfamily-def:		-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
-@fontsize-def:			14px;
+@fontfamily-title:		inherit;
+
+@defpx:					16;
+@rem2px:				1/@defpx;	// 1/16 = 0.0625;
+
+@fontsize-s:			0.75;	// 12px
+@fontsize-def:			0.875;	// 14px
+@fontsize-m:			1;		// 16px
+@fontsize-l:			1.125;	// 18px
+@fontsize-xl:			1.5;	// 24px
+@fontsize-xxl:			1.875;	// 30px
+@fontsize-xxxl:			2.25;	// 36px
+
+@fontweight-def:		400;		//==normal
+@fontweight-bold:		700;		//==bold
+@fontweight-title:		500;		//==Medium
 
 @lineheight-def:		1.5;
-@lineheight-auto:    	floor((@fontsize-def * @lineheight-def));		//计算一个静态行高
+@lineheight-auto:    	floor(@fontsize-def/@rem2px * @lineheight-def);	//动态行高，根据字体大小计算
+@lineheight-title:		1.1;
+
+//边框
+@borderstyle-def:		solid;
+@borderstyle-dotted:	dotted;
+@borderstyle-double:	double;
+@borderstyle-dashed:	dashed;
+
+
+
+
+
+
+
+
 

@@ -5,25 +5,85 @@
 //====================================================
 
 *{
-	.box-sizing(border-box);
+	.prefix-box-sizing(border-box);
 }
 *:after,
 *:before{
-	.box-sizing(border-box);
+	.prefix-box-sizing(border-box);
 }
 
 html{
+	//使用rem作为字体单位，这里为相对基准，浏览器一般默认字体16px
+	//兼容chrome最小字体为12px
+	//参考https://techably.com/chrome-font-size-bug-fix/11996/
+	font-size: 16px;
 	
 }
-
+@media (max-width: 480px){	//浏览器可视区宽度小于480px;
+	html{
+		font-size: 12px;
+	}
+}
+@media (min-width: 480px){	//浏览器可视区宽度大于480px;
+	html{
+		font-size: 12px;
+	}
+}
+@media (min-width: 768px){	//浏览器可视区宽度大于768px;
+	html{
+		font-size: 14px;
+	}
+}
+@media (min-width: 1280px){	//浏览器可视区宽度大于1280px;
+	html{
+		font-size: 16px;
+	}
+}
+@media (min-width: 1600px){	//浏览器可视区宽度大于1366px;
+	html{
+		font-size: 18px;
+	}
+}
 body{
 	font-family: @fontfamily-def;
-	font-size: @fontsize-def;
+	// .comm-fontsize( @fontsize-def );
 	line-height: @lineheight-def;
 	color: @color-def;
 	background-color: @backgroundcolor-def;
 }
 
+.@{prefix}h1, h1,
+.@{prefix}h2, h2,
+.@{prefix}h3, h3,
+.@{prefix}h4, h4,
+.@{prefix}h5, h5,
+.@{prefix}h6, h6{
+	color: @color-title;
+	font-family: @fontfamily-title;
+	font-weight: @fontweight-title;
+	line-height: @lineheight-title;
+	margin: unit(@lineheight-auto, px) 0 unit(@lineheight-auto / 2, px);
+	
+	.small, small {
+		font-weight: normal;
+		line-height: 1;
+		color: @color-small;
+		font-size: 0.65em;
+	}
+}
+.@{prefix}h1, h1 { .comm-fontsize( @fontsize-xxxl ); }
+.@{prefix}h2, h2 { .comm-fontsize( @fontsize-xxl ); }
+.@{prefix}h3, h3 { .comm-fontsize( @fontsize-xl ); }
+.@{prefix}h4, h4 { .comm-fontsize( @fontsize-l ); }
+.@{prefix}h5, h5 { .comm-fontsize( @fontsize-m ); }
+.@{prefix}h6, h6 { .comm-fontsize( @fontsize-def ); }
+
+hr {
+	margin: unit(@lineheight-def, px) 0 unit(@lineheight-def, px);
+	border: 0;
+	border-top: 1px @borderstyle-dashed @color-hr;
+}
+
 p {
-	margin:0px 0px (@lineheight-auto / 2);
+	margin:0 0 unit(@lineheight-auto / 2, px);
 }

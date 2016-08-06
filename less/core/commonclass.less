@@ -1,0 +1,79 @@
+//====================================================
+//
+//		commonclass
+//
+//====================================================
+
+//字体粗细
+//.@{prefix}fontsize-[12,14,16,18,20,...,32]
+.loop-makefontsize(32);
+
+//字体粗细
+.@{prefix}bold {
+	font-weight: @fontweight-bold;
+}
+.@{prefix}normal {
+	font-weight: @fontweight-def;
+}
+
+
+//字间距
+//.@{prefix}fontspace-[1,2,3,4,5,6,7,8,9,10]
+.loop-makeletterspace(1);
+
+
+//段落
+.@{prefix}indent p {
+	text-indent: 2em;
+}
+
+
+//边框
+.@{prefix}dotted {
+	border-style: @borderstyle-dotted;
+}
+.@{prefix}double {
+	border-style: @borderstyle-double;
+}
+.@{prefix}dashed {
+	border-style: @borderstyle-dashed;
+}
+
+
+//圆角
+//.@{prefix}radius-[1,2,3,4,5,6,7,8,9,10]
+.loop-makeradius(1);
+//.@{prefix}radiusp-[10,20,30,40,50]
+.loop-makeradiusp(50);
+
+
+//显示隐藏
+.@{prefix}unvisible {
+	visibility: hidden !important;
+}
+.@{prefix}hide {
+	display: none !important;
+}
+.@{prefix}show {
+	display: block !important;
+}
+
+
+//浮动
+.@{prefix}fleft {
+	float: left !important;
+}
+
+.@{prefix}fright {
+	float: right !important;
+}
+
+.@{prefix}clearfix {
+	.comm-clearfix();
+}
+
+
+//定位
+.@{prefix}fixed {
+	position: fixed !important;
+}

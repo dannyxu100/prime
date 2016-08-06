@@ -1,25 +1,24 @@
 /*
  * prime v1.0.1 (https://github.com/dannyxu100/prime)
- * All rights reserved by xufei
+ * 版权所有 xufei
  */
 
-// reset and dependencies
+// 重置默认样式、依赖
 @import "basic/normalize.less";
 @import "basic/print.less";
 
-// variables
+// 全局变量
 @import "basic/variables.less";
 
-// mixins
+// 混合
 @import "mixins/prefix.less";
+@import "mixins/common.less";
 
-// framework
+// 基础框架
 @import "basic/framework.less";
 
-// core
+// 核心
 
-// components
 
-// components w/ JavaScript
-
-// utility classes
+// 扩展（保证优先级，一定要放在最后编译）
+@import "core/commonclass.less";

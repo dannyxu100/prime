@@ -1,0 +1,90 @@
+//====================================================
+//
+//		common
+//
+//====================================================
+
+//字体大小
+.comm-fontsize( @rem ) {
+	.prefix-font-size( @rem );
+}
+.makerfontsize( @px ) {
+	@rem: @px*@rem2px;
+	.@{prefix}fontsize-@{px} {
+		.comm-fontsize( @rem );
+	}
+}
+.loop-makefontsize( @px, @range:2 ) when ( @px - @range >= 10 ) {		//@range间距等差值,默认2px
+	.makerfontsize( @px );
+	.loop-makefontsize( @px - @range );
+}
+
+
+//字间距
+.makeletterspace( @em ){
+	@grade: @em*10;
+	.@{prefix}fontspace-@{grade} {
+		letter-spacing: unit(@em, em);
+	}
+}
+.loop-makeletterspace( @em, @range:.1 ) when ( @em - @range > 0 ) {	//@range间距等差值,默认0.1em
+	.makeletterspace( @em );
+	.loop-makeletterspace( @em - @range );
+}
+
+
+//圆角
+.makeradius( @em ) {
+	@grade: @em*10;
+	.@{prefix}radius-@{grade} {
+		.prefix-border-radius(unit(@em, em));
+	}
+}
+.loop-makeradius( @em, @range:.1 ) when ( @em - @range > 0 ) {	//@range角度等差值,默认0.1em
+	.makeradius( @em );
+	.loop-makeradius( @em - @range );
+}
+.makeradiusp( @percent ) {
+	.@{prefix}radiusp-@{percent} {
+		.prefix-border-radius(unit(@percent, %));
+	}
+}
+.loop-makeradiusp( @percent, @range:10 ) when ( @percent > 0 ) {		//@range角度等差值,默认10%
+	.makeradiusp( @percent );
+	.loop-makeradiusp( @percent - @range );
+}
+
+
+
+
+// Clearfix
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+.comm-clearfix() {
+	&:before,
+	&:after {
+		content: " "; 		// for 1
+		display: table; 	// for 2
+	}
+	&:after {
+		clear: both;
+	}
+	& {
+		*zoom: 1;
+	}
+}
+
+
+
+
+
+
+
+
