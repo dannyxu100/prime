@@ -1,0 +1,71 @@
+//====================================================
+//
+//		grid
+//
+//====================================================
+
+//栅栏布局
+.@{prefix}grid {
+	width: 100%;
+}
+.@{prefix}row {
+	.comm-clearfix();
+}
+
+.make-cell( @columns ) {
+	.loop( @size ) {
+		@item: ~".@{prefix}cell-@{columns}-@{size}";
+		.loop( @size + 1, @item );					//传入第一个类名
+	}
+	.loop( @size, @list ) when ( @size <= @columns ) {
+		@item: ~".@{prefix}cell-@{columns}-@{size}";
+		.loop( @size + 1, ~"@{list}, @{item}" );	//串连类名，连续定义
+	}
+	.loop( @size, @list ) when ( @size > @columns ) {
+		@{list} {
+			position: relative;
+			float: left;
+			padding: 0 .1em;
+		}
+	}
+	.loop( 1 );		//启动
+}
+.make-cell( @grid-columns-5 );
+.make-cell( @grid-columns-7 );
+.make-cell( @grid-columns-12 );
+
+
+.make-cellwidth( @columns ) {
+	.loop( @size ) when ( @size <= @columns ) {
+		.cell-@{columns}-@{size} {
+			width: percentage( round( (@size/@columns), 5 ) );
+		}
+		.loop( @size + 1 );
+	}
+	.loop( 1 );		//启动
+}
+.make-cellwidth( @grid-columns-5 );
+.make-cellwidth( @grid-columns-7 );
+.make-cellwidth( @grid-columns-12 );
+
+
+
+[class^="cell-"]:first-child {
+	padding-left: 0;
+}
+[class^="cell-"]:last-child {
+	padding-right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
