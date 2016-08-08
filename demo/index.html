@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
+		<title>prime</title>
 		<!--
 		<link href="../build/prime.css" rel="stylesheet" />
 		-->
@@ -11,19 +12,38 @@
 			.wapper {
 				margin:20px auto 20px; max-width: 800px;
 			}
+			h1 {
+				font-size: 60px;
+			}
 			section {
 				background: #fff;
 				padding: 20px;
 				margin-bottom: 30px;
 			}
 			
-			button {
+			.colorblock {
+				width: 100%;
+				height: 80px;
+				line-height: 20px;
+				font-size: 12px;
+				padding: 10px 0px;
+				text-align: center;
+				border: 0px;
+			}
+			.colorblock.active {
+				border-bottom: 2px solid #A22613;
+			}
+			
+			.fillblock {
+				width:100%;
+				height: 30px;
 				border: 0px;
 				background: #eee;
 			}
-			button:hover {
+			.fillblock:hover {
 				background: #f7f7f7;
 			}
+			
 		</style>
 	</head>
 	
@@ -31,7 +51,7 @@
 		<div class="wapper">
 			<section>
 				<cite>https://github.com/dannyxu100/prime</cite>
-				<h1 class="bold">PRIME <small>.h1</small></h1>
+				<h1 class="bold">prime <small>.h1</small></h1>
 				<hr/>
 				<h2>追求简单好用，轻量的css库 <small>.h2</small></h2>
 				<div class="h2">其实我不欢迎你使用 <small>.h2</small></div>
@@ -42,61 +62,247 @@
 			</section>
 			
 			<section>
+				<h2>基调配色</h2>
+				<div class="grid">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<div class="colorblock bgtheme-lighter fwhite">
+								<div>主题-较亮</div>
+								<div>.bgtheme-lighter</div>
+								<div>#74DEFC</div>
+							</div>
+							<div class="colorblock bgtheme-light fwhite">
+								<div>主题-亮</div>
+								<div>.bgtheme-light</div>
+								<div>#43D3FC</div>
+							</div>
+							<div class="colorblock active bgtheme fwhite">
+								<div>主题</div>
+								<div>.bgtheme</div>
+								<div>#05C3F9</div>
+							</div>
+							<div class="colorblock bgtheme-dark fwhite">
+								<div>主题-暗</div>
+								<div>.bgtheme-dark</div>
+								<div>#319DBB</div>
+							</div>
+							<div class="colorblock bgtheme-darker fwhite">
+								<div>主题-较暗</div>
+								<div>.bgtheme-darker</div>
+								<div>#319DBB</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock"></div>
+							<div class="colorblock bgkey-light fwhite">
+								<div>关键的-亮</div>
+								<div>.bgkey-light</div>
+								<div>#FC7E6A</div>
+							</div>
+							<div class="colorblock active bgkey fwhite">
+								<div>关键的</div>
+								<div>.bgkey</div>
+								<div>#F95339</div>
+							</div>
+							<div class="colorblock bgkey-dark fwhite">
+								<div>关键的-暗</div>
+								<div>.bgkey-dark</div>
+								<div>#BB5D4F</div>
+							</div>
+							<div class="colorblock bgkey-darker fwhite">
+								<div>关键的-较暗</div>
+								<div>.bgkey-darker</div>
+								<div>#A22613</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock bgblink-lighter">
+								<div>闪亮的-较亮</div>
+								<div>.bgblink-lighter</div>
+								<div>#FFFF01</div>
+							</div>
+							<div class="colorblock bgblink-light">
+								<div>闪亮的-亮</div>
+								<div>.bgblink-light</div>
+								<div>#FFFF41</div>
+							</div>
+							<div class="colorblock active bgblink">
+								<div>闪亮的</div>
+								<div>.bgblink</div>
+								<div>#FFFF01</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock bgnice-lighter fwhite">
+								<div>友好的-较亮</div>
+								<div>.bgnice-lighter</div>
+								<div>#67E3B1</div>
+							</div>
+							<div class="colorblock bgnice-light fwhite">
+								<div>友好的-亮</div>
+								<div>.bgnice-light</div>
+								<div>#39E39E</div>
+							</div>
+							<div class="colorblock active bgnice fwhite">
+								<div>友好的</div>
+								<div>.bgnice</div>
+								<div>#01C677</div>
+							</div>
+							<div class="colorblock bgnice-dark fwhite">
+								<div>友好的-暗</div>
+								<div>.bgnice-dark</div>
+								<div>#269568</div>
+							</div>
+							<div class="colorblock bgnice-darker fwhite">
+								<div>友好的-较暗</div>
+								<div>.bgnice-darker</div>
+								<div>#00814D</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock"></div>
+							<div class="colorblock bgblack-light fwhite">
+								<div>黑-亮</div>
+								<div>.bgblack-light</div>
+								<div>#666666</div>
+							</div>
+							<div class="colorblock active bgblack fwhite">
+								<div>黑</div>
+								<div>.bgblack</div>
+								<div>#444</div>
+							</div>
+							<div class="colorblock bgblack-dark fwhite">
+								<div>黑-基础</div>
+								<div>.bgblack-dark</div>
+								<div>#333</div>
+							</div>
+							<div class="colorblock bgblack-darker fwhite">
+								<div>黑-暗</div>
+								<div>.bgblack-darker</div>
+								<div>#222</div>
+							</div>
+							<div class="colorblock bgblack-darkest fwhite">
+								<div>黑-最暗</div>
+								<div>.bgblack-darkest</div>
+								<div>#000</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock"></div>
+							<div class="colorblock bggray-light">
+								<div>灰-亮</div>
+								<div>.bggray-light</div>
+								<div>#ccc</div>
+							</div>
+							<div class="colorblock active bggray">
+								<div>灰</div>
+								<div>.bggray</div>
+								<div>#ddd</div>
+							</div>
+							<div class="colorblock bggray-dark fwhite">
+								<div>灰-暗</div>
+								<div>.bggray-dark</div>
+								<div>#bbb</div>
+							</div>
+							<div class="colorblock bggray-darker fwhite">
+								<div>灰-较暗</div>
+								<div>.bggray-darker</div>
+								<div>#aaa</div>
+							</div>
+							<div class="colorblock bggray-darkest fwhite">
+								<div>灰-最暗</div>
+								<div>.bggray-darkest</div>
+								<div>#999</div>
+							</div>
+						</div>
+						<div class="cell-7-1">
+							<div class="colorblock"></div>
+							<div class="colorblock bgwhite-light">
+								<div>白-亮</div>
+								<div>.bgwhite-light</div>
+								<div>#fff</div>
+							</div>
+							<div class="colorblock active bgwhite">
+								<div>白</div>
+								<div>.bgwhite</div>
+								<div>#fafafa</div>
+							</div>
+							<div class="colorblock bgwhite-dark">
+								<div>白-暗</div>
+								<div>.bgwhite-dark</div>
+								<div>#f7f7f7</div>
+							</div>
+							<div class="colorblock bgwhite-darker">
+								<div>白-较暗</div>
+								<div>.bgwhite-darker</div>
+								<div>#f5f5f5</div>
+							</div>
+							<div class="colorblock bgwhite-darkest">
+								<div>白-最暗</div>
+								<div>.bgwhite-darkest</div>
+								<div>#f3f3f3</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section>
 				<h2>布局</h2>
 				<h3>.grid .row .cell-5-1</h3>
 				<div>奇数等分，最小份为1/5</div>
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-5-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-5-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 						<div class="cell-5-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-5">
-							<button style="width:100%; height:30px;">5</button>
+							<button class="fillblock" >5</button>
 						</div>
 					</div>
 				</div>
@@ -106,85 +312,85 @@
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-7-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-7-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-7-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 						<div class="cell-7-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-5">
-							<button style="width:100%; height:30px;">5</button>
+							<button class="fillblock" >5</button>
 						</div>
 						<div class="cell-7-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-6">
-							<button style="width:100%; height:30px;">6</button>
+							<button class="fillblock" >6</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-7">
-							<button style="width:100%; height:30px;">7</button>
+							<button class="fillblock" >7</button>
 						</div>
 					</div>
 				</div>
@@ -194,160 +400,160 @@
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-12-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-12-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 						<div class="cell-12-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 						<div class="cell-12-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 						<div class="cell-12-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-5">
-							<button style="width:100%; height:30px;">5</button>
+							<button class="fillblock" >5</button>
 						</div>
 						<div class="cell-12-5">
-							<button style="width:100%; height:30px;">5</button>
+							<button class="fillblock" >5</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-6">
-							<button style="width:100%; height:30px;">6</button>
+							<button class="fillblock" >6</button>
 						</div>
 						<div class="cell-12-6">
-							<button style="width:100%; height:30px;">6</button>
+							<button class="fillblock" >6</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-7">
-							<button style="width:100%; height:30px;">7</button>
+							<button class="fillblock" >7</button>
 						</div>
 						<div class="cell-12-5">
-							<button style="width:100%; height:30px;">5</button>
+							<button class="fillblock" >5</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-8">
-							<button style="width:100%; height:30px;">8</button>
+							<button class="fillblock" >8</button>
 						</div>
 						<div class="cell-12-4">
-							<button style="width:100%; height:30px;">4</button>
+							<button class="fillblock" >4</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-9">
-							<button style="width:100%; height:30px;">9</button>
+							<button class="fillblock" >9</button>
 						</div>
 						<div class="cell-12-3">
-							<button style="width:100%; height:30px;">3</button>
+							<button class="fillblock" >3</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-10">
-							<button style="width:100%; height:30px;">10</button>
+							<button class="fillblock" >10</button>
 						</div>
 						<div class="cell-12-2">
-							<button style="width:100%; height:30px;">2</button>
+							<button class="fillblock" >2</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-11">
-							<button style="width:100%; height:30px;">11</button>
+							<button class="fillblock" >11</button>
 						</div>
 						<div class="cell-12-1">
-							<button style="width:100%; height:30px;">1</button>
+							<button class="fillblock" >1</button>
 						</div>
 					</div>
 					
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-12">
-							<button style="width:100%; height:30px;">12</button>
+							<button class="fillblock" >12</button>
 						</div>
 					</div>
 				</div>
