@@ -37,7 +37,7 @@
 
 .make-cellwidth( @columns ) {
 	.loop( @size ) when ( @size <= @columns ) {
-		.cell-@{columns}-@{size} {
+		.@{prefix}cell-@{columns}-@{size} {
 			width: percentage( round( (@size/@columns), 5 ) );
 		}
 		.loop( @size + 1 );

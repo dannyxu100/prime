@@ -45,6 +45,13 @@
 				background: #f7f7f7;
 			}
 			
+			.textbox5 {
+				padding-top: 0px; padding-bottom: 0px;
+			}
+			.textbox10 {
+				padding-top: 10px; padding-bottom: 10px;
+			}
+			
 		</style>
 	</head>
 	
@@ -64,9 +71,13 @@
 			
 			<section>
 				<h2>基调配色</h2>
+				<h3>色块</h3>
+				<div>.bgtheme | .bgkey | .bgblink | .bgnice | .bgblack | .bgwhite | .bggray</div>
+				<br/>
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
+							<div class="colorblock"></div>
 							<div class="colorblock bgtheme-lighter fwhite">
 								<div>主题-较亮</div>
 								<div>.bgtheme-lighter</div>
@@ -95,6 +106,7 @@
 						</div>
 						<div class="cell-7-1">
 							<div class="colorblock"></div>
+							<div class="colorblock"></div>
 							<div class="colorblock bgkey-light fwhite">
 								<div>关键的-亮</div>
 								<div>.bgkey-light</div>
@@ -117,10 +129,15 @@
 							</div>
 						</div>
 						<div class="cell-7-1">
+							<div class="colorblock bgblink-lightest">
+								<div>闪亮的-最亮</div>
+								<div>.bgblink-lightest</div>
+								<div>#FFFFC5</div>
+							</div>
 							<div class="colorblock bgblink-lighter">
 								<div>闪亮的-较亮</div>
 								<div>.bgblink-lighter</div>
-								<div>#FFFF01</div>
+								<div>#FFFF73</div>
 							</div>
 							<div class="colorblock bgblink-light">
 								<div>闪亮的-亮</div>
@@ -132,8 +149,14 @@
 								<div>.bgblink</div>
 								<div>#FFFF01</div>
 							</div>
+							<div class="colorblock bgblink-dark ">
+								<div>闪亮的-暗</div>
+								<div>.bgblink-dark</div>
+								<div>#FFD301</div>
+							</div>
 						</div>
 						<div class="cell-7-1">
+							<div class="colorblock"></div>
 							<div class="colorblock bgnice-lighter fwhite">
 								<div>友好的-较亮</div>
 								<div>.bgnice-lighter</div>
@@ -161,6 +184,7 @@
 							</div>
 						</div>
 						<div class="cell-7-1">
+							<div class="colorblock"></div>
 							<div class="colorblock"></div>
 							<div class="colorblock bgblack-light fwhite">
 								<div>黑-亮</div>
@@ -190,6 +214,7 @@
 						</div>
 						<div class="cell-7-1">
 							<div class="colorblock"></div>
+							<div class="colorblock"></div>
 							<div class="colorblock bggray-light">
 								<div>灰-亮</div>
 								<div>.bggray-light</div>
@@ -217,6 +242,7 @@
 							</div>
 						</div>
 						<div class="cell-7-1">
+							<div class="colorblock"></div>
 							<div class="colorblock"></div>
 							<div class="colorblock bgwhite-light">
 								<div>白-亮</div>
@@ -246,12 +272,63 @@
 						</div>
 					</div>
 				</div>
+			
+				
+				<h3>文本</h3>
+				<div>深暗色调</div>
+				<div>.ftheme | .fkey | .fnice | .fblack</div>
+				<ul class="textbox5">
+					<li class="ftheme">Look inside</li>
+					<li class="ftheme">看看</li>
+					<li class="ftheme">Look inside your tiny mind</li>
+					<li class="ftheme">看看你那浅薄的思想</li>
+				</ul>
+				<ul class="textbox5">
+					<li class="fkey">then look a bit harder</li>
+					<li class="fkey">放远大点吧</li>
+					<li class="fkey">Cause we're so uninspired</li>
+					<li class="fkey">因为那里装不下灵魂</li>
+				</ul>
+				<ul class="textbox5">
+					<li class="fnice">So sick and tired of all the hatred you harbor</li>
+					<li class="fnice">如此恶心另人厌倦 全是罪恨</li>
+					<li class="fnice">So you say</li>
+					<li class="fnice">所以你说</li>
+				</ul>
+				<ul class="textbox5">
+					<li class="fblack">It's not okay to be gay</li>
+					<li class="fblack">你不认同同性恋</li>
+					<li class="fblack">Well I think you're just evil</li>
+					<li class="fblack">然而我覺得你是個魔鬼</li>
+				</ul>
+				
+				<div>明亮色调</div>
+				<div>.fblink | .fwhite | .fgray</div>
+				<ul class="textbox10 bgblack">
+					<li class="fblink">You're just some racist who can't tie my laces</li>
+					<li class="fblink">你就是一种种族歧视 連鞋帶都不配給我系</li>
+					<li class="fblink">Your point of view is medieval</li>
+					<li class="fblink">你的觀點已經過時</li>
+				</ul>
+				<ul class="textbox10 bgblack">
+					<li class="fgray">Fuck you (Fuck you)</li>
+					<li class="fgray">去你的</li>
+					<li class="fgray">Fuck you very, very much</li>
+					<li class="fgray">真的是去你媽的</li>
+				</ul>
+				<ul class="textbox10 bgblack">
+					<li class="fwhite">Cause your words don't translate</li>
+					<li class="fwhite">因为我们语言不通</li>
+					<li class="fwhite">And it's getting quite late</li>
+					<li class="fwhite">那只会耽误时间</li>
+				</ul>
 			</section>
 			
 			<section>
 				<h2>布局</h2>
 				<h3>.grid .row .cell-5-1</h3>
 				<div>奇数等分，最小份为1/5</div>
+				<br/>
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-5-1">
@@ -310,6 +387,7 @@
 				
 				<h3>.grid .row .cell-7-1</h3>
 				<div>奇数等分，最小份为1/7</div>
+				<br/>
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-7-1">
@@ -398,6 +476,7 @@
 				
 				<h3>.grid .row .cell-12-1</h3>
 				<div>偶数等分，最小份为1/12</div>
+				<br/>
 				<div class="grid">
 					<div class="row" style="margin-bottom:10px;">
 						<div class="cell-12-1">
@@ -562,22 +641,8 @@
 			
 			<section>
 				<h2>排版</h2>
-				<div class="">
-					<p>Look inside<br/>1.看看</p>
-					<p>Look inside your tiny mind<br/>2.看看你那浅薄的思想</p>
-					<p>then look a bit harder<br/>3.放远大点吧</p>
-					<p>Cause we're so uninspired<br/>4.因为那里装不下灵魂</p>
-					<p>So sick and tired of all the hatred you harbor<br/>5.如此恶心另人厌倦 全是罪恨</p>
-					<p>So you say<br/>6.所以你说</p>
-					<p>It's not okay to be gay<br/>7.你不认同同性恋</p>
-					<p>Well I think you're just evil<br/>8.然而我覺得你是個魔鬼</p>
-					<p>You're just some racist who can't tie my laces<br/>9.你就是一种种族歧视 連鞋帶都不配給我系</p>
-					<p>Your point of view is medieval<br/>10.你的觀點已經過時</p>
-					<p>Fuck you (Fuck you)<br/>11.去你的</p>
-					<p>Fuck you very, very much<br/>12.真的是去你媽的</p>
-				</div>
 				<div class="indent">
-					<div class="h3">《背影》<small>朱自清</small></div>
+					<div class="h4">《背影》<small>朱自清</small></div>
 					<p>我与父亲不相见已二年余了，<strong>我最不能忘记的是他的背影</strong>。那年冬天，祖母死了，父亲的差使也交卸了，正是祸不单行的日子，我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼藉的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说，“<em>事已如此，不必难过，好在天无绝人之路！</em>”</p>
 					<p>回家变卖典质，父亲还了亏空；又借钱办了丧事。这些日子，家中光景很是惨淡，一半为了丧事，一半为了父亲赋闲。丧事完毕，父亲要到南京谋事，我也要回北京念书，我们便同行。</p>
 					<p>到南京时，有朋友约去游逛，勾留了一日；第二日上午便须渡江到浦口，下午上车北去。父亲因为事忙，本已说定不送我，叫旅馆里一个熟识的茶房陪我同去。他再三嘱咐茶房，甚是仔细。但他终于不放心，怕茶房不妥帖；颇踌躇了一会。其实我那年已二十岁，北京已来往过两三次，是没有甚么要紧的了。他踌躇了一会，终于决定还是自己送我去。我两三回劝他不必去；他只说，“不要紧，他们去不好！”</p>
