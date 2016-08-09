@@ -1,0 +1,70 @@
+//====================================================
+//
+//		button
+//
+//====================================================
+
+//设置按钮尺寸
+.button-size(@paddingtb; @paddinglr; @fontsize; @lineheight; @radius) {
+  padding: @paddingtb @paddinglr;
+  font-size: @fontsize;
+  line-height: @lineheight;
+  border-radius: @radius;
+}
+
+//默认按钮
+.btn {
+  display: inline-block;
+  margin-bottom: 0; // For input.btn
+  // font-weight: @fontweight-bold;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-color: @white-darker;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  .button-size(@padding-button-tb; @padding-button-lr; @fontsize-def; @lineheight-def; @radius-def);
+  .prefix-selecttext(none);
+
+  &,
+  &:active,
+  &.active {
+    &:focus,
+    &.focus {
+      // .prefix-tabfocus();
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: @black-dark;
+	background-color: @white;
+	border-color: @gray-lighter;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    outline: 0;
+    background-image: none;
+    .prefix-boxshadow(inset 0 3px 5px rgba(0,0,0,.125));
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: @cursor-no;
+    .prefix-opacity(.65);
+    .prefix-boxshadow(none);
+  }
+
+  a& {
+    &.disabled,
+    fieldset[disabled] & {
+      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+    }
+  }
+}

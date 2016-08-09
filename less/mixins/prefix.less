@@ -85,6 +85,13 @@
 	border-radius: @angle;
 }
 
+//半透明
+.prefix-opacity(@opacity) {
+  opacity: @opacity;
+  // IE8 filter
+  @opacity-ie: (@opacity * 100);
+  filter: ~"alpha(opacity=@{opacity-ie})";
+}
 
 //文本选取
 // none：文本不能被选择
@@ -97,4 +104,25 @@
 	-moz-user-select: @mode;
 	-ms-user-select: @mode;
 	user-select: @mode;
+}
+
+
+//tab键切换焦点
+.prefix-tabfocus() {
+  // Default
+  outline: thin dotted;
+  // WebKit
+  outline: 2px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+
+//投影
+// Drop shadows
+//
+// Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
+// supported browsers that have box shadow capabilities now support it.
+.prefix-boxshadow(@shadow) {
+  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+          box-shadow: @shadow;
 }
