@@ -86,11 +86,19 @@
 }
 
 //半透明
+.prefix-transition(@opt: all linear .15s) {
+	-webkit-transition: @opt;
+	-ms-transition: @opt;
+	-moz-transition: @opt;
+	transition: @opt;
+}
+
+//半透明
 .prefix-opacity(@opacity) {
-  opacity: @opacity;
-  // IE8 filter
-  @opacity-ie: (@opacity * 100);
-  filter: ~"alpha(opacity=@{opacity-ie})";
+	opacity: @opacity;
+	// IE8 filter
+	@opacity-ie: (@opacity * 100);
+	filter: ~"alpha(opacity=@{opacity-ie})";
 }
 
 //文本选取
@@ -109,13 +117,13 @@
 
 //tab键切换焦点
 .prefix-tabfocus() {
-  // Default
-  outline: thin dotted;
-  // WebKit
-  outline: 2px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
-  
-  outline: none;
+	// Default
+	outline: thin dotted;
+	// WebKit
+	outline: 2px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+
+	outline: none;
 }
 
 

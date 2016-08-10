@@ -6,74 +6,75 @@
 
 //设置按钮尺寸
 .button-size(@paddingtb; @paddinglr; @fontsize; @lineheight; @radius) {
-  padding: @paddingtb @paddinglr;
-  font-size: unit( @fontsize, em );
-  line-height: @lineheight;
-  border-radius: @radius;
+	padding: @paddingtb @paddinglr;
+	font-size: unit( @fontsize, em );
+	line-height: @lineheight;
+	border-radius: @radius;
 }
 
 //默认按钮
 .@{prefix}btn, button {
-  display: inline-block;
-  margin-bottom: 0; // For input.btn
-  // font-weight: @fontweight-bold;
-  text-align: center;
-  vertical-align: middle;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  background-color: @white-darker;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  .button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @lineheight-def; @radius-def);
-  .prefix-selecttext(none);
+	display: inline-block;
+	margin-bottom: 0; // For input.btn
+	// font-weight: @fontweight-bold;
+	text-align: center;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	background-color: @white-darker;
+	border: 1px solid transparent;
+	white-space: nowrap;
+	.button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @lineheight-def; @radius-def);
+	.prefix-selecttext(none);
+	.prefix-transition();
 
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			border-color: @gray-lighter;
+			.prefix-tabfocus();
+		}
+	}
+
+	&:hover,
+	&.hover {
 		border-color: @gray-lighter;
-		.prefix-tabfocus();
-    }
-  }
+		color: @black-dark;
+		background-color: @white;
+		text-decoration: none;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
+	}
 
-  &:hover,
-  &.hover {
-	border-color: @gray-lighter;
-    color: @black-dark;
-	background-color: @white;
-    text-decoration: none;
-    .prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
-  }
-  
-  &:focus,
-  &.focus {
-	border-color: @gray-lighter;
-    color: @black-dark;
-	background-color: @white;
-    text-decoration: none;
-  }
+	&:focus,
+	&.focus {
+		border-color: @gray-lighter;
+		color: @black-dark;
+		background-color: @white;
+		text-decoration: none;
+	}
 
-  &:active,
-  &.active {
-	border-color: @gray-lighter;
-    background-image: none;
-    .prefix-boxshadow(inset 0 5px 10px rgba(0, 0, 0, .08));
-  }
+	&:active,
+	&.active {
+		border-color: @gray-lighter;
+		background-image: none;
+		.prefix-boxshadow(inset 0 5px 10px rgba(0, 0, 0, .08));
+	}
 
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    cursor: @cursor-no;
-    .prefix-opacity(.55);
-    .prefix-boxshadow(none);
-  }
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		cursor: @cursor-no;
+		.prefix-opacity(.55);
+		.prefix-boxshadow(none);
+	}
 
-  a& {
-    &.disabled,
-    fieldset[disabled] & {
-      pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
-    }
-  }
+	a& {
+	&.disabled,
+		fieldset[disabled] & {
+			pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+		}
+	}
 }
