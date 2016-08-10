@@ -114,6 +114,8 @@
   // WebKit
   outline: 2px auto -webkit-focus-ring-color;
   outline-offset: -2px;
+  
+  outline: none;
 }
 
 
@@ -123,6 +125,8 @@
 // Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
 // supported browsers that have box shadow capabilities now support it.
 .prefix-boxshadow(@shadow) {
-  -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
-          box-shadow: @shadow;
+	-webkit-box-shadow: @shadow;	// iOS <4.3 & Android <4.1
+	-ms-box-shadow: @shadow;		//IE11
+	-moz-box-shadow: @shadow;		//firefox
+	box-shadow: @shadow;
 }

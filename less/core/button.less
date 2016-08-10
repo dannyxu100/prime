@@ -7,13 +7,13 @@
 //设置按钮尺寸
 .button-size(@paddingtb; @paddinglr; @fontsize; @lineheight; @radius) {
   padding: @paddingtb @paddinglr;
-  font-size: @fontsize;
+  font-size: unit( @fontsize, em );
   line-height: @lineheight;
   border-radius: @radius;
 }
 
 //默认按钮
-.btn {
+.@{prefix}btn, button {
   display: inline-block;
   margin-bottom: 0; // For input.btn
   // font-weight: @fontweight-bold;
@@ -25,7 +25,7 @@
   background-color: @white-darker;
   border: 1px solid transparent;
   white-space: nowrap;
-  .button-size(@padding-button-tb; @padding-button-lr; @fontsize-def; @lineheight-def; @radius-def);
+  .button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @lineheight-def; @radius-def);
   .prefix-selecttext(none);
 
   &,
@@ -33,31 +33,40 @@
   &.active {
     &:focus,
     &.focus {
-      // .prefix-tabfocus();
+		border-color: @gray-lighter;
+		.prefix-tabfocus();
     }
   }
 
   &:hover,
-  &:focus,
-  &.focus {
+  &.hover {
+	border-color: @gray-lighter;
     color: @black-dark;
 	background-color: @white;
+    text-decoration: none;
+    .prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
+  }
+  
+  &:focus,
+  &.focus {
 	border-color: @gray-lighter;
+    color: @black-dark;
+	background-color: @white;
     text-decoration: none;
   }
 
   &:active,
   &.active {
-    outline: 0;
+	border-color: @gray-lighter;
     background-image: none;
-    .prefix-boxshadow(inset 0 3px 5px rgba(0,0,0,.125));
+    .prefix-boxshadow(inset 0 5px 10px rgba(0, 0, 0, .08));
   }
 
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
     cursor: @cursor-no;
-    .prefix-opacity(.65);
+    .prefix-opacity(.55);
     .prefix-boxshadow(none);
   }
 
