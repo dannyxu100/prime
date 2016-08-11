@@ -5,9 +5,13 @@
 		<link rel="icon" href="prime_icon.png">
 		<title>prime</title>
 		<!--
-		<link href="../build/prime.css" rel="stylesheet" />
+		<link rel="stylesheet/less" type="text/css" href="../less/prime.less" />
+		<script src="../less.min.js"></script>
 		-->
+		<link href="../build/prime.css" rel="stylesheet" />
+		<!--
 		<link href="../build/prime.min.css" rel="stylesheet" />
+		-->
 		
 		<style>
 			.wapper {
@@ -702,52 +706,47 @@
 				<div class="grid">
 					<div class="row" style="margin-bottom:5px;">
 						<div class="cell-7-1">
+							<button>default</button>
+						</div>
+						<div class="cell-7-1">
 							<button>默认</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="active">按下</button>
-						</div>
-						<div class="cell-7-1">
-							<button disabled>禁用</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="hover">激活</button>
 						</div>
 						<div class="cell-7-1">
+							<button disabled>禁用</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100px; height:50px;">按钮</button>
+							<button class="active">按下</button>
 						</div>
 						<div class="cell-7-1">
-							<button style="width:100px; height:50px;">按钮</button>
+							<button class="loading">繁忙</button>
 						</div>
 					</div>
 				</div>
 				
 				<div>a标签</div>
-				<div>自定义高度后，垂直居中问题，目前只能通过line-hight:height-pading;来解决</div>
 				<br/>
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
+							<a class="btn">default</a>
+						</div>
+						<div class="cell-7-1">
 							<a class="btn">默认</a>
-						</div>
-						<div class="cell-7-1">
-							<a class="btn active">按下</a>
-						</div>
-						<div class="cell-7-1">
-							<a class="btn" disabled>禁用</a>
 						</div>
 						<div class="cell-7-1">
 							<a class="btn hover">激活</a>
 						</div>
 						<div class="cell-7-1">
+							<a class="btn" disabled>禁用</a>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn" style="width:100px; height:50px;">默认按钮</a>
+							<a class="btn active">按下</a>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn" style="width:100px; height:50px; line-height:36px;">默认按钮</a>
+							<a class="btn loading">繁忙</a>
 						</div>
 					</div>
 				</div>
@@ -758,16 +757,70 @@
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
+							<a class="btn">default</a>
+						</div>
+						<div class="cell-7-1">
 							<a class="btn">默认</a>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn active">按下</a>
+							<a class="btn hover">激活</a>
 						</div>
 						<div class="cell-7-1">
 							<a class="btn" disabled>禁用</a>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn hover">激活</a>
+							<a class="btn active">按下</a>
+						</div>
+						<div class="cell-7-1">
+							<a class="btn loading">繁忙</a>
+						</div>
+						<div class="cell-7-1">
+						</div>
+						<div class="cell-7-1">
+						</div>
+					</div>
+				</div>
+				
+				<h3>.btn-theme</h3>
+				<div>主题按钮</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<button class="btn btn-theme">theme</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-theme">主题</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-theme hover">激活</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-theme" disabled>禁用</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-theme active">按下</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-theme loading">繁忙</button>
+						</div>
+						<div class="cell-7-1">
+						</div>
+						<div class="cell-7-1">
+						</div>
+					</div>
+				</div>
+				
+				<h3>自定义尺寸</h3>
+				<div>自定义高度后，垂直居中问题，目前只能通过line-hight:height-pading;来解决</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<a class="btn" style="width:100px; height:50px;">默认按钮</a>
+						</div>
+						<div class="cell-7-1">
+							<a class="btn" style="width:100px; height:50px; line-height:36px;">默认按钮</a>
 						</div>
 						<div class="cell-7-1">
 						</div>

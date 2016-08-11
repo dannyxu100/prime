@@ -12,8 +12,9 @@
 	border-radius: @radius;
 }
 
+
 //默认按钮
-.@{prefix}btn, button {
+.@{prefix}btn, .@{prefix}btn-def, button {
 	display: inline-block;
 	margin-bottom: 0; // For input.btn
 	// font-weight: @fontweight-bold;
@@ -27,11 +28,12 @@
 	white-space: nowrap;
 	.button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @lineheight-def; @radius-def);
 	.prefix-selecttext(none);
-	.prefix-transition();
+	.prefix-transition(all linear .125s);
 
 	&,
 	&:active,
-	&.active {
+	&.active,
+	&.loading {
 		&:focus,
 		&.focus {
 			border-color: @gray-lighter;
@@ -41,8 +43,8 @@
 
 	&:hover,
 	&.hover {
-		border-color: @gray-lighter;
 		color: @black-dark;
+		border-color: @gray-lighter;
 		background-color: @white;
 		text-decoration: none;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
@@ -50,17 +52,26 @@
 
 	&:focus,
 	&.focus {
-		border-color: @gray-lighter;
 		color: @black-dark;
+		border-color: @gray-lighter;
 		background-color: @white;
 		text-decoration: none;
 	}
 
 	&:active,
-	&.active {
+	&.active,
+	&.loading {
+		color: @black-lighter;
 		border-color: @gray-lighter;
+		background-color: @white-darker;
 		background-image: none;
-		.prefix-boxshadow(inset 0 5px 10px rgba(0, 0, 0, .08));
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+	}
+	&.active {
+		cursor: @cursor-def;
+	}
+	&.loading {
+		cursor: @cursor-loading;
 	}
 
 	&.disabled,
@@ -68,7 +79,7 @@
 	fieldset[disabled] & {
 		cursor: @cursor-no;
 		.prefix-opacity(.55);
-		.prefix-boxshadow(none);
+		.prefix-boxshadow(none) !important;
 	}
 
 	a& {
@@ -78,3 +89,83 @@
 		}
 	}
 }
+
+
+.@{prefix}btn-theme {
+	color: @white;
+	background-color: @color-theme;
+	// border-color: @color-theme-dark;
+
+	&:focus,
+	&.focus {
+		color: @white-lighter;
+		border-color: @color-theme;
+		background-color: @color-theme-light;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @white-lighter;
+		border-color:  @color-theme-light;
+		background-color: @color-theme-lighter;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @white-light;
+		border-color: @color-theme;
+		background-color: @color-theme-light;
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .125));
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @white-lighter;
+			border-color: @color-theme;
+			background-color: @color-theme-light;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @white-lighter;
+			border-color: @color-theme;
+			background-color: @color-theme-light;
+		}
+	}
+
+	.badge {
+		color: @white;
+		background-color: @color-theme;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
