@@ -77,6 +77,7 @@
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
+		border-color: transparent;
 		cursor: @cursor-no;
 		.prefix-opacity(.55);
 		.prefix-boxshadow(none) !important;
@@ -93,8 +94,8 @@
 
 .@{prefix}btn-theme {
 	color: @white;
-	background-color: @color-theme;
 	// border-color: @color-theme-dark;
+	background-color: @color-theme;
 
 	&:focus,
 	&.focus {
@@ -118,7 +119,7 @@
 		color: @white-light;
 		border-color: @color-theme;
 		background-color: @color-theme-light;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .125));
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
 		&:hover,
 		&:focus,
@@ -146,7 +147,7 @@
 		&:active,
 		&.active {
 			color: @white-lighter;
-			border-color: @color-theme;
+			border-color: transparent;
 			background-color: @color-theme-light;
 		}
 	}
@@ -159,8 +160,207 @@
 
 
 
+.@{prefix}btn-key {
+	color: @white;
+	// border-color: @color-key-dark;
+	background-color: @color-key;
+
+	&:focus,
+	&.focus {
+		color: @white-light;
+		border-color: @color-key;
+		background-color: @color-key-light;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @white-light;
+		border-color:  @color-key;
+		background-color: @color-key-light;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @white-light;
+		border-color: @color-key;
+		background-color: @color-key-light;
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .2));
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @white-light;
+			border-color: @color-key;
+			background-color: @color-key-light;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @white-light;
+			border-color: transparent;
+			background-color: @color-key-light;
+		}
+	}
+
+	.badge {
+		color: @white;
+		background-color: @color-key;
+	}
+}
 
 
+
+.@{prefix}btn-blink {
+	color: @black;
+	// border-color: @color-blink-darker;
+	background-color: @color-blink;
+
+	&:focus,
+	&.focus {
+		color: @black-dark;
+		border-color: @color-blink-dark;
+		background-color: @color-blink-light;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @black-dark;
+		border-color:  @color-blink-dark;
+		background-color: @color-blink-light;
+		.prefix-boxshadow(0 3px 5px rgba(0, 0, 0, .06));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @black;
+		border-color: @color-blink-dark;
+		background-color: @color-blink-light;
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @black-dark;
+			border-color: @color-blink-dark;
+			background-color: @color-blink-light;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @black-dark;
+			border-color: transparent;
+			background-color: @color-blink-light;
+		}
+	}
+
+	.badge {
+		color: @black;
+		background-color: @color-blink;
+	}
+}
+
+
+
+.@{prefix}btn-nice {
+	color: @white;
+	// border-color: @color-nice-dark;
+	background-color: @color-nice;
+
+	&:focus,
+	&.focus {
+		color: @white-lighter;
+		border-color: @color-nice;
+		background-color: @color-nice-light;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @white-lighter;
+		border-color:  @color-nice-light;
+		background-color: @color-nice-lighter;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @white-light;
+		border-color: @color-nice;
+		background-color: @color-nice-light;
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @white-lighter;
+			border-color: @color-nice;
+			background-color: @color-nice-light;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @white-lighter;
+			border-color: transparent;
+			background-color: @color-nice-light;
+		}
+	}
+
+	.badge {
+		color: @white;
+		background-color: @color-nice;
+	}
+}
 
 
 
