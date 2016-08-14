@@ -8,7 +8,8 @@
 .@{prefix}grid {
 	width: 100%;
 }
-.@{prefix}row {
+.@{prefix}row,
+.@{prefix}row-full {
 	.comm-clearfix();
 }
 
@@ -49,7 +50,6 @@
 .make-cellwidth( @grid-columns-12 );
 
 
-
 [class^="cell-"]:first-child {
 	padding-left: 0;
 }
@@ -57,6 +57,9 @@
 	padding-right: 0;
 }
 
+.@{prefix}row-full>[class^="cell-"] {
+	padding: 0 !important;
+}
 
 
 

@@ -48,7 +48,6 @@
 			
 			.fillblock {
 				width:100%;
-				height: 30px;
 				background: #eee;
 			}
 			.fillblock:hover {
@@ -443,6 +442,7 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
 				<h3>.grid .row .cell-7-1</h3>
 				<div>奇数等分，最小份为1/7</div>
@@ -532,6 +532,7 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
 				<h3>.grid .row .cell-12-1</h3>
 				<div>偶数等分，最小份为1/12</div>
@@ -696,6 +697,132 @@
 						</div>
 					</div>
 				</div>
+				<br/>
+
+				<h3>.grid .row-full</h3>
+				<div>无间隙</div>
+				<br/>
+				<div class="grid">
+					<div class="row-full" style="margin-bottom:10px;">
+						<div class="cell-5-1">
+							<button class="fillblock" >1</button>
+						</div>
+						<div class="cell-5-1">
+							<button class="fillblock" >1</button>
+						</div>
+						<div class="cell-5-1">
+							<button class="fillblock" >1</button>
+						</div>
+						<div class="cell-5-1">
+							<button class="fillblock" >1</button>
+						</div>
+						<div class="cell-5-1">
+							<button class="fillblock" >1</button>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>嵌套布局</h3>
+				<div>通过.row的嵌套使用，可以完美实现10列和14列的布局</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="margin-bottom: 10px;">
+						<div class="cell-12-6">
+							<div class="row">
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+							</div>
+						</div>
+						<div class="cell-12-6">
+							<div class="row">
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-5-1">
+									<button class="fillblock" >1</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="cell-12-6">
+							<div class="row">
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+							</div>
+						</div>
+						<div class="cell-12-6">
+							<div class="row">
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+								<div class="cell-7-1">
+									<button class="fillblock" >1</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
 			</section>
 			
 			<section>
@@ -725,6 +852,7 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
 				<div>a标签</div>
 				<br/>
@@ -750,29 +878,30 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
-				<h3>.btn-min</h3>
-				<div>小按钮</div>
+				<h3>.btn-inverse</h3>
+				<div>反色按钮</div>
 				<br/>
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
-							<a class="btn">default</a>
+							<button class="btn btn-inverse">inverse</button>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn">默认</a>
+							<button class="btn btn-inverse">反色</button>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn hover">激活</a>
+							<button class="btn btn-inverse hover">激活</button>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn" disabled>禁用</a>
+							<button class="btn btn-inverse" disabled>禁用</button>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn active">按下</a>
+							<button class="btn btn-inverse active">按下</button>
 						</div>
 						<div class="cell-7-1">
-							<a class="btn loading">繁忙</a>
+							<button class="btn btn-inverse loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
 						</div>
@@ -780,119 +909,41 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
-				<h3>.btn-theme</h3>
-				<div>主题按钮</div>
+				<h3>.btn-theme | .btn-key</h3>
+				<div>其他风格按钮</div>
 				<br/>
 				<div class="grid">
 					<div class="row" style="">
-						<div class="cell-7-1">
-							<button class="btn btn-theme">theme</button>
-						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-theme">主题</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-theme hover">激活</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-theme" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-theme active">按下</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-theme loading">繁忙</button>
-						</div>
-						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
-						</div>
-					</div>
-				</div>
-				
-				<h3>.btn-key</h3>
-				<div>关键按钮</div>
-				<br/>
-				<div class="grid">
-					<div class="row" style="">
-						<div class="cell-7-1">
-							<button class="btn btn-key">key</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-key">关键</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-key hover">激活</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-key" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-key active">按下</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-key loading">繁忙</button>
-						</div>
-						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
-						</div>
-					</div>
-				</div>
-				
-				<h3>.btn-blink</h3>
-				<div>闪亮按钮</div>
-				<br/>
-				<div class="grid">
-					<div class="row" style="">
-						<div class="cell-7-1">
-							<button class="btn btn-blink">blink</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-blink">关键</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-blink hover">激活</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-blink" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-blink active">按下</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-blink loading">繁忙</button>
-						</div>
-						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
-						</div>
-					</div>
-				</div>
-				
-				<h3>.btn-nice</h3>
-				<div>友好按钮</div>
-				<br/>
-				<div class="grid">
-					<div class="row" style="">
-						<div class="cell-7-1">
-							<button class="btn btn-nice">nice</button>
+							<button class="btn btn-blink">闪亮</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-nice">友好</button>
 						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-nice hover">激活</button>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.btn-big | .btn-min</h3>
+				<div>大尺寸、小尺寸</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="">
+						<div class="cell-7-2">
+							<a class="btn btn-big">大尺寸按钮</a>
+						</div>
+						<div class="cell-7-2">
+							<a class="btn btn-min">小尺寸按钮</a>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-nice" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-nice active">按下</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-nice loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
 						</div>
@@ -900,23 +951,44 @@
 						</div>
 					</div>
 				</div>
+				<br/>
 				
 				<h3>自定义尺寸</h3>
 				<div>自定义高度后，垂直居中问题，目前只能通过line-hight:height-pading;来解决</div>
 				<br/>
 				<div class="grid">
 					<div class="row" style="">
-						<div class="cell-7-1">
-							<a class="btn" style="width:100px; height:50px;">默认按钮</a>
+						<div class="cell-5-1">
+							<a class="btn" style="width:120px; height:80px;">默认状态</a>
 						</div>
-						<div class="cell-7-1">
-							<a class="btn" style="width:100px; height:50px; line-height:36px;">默认按钮</a>
+						<div class="cell-5-1">
+							<a class="btn" style="width:120px; height:80px; line-height:68px;">设置行高</a>
 						</div>
-						<div class="cell-7-1">
+						<div class="cell-5-1">
+							<a class="btn btn-min" style="width:120px; height:80px; line-height:72px;">小尺寸按钮</a>
 						</div>
-						<div class="cell-7-1">
+						<div class="cell-5-1">
+							<a class="btn btn-big" style="width:120px; height:80px; line-height:60px;">大尺寸按钮</a>
 						</div>
-						<div class="cell-7-1">
+					</div>
+				</div>
+				<br/>
+				
+				<h3>块按钮</h3>
+				<div>宽度100%</div>
+				<br/>
+				<div class="grid">
+					<div class="row-full" style="margin-bottom:10px;">
+						<div class="cell-12-6">
+							<a class="btn btn-big btn-theme btn-block">提交</a>
+						</div>
+						<div class="cell-12-6">
+							<a class="btn btn-big btn-block">取消</a>
+						</div>
+					</div>
+					<div class="row" style="">
+						<div class="cell-5-5">
+							<a class="btn btn-big btn-inverse btn-block">浏览更多</a>
 						</div>
 					</div>
 				</div>
