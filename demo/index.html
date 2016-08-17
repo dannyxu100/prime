@@ -88,37 +88,6 @@
 }
 
 
-
-			
-			.dropdown {
-				display: inline-block;
-				width: 100px;
-				border: 1px solid #eee;
-				background-color: #f3f3f3;
-				overflow: hidden;
-			}
-			.dropdown:hover {
-				background-color: #f7f7f7;
-			}
-			.dropdown>select {
-				width: 100%;
-				border: 0px;
-				font-size: 16px;
-				background: transparent;
-				
-				/*很关键：将默认的select选择框样式清除*/
-				-moz-appearance: none;
-				-webkit-appearance: none;
-				appearance: none;
-			}
-			.dropdown>select:focus {
-				outline: none;
-			}
-			.dropdown>select>option{
-				
-			}
-			
-			
 			/* 模拟下拉框 */
 			.radio-container {
 				position: relative;
@@ -303,6 +272,84 @@
 				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
 			}
 
+			
+			
+			
+
+			
+			.dropdown {
+				/* display: inline-block; */
+				position: relative;
+				height: 4em;
+				font-size: 1.5em;
+				line-height: 1;
+				color: #d6ebe0;
+				font-size: 0px;
+			}
+			.dropdown-select {
+				width: 100%;
+				position: absolute;
+				border: 0px;
+				padding: 0px;
+				font-size: 16px;
+				background-color: #f3f3f3;
+				text-align: left;
+				overflow: hidden;
+			}
+			.dropdown-select .dropdown-tip {
+				position: relative;
+				z-index: 1; 
+				height: 30px;
+				line-height: 30px;
+				background: #666;
+				cursor: pointer;
+			}
+			.dropdown-select .dropdown-options {
+				width: 100%;
+				left: 0px;
+				border: 0px solid #000;
+				background-color: #f3f3f3;
+				padding: 0px;
+			}
+			.dropdown-select .dropdown-options .dropdown-item {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 30px;
+			}
+			.dropdown-select .dropdown-options .dropdown-item input {
+				position: absolute;
+				right: 0;
+				top: 0;
+				width: 30px;
+				height: 30px;
+				z-index: 1;
+				cursor: pointer; 
+			}
+			.dropdown-select .dropdown-options .dropdown-item label {
+				display: block;
+				height: 30px;
+				line-height: 30px;
+				background: #36c875;
+			}
+			
+			
+			
+			.dropdown-select:focus .dropdown-options {
+				position: relative;
+			}
+			.dropdown-select:focus .dropdown-options .dropdown-item {
+				position: relative;
+			}
+			.dropdown-select .dropdown-options .dropdown-item input:checked ~ label {
+				background: #f00;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				z-index: 2;
+			}
 			
 		</style>
 	</head>
@@ -1256,45 +1303,39 @@
 				<h3>.btn</h3>
 				<div>buttn标签</div>
 				<br/>
-				<div class="dropdown" >
-					<select panelheight="auto">
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-					</select>
+				<button><input type="radio" name="city" id="city1" value="北京">1232132</button>
+				<div class="dropdown">
+					<button class="dropdown-select">
+						<div class="dropdown-tip">点击选择</div>
+						<div class="dropdown-options">
+							<div class="dropdown-item">
+								<input type="radio" name="city" id="city1" value="北京">
+								<label for="city1">北京</label>
+							</div>
+							<div class="dropdown-item">
+								<input type="radio" name="city" id="city2" value="上海">
+								<label for="city2">上海</label>
+							</div>
+							<div class="dropdown-item">
+								<input type="radio" name="city" id="city3" value="成都">
+								<label for="city3">成都</label>
+							</div>
+							<div class="dropdown-item">
+								<input type="radio" name="city" id="city4" value="广州">
+								<label for="city4">广州</label>
+							</div>
+							<div class="dropdown-item">
+								<input type="radio" name="city" id="city5" value="深圳">
+								<label for="city5">深圳</label>
+							</div>
+						</div>	
+					</button>
 				</div>
-				
-				<div class="dropdown" style="width:100%;" >
-					<select>
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-						<option>北京</option>
-						<option>上海</option>
-						<option>成都</option>
-						<option>深圳</option>
-						<option>广东</option>
-					</select>
-				</div>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
 				<br/>
 				
 				
@@ -1323,10 +1364,32 @@
 								<input type="radio" name="my-beer" id="choice4" value="choice4">
 								<label for="choice4">广州</label>
 							</li>
+							<li>
+								<input type="radio" name="my-beer" id="choice4" value="choice4">
+								<label for="choice4">广州</label>
+							</li>
+							<li>
+								<input type="radio" name="my-beer" id="choice4" value="choice4">
+								<label for="choice4">广州</label>
+							</li>
+							<li>
+								<input type="radio" name="my-beer" id="choice4" value="choice4">
+								<label for="choice4">广州</label>
+							</li>
+							<li>
+								<input type="radio" name="my-beer" id="choice4" value="choice4">
+								<label for="choice4">广州</label>
+							</li>
+							<li>
+								<input type="radio" name="my-beer" id="choice4" value="choice4">
+								<label for="choice4">广州</label>
+							</li>
 						</ul>	
 					</button>
 				</div>
 				<br/>
+				
+				<style>
 				
 			</section>
 			
