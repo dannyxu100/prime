@@ -49,9 +49,12 @@
 			.fillblock {
 				width:100%;
 				background: #eee;
+				border: 1px solid transparent;
+				padding: 5px 0px;
 			}
 			.fillblock:hover {
-				background: #f7f7f7;
+				border-color: #eee;
+				background: #f5f5f5;
 			}
 			
 			.textbox5 {
@@ -62,11 +65,10 @@
 			}
 			
 			
-			
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
 {
-	width: 8px;
+	width: 5px;
 	height: 16px;
 	background-color: #F5F5F5;
 }
@@ -75,282 +77,158 @@
 ::-webkit-scrollbar-track
 {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #F5F5F5;
 }
 
 /*定义滑块 内阴影+圆角*/
 ::-webkit-scrollbar-thumb
 {
-	border-radius: 10px;
+	border-radius: 5px;
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: #555;
 }
 
 
-			/* 模拟下拉框 */
-			.radio-container {
-				position: relative;
-				height: 4em;
-				font-size: 1.5em;
-				line-height: 1;
-				color: #d6ebe0;
-			}
-			.no-touch .radio-container:focus,
-			.radio-container.active {
-				z-index: 9999;
-			}
 
-			.radio-options {
-				position: absolute;
-				padding: 0px;
-				border: 0px;
-				background: transparent;
-				max-height: 3em;
-				width: 100%;
-				overflow: hidden;
-			}
-			.radio-options ul {
-				padding: 0px;
-				margin-top: 18px;
-			}
-			.radio-options li {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%; 
-				list-style: none;
-			}
-			.radio-options label {
-				display: block;
-				padding: 0.75em;
-				background: #36c875;
-				opacity: 0;
-			}
-			.radio-options input {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 300px;
-				height: 3em;
-				opacity: 0;
-				z-index: 1;
-				cursor: pointer; 
-			}
-			.radio-options input:checked ~ label {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				opacity: 1;
-				z-index: 2;
-				padding: 0.75em;
-				background: #1b9e4d;
-			}
-			.no-touch .radio-options li:hover label {
-				background: #25b45f; 
-			}
-			.radio-options .checked label {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				padding: 0.75em;
-				background: #1b9e4d;
-				visibility: visible;
-				z-index: 2; 
-			}
-			.no-touch .radio-options:focus,
-			.active .radio-options {
-				max-height: 100em; 
-			}
-			.no-touch .radio-options:focus ul,
-			.active .radio-options ul {
-				position: relative;
-				margin-top: 9px; 
-			}
-			.no-touch .radio-options:focus li,
-			.active .radio-options li {
-				position: relative; 
-			}
-			.no-touch .radio-options:focus label,
-			.active .radio-options label {
-				opacity: 1;
-			}
-			.no-touch .radio-options:focus input:checked ~ label,
-			.active .radio-options input:checked ~ label {
-				position: static;
-				border-radius: 0; 
-			}
-			.no-touch .radio-options:hover
-			.checked label {
-				position: static; 
-			}
-			.no-touch .radio-options:hover ul:before,
-			.active .radio-options ul:before {
-				content: "";
-				position: absolute;
-				width: 0px;
-				height: 0px;
-				right: 0.75em;
-				margin-right: -4px;
-				top: -9px;
-				border-style: solid;
-				border-width: 0 9px 9px 9px;
-				border-color: transparent transparent #36c875 transparent;
-			}
-			.radio-options .toggle {
-				position: relative;
-				cursor: pointer;
-				padding: 0.75em;
-				background: #1b9e4d;
-				z-index: 1; 
-			}
-			.radio-options .toggle:before {
-				content: "";
-				border-style: solid;
-				border-width: 5px 0 5px 8.7px;
-				border-color: transparent transparent transparent #d6ebe0;
-				height: 0px;
-				position: absolute;
-				right: 0.75em;
-				top: 50%;
-				margin-top: -5px;
-				width: 0px;
-			}
-			.no-touch .radio-options:hover .toggle:before, 
-			.active .radio-options .toggle:before {
-				border-width: 8.7px 5px 0 5px;
-				border-color: #d6ebe0;
-				margin-top: -2px; 
-			}
-			.radio-options input:checked ~ label:before {
-				content: "";
-				border-style: solid;
-				border-width: 5px 0 5px 8.7px;
-				border-color: #d6ebe0;
-				height: 0px;
-				position: absolute;
-				right: 0.75em;
-				top: 50%;
-				margin-top: -5px;
-				width: 0px;
-			}
-			.radio-options li.checked label:before {
-				content: "";
-				border-style: solid;
-				border-width: 5px 0 5px 8.7px;
-				border-color: #d6ebe0;
-				height: 0px;
-				position: absolute;
-				right: 0.75em;
-				top: 50%;
-				margin-top: -5px;
-				width: 0px;
-			}
-			.no-touch .radio-options:hover input:checked ~ label:before, 
-			.active .radio-options input:checked ~ label:before {
-				content: none; 
-			}
-			.no-touch .radio-options:hover li.checked label:before {
-				content: none; 
-			}
-
-			.no-opacity .radio-options label {
-				visibility: hidden; 
-			}
-
-			.no-opacity .radio-options:focus label {
-				visibility: visible; 
-			}
-
-			.no-opacity .radio-options li.checked label {
-				visibility: visible; 
-			}
-			.no-opacity input {
-				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
-			}
-
+		.select {
+			display: inline-block;
+			position: relative;
+			z-index: 1;
+			font-size: 0px;
+			height: 35px;
+			vertical-align: middle;
+			cursor: pointer;
 			
+		}
+		.select .select-box {
+			position: relative;
+			z-index: 20;
+			height: 35px;
+			width: 100%;
+			padding: 0px 30px 0px 10px;
+			margin: 0px;
+			border: 1px solid transparent;
+			background-color: #f3f3f3;
+			overflow: hidden;
 			
+			-webkit-transition: all linear 0.125s;
+			-ms-transition: all linear 0.125s;
+			-moz-transition: all linear 0.125s;
+			transition: all linear 0.125s;
+		}
+		.select .select-box:after {
+			display: block;
+			width: 30px;
+			height: 100%;
+			line-height: 35px;
+			position: absolute;
+			z-index: 30;
+			top: 0px;
+			right: 0px;
+			font-size: 20px;
+			color: #666;
+			content: "▸";
+			text-align: center;
+		}
+		.select.active .select-box:after {
+			content: "▾";
+		}
+		.select.top.active .select-box:after {
+			content: "▴";
+		}
+		
+		.select .select-text {
+			width: 100%;
+			height: 35px;
+			line-height: 35px;
+			padding: 0px;
+			margin: 0px;
+			vertical-align: middle;
+			font-size: 14px;
+			border: 0px;
+			background-color: transparent;
+			cursor: pointer;
+		}
+		.select .select-text:focus {
+			outline: none;
+		}
+		
+		.select .select-list {
+			display: none;
+			width: 100%;
+			max-height: 300px;
+			position: absolute;
+			z-index: 10;
+			left: 0px;
+			margin: 0px;
+			margin-top: -1px;
+			padding: 0px;
+			border: 1px solid #f3f3f3;
+			font-size: 14px;
+			overflow-x: hidden;
+			overflow-y: auto;
 			
-
+			-webkit-transition: all linear 0.125s;
+			-ms-transition: all linear 0.125s;
+			-moz-transition: all linear 0.125s;
+			transition: all linear 0.125s;
+		}
+		.select.top .select-list {
+			left: 0px;
+			bottom: 0px;
+			margin-bottom: 35px;
+			border-bottom: 0px;
+		}
+		.select.active .select-list {
+			display: block;
+		}
+		
+		.select .select-list .select-item {
+			height: 35px;
+			line-height: 35px;
+			padding-left: 10px;
+			list-style: none;
+			color: #444;
+			background-color: #f7f7f7;
+			overflow: hidden;
 			
-			.dropdown {
-				/* display: inline-block; */
-				position: relative;
-				height: 4em;
-				font-size: 1.5em;
-				line-height: 1;
-				color: #d6ebe0;
-				font-size: 0px;
-			}
-			.dropdown-select {
-				width: 100%;
-				position: absolute;
-				border: 0px;
-				padding: 0px;
-				font-size: 16px;
-				background-color: #f3f3f3;
-				text-align: left;
-				overflow: hidden;
-			}
-			.dropdown-select .dropdown-tip {
-				position: relative;
-				z-index: 1; 
-				height: 30px;
-				line-height: 30px;
-				background: #666;
-				cursor: pointer;
-			}
-			.dropdown-select .dropdown-options {
-				width: 100%;
-				left: 0px;
-				border: 0px solid #000;
-				background-color: #f3f3f3;
-				padding: 0px;
-			}
-			.dropdown-select .dropdown-options .dropdown-item {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 30px;
-			}
-			.dropdown-select .dropdown-options .dropdown-item input {
-				position: absolute;
-				right: 0;
-				top: 0;
-				width: 30px;
-				height: 30px;
-				z-index: 1;
-				cursor: pointer; 
-			}
-			.dropdown-select .dropdown-options .dropdown-item label {
-				display: block;
-				height: 30px;
-				line-height: 30px;
-				background: #36c875;
-			}
-			
-			
-			
-			.dropdown-select:focus .dropdown-options {
-				position: relative;
-			}
-			.dropdown-select:focus .dropdown-options .dropdown-item {
-				position: relative;
-			}
-			.dropdown-select .dropdown-options .dropdown-item input:checked ~ label {
-				background: #f00;
-				position: absolute;
-				top: 0px;
-				left: 0px;
-				width: 100%;
-				z-index: 2;
-			}
-			
+			-webkit-transition: all linear 0.125s;
+			-ms-transition: all linear 0.125s;
+			-moz-transition: all linear 0.125s;
+			transition: all linear 0.125s;
+		}
+		.select .select-list .select-item:hover {
+			color: #222;
+			background-color: #fff;
+		}
+		.select .select-list .select-item.selected {
+			color: #f7f7f7;
+			background-color: #05C3F9;
+		}
+		.select .select-list .select-item.selected:hover {
+			color: #fff;
+			background-color: #74DEFC;
+		}
+		
+		.select:hover {
+			z-index: 2;
+			background-color: #f7f7f7;
+		}
+		.select:hover,
+		.select:hover .select-list {
+			-webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+			-ms-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+			-moz-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+		}
+		.select:hover .select-box,
+		.select:hover .select-list {
+			border-color: #ddd;
+		}
+		.select:hover .select-box {
+			background-color: #f7f7f7;
+		}
 		</style>
 	</head>
 	
@@ -1300,96 +1178,73 @@
 			
 			<section>
 				<h2>下拉框</h2>
-				<h3>.btn</h3>
-				<div>buttn标签</div>
+				<h3>.select</h3>
+				<div></div>
 				<br/>
-				<button><input type="radio" name="city" id="city1" value="北京">1232132</button>
-				<div class="dropdown">
-					<button class="dropdown-select">
-						<div class="dropdown-tip">点击选择</div>
-						<div class="dropdown-options">
-							<div class="dropdown-item">
-								<input type="radio" name="city" id="city1" value="北京">
-								<label for="city1">北京</label>
+				<div class="grid" style="margin:150px 0px 300px;">
+					<div class="row">
+						<div class="cell-12-2">
+							<div class="select">
+								<div class="select-box">
+									<input class="select-text" type="text" placeholder="请选择" value="12"/>
+								</div>
+								<ul class="select-list">
+									<li class="select-item" value="beijing">北京</li>
+									<li class="select-item" value="shanghai">上海</li>
+									<li class="select-item" value="guangzhou">广州</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+								</ul>
 							</div>
-							<div class="dropdown-item">
-								<input type="radio" name="city" id="city2" value="上海">
-								<label for="city2">上海</label>
+						</div>
+						<div class="cell-12-2">
+							<div class="select active">
+								<div class="select-box">
+									<input class="select-text" disabled type="text" placeholder="请选择" value="北京北京北京北京北京北京北京北京北京北京北京北京北京北京北京北京"/>
+								</div>
+								<ul class="select-list">
+									<li class="select-item" value="beijing">北京</li>
+									<li class="select-item" value="shanghai">上海</li>
+									<li class="select-item" value="guangzhou">广州</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+								</ul>
 							</div>
-							<div class="dropdown-item">
-								<input type="radio" name="city" id="city3" value="成都">
-								<label for="city3">成都</label>
+						</div>
+						<div class="cell-12-2">
+							<div class="select active">
+								<div class="select-box">
+									<input class="select-text" type="text" placeholder="请选择" value="上海"/>
+								</div>
+								<ul class="select-list">
+									<li class="select-item" value="beijing">北京北京北京北京北京北京北京北京</li>
+									<li class="select-item selected" value="shanghai">上海</li>
+									<li class="select-item" value="guangzhou">广州</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+								</ul>
 							</div>
-							<div class="dropdown-item">
-								<input type="radio" name="city" id="city4" value="广州">
-								<label for="city4">广州</label>
+						</div>
+						<div class="cell-12-2">
+							<div class="select active top">
+								<div class="select-box">
+									<input class="select-text" type="text" placeholder="请选择" value="上海"/>
+								</div>
+								<ul class="select-list">
+									<li class="select-item" value="beijing">北京</li>
+									<li class="select-item selected" value="shanghai">上海</li>
+									<li class="select-item" value="guangzhou">广州</li>
+									<li class="select-item" value="shenzhen">深圳</li>
+								</ul>
 							</div>
-							<div class="dropdown-item">
-								<input type="radio" name="city" id="city5" value="深圳">
-								<label for="city5">深圳</label>
-							</div>
-						</div>	
-					</button>
+						</div>
+					</div>
 				</div>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				
-				
-				
-				<h2>下拉框</h2>
-				<h3>.btn</h3>
-				<div>buttn标签</div>
-				<br/>
-				<div class="radio-container no-touch">
-					<button class="radio-options">
-						<div class="toggle">点击选择</div>
-						<ul>
-							<li>
-								<input type="radio" name="my-beer" id="choice1" value="choice1">
-								<label for="choice1">北京</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice2" value="choice2">
-								<label for="choice2">上海</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice3" value="choice3">
-								<label for="choice3">成都</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-							<li>
-								<input type="radio" name="my-beer" id="choice4" value="choice4">
-								<label for="choice4">广州</label>
-							</li>
-						</ul>	
-					</button>
-				</div>
-				<br/>
-				
-				<style>
 				
 			</section>
 			
