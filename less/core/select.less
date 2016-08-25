@@ -20,7 +20,7 @@
 		z-index: 20;
 		height: 35px;
 		width: 100%;
-		padding: 0px 30px 0px 10px;
+		padding: 0px 30px 0px 15px;
 		margin: 0px;
 		border: 1px solid transparent;
 		background-color: #f3f3f3;
@@ -75,6 +75,7 @@
 		margin-top: -1px;
 		padding: 0px;
 		border: 1px solid #f3f3f3;
+		background-color: #fff;
 		font-size: 14px;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -87,12 +88,13 @@
 		.@{prefix}select-item {
 			height: 35px;
 			line-height: 35px;
-			padding-left: 10px;
+			padding-left: 15px;
 			list-style: none;
 			color: #444;
-			background-color: #f3f3f3;
+			background-color: #fff;
 			overflow: hidden;
 			
+			.prefix-selecttext(none);
 			-webkit-transition: all linear 0.125s;
 			-ms-transition: all linear 0.125s;
 			-moz-transition: all linear 0.125s;
@@ -100,17 +102,37 @@
 			
 			&:hover {
 				color: #222;
-				background-color: #fff;
+				background-color: #f7f7f7;
+			}
+			&:active,
+			&.active,
+			&.selected {
+				color: @white-light;
+				border-color: @color-theme;
+				background-color: @color-theme-light;
+				.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 			}
 			&.selected {
-				color: #43D3FC;
-				background-color: #fafafa;
 				cursor: default;
-				
-				&:hover {
+			}
+			&.disabled,
+			&[disabled] {
+				&,
+				&:hover,
+				&:active,
+				&.active,
+				&.selected {
+					color: @gray;
+					cursor: @cursor-no;
 					background-color: #fff;
+					.prefix-boxshadow(none);
 				}
 			}
+		}
+		.@{prefix}split {
+			height: 0px;
+			border-top: 1px solid #eee;
+			margin: 5px 0px;
 		}
 	}
 	&:hover, 
@@ -125,7 +147,6 @@
 		
 		.@{prefix}select-list {
 			z-index: 2;
-			background-color: #f7f7f7;
 		}
 		.@{prefix}select-box {
 			background-color: #f7f7f7;
