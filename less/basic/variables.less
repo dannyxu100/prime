@@ -63,6 +63,18 @@
 @grid-columns-5:		5;		//奇数等分5列
 @grid-columns-7:		7;		//奇数等分7列
 
+//控件
+@height-control:		35px;
+@height-control-min:	28px;
+@height-control-big:	50px;
+
+@padding-control-tb:			8px;		//上下内间距
+@padding-control-lr:			15px;		//左右内间距
+@padding-control-min-tb:		6px;
+@padding-control-min-lr:		10px;
+@padding-control-big-tb:		15px;
+@padding-control-big-lr:		30px;
+
 //排版
 @fontfamily-def:		-apple-system, sf_ui_textlight, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
 @fontfamily-title:		inherit;
@@ -85,22 +97,13 @@
 @lineheight-def:		1.5;
 @lineheight-auto:    	floor(@fontsize-def/@rem2px * @lineheight-def);	//动态行高，根据字体大小计算
 @lineheight-title:		1.1;
+@lineheight-control:	1;
 
 //边框
 @borderstyle-def:		solid;
 @borderstyle-dotted:	dotted;
 @borderstyle-double:	double;
 @borderstyle-dashed:	dashed;
-
-//间距
-@padding-button-tb:		6px;		//按钮上下内间距
-@padding-button-lr:		15px;		//按钮左右内间距
-
-@padding-button-min-tb:		4px;
-@padding-button-min-lr:		10px;
-
-@padding-button-big-tb:		10px;
-@padding-button-big-lr:		18px;
 
 //倒角
 @radius-def:			0;
@@ -140,7 +143,42 @@
 @cursor-no:				not-allowed;
 @cursor-loading:		wait;
 
+//图标（特殊符号）
+@icon-checkbox:		"✔";
 
+@icon-select-right:		"▸";
+@icon-select-down:		"▾";
+@icon-select-up:		"▴";
+
+
+
+//按钮
+@height-button:			@height-control;
+@height-button-min:		@height-control-min;
+@height-button-big:		@height-control-big;
+@lineheight-button:		@lineheight-control;
+
+@padding-button-tb:			@padding-control-tb;		//按钮上下内间距
+@padding-button-lr:			@padding-control-lr;		//按钮左右内间距
+@padding-button-min-tb:		@padding-control-min-tb;
+@padding-button-min-lr:		@padding-control-min-lr;
+@padding-button-big-tb:		@padding-control-big-tb;
+@padding-button-big-lr:		@padding-control-big-lr;
+
+
+
+//下拉框
+@height-select:			@height-control;
+@height-select-min:		@height-control-min;
+@height-select-big:		@height-control-big;
+@lineheight-select:		@lineheight-control;
+
+@height-select-list:	300px;
+@radius-select-list:	0;
+@height-select-split:	10px;
+
+@padding-select-l:		15px;
+@padding-select-r:		30px;
 
 
 

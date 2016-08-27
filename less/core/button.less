@@ -5,9 +5,10 @@
 //====================================================
 
 //设置按钮尺寸
-.button-size(@paddingtb; @paddinglr; @fontsize; @lineheight; @radius) {
+.button-size(@paddingtb; @paddinglr; @fontsize; @height; @lineheight; @radius) {
 	padding: @paddingtb @paddinglr;
 	font-size: unit( @fontsize, em );
+	height: @height;
 	line-height: @lineheight;
 	border-radius: @radius;
 }
@@ -16,19 +17,20 @@
 //默认按钮
 .@{prefix}btn, .@{prefix}btn-def {
 	display: inline-block;
+	height: @height-button;
 	margin-bottom: 0; // For input.btn
 	// font-weight: @fontweight-bold;
 	text-align: center;
 	vertical-align: middle;
 	touch-action: manipulation;
-	cursor: pointer;
+	cursor: @cursor-pointer;
 	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
 	background-color: @white-darker;
 	border: 1px solid transparent;
 	white-space: nowrap;
-	.button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @lineheight-def; @radius-def);
+	.button-size(@padding-button-tb; @padding-button-lr; @fontsize-m; @height-button; @lineheight-button; @radius-def);
 	.prefix-selecttext(none);
-	.prefix-transition(all linear .125s);
+	.prefix-transition();
 	
 	&,
 	&:active,
@@ -84,7 +86,7 @@
 	}
 
 	a& {
-	&.disabled,
+		&.disabled,
 		fieldset[disabled] & {
 			pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
 		}
@@ -92,10 +94,10 @@
 }
 
 .@{prefix}btn-min {
-	.button-size(@padding-button-min-tb; @padding-button-min-lr; @fontsize-def; @lineheight-def; @radius-def);
+	.button-size(@padding-button-min-tb; @padding-button-min-lr; @fontsize-def; @height-button-min; @lineheight-button; @radius-def);
 }
 .@{prefix}btn-big {
-	.button-size(@padding-button-big-tb; @padding-button-big-lr; @fontsize-l; @lineheight-def; @radius-def);
+	.button-size(@padding-button-big-tb; @padding-button-big-lr; @fontsize-l; @height-button-big; @lineheight-button; @radius-def);
 }
 
 .@{prefix}btn-block {

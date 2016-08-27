@@ -86,7 +86,7 @@
 }
 
 //半透明
-.prefix-transition(@opt: all linear .15s) {
+.prefix-transition(@opt: all linear .125s) {
 	-webkit-transition: @opt;
 	-ms-transition: @opt;
 	-moz-transition: @opt;
@@ -95,8 +95,10 @@
 
 //半透明
 .prefix-opacity(@opacity) {
+	-moz-opacity: @opacity; 
+	-khtml-opacity: @opacity; 
 	opacity: @opacity;
-	// IE8 filter
+	// for IE
 	@opacity-ie: (@opacity * 100);
 	filter: ~"alpha(opacity=@{opacity-ie})";
 }
