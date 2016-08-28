@@ -37,22 +37,22 @@
 @black-light:			#444;
 @black-lighter:			#666;
 
-@white-darker:			#f3f3f3;
-@white-dark:			#f5f5f5;
-@white:					#f7f7f7;
-@white-light:			#fafafa;
-@white-lighter:			#fff;
+@white-darker:			#F3F3F3;
+@white-dark:			#F5F5F5;
+@white:					#F7F7F7;
+@white-light:			#FAFAFA;
+@white-lighter:			#FFF;
 
 @gray-darker:			#999;
-@gray-dark:				#aaa;
-@gray:					#bbb;
-@gray-light:			#ccc;
-@gray-lighter:			#ddd;
-@gray-lightest:			#eee;
+@gray-dark:				#AAA;
+@gray:					#BBB;
+@gray-light:			#CCC;
+@gray-lighter:			#DDD;
+@gray-lightest:			#EEE;
 
 @color-def:				@black;
 @color-title:			inherit;
-@color-hr:				@gray-light;
+@color-hr:				@gray-lighter;
 @color-small:			@gray-darker;
 
 
@@ -75,10 +75,17 @@
 @padding-control-big-tb:		15px;
 @padding-control-big-lr:		30px;
 
-//排版
-@fontfamily-def:		-apple-system, sf_ui_textlight, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+//字体
+@fontfamily-ios:		-apple-system, sf_ui_textlight;
+@fontfamily-en:			"ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial;
+@fontfamily-zh:			"Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
+@fontfamily-sys:		sans-serif;
+// @fontfamily-def:		-apple-system, sf_ui_textlight, "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+@fontfamily-def:		~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}";
 @fontfamily-title:		inherit;
+@fontfamily-html:		"Helvetica Neue", Helvetica, Arial, sans-serif;
 
+//排版
 @defpx:					16;
 @rem2px:				1/@defpx;	// 1/16 = 0.0625;
 
@@ -144,19 +151,24 @@
 @cursor-loading:		wait;
 
 //图标（特殊符号）
-@icon-checkbox:		"✔";
+@icon-checkboxbefore:			"";
+@icon-checkboxafter:			"✔";
+@icon-checkboxafter-disabled:	"×";
+@icon-radiobefore:				"●";
+@icon-radioafter:				"●";
+@icon-radioafter-disabled:		"○";
 
-@icon-select-right:		"▸";
-@icon-select-down:		"▾";
-@icon-select-up:		"▴";
+@icon-select-right:				"▸";
+@icon-select-down:				"▾";
+@icon-select-up:				"▴";
 
 
 
 //按钮
-@height-button:			@height-control;
-@height-button-min:		@height-control-min;
-@height-button-big:		@height-control-big;
-@lineheight-button:		@lineheight-control;
+@height-button:				@height-control;
+@height-button-min:			@height-control-min;
+@height-button-big:			@height-control-big;
+@lineheight-button:			@lineheight-control;
 
 @padding-button-tb:			@padding-control-tb;		//按钮上下内间距
 @padding-button-lr:			@padding-control-lr;		//按钮左右内间距
@@ -168,17 +180,91 @@
 
 
 //下拉框
-@height-select:			@height-control;
-@height-select-min:		@height-control-min;
-@height-select-big:		@height-control-big;
-@lineheight-select:		@lineheight-control;
+@height-select:				@height-control;
+@height-select-min:			@height-control-min;
+@height-select-big:			@height-control-big;
+@lineheight-select:			@lineheight-control;
+	
+@height-select-list:		300px;
+@height-select-split:		10px;
 
-@height-select-list:	300px;
-@radius-select-list:	0;
-@height-select-split:	10px;
+@height-select-item:		32px;
+@height-select-min-item:	28px;
+@height-select-big-item:	36px;
 
-@padding-select-l:		15px;
-@padding-select-r:		30px;
+@fontsize-select-text:			@fontsize-m;
+@fontsize-select-min-text:		@fontsize-def;
+@fontsize-select-big-text:		@fontsize-l;
+@fontsize-select-list:			@fontsize-def;
+@fontsize-select-min-list:		@fontsize-s;
+@fontsize-select-big-list:		@fontsize-m;
 
+@padding-select-l:			15px;
+@padding-select-r:			30px;
+
+@radius-select-list:		0;
+
+//单选复选框
+@fontsize-checkboxradio-text:			@fontsize-def;
+@fontsize-checkboxradio-text-disabled:	@fontsize-s;
+
+@padding-checkboxradio-tb:		3px;
+@padding-checkboxradio-l:		25px;
+@padding-checkboxradio-r:		10px;
+
+@padding-checkbox-min-l:		20px;
+@padding-radio-min-l:			22px;
+
+@top-checkboxbefore:			3px;
+@left-checkboxbefore:			0;
+@top-checkboxafter:				3px;
+@left-checkboxafter:			0;
+@top-checkboxafter-disabled:	@top-checkboxafter;
+@left-checkboxafter-disabled:	-1px;
+@top-checkboxbefore-min:		6px;
+@left-checkboxbefore-min:		0;
+@top-checkboxafter-min:			6px;
+@left-checkboxafter-min:		0;
+@top-checkboxafter-min-disabled:	5px;
+@left-checkboxafter-min-disabled:	0px;
+
+@top-radiobefore:				1px;
+@left-radiobefore:				-4px;
+@top-radioafter:				2px;
+@left-radioafter:				-1px;
+@top-radioafter-disabled:		0px;
+@left-radioafter-disabled:		1px;
+@top-radiobefore-min:			4px;
+@left-radiobefore-min:			0;
+@top-radioafter-min:			5px;
+@left-radioafter-min:			3px;
+@top-radioafter-min-disabled:	1px;
+@left-radioafter-min-disabled:	1px;
+
+@height-checkbox:				20px;
+@width-checkbox-icon:			@height-checkbox;
+@height-checkbox-icon:			@height-checkbox;
+@width-checkbox-icon-min:		14px;
+@height-checkbox-icon-min:		14px;
+	
+@height-radio:					20px;
+@width-radio-icon:				@height-radio;
+@height-radio-icon:				@height-radio;
+@width-radio-icon-min:			14px;
+@height-radio-icon-min:			14px;
+
+@fontsize-checkboxbefore:				14px;
+@fontsize-checkboxafter:				14px;
+@fontsize-checkboxafter-disabled:		16px;
+@fontsize-checkboxbefore-min:			14px;
+@fontsize-checkboxafter-min:			13px;
+@fontsize-checkboxafter-min-disabled:	14px;
+
+@fontsize-radiobefore:					42px;
+@fontsize-radioafter:					16px;
+@fontsize-radioafter-disabled:			20px;
+@fontsize-radiobefore-min:				32px;
+@fontsize-radioafter-min:				14px;
+@fontsize-radioafter-min-disabled:		20px;
 
 

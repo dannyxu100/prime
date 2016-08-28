@@ -17,7 +17,7 @@ html{
 	//兼容chrome最小字体为12px
 	//参考https://techably.com/chrome-font-size-bug-fix/11996/
 	font-size: 16px;
-	
+	font-family: @fontfamily-def;
 }
 @media (max-width: 480px){	//浏览器可视区宽度小于480px;
 	html{
@@ -45,8 +45,8 @@ html{
 	}
 }
 body{
-	font-family: @fontfamily-def;
 	// .comm-fontsize( @fontsize-def );
+	font-family: @fontfamily-def;
 	line-height: @lineheight-def;
 	color: @color-def;
 	background-color: @backgroundcolor-def;
@@ -86,4 +86,8 @@ hr {
 
 p {
 	margin:0 0 unit(@lineheight-auto / 2, px);
+}
+
+input {
+	// font-family: @fontfamily-def;
 }
