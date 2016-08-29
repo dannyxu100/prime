@@ -5,11 +5,12 @@
 //====================================================
 
 //设置按钮尺寸
-.button-size(@paddingtb; @paddinglr; @fontsize; @height; @lineheight; @radius) {
+.button-size(@paddingtb; @paddinglr; @fontsize; @height; @lineheight; @radius; @fontweight:@fontweight-def) {
 	padding: @paddingtb @paddinglr;
-	font-size: unit( @fontsize, em );
 	height: @height;
 	line-height: @lineheight;
+	font-size: unit( @fontsize, em );
+	font-weight: @fontweight;
 	border-radius: @radius;
 }
 
