@@ -241,8 +241,6 @@
 	}
 }
 
-
-
 .@{prefix}btn-key {
 	color: @white;
 	// border-color: @color-key-dark;
@@ -308,8 +306,6 @@
 		background-color: @color-key;
 	}
 }
-
-
 
 .@{prefix}btn-blink {
 	color: @black;
@@ -377,8 +373,6 @@
 	}
 }
 
-
-
 .@{prefix}btn-nice {
 	color: @white;
 	// border-color: @color-nice-dark;
@@ -445,10 +439,204 @@
 	}
 }
 
+.@{prefix}btn-border {
+	border-width: 2px;
+	color: @gray-light;
+	border-color: @gray-light;
+	background-color: transparent;
 
+	&:focus,
+	&.focus {
+		color: @white-light;
+		border-color: @white-light;
+		background-color: transparent;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @white-light;
+		border-color: @white-light;
+		background-color: transparent;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .3));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @gray-light;
+		border-color: @gray-light;
+		background-color: transparent;
+		.prefix-boxshadow(inset 0 2px 5px rgba(0, 0, 0, .3));
 
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @gray-light;
+			border-color: @gray-light;
+			background-color: transparent;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @gray-lightest;
+			border-color: @gray-lightest;
+			background-color: transparent;
+			.prefix-opacity(.8);
+		}
+	}
 
+	.badge {
+		color: @gray-lightest;
+		background-color: transparent;
+	}
+}
 
+.@{prefix}btn-border-inverse {
+	border-width: 2px;
+	color: @black-lighter;
+	border-color: @black-lighter;
+	background-color: transparent;
 
+	&:focus,
+	&.focus {
+		color: @black-light;
+		border-color: @black;
+		background-color: transparent;
+	}
+	
+	&:hover,
+	&.hover	{
+		color: @black-light;
+		border-color: @black;
+		background-color: transparent;
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .15));
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @black-lighter;
+		border-color: @black;
+		background-color: transparent;
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .3));
 
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @black-lighter;
+			border-color: @black;
+			background-color: transparent;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @black-lighter;
+			border-color: @black-lighter;
+			background-color: transparent;
+		}
+	}
 
+	.badge {
+		color: @black-light;
+		background-color: transparent;
+	}
+}
+
+.@{prefix}btn-link {
+	color: @color-theme-dark;
+	border-color: transparent;
+	background-color: transparent;
+
+	&:focus,
+	&.focus {
+		color: @color-theme-light;
+		border-color: transparent;
+		background-color: transparent;
+	}
+	
+	&:hover,
+	&.hover	{
+		text-decoration: underline;
+		color: @color-theme-light;
+		border-color: transparent;
+		background-color: transparent;
+		.prefix-boxshadow(none);
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		color: @color-theme-dark;
+		border-color: transparent;
+		background-color: transparent;
+		.prefix-boxshadow(none);
+
+		&:hover,
+		&:focus,
+		&.focus {
+			color: @color-theme-dark;
+			border-color: transparent;
+			background-color: transparent;
+		}
+	}
+	
+	&:active,
+	&.active,
+	&.loading,
+	.open > .dropdown-toggle& {
+		text-decoration: none;
+		color: @color-theme-dark;
+		background-image: none;
+	}
+	
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			text-decoration: none;
+			color: @color-theme-light;
+		}
+	}
+
+	.badge {
+		color: @color-theme;
+	}
+}

@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" href="prime_icon.png">
+		<link rel="icon" href="img/prime_icon.png">
 		<title>prime</title>
 		<!--
 		<link rel="stylesheet/less" type="text/css" href="../less/prime.less" />
@@ -110,6 +110,16 @@
 				padding-top: 10px; padding-bottom: 10px;
 			}
 			
+			.bgimg-light {
+				background:center url(img/bg-1.png);
+			}
+			.bgimg-dark {
+				background:center url(img/bg-2.png);
+			}
+			.bgimg-gray {
+				background:center url(img/bg-3.png);
+			}
+			
 			
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
@@ -134,7 +144,10 @@
 	/* border-radius: 5px; */
 	background-color: #ccc;
 }
-
+		
+		.input {
+			border: 1px solid #eee;
+		}
 		
 		</style>
 	</head>
@@ -437,19 +450,19 @@
 				
 				<div>明亮色调</div>
 				<div>.fblink | .fwhite | .fgray</div>
-				<ul class="textbox10 bgblack">
+				<ul class="textbox10 bgimg-dark">
 					<li class="fblink">You're just some racist who can't tie my laces</li>
 					<li class="fblink">你就是一种种族歧视 連鞋帶都不配給我系</li>
 					<li class="fblink">Your point of view is medieval</li>
 					<li class="fblink">你的觀點已經過時</li>
 				</ul>
-				<ul class="textbox10 bgblack">
+				<ul class="textbox10 bgimg-dark">
 					<li class="fgray">Fuck you (Fuck you)</li>
 					<li class="fgray">去你的</li>
 					<li class="fgray">Fuck you very, very much</li>
 					<li class="fgray">真的是去你媽的</li>
 				</ul>
-				<ul class="textbox10 bgblack">
+				<ul class="textbox10 bgimg-dark">
 					<li class="fwhite">Cause your words don't translate</li>
 					<li class="fwhite">因为我们语言不通</li>
 					<li class="fwhite">And it's getting quite late</li>
@@ -1174,7 +1187,7 @@
 				<div class="grid">
 					<div class="row" style="margin-bottom:5px;">
 						<div class="cell-7-1">
-							<button class="btn">default</button>
+							<button class="btn">DEFAULT</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn">默认</button>
@@ -1200,7 +1213,7 @@
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
-							<a class="btn">default</a>
+							<a class="btn">DEFAULT</a>
 						</div>
 						<div class="cell-7-1">
 							<a class="btn">默认</a>
@@ -1227,7 +1240,7 @@
 				<div class="grid">
 					<div class="row" style="">
 						<div class="cell-7-1">
-							<button class="btn btn-inverse">inverse</button>
+							<button class="btn btn-inverse">INVERSE</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-inverse">反色</button>
@@ -1252,7 +1265,100 @@
 				</div>
 				<br/>
 				
-				<h3>.btn-theme | .btn-key</h3>
+				<h3>.btn-border</h3>
+				<div>边框按钮</div>
+				<br/>
+				<div class="grid bgimg-dark" style="padding:20px;">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<button class="btn btn-border">BORDER</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border">边框</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border hover">激活</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border" disabled>禁用</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border active">按下</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border loading">繁忙</button>
+						</div>
+						<div class="cell-7-1">
+						</div>
+						<div class="cell-7-1">
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.btn-border-inverse</h3>
+				<div>反色边框按钮</div>
+				<br/>
+				<div class="grid bgimg-light" style="padding:20px;">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse">INVERSE</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse">边框</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse hover">激活</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse" disabled>禁用</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse active">按下</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-border-inverse loading">繁忙</button>
+						</div>
+						<div class="cell-7-1">
+						</div>
+						<div class="cell-7-1">
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.btn-link</h3>
+				<div>链接按钮</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="">
+						<div class="cell-7-1">
+							<button class="btn btn-link">LINK</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-link">链接</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-link hover">激活</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-link" disabled>禁用</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-link active">按下</button>
+						</div>
+						<div class="cell-7-1">
+							<button class="btn btn-link loading">繁忙</button>
+						</div>
+						<div class="cell-7-1">
+						</div>
+						<div class="cell-7-1">
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.btn-theme | .btn-key | .btn-blink | .btn-nice</h3>
 				<div>其他风格按钮</div>
 				<br/>
 				<div class="grid">
