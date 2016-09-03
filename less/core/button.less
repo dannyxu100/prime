@@ -67,8 +67,10 @@
 		color: @black-lighter;
 		border-color: @gray-lighter;
 		background-color: @white-darker;
-		background-image: none;
 		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+	}
+	&:active {
+		background-image: none;
 	}
 	&.active {
 		cursor: @cursor-def;
@@ -145,13 +147,6 @@
 		}
 	}
 	
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
-	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -211,13 +206,6 @@
 			border-color: @color-theme;
 			background-color: @color-theme-light;
 		}
-	}
-	
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
 	}
 	
 	&.disabled,
@@ -411,13 +399,6 @@
 		}
 	}
 	
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
-	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -476,13 +457,6 @@
 			border-color: @gray-light;
 			background-color: transparent;
 		}
-	}
-	
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
 	}
 	
 	&.disabled,
@@ -544,13 +518,6 @@
 			border-color: @black;
 			background-color: transparent;
 		}
-	}
-	
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
 	}
 	
 	&.disabled,
@@ -619,7 +586,6 @@
 	.open > .dropdown-toggle& {
 		text-decoration: none;
 		color: @color-theme-dark;
-		background-image: none;
 	}
 	
 	&.disabled,

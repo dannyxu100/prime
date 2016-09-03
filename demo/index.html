@@ -13,113 +13,8 @@
 		<link href="../build/prime.min.css" rel="stylesheet" />
 		-->
 		
+		<link href="css/demo.css" rel="stylesheet" />
 		<style>
-			.wapper {
-				margin:20px auto 20px; max-width: 960px;
-			}
-			h1 {
-				font-size: 60px;
-			}
-			.section {
-				background: #fff;
-				padding: 20px;
-				margin-bottom: 30px;
-			}
-			
-			.colorblock,
-			.colorblock-min {
-				position: relative;
-				z-index: 1;
-				width: 100%;
-				height: 80px;
-				line-height: 20px;
-				font-size: 12px;
-				padding: 10px 0px;
-				text-align: center;
-				border: 0px;
-				
-				-webkit-transition: all linear 0.125s;
-				-ms-transition: all linear 0.125s;
-				-moz-transition: all linear 0.125s;
-				transition: all linear 0.125s;
-			}
-			.colorblock.active {
-				border-bottom: 2px solid #A22613;
-			}
-			.colorblock-min{
-				height: 0px;
-				padding: 0px;
-				border: 15px solid #fff;
-				border-width: 15px 0 0;
-			}
-			.colorblock:not(.empty):hover,
-			.colorblock-min:not(.empty):hover {
-				z-index: 2;
-				-webkit-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
-				-ms-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
-				-moz-box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
-				box-shadow: 0px 2px 10px rgba( 0, 0, 0, .125);
-			}
-			
-			.fillblock {
-				width:100%;
-				font-size: 12px;
-				color: #666;
-				background: #eee;
-				border: 1px solid transparent;
-				padding: 5px 0px;
-				
-				-webkit-transition: all linear 0.125s;
-				-ms-transition: all linear 0.125s;
-				-moz-transition: all linear 0.125s;
-				transition: all linear 0.125s;
-			}
-			.fillblock:hover {
-				border-color: #ddd;
-				background: #f5f5f5;
-				
-				-webkit-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
-				-ms-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
-				-moz-box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
-				box-shadow: 0px 3px 5px rgba( 0, 0, 0, .05);
-			}
-			.fillblock:focus {
-				outline: none;
-			}
-			
-			.rdsbox,
-			.rdsboxp {
-				width: 80px;
-				height: 80px;
-				line-height: 80px;
-				background: #ddd;
-				border:1px solid #ccc;
-				margin: 5px;
-				font-size: 12px;
-				text-align: center;
-			}
-			.rdsboxp {
-				background: #F5F5F5;
-				border:1px solid #999;
-			}
-			
-			.textbox5 {
-				padding-top: 0px; padding-bottom: 0px;
-			}
-			.textbox10 {
-				padding-top: 10px; padding-bottom: 10px;
-			}
-			
-			.bgimg-light {
-				background:center url(img/bg-1.png);
-			}
-			.bgimg-dark {
-				background:center url(img/bg-2.png);
-			}
-			.bgimg-gray {
-				background:center url(img/bg-3.png);
-			}
-			
 			
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 ::-webkit-scrollbar
@@ -144,11 +39,6 @@
 	/* border-radius: 5px; */
 	background-color: #ccc;
 }
-		
-		.input {
-			border: 1px solid #eee;
-		}
-		
 		</style>
 	</head>
 	
@@ -1636,7 +1526,7 @@
 									<li class="select-item disabled" value="shanghai">上海</li>
 									<li class="split"></li>
 									<li class="select-item" value="guangzhou">广州</li>
-									<li class="select-item" value="shenzhen" disabled>深圳</li>
+									<li class="select-item disabled" value="shenzhen">深圳</li>
 									<li class="select-item" value="shenzhen">深圳</li>
 									<li class="select-item" value="shenzhen">深圳</li>
 									<li class="select-item" value="shenzhen">深圳</li>
@@ -1751,7 +1641,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="row" style="margin-bottom:300px;">
+					<div class="row" style="margin-bottom:200px;">
 						<div class="cell-5-5">
 							<div class="select select-big select-block active">
 								<div class="select-box">
@@ -1769,6 +1659,137 @@
 				</div>
 			</div>
 			
+			<div class="section">
+				<h2>输入框</h2>
+				<h3>.input</h3>
+				<div>默认样式（HTML5新类型各个浏览器支持程度不同）。</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-5-1">
+							TEXT：<input type="text" class="input" value="" placeholder="请输入"/>
+						</div>
+						<div class="cell-5-1">
+							PASSWORD：<input type="password" class="input" value="" placeholder="请输入密码"/>
+						</div>
+						<div class="cell-5-1">
+							NUMBER：<input type="number" class="input" value="" placeholder="数值"/>
+						</div>
+						<div class="cell-5-1">
+							SEARCH：<input type="search" class="input" value="" placeholder="搜索关键字"/>
+						</div>
+						<div class="cell-5-1">
+							EMAIL：<input type="email" class="input" value="" placeholder="邮件地址"/>
+						</div>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-5-1">
+							MONTH：<input type="month" class="input" value="" placeholder="月份"/>
+						</div>
+						<div class="cell-5-1">
+							DATE：<input type="date" class="input" value="" placeholder="日期"/>
+						</div>
+						<div class="cell-5-1">
+							TIME：<input type="time" class="input" value="" placeholder="时间"/>
+						</div>
+						<div class="cell-5-1">
+							WEEK：<input type="week" class="input" value="" placeholder="第几周"/>
+						</div>
+						<div class="cell-5-1">
+							URL：<input type="url" class="input" value="" placeholder="网址"/>
+						</div>
+					</div>
+				</div>
+				<br/>
+					
+				<h3>.inputgroup .addons .text</h3>
+				<div>组合输入框</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-12-4">
+							<div class="inputgroup">
+								<div class="addons">
+									<span class="text">￥</span>
+								</div>
+								<input type="number" class="input" value="" placeholder="数值"/>
+							</div>
+						</div>
+						<div class="cell-12-4">
+							<div class="inputgroup">
+								<input type="number" class="input" value="" placeholder="数值"/>
+								<div class="addons">
+									<span class="text">元</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-12-4">
+							<div class="inputgroup">
+								<div class="addons">
+									<button class="btn">搜索</button>
+								</div>
+								<input type="text" class="input" value="" placeholder="搜索关键字"/>
+							</div>
+						</div>
+						<div class="cell-12-4">
+							<div class="inputgroup">
+								<input type="text" class="input" value="" placeholder="搜索关键字"/>
+								<div class="addons">
+									<button class="btn">搜索</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+					
+				<h3>自定义宽度</h3>
+				<div>设置.inputgroup元素的宽度</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-12-12">
+							<div class="inputgroup" style="width:500px">
+								<div class="addons">
+									<button class="btn">搜索</button>
+								</div>
+								<input type="text" class="input" value="" placeholder="搜索关键字"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+					
+				<h3>.inputgroup-full</h3>
+				<div>宽度100%</div>
+				<br/>
+				<div class="grid">
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-12-12">
+							<div class="inputgroup inputgroup-full">
+								<div class="addons">
+									<button class="btn">搜索</button>
+								</div>
+								<input type="text" class="input" value="" placeholder="搜索关键字"/>
+							</div>
+						</div>
+					</div>
+					<div class="row" style="margin-bottom:10px;">
+						<div class="cell-12-12">
+							<div class="inputgroup inputgroup-full">
+								<input type="text" class="input" value="" placeholder="搜索关键字"/>
+								<div class="addons">
+									<button class="btn">搜索</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+					
+			</div>
 			
 			<div class="section">
 				<h2>排版</h2>
