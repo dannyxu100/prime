@@ -19,7 +19,8 @@
 @color-key:				#F95339;		//#FF735D;
 @color-key-light:		#FB6C56;		//#FC7E6A;
 
-@color-blink-darker:	#FFD301;
+@color-blink-darkest:	#FFD301;
+@color-blink-darker:	#FFF201;
 @color-blink-dark:		#FFFF01;
 @color-blink:			#FFFF41;
 @color-blink-light:		#FFFF73;
@@ -66,9 +67,9 @@
 @grid-columns-7:		7;		//奇数等分7列
 
 //控件
-@height-control:		35px;
-@height-control-min:	28px;
-@height-control-big:	50px;
+@height-control:				35px;
+@height-control-min:			28px;
+@height-control-big:			50px;
 
 @padding-control-tb:			8px;		//上下内间距
 @padding-control-lr:			15px;		//左右内间距
@@ -282,12 +283,45 @@
 //输入框
 @width-input:				160px;
 @height-input:				@height-control;
+@height-input-min:			@height-control-min;
+@height-input-big:			@height-control-big;
+
+@padding-input:				4px;
+@padding-input-l:			15px;
+
+@lineheight-input:			@height-control - 8 - 2;
+@lineheight-input-min:		@height-control-min - 8 - 2;
+@lineheight-input-big:		@height-control-big - 8 - 2;
+
 @fontsize-input:			@fontsize-def;
-@bgcolor-input:				@white-lighter;
+@fontsize-input-min:		@height-control;
+@fontsize-input-big:		@height-control;
+
 @bordercolor-input:			@gray-lighter;
+@bgcolor-input:				@white-lighter;
 @shadowcolor-input:			rgba(0, 0, 0, .05);
-@bordercolor-input-focus:	@color-theme;
-@shadowcolor-input-focus:	rgba(0, 0, 0, .125);
+@bordercolor-input-focus:	@gray-darker;
+@shadowcolor-input-focus:	rgba(0, 0, 0, .09);
+
+@bordercolor-input-theme:			@bordercolor-input;
+@bgcolor-input-theme:				@bgcolor-input;
+@bordercolor-input-theme-focus:		@color-theme;
+@shadowcolor-input-theme-focus:		rgba(5, 195, 249, .2);		//@color-theme #05C3F9
+
+@bordercolor-input-key:				@bordercolor-input;
+@bgcolor-input-key:					@bgcolor-input;
+@bordercolor-input-key-focus:		@color-key;
+@shadowcolor-input-key-focus:		rgba(249, 83, 57, .2);		//@color-key #F95339
+
+@bordercolor-input-blink:			@bordercolor-input;
+@bgcolor-input-blink:				@bgcolor-input;
+@bordercolor-input-blink-focus:		@color-blink-darkest;
+@shadowcolor-input-blink-focus:		rgba(255, 211, 1, .2);		//@color-blink #FFFF01
+
+@bordercolor-input-nice:			@bordercolor-input;
+@bgcolor-input-nice:				@bgcolor-input;
+@bordercolor-input-nice-focus:		@color-nice;
+@shadowcolor-input-nice-focus:		rgba(1, 198, 119, .2);		//@color-blink #01C677
 
 
 

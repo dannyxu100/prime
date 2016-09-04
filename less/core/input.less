@@ -28,33 +28,75 @@ url
 week
 */
 
+
+//设置输入框尺寸
+.input-size(@height; @lineheight; @fontsize; @fontweight; @padding; @paddingl; @radius) {
+	height: @height;
+	line-height: @lineheight;
+	font-size: unit(@fontsize, em);
+	font-weight: @fontweight;
+	padding: @padding;
+	padding-left: @paddingl;
+	
+	.prefix-border-radius(@radius);
+}
+
+//设置输入框风格
+.input-style(@bordercolor; @bgcolor; @bordercolorfocus; @shadowcolorfocus) {
+	border-color: @bordercolor;
+	background-color: @bgcolor;
+	
+	&:focus,
+	&.active {
+		border-color: @bordercolorfocus;
+		.prefix-boxshadow(inset 0 2px 4px @shadowcolorfocus);
+	}
+}
+
 //默认输入框
 .@{prefix}input {
 	padding: 4px;
 	padding-left: 15px;
 	width: @width-input;
-	height: @height-input;
-	line-height: @height-input - 8 - 2;
-	font-size: unit(@fontsize-input, em);
-	border: 1px solid @bordercolor-input;
-	background-color: @bgcolor-input;
+	border: 1px solid transparent;
 	vertical-align: middle;
 	
+	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+	.input-style(@bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadowcolor-input-focus);
 	.comm-textoverflow();
 	.prefix-transition();
 	.prefix-boxshadow(inset 0 2px 3px @shadowcolor-input);
 	
 	
-	&:focus {
+	&:focus,
+	&.active {
 		outline: none;
-		border-color: @bordercolor-input-focus;
-		.prefix-boxshadow(inset 0 2px 3px @shadowcolor-input-focus);
-		
 	}
 	&.readonly,
 	&[readonly] {
 		.prefix-selecttext(none);
 	}
+}
+.@{prefix}input-full {
+	width: 100%;
+}
+.@{prefix}input-min {
+	.input-size(@height-input-min; @lineheight-input-min; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+}
+.@{prefix}input-big {
+	.input-size(@height-input-big; @lineheight-input-big; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+}
+.@{prefix}input-theme {
+	.input-style(@bordercolor-input-theme; @bgcolor-input-theme; @bordercolor-input-theme-focus; @shadowcolor-input-theme-focus);
+}
+.@{prefix}input-key {
+	.input-style(@bordercolor-input-key; @bgcolor-input-key; @bordercolor-input-key-focus; @shadowcolor-input-key-focus);
+}
+.@{prefix}input-blink {
+	.input-style(@bordercolor-input-blink; @bgcolor-input-blink; @bordercolor-input-blink-focus; @shadowcolor-input-blink-focus);
+}
+.@{prefix}input-nice {
+	.input-style(@bordercolor-input-nice; @bgcolor-input-nice; @bordercolor-input-nice-focus; @shadowcolor-input-nice-focus);
 }
 
 //组合输入框
@@ -81,6 +123,7 @@ week
 		position: relative;
 		z-index: 10;
 		width: 1%;
+		white-space: nowrap;		//强制不换行
 		
 		& .@{prefix}text {
 			display: inline-block;
@@ -92,7 +135,6 @@ week
 		}
 		& .@{prefix}btn {
 			margin-left: -1px;
-			border-color: @bordercolor-input;
 		}
 		&:first-child {
 			& .@{prefix}btn {

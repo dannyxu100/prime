@@ -11,7 +11,7 @@
 	line-height: @lineheight;
 	font-size: unit( @fontsize, em );
 	font-weight: @fontweight;
-	border-radius: @radius;
+	.prefix-border-radius(@radius);
 }
 
 
@@ -52,7 +52,6 @@
 		text-decoration: none;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
 	}
-
 	&:focus,
 	&.focus {
 		color: @black-dark;
@@ -60,7 +59,6 @@
 		background-color: @white;
 		text-decoration: none;
 	}
-
 	&:active,
 	&.active,
 	&.loading {
@@ -78,7 +76,9 @@
 	&.loading {
 		cursor: @cursor-loading;
 	}
-
+	&.border {
+		border-color: @gray-lighter;
+	}
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -87,7 +87,6 @@
 		.prefix-opacity(.55);
 		.prefix-boxshadow(none) !important;
 	}
-
 	a& {
 		&.disabled,
 		fieldset[disabled] & {
@@ -120,7 +119,6 @@
 		border-color: @black;
 		background-color: @black-light;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @white-lighter;
@@ -128,7 +126,6 @@
 		background-color: @black-light;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -146,7 +143,9 @@
 			background-color: @black;
 		}
 	}
-	
+	&.border {
+		border-color:  @black;
+	}
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -161,7 +160,6 @@
 			background-color: @black-light;
 		}
 	}
-
 	.badge {
 		color: @white;
 		background-color: @black;
@@ -189,7 +187,6 @@
 		background-color: @color-theme-lighter;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -207,7 +204,9 @@
 			background-color: @color-theme-light;
 		}
 	}
-	
+	&.border {
+		border-color: @color-theme;
+	}
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -222,7 +221,6 @@
 			background-color: @color-theme-light;
 		}
 	}
-
 	.badge {
 		color: @white;
 		background-color: @color-theme;
@@ -240,7 +238,6 @@
 		border-color: @color-key;
 		background-color: @color-key-light;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @white-light;
@@ -248,7 +245,6 @@
 		background-color: @color-key-light;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -266,14 +262,15 @@
 			background-color: @color-key-light;
 		}
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
 	.open > .dropdown-toggle& {
 		background-image: none;
 	}
-	
+	&.border {
+		border-color:  @color-key;
+	}
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -288,7 +285,6 @@
 			background-color: @color-key-light;
 		}
 	}
-
 	.badge {
 		color: @white;
 		background-color: @color-key;
@@ -303,43 +299,42 @@
 	&:focus,
 	&.focus {
 		color: @black-dark;
-		border-color: @color-blink-dark;
+		border-color: @color-blink-darker;
 		background-color: @color-blink-light;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @black-dark;
-		border-color:  @color-blink-dark;
+		border-color:  @color-blink-darker;
 		background-color: @color-blink-light;
-		.prefix-boxshadow(0 3px 10px rgba(0, 0, 0, .05));
+		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .06));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
 	.open > .dropdown-toggle& {
 		color: @black;
-		border-color: @color-blink-dark;
+		border-color: @color-blink-darker;
 		background-color: @color-blink-light;
-		.prefix-boxshadow(inset 0 1px 5px rgba(0, 0, 0, .06));
+		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .06));
 
 		&:hover,
 		&:focus,
 		&.focus {
 			color: @black-dark;
-			border-color: @color-blink-dark;
+			border-color: @color-blink-darker;
 			background-color: @color-blink-light;
 		}
 	}
-	
+	&.border {
+		border-color:  @color-blink-darker;
+	}
 	&:active,
 	&.active,
 	&.loading,
 	.open > .dropdown-toggle& {
 		background-image: none;
 	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -354,7 +349,6 @@
 			background-color: @color-blink-light;
 		}
 	}
-
 	.badge {
 		color: @black;
 		background-color: @color-blink;
@@ -372,15 +366,13 @@
 		border-color: @color-nice;
 		background-color: @color-nice-light;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @white-lighter;
-		border-color:  @color-nice-light;
+		border-color:  @color-nice;
 		background-color: @color-nice-lighter;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -398,7 +390,9 @@
 			background-color: @color-nice-light;
 		}
 	}
-	
+	&.border {
+		border-color:  @color-nice;
+	}
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -413,7 +407,6 @@
 			background-color: @color-nice-light;
 		}
 	}
-
 	.badge {
 		color: @white;
 		background-color: @color-nice;
@@ -432,7 +425,6 @@
 		border-color: @white-light;
 		background-color: transparent;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @white-light;
@@ -440,7 +432,6 @@
 		background-color: transparent;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .3));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -458,7 +449,6 @@
 			background-color: transparent;
 		}
 	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -474,7 +464,6 @@
 			.prefix-opacity(.8);
 		}
 	}
-
 	.badge {
 		color: @gray-lightest;
 		background-color: transparent;
@@ -493,7 +482,6 @@
 		border-color: @black;
 		background-color: transparent;
 	}
-	
 	&:hover,
 	&.hover	{
 		color: @black-light;
@@ -501,7 +489,6 @@
 		background-color: transparent;
 		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -519,7 +506,6 @@
 			background-color: transparent;
 		}
 	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -534,7 +520,6 @@
 			background-color: transparent;
 		}
 	}
-
 	.badge {
 		color: @black-light;
 		background-color: transparent;
@@ -552,7 +537,6 @@
 		border-color: transparent;
 		background-color: transparent;
 	}
-	
 	&:hover,
 	&.hover	{
 		text-decoration: underline;
@@ -561,7 +545,6 @@
 		background-color: transparent;
 		.prefix-boxshadow(none);
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -579,7 +562,6 @@
 			background-color: transparent;
 		}
 	}
-	
 	&:active,
 	&.active,
 	&.loading,
@@ -587,7 +569,6 @@
 		text-decoration: none;
 		color: @color-theme-dark;
 	}
-	
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
@@ -601,7 +582,6 @@
 			color: @color-theme-light;
 		}
 	}
-
 	.badge {
 		color: @color-theme;
 	}
