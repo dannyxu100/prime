@@ -14,36 +14,94 @@
 	& .@{prefix}input {
 		display: table-cell;
 		position: relative;
-		z-index: 20;
+		z-index: 10;
 		width: 100%;
 		margin-left: -1px;
 		
+		.prefix-border-left-radius(0);
+		
 		&:first-child {
 			margin-left: 0;
+			
+			.prefix-border-left-radius(@radius-input);
+			.prefix-border-right-radius(0);
 		}
+	}
+	& .@{prefix}input:focus {
+		z-index: 30;
 	}
 	& .@{prefix}addons {
 		display: table-cell;
 		vertical-align: middle;
 		position: relative;
-		z-index: 10;
+		z-index: 20;
 		width: 1%;
-		white-space: nowrap;		//强制不换行
 		
+		.comm-inlineblock-clearspace();
+		
+		& .@{prefix}text,
+		& .@{prefix}btn {
+			.prefix-border-radius(0);
+			
+			&:last-child {
+				.prefix-border-right-radius(@radius-input);
+			}
+		}
 		& .@{prefix}text {
 			display: inline-block;
-			padding: 4px 15px;
+			padding: 4px 8px;
 			height: @height-input;
-			line-height: @height-input - 8;
+			line-height: @height-input - 4px*2;
+			font-size: @fontsize-input;
 			color: @color-weak;
 			background-color: @bgcolor-weak;
 		}
+		& .@{prefix}text-min {
+			height: @height-input-min;
+			line-height: @height-input-min - 4px*2;
+			font-size: @fontsize-input-min;
+		}
+		& .@{prefix}text-big {
+			height: @height-input-big;
+			line-height: @height-input-big - 4px*2;
+			font-size: @fontsize-input-big;
+		}
 		& .@{prefix}btn {
 			margin-left: -1px;
+			position: relative;
+			z-index: 10;
+			
+			&:hover {
+				z-index: 20;
+			}
 		}
 		&:first-child {
+			& .@{prefix}text,
+			& .@{prefix}btn {
+				&:last-child {			//优先级考虑，必须放在:first-child前面，否则同级只有一个元素的时:first-child的圆角样式会被覆盖
+					.prefix-border-radius(0);
+				}
+				&:first-child {
+					.prefix-border-left-radius(@radius-input);
+				}
+			}
+			& .@{prefix}text {
+				margin-right: 1px;		//抵消后面input的margin-left:-1px;
+				
+				&:first-child {
+					padding-left: 15px;
+				}
+			}
 			& .@{prefix}btn {
 				margin-left: 0;
+				
+			}
+		}
+		&:last-child {
+			& .@{prefix}text {
+				&:last-child {
+					padding-right: 15px;
+				}
 			}
 		}
 	}

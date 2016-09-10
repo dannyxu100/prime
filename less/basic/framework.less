@@ -64,7 +64,8 @@ body{
 	line-height: @lineheight-title;
 	margin: unit(@lineheight-auto, px) 0 unit(@lineheight-auto / 2, px);
 	
-	.small, small {
+	&>small,
+	&>.small {
 		font-weight: normal;
 		line-height: 1;
 		color: @color-small;
@@ -91,7 +92,11 @@ p {
 input {
 	// font-family: @fontfamily-def;
 }
-
+//去掉IE浏览器右边的小叉
+//如果在IE10+浏览器下切换到兼容的低版本浏览器下时，右边的小叉还是存在的
+input::-ms-clear {
+	display:none;
+}
 
 
 

@@ -33,7 +33,7 @@ week
 .input-size(@height; @lineheight; @fontsize; @fontweight; @padding; @paddingl; @radius) {
 	height: @height;
 	line-height: @lineheight;
-	font-size: unit(@fontsize, em);
+	font-size: @fontsize;	//unit(@fontsize, em);
 	font-weight: @fontweight;
 	padding: @padding;
 	padding-left: @paddingl;
@@ -61,30 +61,46 @@ week
 	border: 1px solid transparent;
 	vertical-align: middle;
 	
-	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 	.input-style(@bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadowcolor-input-focus);
 	.comm-textoverflow();
 	.prefix-transition();
 	.prefix-boxshadow(inset 0 2px 3px @shadowcolor-input);
-	
 	
 	&:focus,
 	&.active {
 		outline: none;
 	}
 	&.readonly,
-	&[readonly] {
+	&[readonly],
+	&.disabled,
+	&[disabled] {
+		color: @gray-darker;
+		border-color: @gray-lightest;
+		background: @white-dark;
+		
+		.prefix-boxshadow(none);
 		.prefix-selecttext(none);
+		
+		&:focus,
+		&.active {
+			
+		}
+	}
+	&.disabled,
+	&[disabled] {
+		color: @gray-light;
+		cursor: @cursor-no;
 	}
 }
 .@{prefix}input-full {
 	width: 100%;
 }
 .@{prefix}input-min {
-	.input-size(@height-input-min; @lineheight-input-min; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+	.input-size(@height-input-min; @lineheight-input-min; @fontsize-input-min; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 }
 .@{prefix}input-big {
-	.input-size(@height-input-big; @lineheight-input-big; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-def);
+	.input-size(@height-input-big; @lineheight-input-big; @fontsize-input-big; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 }
 .@{prefix}input-theme {
 	.input-style(@bordercolor-input-theme; @bgcolor-input-theme; @bordercolor-input-theme-focus; @shadowcolor-input-theme-focus);
@@ -97,52 +113,4 @@ week
 }
 .@{prefix}input-nice {
 	.input-style(@bordercolor-input-nice; @bgcolor-input-nice; @bordercolor-input-nice-focus; @shadowcolor-input-nice-focus);
-}
-
-//组合输入框
-.@{prefix}inputgroup {
-	display: inline-table;
-	border-collapse: collapse;
-	position: relative;
-	width: 220px;
-	
-	& .@{prefix}input {
-		display: table-cell;
-		position: relative;
-		z-index: 20;
-		width: 100%;
-		margin-left: -1px;
-		
-		&:first-child {
-			margin-left: 0;
-		}
-	}
-	& .@{prefix}addons {
-		display: table-cell;
-		vertical-align: middle;
-		position: relative;
-		z-index: 10;
-		width: 1%;
-		white-space: nowrap;		//强制不换行
-		
-		& .@{prefix}text {
-			display: inline-block;
-			padding: 4px 15px;
-			height: @height-input;
-			line-height: @height-input - 8;
-			color: @color-weak;
-			background-color: @bgcolor-weak;
-		}
-		& .@{prefix}btn {
-			margin-left: -1px;
-		}
-		&:first-child {
-			& .@{prefix}btn {
-				margin-left: 0;
-			}
-		}
-	}
-}
-.@{prefix}inputgroup-full {
-	width: 100%;
 }

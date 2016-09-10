@@ -1,0 +1,68 @@
+//====================================================
+//
+//		form
+//
+//====================================================
+
+//默认表单
+.@{prefix}form {
+	margin: @margin-form-t 0 @margin-form-b;
+	padding: @padding-form;
+	
+	.@{prefix}formsub {
+		margin: @margin-form-sub-t 0 @margin-form-sub-b;
+	}
+	.@{prefix}formitem,
+	.@{prefix}formitem-line {
+		margin: @margin-form-item-t 0 @margin-form-item-b;
+		
+		.comm-inlineblock-clearspace();
+		
+		&>.label {
+			display: inline-block;
+			min-width: @width-formlabel;
+			height: @height-control;
+			line-height: @height-control;
+			margin-left: @margin-formlabel-l;
+			margin-right: @margin-formlabel-r;
+			font-size: @fontsize-formlabel;
+			vertical-align: middle;
+		}
+		&>small,
+		&>.small {
+			display: inline-block;
+			height: @height-control;
+			line-height: @height-control;
+			margin-left: 15px;
+			vertical-align: middle;
+			color: @color-weak;
+			font-size: 12px;
+		}
+	}
+	.@{prefix}formitem-line {
+		&>.label {
+			display: block;
+			height: auto;
+			line-height: 1;
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		&>small,
+		&>.small {
+			display: block;
+			height: auto;
+			line-height: 1;
+			margin-left: 0;
+			padding: 8px 0;
+		}
+	}
+	.@{prefix}must {
+		&:before {
+			color: @color-formmust;
+			font-weight: 700;
+			line-height: 1;
+			content: @icon-form-must
+		}
+	}
+}

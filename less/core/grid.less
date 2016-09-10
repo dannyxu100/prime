@@ -8,8 +8,8 @@
 .@{prefix}grid {
 	width: 100%;
 }
-.@{prefix}row,
-.@{prefix}row-full {
+.@{prefix}grid-row,
+.@{prefix}grid-row-full {
 	.comm-clearfix();
 }
 
@@ -26,7 +26,7 @@
 		@{list} {
 			position: relative;
 			float: left;
-			padding: 0 .1em;
+			padding: 0 @padding-grid-lr;
 		}
 	}
 	.loop( 1 );		//启动
@@ -39,7 +39,7 @@
 .make-cellwidth( @columns ) {
 	.loop( @size ) when ( @size <= @columns ) {
 		.@{prefix}cell-@{columns}-@{size} {
-			width: percentage( round( (@size/@columns), 5 ) );
+			width: percentage( @size/@columns );
 		}
 		.loop( @size + 1 );
 	}
@@ -57,7 +57,7 @@
 	padding-right: 0;
 }
 
-.@{prefix}row-full>[class^="cell-"] {
+.@{prefix}grid-row-full>[class^="cell-"] {
 	padding: 0 !important;
 }
 

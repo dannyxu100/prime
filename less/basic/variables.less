@@ -52,7 +52,7 @@
 @gray-lightest:			#EEE;
 
 @color-def:				@black;
-@color-weak:			@black-lighter;
+@color-weak:			@gray-darker;
 @color-title:			inherit;
 @color-hr:				@gray-lighter;
 @color-small:			@gray-darker;
@@ -65,17 +65,22 @@
 @grid-columns-12:		12;		//偶数等分12列
 @grid-columns-5:		5;		//奇数等分5列
 @grid-columns-7:		7;		//奇数等分7列
+@padding-grid-lr:		2px;
 
 //控件
 @height-control:				35px;
 @height-control-min:			28px;
-@height-control-big:			50px;
+@height-control-big:			45px;
+
+@fontsize-control:				14px;
+@fontsize-control-min:			12px;
+@fontsize-control-big:			16px;
 
 @padding-control-tb:			8px;		//上下内间距
-@padding-control-lr:			15px;		//左右内间距
+@padding-control-lr:			18px;		//左右内间距
 @padding-control-min-tb:		6px;
-@padding-control-min-lr:		10px;
-@padding-control-big-tb:		15px;
+@padding-control-min-lr:		14px;
+@padding-control-big-tb:		10px;
 @padding-control-big-lr:		30px;
 
 //字体
@@ -107,7 +112,6 @@
 @lineheight-def:		1.5;
 @lineheight-auto:    	floor(@fontsize-def/@rem2px * @lineheight-def);	//动态行高，根据字体大小计算
 @lineheight-title:		1.1;
-@lineheight-control:	1;
 
 //边框
 @borderstyle-def:		solid;
@@ -164,6 +168,7 @@
 @icon-select-right:				"▸";
 @icon-select-down:				"▾";
 @icon-select-up:				"▴";
+@icon-form-must:				"*";
 
 
 
@@ -171,7 +176,14 @@
 @height-button:				@height-control;
 @height-button-min:			@height-control-min;
 @height-button-big:			@height-control-big;
-@lineheight-button:			@lineheight-control;
+
+@lineheight-button:			@height-button - @padding-control-tb*2 - 2px;
+@lineheight-button-min:		@height-button-min - @padding-control-min-tb*2 - 2px;
+@lineheight-button-big:		@height-button-big - @padding-control-big-tb*2 - 2px;
+
+@fontsize-button:			@fontsize-control;
+@fontsize-button-min:		@fontsize-control-min;
+@fontsize-button-big:		@fontsize-control-big;
 
 @padding-button-tb:			@padding-control-tb;		//按钮上下内间距
 @padding-button-lr:			@padding-control-lr;		//按钮左右内间距
@@ -180,90 +192,96 @@
 @padding-button-big-tb:		@padding-control-big-tb;
 @padding-button-big-lr:		@padding-control-big-lr;
 
+@radius-button:				@radius-def;
 
 
 //下拉框
-@height-select:				@height-control;
-@height-select-min:			@height-control-min;
-@height-select-big:			@height-control-big;
-@lineheight-select:			@lineheight-control;
+@height-select:					@height-control;
+@height-select-min:				@height-control-min;
+@height-select-big:				@height-control-big;
 	
-@height-select-list:		300px;
-@height-select-split:		20px;
+@lineheight-select:				@height-select - 2px;
+@lineheight-select-min:			@height-select-min - 2px;
+@lineheight-select-big:			@height-select-big - 2px;
+		
+@height-select-list:			300px;
+@height-select-split:			20px;
+	
+@height-select-item:			32px;
+@height-select-min-item:		28px;
+@height-select-big-item:		36px;
 
-@height-select-item:		32px;
-@height-select-min-item:	28px;
-@height-select-big-item:	36px;
+@fontsize-select-text:			@fontsize-control;
+@fontsize-select-min-text:		@fontsize-control-min;
+@fontsize-select-big-text:		@fontsize-control-big;
 
-@fontsize-select-text:			@fontsize-m;
-@fontsize-select-min-text:		@fontsize-def;
-@fontsize-select-big-text:		@fontsize-l;
-@fontsize-select-list:			@fontsize-def;
-@fontsize-select-min-list:		@fontsize-s;
-@fontsize-select-big-list:		@fontsize-m;
+@fontsize-select-list:			@fontsize-control-min;
+@fontsize-select-min-list:		@fontsize-control-min;
+@fontsize-select-big-list:		@fontsize-control;
 
-@padding-select-l:			15px;
-@padding-select-r:			30px;
+@padding-select-l:				15px;
+@padding-select-r:				30px;
 
-@radius-select-list:		0;
+@radius-select:					@radius-def;
+@radius-select-list:			@radius-def;
 
 @bgcolor-select-item-selected:	@color-theme-light;
 
 
 //单选复选框
-@fontsize-checkboxradio-text:			@fontsize-def;
-@fontsize-checkboxradio-text-disabled:	@fontsize-s;
+@fontsize-checkboxradio-text:		@fontsize-control;
+@fontsize-checkboxradio-text-min:	@fontsize-control-min;
 
-@padding-checkboxradio-tb:		3px;
-@padding-checkboxradio-l:		25px;
-@padding-checkboxradio-r:		10px;
-
-@padding-checkbox-min-l:		20px;
-@padding-radio-min-l:			22px;
-
-@top-checkboxbefore:			3px;
-@left-checkboxbefore:			0;
-@top-checkboxafter:				3px;
-@left-checkboxafter:			0;
-@top-checkboxafter-disabled:	@top-checkboxafter;
-@left-checkboxafter-disabled:	-1px;
-@top-checkboxbefore-min:		6px;
-@left-checkboxbefore-min:		0;
-@top-checkboxafter-min:			6px;
-@left-checkboxafter-min:		0;
+@padding-checkboxradio-tb:			3px;
+@padding-checkboxradio-l:			25px;
+@padding-checkboxradio-r:			10px;
+	
+@padding-checkbox-min-l:			20px;
+@padding-radio-min-l:				22px;
+	
+@top-checkboxbefore:				3px;
+@left-checkboxbefore:				0;
+@top-checkboxafter:					3px;
+@left-checkboxafter:				0;
+@top-checkboxafter-disabled:		@top-checkboxafter;
+@left-checkboxafter-disabled:		-1px;
+@top-checkboxbefore-min:			6px;
+@left-checkboxbefore-min:			0;
+@top-checkboxafter-min:				6px;
+@left-checkboxafter-min:			0;
 @top-checkboxafter-min-disabled:	5px;
 @left-checkboxafter-min-disabled:	0px;
 
-@top-radiobefore:				1px;
-@left-radiobefore:				-4px;
-@top-radioafter:				2px;
-@left-radioafter:				-1px;
-@top-radioafter-disabled:		1px;
-@left-radioafter-disabled:		1px;
-@top-radiobefore-min:			4px;
-@left-radiobefore-min:			0;
-@top-radioafter-min:			5px;
-@left-radioafter-min:			3px;
-@top-radioafter-min-disabled:	2px;
-@left-radioafter-min-disabled:	1px;
-
-@height-checkbox:				20px;
-@width-checkbox-icon:			@height-checkbox;
-@height-checkbox-icon:			@height-checkbox;
-@width-checkbox-icon-min:		14px;
-@height-checkbox-icon-min:		14px;
+@top-radiobefore:					1px;
+@left-radiobefore:					-4px;
+@top-radioafter:					2px;
+@left-radioafter:					-1px;
+@top-radioafter-disabled:			1px;
+@left-radioafter-disabled:			1px;
+@top-radiobefore-min:				4px;
+@left-radiobefore-min:				0;
+@top-radioafter-min:				5px;
+@left-radioafter-min:				3px;
+@top-radioafter-min-disabled:		2px;
+@left-radioafter-min-disabled:		1px;
 	
-@height-radio:					20px;
-@width-radio-icon:				@height-radio;
-@height-radio-icon:				@height-radio;
-@width-radio-icon-min:			14px;
-@height-radio-icon-min:			14px;
+@height-checkbox:					20px;
+@width-checkbox-icon:				@height-checkbox;
+@height-checkbox-icon:				@height-checkbox;
+@width-checkbox-icon-min:			14px;
+@height-checkbox-icon-min:			14px;
+		
+@height-radio:						20px;
+@width-radio-icon:					@height-radio;
+@height-radio-icon:					@height-radio;
+@width-radio-icon-min:				14px;
+@height-radio-icon-min:				14px;
 
 @fontsize-checkboxbefore:				14px;
 @fontsize-checkboxafter:				14px;
 @fontsize-checkboxafter-disabled:		16px;
 @fontsize-checkboxbefore-min:			14px;
-@fontsize-checkboxafter-min:			13px;
+@fontsize-checkboxafter-min:			12px;
 @fontsize-checkboxafter-min-disabled:	14px;
 
 @fontsize-radiobefore:					42px;
@@ -276,7 +294,11 @@
 @color-checkbox-checked:		@color-theme-dark;
 @color-radio-checked:			@color-theme-dark;
 
+@radius-checkboxbefore:			@radius-def;
+
+
 //表格
+@color-table:				@black-light;
 @fontsize-table:			@fontsize-def;
 
 
@@ -289,13 +311,13 @@
 @padding-input:				4px;
 @padding-input-l:			15px;
 
-@lineheight-input:			@height-control - 8 - 2;
-@lineheight-input-min:		@height-control-min - 8 - 2;
-@lineheight-input-big:		@height-control-big - 8 - 2;
+@lineheight-input:			@height-control - @padding-input*2 - 2px;
+@lineheight-input-min:		@height-control-min - @padding-input*2 - 2px;
+@lineheight-input-big:		@height-control-big - @padding-input*2 - 2px;
 
-@fontsize-input:			@fontsize-def;
-@fontsize-input-min:		@height-control;
-@fontsize-input-big:		@height-control;
+@fontsize-input:			@fontsize-control;
+@fontsize-input-min:		@fontsize-control-min;
+@fontsize-input-big:		@fontsize-control-big;
 
 @bordercolor-input:			@gray-lighter;
 @bgcolor-input:				@white-lighter;
@@ -323,11 +345,25 @@
 @bordercolor-input-nice-focus:		@color-nice;
 @shadowcolor-input-nice-focus:		rgba(1, 198, 119, .2);		//@color-blink #01C677
 
+@radius-input:						@radius-def;
 
 
 
+//表单
+@padding-form:				0;
+@margin-form-t:				0;
+@margin-form-b:				0;
+@margin-form-sub-t:			5px;
+@margin-form-sub-b:			30px;
+@margin-form-item-t:		0;
+@margin-form-item-b:		15px;
 
+@fontsize-formlabel:		14px;
+@width-formlabel:			70px;
+@margin-formlabel-l:		0px;
+@margin-formlabel-r:		15px;
 
+@color-formmust:			@color-key;
 
 
 

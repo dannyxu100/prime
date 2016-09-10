@@ -25,6 +25,7 @@
 		background-color: @white-darker;
 		overflow: hidden;
 		
+		.prefix-border-radius(@radius-select);
 		.prefix-transition();
 		
 		&:active,
@@ -49,11 +50,11 @@
 		.@{prefix}select-text {
 			width: 100%;
 			height: @height-select;
-			line-height: @height-select - 2;
+			line-height: @lineheight-select;
 			padding: 0px;
 			margin: 0px;
 			border: 0px;
-			font-size: unit( @fontsize-select-text, em );
+			font-size: @fontsize-select-text;	//unit( @fontsize-select-text, em );
 			background-color: transparent;
 			vertical-align: middle;
 			cursor: pointer;
@@ -82,11 +83,11 @@
 		padding: 0px;
 		border: 1px solid @white-darker;
 		background-color: @white-lighter;
-		font-size: unit( @fontsize-select-list, em );
+		font-size: @fontsize-select-list;	//unit( @fontsize-select-list, em );
 		overflow-x: hidden;
 		overflow-y: auto;
 		
-		.prefix-border-bottom-radius(unit(@radius-select-list, em));
+		.prefix-border-bottom-radius(@radius-select-list);
 		.prefix-transition();
 		
 		.@{prefix}select-item {
@@ -157,6 +158,7 @@
 	&.active {
 		.@{prefix}select-box {
 			border-bottom-color: @gray-lightest;
+			.prefix-border-bottom-radius(0);
 			
 			&:after {
 				content: @icon-select-down;
@@ -175,7 +177,7 @@
 			margin-bottom: 35px;
 			border-bottom: 0px;
 			
-			.prefix-border-top-radius(unit(@radius-select-list, em));
+			.prefix-border-top-radius(@radius-select-list);
 			.prefix-border-bottom-radius(0);
 		}
 	}
@@ -183,6 +185,9 @@
 		.@{prefix}select-box {
 			border-top-color: @gray-lightest;
 			border-bottom-color: @gray-lighter;
+			
+			.prefix-border-top-radius(0);
+			.prefix-border-bottom-radius(@radius-select);
 			
 			&:after {
 				content: @icon-select-up;
@@ -193,7 +198,7 @@
 	
 }
 
-.@{prefix}select-block {
+.@{prefix}select-full {
   display: block;
   width: 100%;
 }
@@ -219,13 +224,13 @@
 		}
 		.@{prefix}select-text {
 			height: @height-select-min;
-			line-height: @height-select-min - 3;
-			font-size: unit( @fontsize-select-min-text, em );
+			line-height: @lineheight-select-min;
+			font-size: @fontsize-select-min-text;	//unit( @fontsize-select-min-text, em );
 		}
 	}
 	
 	.@{prefix}select-list {
-		font-size: unit( @fontsize-select-min-list, em );
+		font-size: @fontsize-select-min-list;	//unit( @fontsize-select-min-list, em );
 		
 		.@{prefix}select-item {
 			height: @height-select-min-item;
@@ -248,12 +253,12 @@
 		}
 		.@{prefix}select-text {
 			height: @height-select-big;
-			line-height: @height-select-big - 3;
-			font-size: unit( @fontsize-select-big-text, em );
+			line-height: @lineheight-select-big;
+			font-size: @fontsize-select-big-text;	//unit( @fontsize-select-big-text, em );
 		}
 	}
 	.@{prefix}select-list {
-		font-size: unit( @fontsize-select-big-list, em );
+		font-size: @fontsize-select-big-list;	//unit( @fontsize-select-big-list, em );
 		
 		.@{prefix}select-item {
 			height: @height-select-big-item;
