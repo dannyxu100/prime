@@ -107,3 +107,11 @@ h1 {
 .bgimg-gray {
 	background:center url(../img/bg-3.png);
 }
+
+.demo-dlg {
+	position: relative;
+	height: 400px;
+}
+.demo-dlg .dlg{
+	position: absolute;
+}

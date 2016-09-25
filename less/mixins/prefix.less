@@ -100,7 +100,7 @@
 	opacity: @opacity;
 	// for IE
 	@opacity-ie: (@opacity * 100);
-	filter: ~"alpha(opacity=@{opacity-ie})";
+	filter: ~"Alpha(Opacity=@{opacity-ie})";
 }
 
 //文本选取
@@ -134,7 +134,7 @@
 //
 // Note: Deprecated `.box-shadow()` as of v3.1.0 since all of Bootstrap's
 // supported browsers that have box shadow capabilities now support it.
-.prefix-boxshadow(@shadow) {
+.prefix-box-shadow(@shadow) {
 	-webkit-box-shadow: @shadow;	// iOS <4.3 & Android <4.1
 	-ms-box-shadow: @shadow;		//IE11
 	-moz-box-shadow: @shadow;		//firefox

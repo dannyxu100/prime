@@ -49,23 +49,23 @@ week
 	&:focus,
 	&.active {
 		border-color: @bordercolorfocus;
-		.prefix-boxshadow(inset 0 2px 4px @shadowcolorfocus);
+		.prefix-box-shadow(inset 0 2px 4px @shadowcolorfocus);
 	}
 }
 
 //默认输入框
-.@{prefix}input {
+.@{prefix}input,
+.@{prefix}textarea {
 	padding: 4px;
 	padding-left: 15px;
 	width: @width-input;
 	border: 1px solid transparent;
 	vertical-align: middle;
 	
-	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 	.input-style(@bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadowcolor-input-focus);
 	.comm-textoverflow();
 	.prefix-transition();
-	.prefix-boxshadow(inset 0 2px 3px @shadowcolor-input);
+	.prefix-box-shadow(inset 0 2px 3px @shadowcolor-input);
 	
 	&:focus,
 	&.active {
@@ -79,7 +79,7 @@ week
 		border-color: @gray-lightest;
 		background: @white-dark;
 		
-		.prefix-boxshadow(none);
+		.prefix-box-shadow(none);
 		.prefix-selecttext(none);
 		
 		&:focus,
@@ -93,7 +93,16 @@ week
 		cursor: @cursor-no;
 	}
 }
-.@{prefix}input-full {
+.@{prefix}input {
+	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+}
+.@{prefix}textarea {
+	.input-size(@height-textarea; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+	
+	resize: none;
+}
+.@{prefix}input-full,
+.@{prefix}textarea-full {
 	width: 100%;
 }
 .@{prefix}input-min {
@@ -102,15 +111,19 @@ week
 .@{prefix}input-big {
 	.input-size(@height-input-big; @lineheight-input-big; @fontsize-input-big; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 }
-.@{prefix}input-theme {
+.@{prefix}input-theme,
+.@{prefix}textarea-theme {
 	.input-style(@bordercolor-input-theme; @bgcolor-input-theme; @bordercolor-input-theme-focus; @shadowcolor-input-theme-focus);
 }
-.@{prefix}input-key {
+.@{prefix}input-key,
+.@{prefix}textarea-key {
 	.input-style(@bordercolor-input-key; @bgcolor-input-key; @bordercolor-input-key-focus; @shadowcolor-input-key-focus);
 }
-.@{prefix}input-blink {
+.@{prefix}input-blink,
+.@{prefix}textarea-blink {
 	.input-style(@bordercolor-input-blink; @bgcolor-input-blink; @bordercolor-input-blink-focus; @shadowcolor-input-blink-focus);
 }
-.@{prefix}input-nice {
+.@{prefix}input-nice,
+.@{prefix}textarea-nice {
 	.input-style(@bordercolor-input-nice; @bgcolor-input-nice; @bordercolor-input-nice-focus; @shadowcolor-input-nice-focus);
 }

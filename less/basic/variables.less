@@ -13,6 +13,7 @@
 @color-theme:			#05C3F9;
 @color-theme-light:		#43D3FC;
 @color-theme-lighter:	#74DEFC;
+@color-theme-lightest:	#D8F6FE;
 
 @color-key-darker:		#A22613;
 @color-key-dark:		#BB5D4F;
@@ -93,6 +94,26 @@
 @fontfamily-title:		inherit;
 @fontfamily-html:		"Helvetica Neue", Helvetica, Arial, sans-serif;
 
+@fontfamily-icon:		"iconfont";
+
+
+//图标（特殊符号）
+@icon-delete:					"\e608";
+
+@icon-checkboxbefore:			"\e617";
+@icon-checkboxafter:			"\e61a";
+@icon-checkboxafter-checked:	"\e616";
+@icon-radiobefore:				"\e61e";
+@icon-radioafter:				"\e61f";
+@icon-radioafter-checked:		"\e61d";
+
+@icon-select-right:				"\e601";
+@icon-select-down:				"\e600";
+@icon-select-up:				"\e602";
+@icon-form-must:				"*";
+
+
+
 //排版
 @defpx:					16;
 @rem2px:				1/@defpx;	// 1/16 = 0.0625;
@@ -119,8 +140,14 @@
 @borderstyle-double:	double;
 @borderstyle-dashed:	dashed;
 
+//z层级
+@zindex-def:			0;
+@zindex-bg:				1;
+@zindex-control:		100;
+@zindex-layer:			1000;
+
 //倒角
-@radius-def:			0;
+@radius-def:			0.3em;
 @radius-1:				0.1em;
 @radius-2:				0.2em;
 @radius-3:				0.3em;
@@ -157,48 +184,42 @@
 @cursor-no:				not-allowed;
 @cursor-loading:		wait;
 
-//图标（特殊符号）
-@icon-checkboxbefore:			"";
-@icon-checkboxafter:			"✔";
-@icon-checkboxafter-disabled:	"×";
-@icon-radiobefore:				"●";
-@icon-radioafter:				"●";
-@icon-radioafter-disabled:		"○";
-
-@icon-select-right:				"▸";
-@icon-select-down:				"▾";
-@icon-select-up:				"▴";
-@icon-form-must:				"*";
-
-
 
 //按钮
-@height-button:				@height-control;
-@height-button-min:			@height-control-min;
-@height-button-big:			@height-control-big;
+@height-btn:				@height-control;
+@height-btn-min:			@height-control-min;
+@height-btn-big:			@height-control-big;
 
-@lineheight-button:			@height-button - @padding-control-tb*2 - 2px;
-@lineheight-button-min:		@height-button-min - @padding-control-min-tb*2 - 2px;
-@lineheight-button-big:		@height-button-big - @padding-control-big-tb*2 - 2px;
+@lineheight-btn:			@height-btn - @padding-control-tb*2 - 2px;
+@lineheight-btn-min:		@height-btn-min - @padding-control-min-tb*2 - 2px;
+@lineheight-btn-big:		@height-btn-big - @padding-control-big-tb*2 - 2px;
 
-@fontsize-button:			@fontsize-control;
-@fontsize-button-min:		@fontsize-control-min;
-@fontsize-button-big:		@fontsize-control-big;
+@fontsize-btn:				@fontsize-control;
+@fontsize-btn-min:			@fontsize-control-min;
+@fontsize-btn-big:			@fontsize-control-big;
 
-@padding-button-tb:			@padding-control-tb;		//按钮上下内间距
-@padding-button-lr:			@padding-control-lr;		//按钮左右内间距
-@padding-button-min-tb:		@padding-control-min-tb;
-@padding-button-min-lr:		@padding-control-min-lr;
-@padding-button-big-tb:		@padding-control-big-tb;
-@padding-button-big-lr:		@padding-control-big-lr;
+@padding-btn-tb:			@padding-control-tb;		//按钮上下内间距
+@padding-btn-lr:			@padding-control-lr;		//按钮左右内间距
+@padding-btn-min-tb:		@padding-control-min-tb;
+@padding-btn-min-lr:		@padding-control-min-lr;
+@padding-btn-big-tb:		@padding-control-big-tb;
+@padding-btn-big-lr:		@padding-control-big-lr;
 
-@radius-button:				@radius-def;
+@radius-btn:				@radius-def;
+@zindex-btn:				@zindex-control;
+@zindex-btnhover:			@zindex-control + 10;
 
 
 //下拉框
 @height-select:					@height-control;
 @height-select-min:				@height-control-min;
 @height-select-big:				@height-control-big;
+
+@zindex-select:					@zindex-control;
+@zindex-select-hover:			@zindex-select + 10;
+@zindex-selectbox:				@zindex-control + 20;
+@zindex-selectbox-after:		@zindex-selectbox + 10;
+@zindex-selectlist:				@zindex-control + 10;
 	
 @lineheight-select:				@height-select - 2px;
 @lineheight-select-min:			@height-select-min - 2px;
@@ -225,76 +246,33 @@
 @radius-select:					@radius-def;
 @radius-select-list:			@radius-def;
 
-@bgcolor-select-item-selected:	@color-theme-light;
+@color-select-item-selected:	@black-light;
+@bgcolor-select-item-selected:	@color-theme-lightest;
 
 
 //单选复选框
 @fontsize-checkboxradio-text:		@fontsize-control;
 @fontsize-checkboxradio-text-min:	@fontsize-control-min;
 
+@zindex-checkboxradio-before:		@zindex-control;
+@zindex-checkboxradio-after:		@zindex-checkboxradio-before + 10;
+
 @padding-checkboxradio-tb:			3px;
 @padding-checkboxradio-l:			25px;
 @padding-checkboxradio-r:			10px;
-	
-@padding-checkbox-min-l:			20px;
-@padding-radio-min-l:				22px;
-	
-@top-checkboxbefore:				3px;
-@left-checkboxbefore:				0;
-@top-checkboxafter:					3px;
-@left-checkboxafter:				0;
-@top-checkboxafter-disabled:		@top-checkboxafter;
-@left-checkboxafter-disabled:		-1px;
-@top-checkboxbefore-min:			6px;
-@left-checkboxbefore-min:			0;
-@top-checkboxafter-min:				6px;
-@left-checkboxafter-min:			0;
-@top-checkboxafter-min-disabled:	5px;
-@left-checkboxafter-min-disabled:	0px;
 
-@top-radiobefore:					1px;
-@left-radiobefore:					-4px;
-@top-radioafter:					2px;
-@left-radioafter:					-1px;
-@top-radioafter-disabled:			1px;
-@left-radioafter-disabled:			1px;
-@top-radiobefore-min:				4px;
-@left-radiobefore-min:				0;
-@top-radioafter-min:				5px;
-@left-radioafter-min:				3px;
-@top-radioafter-min-disabled:		2px;
-@left-radioafter-min-disabled:		1px;
-	
 @height-checkbox:					20px;
-@width-checkbox-icon:				@height-checkbox;
-@height-checkbox-icon:				@height-checkbox;
-@width-checkbox-icon-min:			14px;
-@height-checkbox-icon-min:			14px;
-		
 @height-radio:						20px;
-@width-radio-icon:					@height-radio;
-@height-radio-icon:					@height-radio;
-@width-radio-icon-min:				14px;
-@height-radio-icon-min:				14px;
 
-@fontsize-checkboxbefore:				14px;
-@fontsize-checkboxafter:				14px;
-@fontsize-checkboxafter-disabled:		16px;
-@fontsize-checkboxbefore-min:			14px;
-@fontsize-checkboxafter-min:			12px;
-@fontsize-checkboxafter-min-disabled:	14px;
+@fontsize-checkboxicon:				16px;
+@fontsize-checkboxicon-min:			12px;
+@fontsize-radioicon:				17px;
+@fontsize-radioicon-min:			14px;
 
-@fontsize-radiobefore:					42px;
-@fontsize-radioafter:					16px;
-@fontsize-radioafter-disabled:			20px;
-@fontsize-radiobefore-min:				32px;
-@fontsize-radioafter-min:				14px;
-@fontsize-radioafter-min-disabled:		20px;
-
-@color-checkbox-checked:		@color-theme-dark;
-@color-radio-checked:			@color-theme-dark;
-
-@radius-checkboxbefore:			@radius-def;
+@color-checkbox-checked:			@black-lighter;
+@color-radio-checked:				@black-lighter;
+	
+@radius-checkboxbefore:				@radius-def;
 
 
 //表格
@@ -305,6 +283,8 @@
 //输入框
 @width-input:				160px;
 @height-input:				@height-control;
+@width-textarea:			@width-input;
+@height-textarea:			@height-control * 3;
 @height-input-min:			@height-control-min;
 @height-input-big:			@height-control-big;
 
@@ -348,6 +328,13 @@
 @radius-input:						@radius-def;
 
 
+//组合输入框
+@zindex-inputgroup-input:				@zindex-control;
+@zindex-inputgroup-input-focus:			@zindex-inputgroup-input + 20;
+@zindex-inputgroup-addons:				@zindex-inputgroup-input + 10;
+@zindex-inputgroup-addons-btn:			@zindex-control;
+@zindex-inputgroup-addons-btn-hover:	@zindex-inputgroup-addons-btn + 10;
+
 
 //表单
 @padding-form:				0;
@@ -366,8 +353,25 @@
 @color-formmust:			@color-key;
 
 
+//遮罩层
+@bgcolor-mask:				@black-darker;
+@zindex-mask:				@zindex-layer;
 
 
+//对话框
+@zindex-dlg:				@zindex-layer;
+@zindex-dlgmask:			@zindex-dlg;
+@zindex-dlgwrapper:			@zindex-dlg + 10;
+@zindex-dlgtitle:			@zindex-bg;
+@zindex-dlgclose:			@zindex-dlgtitle + 10;
+
+@color-dlgtitle:			@black-lighter;
+@fontsize-dlgtitle:			@fontsize-m;
+@fontweight-dlgtitle:		@fontweight-bold;
+
+@icon-dlgclose:				@icon-delete;
+
+@radius-dlg:				@radius-def;
 
 
 

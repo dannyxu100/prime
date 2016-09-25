@@ -1,6 +1,6 @@
 //====================================================
 //
-//		button
+//		btn
 //
 //====================================================
 
@@ -16,20 +16,25 @@
 
 
 //默认按钮
-.@{prefix}btn, .@{prefix}btn-def {
+.@{prefix}btn,
+.@{prefix}btn-def {
 	display: inline-block;
-	height: @height-button;
-	margin-bottom: 0; // For input.btn
+	position: relative;
+	z-index: @zindex-btn;
+	height: @height-btn;
+	margin-bottom: 0; 						// For input.btn
 	// font-weight: @fontweight-bold;
 	text-align: center;
 	vertical-align: middle;
-	touch-action: manipulation;
+	touch-action: manipulation;				//支持手势操作
+	color: @black-light;
+	background-image: none; 				// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+	border: 1px solid @gray-lightest;		//transparent;
+	background-color: @white-lighter;		//@white-darker;
 	cursor: @cursor-pointer;
-	background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-	background-color: @white-darker;
-	border: 1px solid transparent;
 	white-space: nowrap;
-	.button-size(@padding-button-tb; @padding-button-lr; @fontsize-button; @height-button; @lineheight-button; @radius-button);
+	
+	.button-size(@padding-btn-tb; @padding-btn-lr; @fontsize-btn; @height-btn; @lineheight-btn; @radius-btn);
 	.prefix-selecttext(none);
 	.prefix-transition();
 	
@@ -40,6 +45,8 @@
 		&:focus,
 		&.focus {
 			border-color: @gray-lighter;
+			z-index: @zindex-btnhover;
+			
 			.prefix-tabfocus();
 		}
 	}
@@ -48,24 +55,29 @@
 	&.hover {
 		color: @black-dark;
 		border-color: @gray-lighter;
-		background-color: @white;
+		background-color: @white-lighter;
 		text-decoration: none;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .05));
+		z-index: @zindex-btnhover;
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .05));
 	}
 	&:focus,
 	&.focus {
 		color: @black-dark;
 		border-color: @gray-lighter;
-		background-color: @white;
+		background-color: @white-lighter;
 		text-decoration: none;
+		z-index: @zindex-btnhover;
 	}
 	&:active,
 	&.active,
 	&.loading {
 		color: @black-lighter;
 		border-color: @gray-lighter;
-		background-color: @white-darker;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+		background-color: @white-light;
+		z-index: @zindex-btnhover;
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
 	}
 	&:active {
 		background-image: none;
@@ -82,12 +94,24 @@
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
-		border-color: transparent;
-		cursor: @cursor-no;
-		.prefix-opacity(.55);
-		.prefix-boxshadow(none) !important;
+		&,
+		&:hover,
+		&:focus,
+		&.focus,
+		&:active,
+		&.active {
+			color: @black-lighter;
+			border-color: transparent;
+			background-color: @white-dark;
+			cursor: @cursor-no;
+			
+			.prefix-opacity(.55);
+			.prefix-box-shadow(none) !important;
+		}
 	}
 	a& {
+		text-decoration: none;
+	
 		&.disabled,
 		fieldset[disabled] & {
 			pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
@@ -96,10 +120,10 @@
 }
 
 .@{prefix}btn-min {
-	.button-size(@padding-button-min-tb; @padding-button-min-lr; @fontsize-button-min; @height-button-min; @lineheight-button-min; @radius-button);
+	.button-size(@padding-btn-min-tb; @padding-btn-min-lr; @fontsize-btn-min; @height-btn-min; @lineheight-btn-min; @radius-btn);
 }
 .@{prefix}btn-big {
-	.button-size(@padding-button-big-tb; @padding-button-big-lr; @fontsize-button-big; @height-button-big; @lineheight-button-big; @radius-button);
+	.button-size(@padding-btn-big-tb; @padding-btn-big-lr; @fontsize-btn-big; @height-btn-big; @lineheight-btn-big; @radius-btn);
 }
 
 .@{prefix}btn-full {
@@ -110,7 +134,7 @@
 
 .@{prefix}btn-inverse {
 	color: @white;
-	// border-color: @black-dark;
+	border-color: @black-lighter;
 	background-color: @black-lighter;
 
 	&.border {
@@ -127,7 +151,8 @@
 		color: @white-lighter;
 		border-color:  @black;
 		background-color: @black-light;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .15));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
 	&:active,
 	&.active,
@@ -136,7 +161,8 @@
 		color: @white-light;
 		border-color: @black-dark;
 		background-color: @black;
-		.prefix-boxshadow(inset 0 1px 5px rgba(0, 0, 0, .5));
+		
+		.prefix-box-shadow(inset 0 1px 5px rgba(0, 0, 0, .5));
 
 		&:hover,
 		&:focus,
@@ -170,7 +196,7 @@
 
 .@{prefix}btn-theme {
 	color: @white;
-	// border-color: @color-theme-dark;
+	border-color: @color-theme;
 	background-color: @color-theme;
 
 	&.border {
@@ -188,7 +214,8 @@
 		color: @white-lighter;
 		border-color:  @color-theme-light;
 		background-color: @color-theme-lighter;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
 	&.active,
@@ -197,7 +224,8 @@
 		color: @white-light;
 		border-color: @color-theme;
 		background-color: @color-theme-light;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
 		&:hover,
 		&:focus,
@@ -229,7 +257,7 @@
 
 .@{prefix}btn-key {
 	color: @white;
-	// border-color: @color-key-dark;
+	border-color: @color-key;
 	background-color: @color-key;
 
 	&.border {
@@ -246,7 +274,8 @@
 		color: @white-light;
 		border-color:  @color-key;
 		background-color: @color-key-light;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
 	&.active,
@@ -255,7 +284,8 @@
 		color: @white-light;
 		border-color: @color-key;
 		background-color: @color-key-light;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .2));
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
 
 		&:hover,
 		&:focus,
@@ -293,7 +323,7 @@
 
 .@{prefix}btn-blink {
 	color: @black;
-	// border-color: @color-blink-darker;
+	border-color: @color-blink;
 	background-color: @color-blink;
 
 	&.border {
@@ -310,7 +340,8 @@
 		color: @black-dark;
 		border-color:  @color-blink-darker;
 		background-color: @color-blink-light;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .06));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .06));
 	}
 	&:active,
 	&.active,
@@ -319,7 +350,8 @@
 		color: @black;
 		border-color: @color-blink-darker;
 		background-color: @color-blink-light;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .06));
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .06));
 
 		&:hover,
 		&:focus,
@@ -357,7 +389,7 @@
 
 .@{prefix}btn-nice {
 	color: @white;
-	// border-color: @color-nice-dark;
+	border-color: @color-nice;
 	background-color: @color-nice;
 
 	&.border {
@@ -374,7 +406,8 @@
 		color: @white-lighter;
 		border-color:  @color-nice;
 		background-color: @color-nice-lighter;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
 	&.active,
@@ -383,7 +416,8 @@
 		color: @white-light;
 		border-color: @color-nice;
 		background-color: @color-nice-light;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
 		&:hover,
 		&:focus,
@@ -430,7 +464,8 @@
 		color: @white-light;
 		border-color: @white-light;
 		background-color: transparent;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .3));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .3));
 	}
 	&:active,
 	&.active,
@@ -439,7 +474,8 @@
 		color: @gray-light;
 		border-color: @gray-light;
 		background-color: transparent;
-		.prefix-boxshadow(inset 0 2px 5px rgba(0, 0, 0, .3));
+		
+		.prefix-box-shadow(inset 0 2px 5px rgba(0, 0, 0, .3));
 
 		&:hover,
 		&:focus,
@@ -461,6 +497,7 @@
 			color: @gray-lightest;
 			border-color: @gray-lightest;
 			background-color: transparent;
+			
 			.prefix-opacity(.8);
 		}
 	}
@@ -487,7 +524,8 @@
 		color: @black-light;
 		border-color: @black;
 		background-color: transparent;
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .15));
+		
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
 	&:active,
 	&.active,
@@ -496,7 +534,8 @@
 		color: @black-lighter;
 		border-color: @black;
 		background-color: transparent;
-		.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .3));
+		
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .3));
 
 		&:hover,
 		&:focus,
@@ -528,15 +567,15 @@
 
 .@{prefix}btn-border,
 .@{prefix}btn-border-inverse {
-	line-height: @lineheight-button - 2px;
+	line-height: @lineheight-btn - 2px;
 }
 .@{prefix}btn-border.@{prefix}btn-min,
 .@{prefix}btn-border-inverse.@{prefix}btn-min {
-	line-height: @lineheight-button-min - 2px;
+	line-height: @lineheight-btn-min - 2px;
 }
 .@{prefix}btn-border.@{prefix}btn-big,
 .@{prefix}btn-border-inverse.@{prefix}btn-big {
-	line-height: @lineheight-button-big - 2px;
+	line-height: @lineheight-btn-big - 2px;
 }
 
 .@{prefix}btn-link {
@@ -556,7 +595,8 @@
 		color: @color-theme-light;
 		border-color: transparent;
 		background-color: transparent;
-		.prefix-boxshadow(none);
+		
+		.prefix-box-shadow(none);
 	}
 	&:active,
 	&.active,
@@ -565,7 +605,8 @@
 		color: @color-theme-dark;
 		border-color: transparent;
 		background-color: transparent;
-		.prefix-boxshadow(none);
+		
+		.prefix-box-shadow(none);
 
 		&:hover,
 		&:focus,
@@ -591,8 +632,9 @@
 		&.focus,
 		&:active,
 		&.active {
-			text-decoration: none;
-			color: @color-theme-light;
+			color: @color-theme-dark;
+			background-color: transparent;
+			text-decoration: line-through;
 		}
 	}
 	.badge {

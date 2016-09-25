@@ -1,0 +1,85 @@
+//====================================================
+//
+//		btngroup
+//
+//====================================================
+
+//按钮组
+.@{prefix}btngroup {
+	display: inline-block;
+	border-collapse: separate;
+	position: relative;
+	
+	& > .@{prefix}btngroup,
+	& > .@{prefix}btn {
+		display: inline-block;
+		position: relative;
+		float: left;
+		margin-left: -1px;
+		
+		.prefix-border-radius(0);
+		
+		&:first-child {
+			margin-left: 0;
+			
+			.prefix-border-left-radius(@radius-btn);
+		}
+		&:last-child {
+			.prefix-border-right-radius(@radius-btn);
+		}
+	}
+	
+}
+.@{prefix}btngroup-full {
+	display: table;
+	width: 100%;
+	
+	& > .@{prefix}btngroup,
+	& > .@{prefix}btn {
+		display: table-cell;
+		float: none;
+		width: 1%;
+	}
+	& > .@{prefix}btngroup {
+		& > .@{prefix}btn {
+			width: 100%;
+			.prefix-border-radius(0);
+		}
+		&:first-child > .@{prefix}btn {
+			.prefix-border-left-radius(@radius-btn);
+		}
+		&:last-child > .@{prefix}btn {
+			.prefix-border-right-radius(@radius-btn);
+		}
+	}
+}
+
+//.grid模拟.btngroup-full（可以完美实现按钮间边框重叠）
+.@{prefix}grid-btngroup {
+	.@{prefix}grid-row {
+		& > [class^="cell-"] {
+			padding: 0 !important;
+			margin-left: -1px;
+			
+			.comm-inlineblock-clearspace();
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			& > .@{prefix}btn,
+			& > .@{prefix}btngroup,
+			& > .@{prefix}btngroup > .@{prefix}btn {
+				width: 100%;
+				.prefix-border-radius(0);
+			}
+			&:first-child > .@{prefix}btn,
+			&:first-child > .@{prefix}btngroup > .@{prefix}btn {
+				.prefix-border-left-radius(@radius-btn);
+			}
+			&:last-child > .@{prefix}btn,
+			&:last-child > .@{prefix}btngroup > .@{prefix}btn {
+				.prefix-border-right-radius(@radius-btn);
+			}
+		}
+	}
+}

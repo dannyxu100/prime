@@ -1,0 +1,18 @@
+//====================================================
+//
+//		mask
+//
+//====================================================
+
+//默认遮罩层
+.@{prefix}mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: @zindex-mask;
+	background-color: @bgcolor-mask;
+	
+	.prefix-opacity(.25);
+}

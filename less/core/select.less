@@ -8,21 +8,23 @@
 .@{prefix}select {
 	display: inline-block;
 	position: relative;
-	z-index: 1;
+	z-index: @zindex-select;
 	height: @height-select;
 	width: 120px;
 	vertical-align: middle;
 	cursor: @cursor-pointer;
+	
+	.prefix-transition();
 
 	.@{prefix}select-box {
 		position: relative;
-		z-index: 20;
+		z-index: @zindex-selectbox;
 		height: @height-select;
 		width: 100%;
 		padding: 0px @padding-select-r 0px @padding-select-l;
 		margin: 0px;
-		border: 1px solid transparent;
-		background-color: @white-darker;
+		border: 1px solid @gray-lightest;
+		background-color: @white-lighter;
 		overflow: hidden;
 		
 		.prefix-border-radius(@radius-select);
@@ -30,21 +32,21 @@
 		
 		&:active,
 		&.active {
-			.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+			.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
 		}
 		&:after {
 			display: block;
+			position: absolute;
+			z-index: @zindex-selectbox-after;
+			top: 0px;
+			right: 0px;
 			width: 30px;
 			height: 100%;
 			line-height: @height-select - 3;
-			position: absolute;
-			z-index: 30;
-			top: 0px;
-			right: 0px;
-			font-size: 20px;
-			color: @black-lighter;
-			content: @icon-select-right;
+			color: @gray-dark;
 			text-align: center;
+			
+			.comm-iconfont( @icon-select-right, 14px );
 		}
 		
 		.@{prefix}select-text {
@@ -76,7 +78,7 @@
 		width: 100%;
 		max-height: @height-select-list;
 		position: absolute;
-		z-index: 10;
+		z-index: @zindex-selectlist;
 		left: 0px;
 		margin: 0px;
 		margin-top: -1px;
@@ -109,13 +111,14 @@
 				background-color: @white;
 			}
 			&:active,
-			&.active,
-			&.selected {
-				color: @white-darker;
-				background-color: @bgcolor-select-item-selected;
-				.prefix-boxshadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+			&.active {
+				color: @black;
+				background-color: @white-dark;
+				.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 			}
 			&.selected {
+				color: @color-select-item-selected;
+				background-color: @bgcolor-select-item-selected;
 				cursor: @cursor-def;
 			}
 			&.disabled {
@@ -127,7 +130,7 @@
 					color: @gray;
 					cursor: @cursor-no;
 					background-color: @white-lighter;
-					.prefix-boxshadow(none);
+					.prefix-box-shadow(none);
 				}
 			}
 		}
@@ -139,16 +142,18 @@
 	}
 	&:hover, 
 	&.active {
-		z-index: 2;
-		background-color: @white;
+		z-index: @zindex-select-hover;
 		
-		.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 		
-		.@{prefix}select-list {
-			z-index: 2;
-		}
 		.@{prefix}select-box {
-			background-color: @white;
+			border-color: @gray-lighter;
+			background-color: @white-lighter;
+			
+			&:active {
+				color: @black-lighter;
+				background-color: @white-light;
+			}
 		}
 		.@{prefix}select-box,
 		.@{prefix}select-list {
@@ -167,7 +172,7 @@
 		.@{prefix}select-list {
 			display: block;
 			
-			.prefix-boxshadow(0 4px 10px rgba(0, 0, 0, .08));
+			.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 		}
 	}
 	&.top {

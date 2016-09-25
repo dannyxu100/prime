@@ -20,7 +20,7 @@
 ::-webkit-scrollbar
 {
 	width: 5px;
-	height: 16px;
+	height: 5px;
 	background-color: #f5f5f5;
 }
 
@@ -66,7 +66,11 @@
 				<div class="grid">
 					<div class="grid-row" style="">
 						<div class="cell-7-1">
-							<div class="colorblock empty"></div>
+							<div class="colorblock bgtheme-lightest">
+								<div>主题-最亮</div>
+								<div>.bgtheme-lightest</div>
+								<div>#D8F6FE</div>
+							</div>
 							<div class="colorblock bgtheme-lighter fwhite">
 								<div>主题-较亮</div>
 								<div>.bgtheme-lighter</div>
@@ -809,6 +813,9 @@
 				</div>
 				<br/>
 				
+				<h3>.grid-btngroup</h3>
+				<div>参见按钮组部分文档</div>
+				<br/>
 			</div>
 			
 			<!-- 表格 -->
@@ -1158,17 +1165,13 @@
 							<button class="btn btn-inverse hover">激活</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-inverse" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
 							<button class="btn btn-inverse active">按下</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-inverse loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
+							<button class="btn btn-inverse" disabled>禁用</button>
 						</div>
 					</div>
 				</div>
@@ -1183,13 +1186,10 @@
 							<button class="btn btn-border">border</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-border">边框</button>
+							<button class="btn btn-border">默认</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-border hover">激活</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-border" disabled>禁用</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-border active">按下</button>
@@ -1198,8 +1198,7 @@
 							<button class="btn btn-border loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
+							<button class="btn btn-border" disabled>禁用</button>
 						</div>
 					</div>
 				</div>
@@ -1214,13 +1213,10 @@
 							<button class="btn btn-border-inverse">inverse</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-border-inverse">边框</button>
+							<button class="btn btn-border-inverse">默认</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-border-inverse hover">激活</button>
-						</div>
-						<div class="cell-7-1">
-							<button class="btn btn-border-inverse" disabled>禁用</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-border-inverse active">按下</button>
@@ -1229,8 +1225,7 @@
 							<button class="btn btn-border-inverse loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
+							<button class="btn btn-border-inverse" disabled>禁用</button>
 						</div>
 					</div>
 				</div>
@@ -1251,17 +1246,13 @@
 							<button class="btn btn-link hover">激活</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-link" disabled>禁用</button>
-						</div>
-						<div class="cell-7-1">
 							<button class="btn btn-link active">按下</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-link loading">繁忙</button>
 						</div>
 						<div class="cell-7-1">
-						</div>
-						<div class="cell-7-1">
+							<button class="btn btn-link" disabled>禁用</button>
 						</div>
 					</div>
 				</div>
@@ -1350,6 +1341,91 @@
 						</div>
 					</div>
 				</div>
+				<br/>
+			</div>
+			
+			<!-- 按钮组 -->
+			<div class="section">
+				<h2>按钮组</h2>
+				<h3>.btngroup</h3>
+				<div></div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4">
+							<div class="btngroup">
+								<button class="btn">左栏</button>
+								<button class="btn">中间</button>
+								<button class="btn">中间</button>
+								<button class="btn">右栏</button>
+							</div>
+						</div>
+						
+						<div class="cell-12-2">&nbsp;</div>
+						
+						<div class="cell-12-6">
+						</div>
+					</div>
+				</div>
+				<br/>
+					
+				<h3>.btngroup-full > .btn</h3>
+				<div>.btn只能使用a标签</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-12">
+							<div class="btngroup btngroup-full">
+								<a class="btn" href="javascript:;">左栏</a>
+								<a class="btn" href="javascript:;">中间</a>
+								<a class="btn" href="javascript:;">右栏</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.btngroup-full > .btngroup > .btn</h3>
+				<div>由于button标签不支持table-cell两端对齐，必须多嵌套一层.btngroup</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-12">
+							<div class="btngroup btngroup-full">
+								<div class="btngroup">
+									<button class="btn">左栏</button>
+								</div>
+								<div class="btngroup">
+									<button class="btn">中间</button>
+								</div>
+								<div class="btngroup">
+									<button class="btn">右栏</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.grid-btngroup .grid-row .btn</h3>
+				<div>如果嫌弃按钮间的边框无法重叠，可以使用.grid-full模拟（可是便不能根据数量动态变更，而渲染样式了）</div>
+				<br/>
+				<div class="grid grid-btngroup">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4">
+							<button class="btn btn-full">左栏</button>
+						</div>
+						<div class="cell-12-4">
+							<button class="btn btn-full">中间</button>
+						</div>
+						<div class="cell-12-4">
+							<div class="btngroup">
+								<button class="btn btn-full">右栏</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
 			</div>
 			
 			<!-- 单选、复选 -->
@@ -1533,6 +1609,66 @@
 							<label class="radio radio-full radio-min checked">
 								<input type="radio" name="mustchk2" value="mustchk2" checked />
 								<span class="radio-text">但这TM却是必须选</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.checkbox-theme .radio-theme | *-key  | *-blink  | *-nice </h3>
+				<div>其他风格按钮</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:10px;">
+						<div class="cell-12-2">
+							<label class="checkbox checkbox-theme checked">
+								<input type="checkbox" name="group1" value="1"/>
+								<span class="checkbox-text">主题</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="checkbox checkbox-key checked">
+								<input type="checkbox" name="group1" value="2"/>
+								<span class="checkbox-text">关键</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="checkbox checkbox-blink checked">
+								<input type="checkbox" name="group1" value="3"/>
+								<span class="checkbox-text">闪亮</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="checkbox checkbox-nice checked">
+								<input type="checkbox" name="group1" value="4"/>
+								<span class="checkbox-text">友好</span>
+							</label>
+						</div>
+					</div>
+					
+					<div class="grid-row" style="margin-bottom:10px;">
+						<div class="cell-12-2">
+							<label class="radio radio-theme checked">
+								<input type="radio" name="group1" value="1"/>
+								<span class="radio-text">主题</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="radio radio-key checked">
+								<input type="radio" name="group1" value="2"/>
+								<span class="radio-text">关键</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="radio radio-blink checked">
+								<input type="radio" name="group1" value="3"/>
+								<span class="radio-text">闪亮</span>
+							</label>
+						</div>
+						<div class="cell-12-2">
+							<label class="radio radio-nice checked">
+								<input type="radio" name="group1" value="4"/>
+								<span class="radio-text">友好</span>
 							</label>
 						</div>
 					</div>
@@ -1951,7 +2087,7 @@
 							<div class="inputgroup" style="width:528px">
 								<div class="addons">
 									<button class="btn btn-nice border">搜索</button>
-									<button class="btn btn-nice border" style="padding:8px 5px; font-size:22px;">▾</button>
+									<button class="btn btn-nice border" style="padding:8px 3px;"><i class="iconfont icon-down fsize-12"></i></button>
 								</div>
 								<input type="text" class="input input-nice active" value="" placeholder="搜索关键字"/>
 							</div>
@@ -1982,7 +2118,7 @@
 								<div class="addons">
 									<button class="btn btn-theme border">搜索</button>
 									<button class="btn btn-theme border">其他</button>
-									<button class="btn btn-theme border" style="padding:8px 5px; font-size:22px;">▾</button>
+									<button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down fsize-12"></i></button>
 								</div>
 							</div>
 						</div>
@@ -1991,7 +2127,7 @@
 						<div class="cell-12-12">
 							<div class="inputgroup inputgroup-full">
 								<div class="addons">
-									<button class="btn btn-key btn-big border">搜索</button>
+									<button class="btn btn-key btn-big border"><i class="iconfont icon-search"></i> 搜索</button>
 								</div>
 								<input type="text" class="input input-key input-big active" value="" placeholder="搜索关键字"/>
 							</div>
@@ -2022,7 +2158,7 @@
 								</div>
 								
 								<div style="padding-left:85px;">
-									<label class="checkbox checkbox-min checkbox-full">
+									<label class="checkbox checkbox-theme checkbox-min checkbox-full">
 										<input type="checkbox" id="autologin" name="autologin" value="1" />
 										<span class="checkbox-text">30天免登录</span>
 									</label>
@@ -2056,11 +2192,11 @@
 								<div class="formsub">
 									<div class="formitem">
 										<label class="label">性别</label>
-										<label class="radio checked">
+										<label class="radio radio-nice checked">
 											<input type="radio" id="formgender1" name="formgender" value="man" checked/>
 											<span class="radio-text">男</span>
 										</label>
-										<label class="radio">
+										<label class="radio radio-nice">
 											<input type="radio" id="formgender2" name="formgender" value="woman" />
 											<span class="radio-text">女</span>
 										</label>
@@ -2123,7 +2259,7 @@
 									<div class="formitem-line">
 										<label class="label">旧密码 <i class="must"></i></label>
 										<input type="text" class="input input-full" value="" placeholder="登录密码"/>
-										<small>如果忘记旧密码，你可以联系我们的客服进行咨询。</small>
+										<small>忘记密码，可以联系客服咨询。</small>
 									</div>
 								</div>
 								
@@ -2139,7 +2275,7 @@
 								</div>
 								
 								<div>
-									<label class="checkbox checkbox-min checkbox-full">
+									<label class="checkbox checkbox-theme checkbox-min checkbox-full">
 										<input type="checkbox" id="autologin" name="autologin" value="1" />
 										<span class="checkbox-text">同意《账号安全管理协议》条款</span>
 									</label>
@@ -2153,6 +2289,149 @@
 				
 			</div>
 			
+			<!-- 遮罩层 -->
+			<div class="section">
+				<h2>遮罩层</h2>
+				<h3>.mask</h3>
+				<div></div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row">
+						<div class="cell-12-6">
+							<div class="mask hide"></div>
+							
+						</div>
+					</div>
+				</div>
+				<br/>
+			</div>
+			
+			<!-- 对话框 -->
+			<div class="section">
+				<h2>对话框</h2>
+				<h3>.dlg</h3>
+				<div>由于主张简洁统一的交互语言，这里的对话框都是模态。（如果需要非模态对话框，可以自己写一个，其实也很简单）</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row">
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-head">
+										<div class="dlg-title">对话框标题</div>
+										<button class="dlg-close"></button>
+									</div>
+									<div class="dlg-body">
+										这里是内容区...
+									</div>
+									<div class="dlg-foot">
+										<div class="fright">
+											<button class="btn">取消</button>
+											<button class="btn btn-theme">确认</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg dlg-nomask">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-head">
+										<div class="dlg-title">对话框标题</div>
+										<button class="dlg-close"></button>
+									</div>
+									<div class="dlg-body">
+										这里是内容区...
+									</div>
+									<div class="dlg-foot">
+										<div class="fright">
+											<button class="btn">取消</button>
+											<button class="btn btn-theme">确认</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				
+				<h3>.dlg-alert | .dlg-confirm | .dlg-prompt</h3>
+				<div>提示框、确认框、输入框</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row-full">
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg dlg-alert">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-body">
+										信息保存成功
+									</div>
+									<div class="dlg-foot">
+										<button class="btn dlg-ok">确认</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg dlg-confirm">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-body">
+										确定要删除吗？
+									</div>
+									<div class="dlg-foot">
+										<button class="btn dlg-cancel">取消</button>
+										<button class="btn dlg-yes">确认</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="grid-row-full">
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg dlg-prompt">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-body">
+										<label class="dlg-label">用户手机号码</label>
+										<input type="text" class="input input-full dlg-input" name="" value="" placeholder="请输入" />
+									</div>
+									<div class="dlg-foot">
+										<button class="btn dlg-cancel">取消</button>
+										<button class="btn dlg-yes">确认</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-6 demo-dlg">
+							<div class="dlg dlg-prompt">
+								<div class="mask"></div>
+								<div class="dlg-container">
+									<div class="dlg-body">
+										<label class="dlg-label">个性签名</label>
+										<textarea type="text" class="textarea textarea-full dlg-textarea" name="" value="" placeholder="请输入" ></textarea>
+									</div>
+									<div class="dlg-foot">
+										<button class="btn dlg-cancel">取消</button>
+										<button class="btn dlg-yes">确认</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+			</div>
 			
 			<!-- 排版 -->
 			<div class="section">
@@ -2172,6 +2451,51 @@
 			<!-- 通用类名 -->
 			<div class="section">
 				<h2>通用类名</h2>
+				<h3>.fsize-*</h3>
+				<p>字体尺寸，可选.fsize-[12,14,16,18,20,22,24,26,28,30,32]，（默认支持自适应尺寸，单位rem，兼容px）</p>
+				<div>
+					<div class="grid">
+						<div class="grid-row">
+							<div class="cell-12-2">
+								<span class="fsize-12">fsize-12</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-14">fsize-14</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-14">fsize-16</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-18">fsize-18</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-20">fsize-20</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-22">fsize-22</span>
+							</div>
+						</div>
+						
+						<div class="grid-row">
+							<div class="cell-12-2">
+								<span class="fsize-24">fsize-24</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-26">fsize-26</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-28">fsize-28</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-30">fsize-30</span>
+							</div>
+							<div class="cell-12-2">
+								<span class="fsize-32">fsize-32</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				
 				<h3>.bold</h3>
 				<p>文本设置为加粗</p>
 				
