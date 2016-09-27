@@ -23,7 +23,7 @@
 		width: 100%;
 		padding: 0px @padding-select-r 0px @padding-select-l;
 		margin: 0px;
-		border: 1px solid @gray-lightest;
+		border: 1px solid @gray-lighter;
 		background-color: @white-lighter;
 		overflow: hidden;
 		
@@ -147,7 +147,6 @@
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 		
 		.@{prefix}select-box {
-			border-color: @gray-lighter;
 			background-color: @white-lighter;
 			
 			&:active {
@@ -157,12 +156,12 @@
 		}
 		.@{prefix}select-box,
 		.@{prefix}select-list {
-			border-color: @gray-lighter;
+			border-color: @gray-light;
 		}
 	}
 	&.active {
 		.@{prefix}select-box {
-			border-bottom-color: @gray-lightest;
+			border-bottom-color: @gray-lighter;
 			.prefix-border-bottom-radius(0);
 			
 			&:after {
@@ -188,8 +187,8 @@
 	}
 	&.top.active {
 		.@{prefix}select-box {
-			border-top-color: @gray-lightest;
-			border-bottom-color: @gray-lighter;
+			border-top-color: @gray-lighter;
+			border-bottom-color: @gray-light;
 			
 			.prefix-border-top-radius(0);
 			.prefix-border-bottom-radius(@radius-select);

@@ -29,7 +29,7 @@
 	touch-action: manipulation;				//支持手势操作
 	color: @black-light;
 	background-image: none; 				// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-	border: 1px solid @gray-lightest;		//transparent;
+	border: 1px solid @gray-lighter;		//transparent;
 	background-color: @white-lighter;		//@white-darker;
 	cursor: @cursor-pointer;
 	white-space: nowrap;
@@ -44,7 +44,7 @@
 	&.loading {
 		&:focus,
 		&.focus {
-			border-color: @gray-lighter;
+			border-color: @gray-light;
 			z-index: @zindex-btnhover;
 			
 			.prefix-tabfocus();
@@ -54,7 +54,7 @@
 	&:hover,
 	&.hover {
 		color: @black-dark;
-		border-color: @gray-lighter;
+		border-color: @gray-light;
 		background-color: @white-lighter;
 		text-decoration: none;
 		z-index: @zindex-btnhover;
@@ -64,7 +64,7 @@
 	&:focus,
 	&.focus {
 		color: @black-dark;
-		border-color: @gray-lighter;
+		border-color: @gray-light;
 		background-color: @white-lighter;
 		text-decoration: none;
 		z-index: @zindex-btnhover;
@@ -73,7 +73,7 @@
 	&.active,
 	&.loading {
 		color: @black-lighter;
-		border-color: @gray-lighter;
+		border-color: @gray-light;
 		background-color: @white-light;
 		z-index: @zindex-btnhover;
 		
@@ -89,7 +89,7 @@
 		cursor: @cursor-loading;
 	}
 	&.border {
-		border-color: @gray-lighter;
+		border-color: @gray-light;
 	}
 	&.disabled,
 	&[disabled],
