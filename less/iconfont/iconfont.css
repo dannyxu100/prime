@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1475051470'); /* IE9*/
-  src: url('iconfont.eot?t=1475051470#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1475051470') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1475051470') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1475051470#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1475057250'); /* IE9*/
+  src: url('iconfont.eot?t=1475057250#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1475057250') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1475057250') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1475057250#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -28,13 +28,21 @@
 .icon-dot:before { content: "\e60d"; }
 .icon-menu:before { content: "\e60e"; }
 .icon-circle:before { content: "\e60f"; }
-.icon-user:before { content: "\e610"; }
 .icon-refresh:before { content: "\e611"; }
 .icon-search:before { content: "\e612"; }
 .icon-trash:before { content: "\e613"; }
 .icon-unlock:before { content: "\e614"; }
+.icon-date:before { content: "\e625"; }
+.icon-chat:before { content: "\e61b"; }
 .icon-list:before { content: "\e618"; }
 .icon-rocket:before { content: "\e619"; }
+.icon-pic:before { content: "\e61c"; }
+.icon-file:before { content: "\e61e"; }
+.icon-folder:before { content: "\e623"; }
+.icon-exit:before { content: "\e624"; }
+.icon-user:before { content: "\e616"; }
+.icon-user-circle:before { content: "\e617"; }
+.icon-user-inverse:before { content: "\e61a"; }
 .icon-right:before { content: "\e601"; }
 .icon-up:before { content: "\e602"; }
 .icon-left:before { content: "\e603"; }
@@ -44,3 +52,5 @@
 .icon-checkbox-hover:before { content: "\e621"; }
 .icon-checkbox-checked:before { content: "\e622"; }
 .icon-radio-checked:before { content: "\e615"; }
+.icon-plus:before { content: "\e610"; }
+.icon-time:before { content: "\e626"; }

@@ -115,3 +115,8 @@ h1 {
 .demo-dlg .dlg{
 	position: absolute;
 }
+.demo-iconfont .iconfont {
+	font-size: 24px;
+	margin: 20px;
+	color: #319DBB;
+}
