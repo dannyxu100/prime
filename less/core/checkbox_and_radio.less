@@ -72,12 +72,15 @@
 	&:hover,
 	&.hover {
 		&:before {
-			.prefix-opacity(1);
+			display: none \9;		/* ie hack */
+		
+			.prefix-opacity(0);
 		}
 		&:after {
 			display: block \9;		/* ie hack */
+			color: @color-checkbox-checked;
 			
-			.prefix-opacity(.4);
+			.prefix-opacity(.8);
 		}
 	}
 	&.checked {
@@ -122,12 +125,15 @@
 	&:hover,
 	&.hover {
 		&:before {
+			display: none \9;		/* ie hack */
+		
 			.prefix-opacity(0);
 		}
 		&:after {
 			display: block \9;		/* ie hack */
+			color: @color-radio-checked;
 			
-			.prefix-opacity(.4);
+			.prefix-opacity(.8);
 		}
 	}
 	&.checked {
