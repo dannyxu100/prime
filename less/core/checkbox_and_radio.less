@@ -97,11 +97,17 @@
 	}
 	&.disabled,
 	&[disabled] {
-		&:before {
+		&:before,
+		&:hover:before {
+			display: block \9;		/* ie hack */
 			color: @gray-lightest;
+			
 			.prefix-opacity(1);
 		}
-		&:after {
+		&:after,
+		&:hover:after {
+			display: none \9;		/* ie hack */
+			
 			.prefix-opacity(0);
 		}
 	}
@@ -150,11 +156,17 @@
 	}
 	&.disabled,
 	&[disabled] {
-		&:before {
+		&:before,
+		&:hover:before {
+			display: block \9;		/* ie hack */
 			color: @gray-lightest;
+			
 			.prefix-opacity(1);
 		}
-		&:after {
+		&:after,
+		&:hover:after {
+			display: none \9;		/* ie hack */
+			
 			.prefix-opacity(0);
 		}
 	}
