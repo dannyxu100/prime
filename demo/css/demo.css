@@ -119,4 +119,8 @@ h1 {
 	font-size: 24px;
 	margin: 20px;
 	color: #319DBB;
+	cursor: pointer;
+}
+.demo-iconfont .iconfont:hover {
+	color: #01C677;
 }

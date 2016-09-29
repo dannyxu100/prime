@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1475058684'); /* IE9*/
-  src: url('iconfont.eot?t=1475058684#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1475058684') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1475058684') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1475058684#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1475133509'); /* IE9*/
+  src: url('iconfont.eot?t=1475133509#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1475133509') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1475133509') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1475133509#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -15,37 +15,38 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-phone:before { content: "\e627"; }
+.icon-phone:before { content: "\e63b"; }
+.icon-refresh:before { content: "\e634"; }
 .icon-down:before { content: "\e600"; }
 .icon-add:before { content: "\e604"; }
 .icon-stop:before { content: "\e605"; }
 .icon-ok:before { content: "\e606"; }
 .icon-error:before { content: "\e607"; }
 .icon-delete:before { content: "\e608"; }
-.icon-download:before { content: "\e609"; }
-.icon-upload:before { content: "\e60a"; }
 .icon-done:before { content: "\e60b"; }
 .icon-info:before { content: "\e60c"; }
 .icon-dot:before { content: "\e60d"; }
 .icon-menu:before { content: "\e60e"; }
 .icon-circle:before { content: "\e60f"; }
-.icon-refresh:before { content: "\e611"; }
+.icon-load:before { content: "\e611"; }
 .icon-search:before { content: "\e612"; }
 .icon-trash:before { content: "\e613"; }
 .icon-unlock:before { content: "\e614"; }
 .icon-mail:before { content: "\e628"; }
+.icon-window:before { content: "\e63a"; }
+.icon-window-inverse:before { content: "\e638"; }
+.icon-setting:before { content: "\e62b"; }
 .icon-date:before { content: "\e625"; }
-.icon-chat:before { content: "\e61b"; }
+.icon-switch:before { content: "\e62c"; }
 .icon-list:before { content: "\e618"; }
 .icon-rocket:before { content: "\e619"; }
 .icon-pic:before { content: "\e61c"; }
 .icon-file:before { content: "\e61e"; }
-.icon-setting:before { content: "\e629"; }
+.icon-switch-inverse:before { content: "\e62d"; }
 .icon-folder:before { content: "\e623"; }
 .icon-exit:before { content: "\e624"; }
-.icon-user:before { content: "\e616"; }
-.icon-user-circle:before { content: "\e617"; }
-.icon-user-inverse:before { content: "\e61a"; }
+.icon-apps:before { content: "\e637"; }
+.icon-layer:before { content: "\e639"; }
 .icon-right:before { content: "\e601"; }
 .icon-up:before { content: "\e602"; }
 .icon-left:before { content: "\e603"; }
@@ -57,3 +58,30 @@
 .icon-radio-checked:before { content: "\e615"; }
 .icon-plus:before { content: "\e610"; }
 .icon-time:before { content: "\e626"; }
+.icon-like:before { content: "\e62e"; }
+.icon-like-inverse:before { content: "\e62f"; }
+.icon-phone-circle:before { content: "\e630"; }
+.icon-chat:before { content: "\e616"; }
+.icon-setting-inverse:before { content: "\e629"; }
+.icon-good:before { content: "\e61b"; }
+.icon-good-circle:before { content: "\e62a"; }
+.icon-link:before { content: "\e635"; }
+.icon-back:before { content: "\e627"; }
+.icon-upload:before { content: "\e609"; }
+.icon-download:before { content: "\e60a"; }
+.icon-download-inverse:before { content: "\e633"; }
+.icon-upload-inverse:before { content: "\e636"; }
+.icon-show:before { content: "\e632"; }
+.icon-hide:before { content: "\e63c"; }
+.icon-pc-inverse:before { content: "\e63d"; }
+.icon-pc:before { content: "\e63e"; }
+.icon-cart:before { content: "\e63f"; }
+.icon-chart:before { content: "\e640"; }
+.icon-chart-inverse:before { content: "\e641"; }
+.icon-cart-inverse:before { content: "\e642"; }
+.icon-user-circle:before { content: "\e643"; }
+.icon-user-inverse:before { content: "\e644"; }
+.icon-notice:before { content: "\e617"; }
+.icon-light:before { content: "\e61a"; }
+.icon-user:before { content: "\e645"; }
+.icon-notice-circle:before { content: "\e646"; }
