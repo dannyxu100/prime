@@ -30,10 +30,6 @@
 		.prefix-border-radius(@radius-select);
 		.prefix-transition();
 		
-		&:active,
-		&.active {
-			.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
-		}
 		&:after {
 			display: block;
 			position: absolute;
@@ -140,29 +136,30 @@
 			margin: @height-select-split/2 0px;
 		}
 	}
-	&:hover, 
+	&:active,
 	&.active {
 		z-index: @zindex-select-hover;
 		
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
-		
-		.@{prefix}select-box {
-			background-color: @white-lighter;
-			
-			&:active {
-				color: @black-lighter;
-				background-color: @white-light;
-			}
-		}
 		.@{prefix}select-box,
 		.@{prefix}select-list {
 			border-color: @gray-light;
 		}
 	}
+	&:hover, 
+	&.hover {
+		z-index: @zindex-select-hover;
+		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+	}
+	&:active,
 	&.active {
+		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+		
 		.@{prefix}select-box {
+			background-color: @white-light;
 			border-bottom-color: @gray-lighter;
+			
 			.prefix-border-bottom-radius(0);
+			.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
 			
 			&:after {
 				content: @icon-select-down;
@@ -203,8 +200,8 @@
 }
 
 .@{prefix}select-full {
-  display: block;
-  width: 100%;
+	display: block;
+	width: 100%;
 }
 
 .@{prefix}select-center {

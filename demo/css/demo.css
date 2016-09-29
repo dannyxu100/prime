@@ -115,7 +115,8 @@ h1 {
 .demo-dlg .dlg{
 	position: absolute;
 }
-.demo-iconfont .iconfont {
+.demo-iconfont .iconfont,
+.demo-iconfont-sys .iconfont {
 	font-size: 24px;
 	margin: 20px;
 	color: #319DBB;
@@ -123,4 +124,8 @@ h1 {
 }
 .demo-iconfont .iconfont:hover {
 	color: #01C677;
+}
+.demo-iconfont-sys .iconfont,
+.demo-iconfont-sys .iconfont:hover {
+	color: #A22613;
 }
