@@ -75,9 +75,9 @@ week
 	&[readonly],
 	&.disabled,
 	&[disabled] {
-		color: @gray-darker;
-		border-color: @gray-lightest;
-		background: @white-dark;
+		color: @color-gray-darker;
+		border-color: @color-gray-lightest;
+		background: @color-white-dark;
 		
 		.prefix-box-shadow(none);
 		.prefix-selecttext(none);
@@ -89,7 +89,7 @@ week
 	}
 	&.disabled,
 	&[disabled] {
-		color: @gray-light;
+		color: @color-gray-light;
 		cursor: @cursor-no;
 	}
 }
@@ -119,9 +119,9 @@ week
 .@{prefix}textarea-key {
 	.input-style(@bordercolor-input-key; @bgcolor-input-key; @bordercolor-input-key-focus; @shadowcolor-input-key-focus);
 }
-.@{prefix}input-blink,
-.@{prefix}textarea-blink {
-	.input-style(@bordercolor-input-blink; @bgcolor-input-blink; @bordercolor-input-blink-focus; @shadowcolor-input-blink-focus);
+.@{prefix}input-light,
+.@{prefix}textarea-light {
+	.input-style(@bordercolor-input-light; @bgcolor-input-light; @bordercolor-input-light-focus; @shadowcolor-input-light-focus);
 }
 .@{prefix}input-nice,
 .@{prefix}textarea-nice {

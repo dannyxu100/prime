@@ -1,0 +1,240 @@
+//====================================================
+//
+//		popmenu
+//
+//====================================================
+
+
+//设置菜单尺寸
+.popmenu-size(@height; @lineheight; @fontsize; @fontweight; @padding; @paddingl; @radius) {
+	height: @height;
+	line-height: @lineheight;
+	font-size: @fontsize;	//unit(@fontsize, em);
+	font-weight: @fontweight;
+	padding: @padding;
+	padding-left: @paddingl;
+	
+	.prefix-border-radius(@radius);
+}
+
+//设置菜单风格
+.popmenu-style(@bordercolor; @bgcolor; @bordercolorfocus; @shadowcolorfocus) {
+	border-color: @bordercolor;
+	background-color: @bgcolor;
+	
+	&:focus,
+	&.active {
+		border-color: @bordercolorfocus;
+		.prefix-box-shadow(inset 0 2px 4px @shadowcolorfocus);
+	}
+}
+
+//默认菜单
+.@{prefix}popmenu,
+.@{prefix}popmenu-sub {
+	position: absolute;
+	z-index: @zindex-popmenu;
+	left: 0;
+	min-width: @minwidth-popmenu;
+	margin: 0;
+	padding: @padding-popmenu-tb 0 @padding-popmenu-tb;
+	border: 1px solid @bordercolor-popmenu;
+	background-color: @bgcolor-popmenu;
+	font-size: @fontsize-popmenu;	//unit( @fontsize-popmenu, em );
+	
+	.prefix-box-shadow(0 5px 20px rgba(0, 0, 0, .08));
+	.prefix-border-radius(@radius-popmenu);
+	
+	&:active,
+	&.active {
+		z-index: @zindex-popmenu-active;
+	}
+	&:hover,
+	&.hover {
+		z-index: @zindex-popmenu-hover
+	}
+	.@{prefix}popmenu-item {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: @height-popmenu-item;
+		line-height: @height-popmenu-item;
+		padding-left: @padding-popmenu-item-l;
+		padding-right: @padding-popmenu-item-r;
+		list-style: none;
+		color: @color-popmenu;
+		background-color: @color-white-lighter;
+		text-decoration: none;
+		cursor: @cursor-pointer;
+		
+		.comm-textoverflow();
+		.prefix-transition(all linear .08s);
+		.prefix-selecttext(none);
+		.comm-clearfix();
+		
+		& .icon,
+		& .hd {
+			position: absolute;
+			top: 0;
+			left: @padding-popmenu-item-l;
+			bottom: 0;
+			line-height: @height-popmenu-item;
+		}
+		& .md {
+			line-height: @height-popmenu-item;
+			text-align: center;
+		}
+		& .ft {
+			position: absolute;
+			top: 0;
+			right: @padding-popmenu-item-r;
+			bottom: 0;
+			line-height: @height-popmenu-item;
+		}
+		& small,
+		& .small {
+			color: lighten(@color-popmenu, 30%);
+			font-size: 0.65em;
+		}
+		
+		&:hover {
+			color: @color-black-dark;
+			background-color: @color-white-dark;
+		}
+		&:active,
+		&.active,
+		&.selected {
+			color: @color-black;
+			background-color: @color-gray-lightest;
+			
+			.prefix-box-shadow(inset 0 1px 2px rgba(0, 0, 0, .08));
+		}
+		&.selected {
+			color: @color-popmenu-item-selected;
+			background-color: @bgcolor-popmenu-item-selected;
+			cursor: @cursor-def;
+			
+			.prefix-box-shadow(none);
+			
+			&:after {
+				position: absolute;
+				top: 0;
+				right: @padding-popmenu-item-r;
+				height: @height-popmenu-item;
+				line-height: @height-popmenu-item;
+				color: @color-popmenu-icon-selected;
+				display: none \9;		/* ie hack */
+				
+				.prefix-opacity(0);
+				.comm-iconfont( @icon-popmenu-selected, @fontsize-popmenu-icon-selected );
+			}
+		}
+		&.hassub {
+			&:after {
+				position: absolute;
+				top: 0;
+				right: @padding-popmenu-item-r;
+				height: @height-popmenu-item;
+				line-height: @height-popmenu-item;
+				color: @color-popmenu-icon-hassub;
+				display: none;
+				
+				.comm-iconfont( @icon-popmenu-sub-right, @fontsize-popmenu-icon-hassub );
+			}
+		}
+		&.disabled {
+			&,
+			&:hover,
+			&:active,
+			&.active,
+			&.selected,
+			&.hassub {
+				color: @color-gray;
+				cursor: @cursor-no;
+				background-color: @color-white-lighter;
+				.prefix-box-shadow(none);
+			}
+		}
+	}
+	.@{prefix}split {
+		height: 0px;
+		border-top: 1px solid @color-gray-lightest;
+		margin: @height-popmenu-split/2 0px;
+		font-size: 0;
+	}
+}
+.@{prefix}popmenu-selectable {
+	.@{prefix}popmenu-item {
+		padding-right: @padding-popmenu-selectable-item-r;
+		
+		&.selected {
+			&:after {
+				display: block \9;		/* ie hack */
+				
+				.prefix-opacity(1);
+			}
+		}
+	}
+}
+.@{prefix}popmenu-icon {
+	.@{prefix}popmenu-item {
+		padding-left: @padding-popmenu-icon-item-l;
+		
+		& .icon {
+			color: @color-black-lighter;
+			font-size: @fontsize-popmenu-icon;
+		}
+		& .hd {
+			left: @padding-popmenu-icon-item-l;
+		}
+	}
+}
+.@{prefix}popmenu-tree,
+.@{prefix}popmenu-tree-left,
+.@{prefix}popmenu-tree-top {
+	.@{prefix}popmenu-item {
+		padding-right: @padding-popmenu-tree-item-r;
+		
+		&>.popmenu-sub {
+			top: 0;
+			left: 100%;
+			margin-left: -5px;
+			display: none;
+		}
+		&.hassub {
+			&:after {
+				display: block;
+			}
+			&:hover,
+			&:active,
+			&.active {
+				&>.popmenu-sub {
+					display: block;
+				}
+			}
+		}
+	}
+}
+.@{prefix}popmenu-tree-left {
+	.@{prefix}popmenu-item {
+		&>.popmenu-sub {
+			left: auto;
+			right: 100%;
+			margin-right: -5px;
+		}
+	}
+}
+.@{prefix}popmenu-tree-top {
+	.@{prefix}popmenu-item {
+		&>.popmenu-sub {
+			top: auto;
+			bottom: 0px;
+		}
+	}
+}
+.@{prefix}popmenu-min {
+	.popmenu-size(@height-input-min; @lineheight-input-min; @fontsize-input-min; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+}
+.@{prefix}popmenu-big {
+	.popmenu-size(@height-input-big; @lineheight-input-big; @fontsize-input-big; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+}

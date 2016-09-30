@@ -52,14 +52,14 @@
 		
 		.@{prefix}checkbox-text,
 		.@{prefix}radio-text {
-			color: @gray-light;
+			color: @color-gray-light;
 		}
 	}
 	
 }
 .@{prefix}checkbox {
 	&:before {
-		color: @gray-light;
+		color: @color-gray-light;
 		
 		.comm-iconfont( @icon-checkboxbefore, @fontsize-checkboxicon );
 	}
@@ -100,7 +100,7 @@
 		&:before,
 		&:hover:before {
 			display: block \9;		/* ie hack */
-			color: @gray-lightest;
+			color: @color-gray-lightest;
 			
 			.prefix-opacity(1);
 		}
@@ -118,7 +118,7 @@
 		left: 1px;
 	}
 	&:before {
-		color: @gray-light;
+		color: @color-gray-light;
 		
 		.comm-iconfont( @icon-radiobefore, @fontsize-radioicon );
 	}
@@ -159,7 +159,7 @@
 		&:before,
 		&:hover:before {
 			display: block \9;		/* ie hack */
-			color: @gray-lightest;
+			color: @color-gray-lightest;
 			
 			.prefix-opacity(1);
 		}
@@ -189,11 +189,11 @@
 		}
 	}
 }
-.@{prefix}checkbox-blink,
-.@{prefix}radio-blink {
+.@{prefix}checkbox-light,
+.@{prefix}radio-light {
 	&.checked {
 		&:after {
-			color: @color-blink-darkest;
+			color: @color-light-darkest;
 		}
 	}
 }

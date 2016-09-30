@@ -108,6 +108,10 @@ h1 {
 	background:center url(../img/bg-3.png);
 }
 
+.demo-popmenu {
+	position: relative;
+	height: 260px;
+}
 .demo-dlg {
 	position: relative;
 	height: 400px;
@@ -115,17 +119,20 @@ h1 {
 .demo-dlg .dlg{
 	position: absolute;
 }
+
 .demo-iconfont .iconfont,
 .demo-iconfont-sys .iconfont {
-	font-size: 25px;
+	font-size: 26px;
 	margin: 20px;
 	color: #319DBB;
 	cursor: pointer;
 }
 .demo-iconfont .iconfont:hover {
-	color: #01C677;
+	color: #05C3F9;
 }
-.demo-iconfont-sys .iconfont,
-.demo-iconfont-sys .iconfont:hover {
+.demo-iconfont-sys .iconfont {
 	color: #A22613;
+}
+.demo-iconfont-sys .iconfont:hover {
+	color: #F95339;
 }

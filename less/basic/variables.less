@@ -5,7 +5,7 @@
 //====================================================
 
 //prime类名前缀（一般用于自定义样式库和解决css类名冲突）
-@prefix:				;
+@prefix:				~"";
 
 //颜色
 @color-theme-darker:	#027FA2;
@@ -20,12 +20,12 @@
 @color-key:				#F95339;		//#FF735D;
 @color-key-light:		#FB6C56;		//#FC7E6A;
 
-@color-blink-darkest:	#FFD301;
-@color-blink-darker:	#FFF201;
-@color-blink-dark:		#FFFF01;
-@color-blink:			#FFFF41;
-@color-blink-light:		#FFFF73;
-@color-blink-lighter:	#FFFFC5;
+@color-light-darkest:	#FFD301;
+@color-light-darker:	#FFF201;
+@color-light-dark:		#FFFF01;
+@color-light:			#FFFF41;
+@color-light-light:		#FFFF73;
+@color-light-lighter:	#FFFFC5;
 
 @color-nice-darker:		#00814D;
 @color-nice-dark:		#269568;
@@ -33,34 +33,36 @@
 @color-nice-light:		#39E39E;
 @color-nice-lighter:	#67E3B1;
 
-@black-darker:			#000;
-@black-dark:			#222;
-@black:					#333;
-@black-light:			#444;
-@black-lighter:			#666;
+@color-black-darker:		#000;
+@color-black-dark:			#222;
+@color-black:				#333;
+@color-black-light:			#444;
+@color-black-lighter:		#666;
 
-@white-darker:			#F3F3F3;
-@white-dark:			#F5F5F5;
-@white:					#F7F7F7;
-@white-light:			#FAFAFA;
-@white-lighter:			#FFF;
+@color-white-darker:		#F3F3F3;
+@color-white-dark:			#F5F5F5;
+@color-white:				#F7F7F7;
+@color-white-light:			#FAFAFA;
+@color-white-lighter:		#FFF;
 
-@gray-darker:			#999;
-@gray-dark:				#AAA;
-@gray:					#BBB;
-@gray-light:			#CCC;
-@gray-lighter:			#DDD;
-@gray-lightest:			#EEE;
+@color-gray-darker:			#999;
+@color-gray-dark:			#AAA;
+@color-gray:				#BBB;
+@color-gray-light:			#CCC;
+@color-gray-lighter:		#DDD;
+@color-gray-lightest:		#EEE;
 
-@color-def:				@black;
-@color-weak:			@gray-darker;
+@color-def:				@color-black;
+@color-weak:			@color-gray-darker;
 @color-title:			inherit;
-@color-hr:				@gray-lighter;
-@color-small:			@gray-darker;
+@color-hr:				@color-gray-lighter;
+@color-small:			@color-gray-darker;
 
+@color-link:			@color-theme-dark;
+@color-link-hover:		@color-theme-darker;
 
-@bgcolor-def:			@white-light;
-@bgcolor-weak:			@white;
+@bgcolor-def:			@color-white-light;
+@bgcolor-weak:			@color-white;
 
 //布局
 @grid-columns-12:		12;		//偶数等分12列
@@ -98,6 +100,7 @@
 
 
 //图标（特殊符号）
+@icon-done:						"\e60b";
 @icon-delete:					"\e608";
 
 @icon-checkboxbefore:			"\e620";
@@ -107,10 +110,12 @@
 @icon-radioafter:				"\e64c";
 @icon-radioafter-checked:		"\e64a";
 
-@icon-select-right:				"\e601";
-@icon-select-down:				"\e600";
-@icon-select-up:				"\e602";
-@icon-form-must:				"*";
+@icon-left:						"\e603";
+@icon-right:					"\e601";
+@icon-down:						"\e600";
+@icon-up:						"\e602";
+
+@icon-snow:						"*";
 
 
 
@@ -147,16 +152,16 @@
 @zindex-layer:			1000;
 
 //倒角
-@radius-def:			0;
-@radius-1:				0.1em;
-@radius-2:				0.2em;
-@radius-3:				0.3em;
-@radius-4:				0.4em;
-@radius-5:				0.5em;
-@radius-6:				0.6em;
-@radius-7:				0.7em;
-@radius-8:				0.8em;
-@radius-9:				0.9em;
+@radius-def:			.3em;
+@radius-1:				.1em;
+@radius-2:				.2em;
+@radius-3:				.3em;
+@radius-4:				.4em;
+@radius-5:				.5em;
+@radius-6:				.6em;
+@radius-7:				.7em;
+@radius-8:				.8em;
+@radius-9:				.9em;
 @radius-10:				1em;
 
 //指针样式
@@ -210,7 +215,52 @@
 @zindex-btnhover:			@zindex-control + 10;
 
 
+//气泡菜单
+@bgcolor-popmenu:						@color-white-lighter;
+@bordercolor-popmenu:					@color-gray-lighter;
+@color-popmenu:							@color-black;
+
+@color-popmenu-item-selected:			@color-black-darker;
+@bgcolor-popmenu-item-selected:			@color-gray-lightest;
+
+@color-popmenu-icon-selected:			@color-theme-darker;
+@color-popmenu-icon-hassub:				@color-theme-dark;
+
+@minwidth-popmenu:						160px;
+@height-popmenu-item:					28px;
+@height-popmenu-min-item:				26px;
+@height-popmenu-big-item:				30px;
+@height-popmenu-split:					10px;
+
+@padding-popmenu-tb:					5px;
+@padding-popmenu-item-l:				15px;
+@padding-popmenu-item-r:				15px;
+@padding-popmenu-selectable-item-r:		35px;
+@padding-popmenu-icon-item-l:			40px;
+@padding-popmenu-tree-item-l:			35px;
+@padding-popmenu-tree-item-r:			35px;
+
+@fontsize-popmenu:						@fontsize-control;
+@fontsize-popmenu-icon:					14px;
+@fontsize-popmenu-icon-selected:		14px;
+@fontsize-popmenu-icon-hassub:			12px;
+			
+@zindex-popmenu:						@zindex-control;
+@zindex-popmenu-active:					@zindex-popmenu + 10;
+@zindex-popmenu-hover:					@zindex-popmenu + 20;
+		
+@radius-popmenu:						@radius-def;
+
+@icon-popmenu-selected:					@icon-done;
+@icon-popmenu-sub-left:					@icon-left;
+@icon-popmenu-sub-right:				@icon-right;
+
+
+
 //下拉框
+@color-select-item-selected:	@color-black-light;
+@bgcolor-select-item-selected:	@color-theme-lightest;
+
 @height-select:					@height-control;
 @height-select-min:				@height-control-min;
 @height-select-big:				@height-control-big;
@@ -226,11 +276,11 @@
 @lineheight-select-big:			@height-select-big - 2px;
 		
 @height-select-list:			300px;
-@height-select-split:			20px;
+@height-select-split:			10px;
 	
-@height-select-item:			32px;
-@height-select-min-item:		28px;
-@height-select-big-item:		36px;
+@height-select-item:			28px;
+@height-select-min-item:		26px;
+@height-select-big-item:		30px;
 
 @fontsize-select-text:			@fontsize-control;
 @fontsize-select-min-text:		@fontsize-control-min;
@@ -241,13 +291,15 @@
 @fontsize-select-big-list:		@fontsize-control;
 
 @padding-select-l:				15px;
-@padding-select-r:				30px;
+@padding-select-r:				5px;
 
 @radius-select:					@radius-def;
 @radius-select-list:			@radius-def;
 
-@color-select-item-selected:	@black-light;
-@bgcolor-select-item-selected:	@color-theme-lightest;
+@icon-select-right:				@icon-right;
+@icon-select-down:				@icon-down;
+@icon-select-up:				@icon-up;
+
 
 
 //单选复选框
@@ -269,15 +321,18 @@
 @fontsize-radioicon:				19px;
 @fontsize-radioicon-min:			14px;
 
-@color-checkbox-checked:			@black-lighter;
-@color-radio-checked:				@black-lighter;
+@color-checkbox-checked:			@color-black-light;
+@color-radio-checked:				@color-black-light;
 	
 @radius-checkboxbefore:				@radius-def;
 
 
 //表格
-@color-table:				@black-light;
+@color-table:				@color-black-light;
 @fontsize-table:			@fontsize-def;
+
+@radius-table:				@radius-def;
+
 
 
 //输入框
@@ -299,10 +354,10 @@
 @fontsize-input-min:		@fontsize-control-min;
 @fontsize-input-big:		@fontsize-control-big;
 
-@bordercolor-input:			@gray-lighter;
-@bgcolor-input:				@white-lighter;
+@bordercolor-input:			@color-gray-lighter;
+@bgcolor-input:				@color-white-lighter;
 @shadowcolor-input:			rgba(0, 0, 0, .05);
-@bordercolor-input-focus:	@gray;
+@bordercolor-input-focus:	@color-gray;
 @shadowcolor-input-focus:	rgba(0, 0, 0, .09);
 
 @bordercolor-input-theme:			@bordercolor-input;
@@ -315,15 +370,15 @@
 @bordercolor-input-key-focus:		@color-key;
 @shadowcolor-input-key-focus:		rgba(249, 83, 57, .2);		//@color-key #F95339
 
-@bordercolor-input-blink:			@bordercolor-input;
-@bgcolor-input-blink:				@bgcolor-input;
-@bordercolor-input-blink-focus:		@color-blink-darkest;
-@shadowcolor-input-blink-focus:		rgba(255, 211, 1, .2);		//@color-blink #FFFF01
+@bordercolor-input-light:			@bordercolor-input;
+@bgcolor-input-light:				@bgcolor-input;
+@bordercolor-input-light-focus:		@color-light-darkest;
+@shadowcolor-input-light-focus:		rgba(255, 211, 1, .2);		//@color-light #FFFF01
 
 @bordercolor-input-nice:			@bordercolor-input;
 @bgcolor-input-nice:				@bgcolor-input;
 @bordercolor-input-nice-focus:		@color-nice;
-@shadowcolor-input-nice-focus:		rgba(1, 198, 119, .2);		//@color-blink #01C677
+@shadowcolor-input-nice-focus:		rgba(1, 198, 119, .2);		//@color-light #01C677
 
 @radius-input:						@radius-def;
 
@@ -351,10 +406,10 @@
 @margin-formlabel-r:		15px;
 
 @color-formmust:			@color-key;
-
+@icon-form-must:			@icon-snow;
 
 //遮罩层
-@bgcolor-mask:				@black-darker;
+@bgcolor-mask:				@color-black-darker;
 @zindex-mask:				@zindex-layer;
 
 
@@ -365,7 +420,7 @@
 @zindex-dlgtitle:			@zindex-bg;
 @zindex-dlgclose:			@zindex-dlgtitle + 10;
 
-@color-dlgtitle:			@black-lighter;
+@color-dlgtitle:			@color-black-lighter;
 @fontsize-dlgtitle:			@fontsize-m;
 @fontweight-dlgtitle:		@fontweight-bold;
 

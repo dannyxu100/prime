@@ -61,7 +61,7 @@
 			<div class="section">
 				<h2>基调配色</h2>
 				<h3>色块</h3>
-				<div>.bgtheme | .bgkey | .bgblink | .bgnice | .bgblack | .bgwhite | .bggray</div>
+				<div>.bgtheme | .bgkey | .bglight | .bgnice | .bgblack | .bgwhite | .bggray</div>
 				<br/>
 				<div class="grid">
 					<div class="grid-row" style="">
@@ -94,7 +94,7 @@
 							<div class="colorblock bgtheme-darker fwhite">
 								<div>主题-较暗</div>
 								<div>.bgtheme-darker</div>
-								<div>#319DBB</div>
+								<div>#027FA2</div>
 							</div>
 						</div>
 						<div class="cell-7-1">
@@ -122,34 +122,34 @@
 							</div>
 						</div>
 						<div class="cell-7-1">
-							<div class="colorblock bgblink-lightest">
+							<div class="colorblock bglight-lightest">
 								<div>闪亮的-最亮</div>
-								<div>.bgblink-lightest</div>
+								<div>.bglight-lightest</div>
 								<div>#FFFFC5</div>
 							</div>
-							<div class="colorblock bgblink-lighter">
+							<div class="colorblock bglight-lighter">
 								<div>闪亮的-较亮</div>
-								<div>.bgblink-lighter</div>
+								<div>.bglight-lighter</div>
 								<div>#FFFF73</div>
 							</div>
-							<div class="colorblock bgblink-light">
+							<div class="colorblock bglight-light">
 								<div>闪亮的-亮</div>
-								<div>.bgblink-light</div>
+								<div>.bglight-light</div>
 								<div>#FFFF41</div>
 							</div>
-							<div class="colorblock active bgblink">
+							<div class="colorblock active bglight">
 								<div>闪亮的</div>
-								<div>.bgblink</div>
+								<div>.bglight</div>
 								<div>#FFFF01</div>
 							</div>
-							<div class="colorblock bgblink-dark ">
+							<div class="colorblock bglight-dark ">
 								<div>闪亮的-暗</div>
-								<div>.bgblink-dark</div>
+								<div>.bglight-dark</div>
 								<div>#FFF201</div>
 							</div>
-							<div class="colorblock bgblink-darker ">
+							<div class="colorblock bglight-darker ">
 								<div>闪亮的-较暗</div>
-								<div>.bgblink-darker</div>
+								<div>.bglight-darker</div>
 								<div>#FFD301</div>
 							</div>
 						</div>
@@ -350,12 +350,12 @@
 				</ul>
 				
 				<div>明亮色调</div>
-				<div>.fblink | .fwhite | .fgray</div>
+				<div>.flight | .fwhite | .fgray</div>
 				<ul class="textbox10 bgimg-dark">
-					<li class="fblink">You're just some racist who can't tie my laces</li>
-					<li class="fblink">你就是一种种族歧视 連鞋帶都不配給我系</li>
-					<li class="fblink">Your point of view is medieval</li>
-					<li class="fblink">你的觀點已經過時</li>
+					<li class="flight">You're just some racist who can't tie my laces</li>
+					<li class="flight">你就是一种种族歧视 連鞋帶都不配給我系</li>
+					<li class="flight">Your point of view is medieval</li>
+					<li class="flight">你的觀點已經過時</li>
 				</ul>
 				<ul class="textbox10 bgimg-dark">
 					<li class="fgray">Fuck you (Fuck you)</li>
@@ -919,34 +919,42 @@
 							</table>
 						</div>
 						<div class="cell-12-6">
-							<div style="margin-bottom:10px;">.table-border 边框模式</div>
-							<table class="table table-border">
-								<caption>今日热门影片</caption>
-								<tr>
-									<th>影片名</th>
-									<th>主演</th>
-									<th>类型</th>
-									<th>地区</th>
-								</tr>
-								<tr>
-									<td>超能陆战队</td>
-									<td>斯科特·埃德希特、瑞恩·波特</td>
-									<td>动画</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>超体</td>
-									<td>斯嘉丽·约翰逊</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>星际穿越</td>
-									<td>马修·麦康纳</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
-							</table>
+							<div style="margin-bottom:10px;">.table-grid-border .table-grid 边框模式</div>
+							<div class="table-grid-border">
+								<table class="table table-grid">
+									<caption>今日热门影片</caption>
+									<thead>
+										<tr>
+											<th>影片名</th>
+											<th>主演</th>
+											<th>类型</th>
+											<th>地区</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>超能陆战队</td>
+											<td>斯科特·埃德希特、瑞恩·波特</td>
+											<td>动画</td>
+											<td>美国</td>
+										</tr>
+										<tr>
+											<td>超体</td>
+											<td>斯嘉丽·约翰逊</td>
+											<td>科幻</td>
+											<td>美国</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>星际穿越</td>
+											<td>马修·麦康纳</td>
+											<td>科幻</td>
+											<td>美国</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 						</div>
 					</div>
 					
@@ -1018,32 +1026,37 @@
 					<div class="grid-row" style="margin-bottom:50px;">
 						<div class="cell-12-12">
 							<div style="margin-bottom:10px;">.table-min 紧凑模式</div>
-							<table class="table table-border table-min">
-								<caption>今日热门影片</caption>
-								<tr>
-									<th>影片名</th>
-									<th>主演</th>
-									<th>类型</th>
-									<th>地区</th>
-								</tr>
-								<tr>
-									<td>超能陆战队</td>
-									<td>斯科特·埃德希特、瑞恩·波特</td>
-									<td>动画</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>超体</td>
-									<td>斯嘉丽·约翰逊</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>星际穿越</td>
-									<td>马修·麦康纳</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
+							<table class="table table-grid table-min">
+								<thead>
+									<tr>
+										<th>影片名</th>
+										<th>主演</th>
+										<th>类型</th>
+										<th>地区</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>超能陆战队</td>
+										<td>斯科特·埃德希特、瑞恩·波特</td>
+										<td>动画</td>
+										<td>美国</td>
+									</tr>
+									<tr>
+										<td>超体</td>
+										<td>斯嘉丽·约翰逊</td>
+										<td>科幻</td>
+										<td>美国</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<td>星际穿越</td>
+										<td>马修·麦康纳</td>
+										<td>科幻</td>
+										<td>美国</td>
+									</tr>
+								</tfoot>
 							</table>
 						</div>
 					</div>
@@ -1051,33 +1064,35 @@
 					<div class="grid-row" style="margin-bottom:50px;">
 						<div class="cell-12-12">
 							<div style="margin-bottom:10px;">.table-full 宽度100%</div>
-							<table class="table table-border table-full">
-								<caption>今日热门影片</caption>
-								<tr>
-									<th>影片名</th>
-									<th>主演</th>
-									<th>类型</th>
-									<th>地区</th>
-								</tr>
-								<tr>
-									<td>超能陆战队</td>
-									<td>斯科特·埃德希特、瑞恩·波特</td>
-									<td>动画</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>超体</td>
-									<td>斯嘉丽·约翰逊</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
-								<tr>
-									<td>星际穿越</td>
-									<td>马修·麦康纳</td>
-									<td>科幻</td>
-									<td>美国</td>
-								</tr>
-							</table>
+							<div class="table-grid-border table-full">
+								<table class="table table-grid">
+									<caption>今日热门影片</caption>
+									<tr>
+										<th>影片名</th>
+										<th>主演</th>
+										<th>类型</th>
+										<th>地区</th>
+									</tr>
+									<tr>
+										<td>超能陆战队</td>
+										<td>斯科特·埃德希特、瑞恩·波特</td>
+										<td>动画</td>
+										<td>美国</td>
+									</tr>
+									<tr>
+										<td>超体</td>
+										<td>斯嘉丽·约翰逊</td>
+										<td>科幻</td>
+										<td>美国</td>
+									</tr>
+									<tr>
+										<td>星际穿越</td>
+										<td>马修·麦康纳</td>
+										<td>科幻</td>
+										<td>美国</td>
+									</tr>
+								</table>
+							</div>
 						</div>
 					</div>
 					
@@ -1258,7 +1273,7 @@
 				</div>
 				<br/>
 				
-				<h3>.btn-theme | .btn-key | .btn-blink | .btn-nice</h3>
+				<h3>.btn-theme | .btn-key | .btn-light | .btn-nice</h3>
 				<div>其他风格按钮</div>
 				<br/>
 				<div class="grid">
@@ -1270,7 +1285,7 @@
 							<button class="btn btn-key">关键</button>
 						</div>
 						<div class="cell-7-1">
-							<button class="btn btn-blink">闪亮</button>
+							<button class="btn btn-light">闪亮</button>
 						</div>
 						<div class="cell-7-1">
 							<button class="btn btn-nice">友好</button>
@@ -1453,6 +1468,272 @@
 					</div>
 				</div>
 				<br/>
+			</div>
+			
+			<!-- 气泡菜单 -->
+			<div class="section">
+				<h2>气泡菜单</h2>
+				<h3>.popmenu</h3>
+				<div></div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu">
+								<a class="popmenu-item" href="javascript:;">新建</a>
+								<a class="popmenu-item" href="javascript:;">打开</a>
+								<a class="popmenu-item" href="javascript:;">保存</a>
+								<div class="split"></div>
+								<a class="popmenu-item" href="javascript:;">退出</a>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu">
+								<div class="popmenu-item">
+									<div class="hd"></div>
+									<div class="md">后退</div>
+									<div class="ft"></div>
+								</div>
+								<div class="popmenu-item">
+									<div class="hd"></div>
+									<div class="md">暂停</div>
+									<div class="ft"></div>
+								</div>
+								<div class="popmenu-item selected">
+									<div class="hd"></div>
+									<div class="md">前进</div>
+									<div class="ft"></div>
+								</div>
+								<div class="split"></div>
+								<div class="popmenu-item">
+									<div class="hd"></div>
+									<div class="md">弹出</div>
+									<div class="ft"></div>
+								</div>
+								<div class="popmenu-item">
+									<div class="hd"></div>
+									<div class="md">字幕</div>
+									<div class="ft"></div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+						</div>
+					</div>
+					
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu popmenu-selectable">
+								<div class="popmenu-item">名称排序</div>
+								<div class="popmenu-item">价格排序</div>
+								<div class="popmenu-item disabled">信用排序</div>
+								<div class="split"></div>
+								<div class="popmenu-item selected">倒序</div>
+								<div class="popmenu-item">正序</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu">
+								<div class="popmenu-item">
+									<div class="hd">复制</div>
+									<div class="md"></div>
+									<div class="ft">
+										<small>Ctrl + C</small>
+									</div>
+								</div>
+								<div class="popmenu-item">
+									<div class="hd">剪切</div>
+									<div class="md"></div>
+									<div class="ft">
+										<small>Ctrl + X</small>
+									</div>
+								</div>
+								<div class="popmenu-item selected">
+									<div class="hd">粘贴</div>
+									<div class="md"></div>
+									<div class="ft">
+										<small>Ctrl + V</small>
+									</div>
+								</div>
+								<div class="split"></div>
+								<div class="popmenu-item">字体</div>
+								<div class="popmenu-item">颜色</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu">
+								<div class="popmenu-item">
+									<div class="hd">复制</div>
+									<div class="md"></div>
+									<div class="ft">
+										<label>99</label>
+									</div>
+								</div>
+								<div class="popmenu-item">
+									<div class="hd">剪切</div>
+									<div class="md"></div>
+									<div class="ft">
+										<label>99</label>
+									</div>
+								</div>
+								<div class="popmenu-item selected">
+									<div class="hd">粘贴</div>
+									<div class="md"></div>
+									<div class="ft">
+										<label>99</label>
+									</div>
+								</div>
+								<div class="split"></div>
+								<div class="popmenu-item">字体</div>
+								<div class="popmenu-item">颜色</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu popmenu-icon">
+								<a class="popmenu-item" href="javascript:;">
+									<i class="icon iconfont icon-user-inverse"></i>
+									<span>用户中心</span>
+								</a>
+								<a class="popmenu-item" href="javascript:;">
+									<i class="icon iconfont icon-lock"></i>
+									<span>修改密码</span>
+								</a>
+								<a class="popmenu-item" href="javascript:;">
+									<span>我的收藏</span>
+								</a>
+								<div class="split"></div>
+								<a class="popmenu-item" href="javascript:;">
+									<i class="icon iconfont icon-setting-inverse"></i>
+									<span>设置</span>
+								</a>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu popmenu-tree">
+								<div class="popmenu-item hassub">
+									<span>市场部门</span>
+									
+									<div class="popmenu-sub">
+										<div class="popmenu-item hassub">
+											<span>部门一</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">宣传组</div>
+												<div class="popmenu-item">策划组</div>
+												<div class="popmenu-item">公关组</div>
+											</div>
+										</div>
+										<div class="popmenu-item hassub">
+											<span>部门二</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">宣传组</div>
+												<div class="popmenu-item">策划组</div>
+												<div class="popmenu-item">公关组</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="popmenu-item hassub">
+									<span>技术部</span>
+									
+									<div class="popmenu-sub">
+										<div class="popmenu-item hassub">
+											<span>前端</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">设计组</div>
+												<div class="popmenu-item">交互组</div>
+												<div class="popmenu-item">程序组</div>
+											</div>
+										</div>
+										<div class="popmenu-item hassub">
+											<span>后端</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">架构</div>
+												<div class="popmenu-item">业务组</div>
+												<div class="popmenu-item">数据组</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="popmenu-item disabled">财务部</div>
+								<div class="split"></div>
+								<div class="popmenu-item">秘书处</div>
+								<div class="popmenu-item">总经办</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenu">
+							<div class="popmenu popmenu-tree-left popmenu-tree-top">
+								<div class="popmenu-item hassub">
+									<span>市场部门</span>
+									
+									<div class="popmenu-sub">
+										<div class="popmenu-item hassub">
+											<span>部门一</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">宣传组</div>
+												<div class="popmenu-item">策划组</div>
+												<div class="popmenu-item">公关组</div>
+											</div>
+										</div>
+										<div class="popmenu-item hassub">
+											<span>部门二</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">宣传组</div>
+												<div class="popmenu-item">策划组</div>
+												<div class="popmenu-item">公关组</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="popmenu-item hassub">
+									<span>技术部</span>
+									
+									<div class="popmenu-sub">
+										<div class="popmenu-item hassub">
+											<span>前端</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">设计组</div>
+												<div class="popmenu-item">交互组</div>
+												<div class="popmenu-item">程序组</div>
+											</div>
+										</div>
+										<div class="popmenu-item hassub">
+											<span>后端</span>
+											
+											<div class="popmenu-sub">
+												<div class="popmenu-item">架构</div>
+												<div class="popmenu-item">业务组</div>
+												<div class="popmenu-item">数据组</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="popmenu-item disabled">财务部</div>
+								<div class="split"></div>
+								<div class="popmenu-item">秘书处</div>
+								<div class="popmenu-item">总经办</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<br/>
+
 			</div>
 			
 			<!-- 单选、复选 -->
@@ -1642,7 +1923,7 @@
 				</div>
 				<br/>
 				
-				<h3>.checkbox-theme .radio-theme | *-key  | *-blink  | *-nice </h3>
+				<h3>.checkbox-theme .radio-theme | *-key  | *-light  | *-nice </h3>
 				<div>其他风格按钮</div>
 				<br/>
 				<div class="grid">
@@ -1660,7 +1941,7 @@
 							</label>
 						</div>
 						<div class="cell-12-2">
-							<label class="checkbox checkbox-blink checked">
+							<label class="checkbox checkbox-light checked">
 								<input type="checkbox" name="group1" value="3"/>
 								<span class="checkbox-text">闪亮</span>
 							</label>
@@ -1687,7 +1968,7 @@
 							</label>
 						</div>
 						<div class="cell-12-2">
-							<label class="radio radio-blink checked">
+							<label class="radio radio-light checked">
 								<input type="radio" name="group1" value="3"/>
 								<span class="radio-text">闪亮</span>
 							</label>
@@ -1929,7 +2210,7 @@
 				</div>
 				<br/>
 				
-				<h3>.input-theme | .input-key | .input-blink | .input-nice</h3>
+				<h3>.input-theme | .input-key | .input-light | .input-nice</h3>
 				<div>其他风格输入框</div>
 				<br/>
 				<div class="grid">
@@ -1941,7 +2222,7 @@
 							key：<input type="text" class="input input-key" value="" placeholder="请输入"/>
 						</div>
 						<div class="cell-5-1">
-							blink：<input type="text" class="input input-blink" value="" placeholder="请输入"/>
+							light：<input type="text" class="input input-light" value="" placeholder="请输入"/>
 						</div>
 						<div class="cell-5-1">
 							nice：<input type="text" class="input input-nice" value="" placeholder="请输入"/>
@@ -1958,7 +2239,7 @@
 							active：<input type="text" class="input input-key active" value="" placeholder="请输入"/>
 						</div>
 						<div class="cell-5-1">
-							active：<input type="text" class="input input-blink active" value="" placeholder="请输入"/>
+							active：<input type="text" class="input input-light active" value="" placeholder="请输入"/>
 						</div>
 						<div class="cell-5-1">
 							active：<input type="text" class="input input-nice active" value="" placeholder="请输入"/>
@@ -2565,8 +2846,12 @@
 				<div class="grid">
 					<div class="grid-row">
 						<div class="cell-12-12 demo-iconfont-sys">
+							<i class="iconfont icon-done"></i>
 							<i class="iconfont icon-delete"></i>
+							<i class="iconfont icon-left"></i>
+							<i class="iconfont icon-right"></i>
 							<i class="iconfont icon-down"></i>
+							<i class="iconfont icon-up"></i>
 							<i class="iconfont icon-radio"></i>
 							<i class="iconfont icon-radio-hover"></i>
 							<i class="iconfont icon-radio-checked"></i>
