@@ -4,6 +4,7 @@
 //
 //====================================================
 
+//标签页弹出气泡菜单
 .@{prefix}tabs {
 	& > .@{prefix}tabs-navs {
 		& > .@{prefix}tabs-nav-popmenu,
@@ -23,6 +24,9 @@
 			}
 			&:active,
 			&.active {
+				.tabs-nav-style(@bgcolor-tabs-nav-hover; @bordercolor-tabs-nav-hover; @color-tabs-nav-hover);
+				.prefix-box-shadow(none);
+				
 				&:after {
 					.comm-iconfont( @icon-down-min );
 				}

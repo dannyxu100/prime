@@ -16,7 +16,7 @@
 }
 
 //设置标签页按钮样式
-.tabs-nav-style(@bgcolor; @bordercolor; @color; @radius:@radius-tabs) {
+.tabs-nav-style(@bgcolor; @bordercolor; @color; @radius:@radius-tab-nav) {
 	color: @color;
 	background-color: @bgcolor;
 	border-color: @bordercolor;
@@ -61,9 +61,7 @@
 			
 			&:hover,
 			&.hover {
-				color: @color-tabs-nav-hover;
-				border-color: @bordercolor-tabs-nav-hover;
-				background-color: @bgcolor-tabs-nav-hover;
+				.tabs-nav-style(@bgcolor-tabs-nav-hover; @bordercolor-tabs-nav-hover; @color-tabs-nav-hover);
 				z-index: @zindex-tabs-nav-hover;
 				border-bottom-color: @bordercolor-tabs-navs;
 				
@@ -71,9 +69,7 @@
 			}
 			&:active,
 			&.active {
-				color: @color-tabs-nav-active;
-				border-color: @bordercolor-tabs-nav-active;
-				background-color: @bgcolor-tabs-nav-active;
+				.tabs-nav-style(@bgcolor-tabs-nav-active; @bordercolor-tabs-nav-active; @color-tabs-nav-active);
 				z-index: @zindex-tabs-nav-active;
 				border-bottom-color: transparent;
 				
