@@ -96,7 +96,7 @@
 
 
 //字体图标
-.makeiconfont ( @fontsize, @fontfamily ) {
+.makeiconfont ( @fontsize; @fontfamily ) {
 	font-family: @fontfamily !important;
 	font-size: @fontsize;
 	font-style: normal;
@@ -104,7 +104,7 @@
 	-webkit-text-stroke-width: 0.2px;
 	-moz-osx-font-smoothing: grayscale;
 }
-.comm-iconfont( @content, @fontsize:16px, @fontfamily:@fontfamily-icon ) {
+.comm-iconfont( @content; @fontsize:inherit; @fontfamily:@fontfamily-icon ) {
 	.makeiconfont( @fontsize, @fontfamily );
 	content: @content;
 }

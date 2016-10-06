@@ -12,7 +12,7 @@
 	padding: @padding-checkboxradio-tb @padding-checkboxradio-r @padding-checkboxradio-tb @padding-checkboxradio-l;
 	border: 1px solid transparent;
 	vertical-align: middle;
-	cursor: pointer;
+	cursor: @cursor-pointer;
 	
 	&:before,
 	&:after {
@@ -37,7 +37,7 @@
 	}
 	.@{prefix}checkbox-text,
 	.@{prefix}radio-text {
-		display: block;
+		display: inline-block;
 		height: @height-checkbox;
 		line-height: @height-checkbox;
 		font-size: @fontsize-checkboxradio-text;

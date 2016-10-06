@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1475236552'); /* IE9*/
-  src: url('iconfont.eot?t=1475236552#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1475236552') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1475236552') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1475236552#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1475741386'); /* IE9*/
+  src: url('iconfont.eot?t=1475741386#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1475741386') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1475741386') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1475741386#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -19,7 +19,6 @@
 .icon-money:before { content: "\e648"; }
 .icon-location:before { content: "\e649"; }
 .icon-refresh:before { content: "\e634"; }
-.icon-down:before { content: "\e600"; }
 .icon-add:before { content: "\e604"; }
 .icon-stop:before { content: "\e605"; }
 .icon-ok:before { content: "\e606"; }
@@ -50,9 +49,6 @@
 .icon-exit:before { content: "\e624"; }
 .icon-apps:before { content: "\e637"; }
 .icon-layer:before { content: "\e639"; }
-.icon-right:before { content: "\e601"; }
-.icon-up:before { content: "\e602"; }
-.icon-left:before { content: "\e603"; }
 .icon-checkbox:before { content: "\e620"; }
 .icon-checkbox-hover:before { content: "\e621"; }
 .icon-checkbox-checked:before { content: "\e622"; }
@@ -90,3 +86,11 @@
 .icon-radio-hover:before { content: "\e64c"; }
 .icon-unlock:before { content: "\e614"; }
 .icon-lock:before { content: "\e61d"; }
+.icon-up-min:before { content: "\e615"; }
+.icon-left-min:before { content: "\e61f"; }
+.icon-down-min:before { content: "\e64d"; }
+.icon-right:before { content: "\e601"; }
+.icon-left:before { content: "\e603"; }
+.icon-up:before { content: "\e602"; }
+.icon-down:before { content: "\e600"; }
+.icon-right-min:before { content: "\e652"; }

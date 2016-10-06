@@ -43,6 +43,7 @@
 		
 		.@{prefix}tabs-nav {
 			display: inline-block;
+			position: relative;
 			padding: 0;
 			margin: 0;
 			margin-left: 3px;
@@ -52,6 +53,7 @@
 			.tabs-nav-size(@padding-tabs-nav-tb; @padding-tabs-nav-lr; @fontsize-tabs-nav; @height-tabs-nav; @lineheight-tabs-nav);
 			.tabs-nav-style(@bgcolor-tabs-nav; @bordercolor-tabs-nav; @color-tabs-nav);
 			.prefix-transition();
+			.prefix-selecttext(none);
 			
 			&:first-child {
 				margin-left: 0;

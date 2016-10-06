@@ -1780,7 +1780,7 @@
 				</div>
 				<br/>
 
-				<h3>.btngroup .popmenu</h3>
+				<h3>.btngroup .btn-popmenu .popmenu</h3>
 				<div>弹出菜单按钮组，.popmenu必须放在.btngroup子元素的最后</div>
 				<br/>
 				<div class="grid">
@@ -1788,7 +1788,7 @@
 						<div class="cell-5-1 demo-popmenuopen">
 							<div class="btngroup">
 								<button class="btn btn-last btn-popmenu">
-									<span>默认</span> <i class="iconfont icon-down"></i>
+									<span>默认</span> <i class="iconfont icon-down-min"></i>
 								</button>
 							
 								<div class="popmenu active">
@@ -1805,7 +1805,7 @@
 							<div class="btngroup">
 								<button class="btn btn-last btn-popmenu active">
 									<span>激活</span>
-									<i class="iconfont icon-down"></i>
+									<i class="iconfont icon-down-min"></i>
 								</button>
 								
 								<div class="popmenu active">
@@ -1821,7 +1821,7 @@
 						<div class="cell-5-1">
 							<div class="btngroup">
 								<button class="btn btn-popmenu-icon">
-									<i class="iconfont icon-down"></i>
+									<i class="iconfont icon-down-min"></i>
 								</button>
 								<button class="btn btn-last">提交</button>
 								
@@ -1839,7 +1839,7 @@
 							<div class="btngroup">
 								<button class="btn">提交</button>
 								<button class="btn btn-last btn-popmenu-icon btn-popmenu-left btn-popmenu-top">
-									<i class="iconfont icon-up"></i>
+									<i class="iconfont icon-up-min"></i>
 								</button>
 								
 								<div class="popmenu">
@@ -1860,7 +1860,7 @@
 						<div class="cell-12-6 demo-popmenuopen">
 							<div class="btngroup btngroup-full">
 								<button class="btn btn-last btn-full btn-popmenu active">
-									<span>自适应按钮组100%宽度</span> <i class="iconfont icon-down"></i>
+									<span>自适应按钮组100%宽度</span> <i class="iconfont icon-down-min"></i>
 								</button>
 								
 								<div class="popmenu popmenu-full active">
@@ -1876,7 +1876,7 @@
 						<div class="cell-12-6 demo-popmenuopen">
 							<div class="btngroup">
 								<button class="btn btn-last btn-popmenu active">
-									<span>内容居中</span> <i class="iconfont icon-down"></i>
+									<span>内容居中</span> <i class="iconfont icon-down-min"></i>
 								</button>
 								
 								<div class="popmenu popmenu-full active">
@@ -2340,10 +2340,11 @@
 						<div class="cell-12-6">
 							<div class="tabs">
 								<ul class="tabs-navs">
-									<li class="tabs-nav">首页</li>
-									<li class="tabs-nav active">基本信息</li>
-									<li class="tabs-nav">详情</li>
-									<li class="tabs-nav">其他</li>
+									<li class="tabs-nav">参数</li>
+									<li class="tabs-nav active">详情</li>
+									<li class="tabs-nav">评论</li>
+									<li class="tabs-nav">图册</li>
+									<li class="tabs-nav">更多 <i class="iconfont icon-right-min"></i></li>
 								</ul>
 							</div>
 						</div>
@@ -2360,10 +2361,39 @@
 						<div class="cell-12-6">
 							<div class="tabs tabs-min">
 								<ul class="tabs-navs">
-									<li class="tabs-nav active">首页</li>
+									<li class="tabs-nav active">红色</li>
+									<li class="tabs-nav">蓝色</li>
+									<li class="tabs-nav">黑色</li>
+									<li class="tabs-nav">其他 <i class="iconfont icon-right-min"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.tabs .tabs-nav-popmenu .popmenu</h3>
+				<div>弹出气泡菜单</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:10px;">
+						<div class="cell-12-6 demo-popmenuopen">
+							<div class="tabs tabs-min">
+								<ul class="tabs-navs">
+									<li class="tabs-nav">首页</li>
 									<li class="tabs-nav">基本信息</li>
 									<li class="tabs-nav">详情</li>
-									<li class="tabs-nav">更多 <i class="iconfont icon-down"></i></li>
+									<li class="tabs-nav tabs-nav-popmenu active">
+										<span>更多</span>
+										<div class="popmenu active">
+											<a class="popmenu-item" href="javascript:;">新建</a>
+											<a class="popmenu-item" href="javascript:;">打开</a>
+											<a class="popmenu-item" href="javascript:;">保存</a>
+											<div class="split"></div>
+											<a class="popmenu-item" href="javascript:;">退出</a>
+										</div>
+									</li>
+									
 								</ul>
 							</div>
 						</div>
@@ -2618,7 +2648,7 @@
 							<div class="inputgroup" style="width:528px">
 								<div class="addons">
 									<button class="btn btn-nice border">搜索</button>
-									<button class="btn btn-nice border" style="padding:8px 3px;"><i class="iconfont icon-down fsize-12"></i></button>
+									<button class="btn btn-nice border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
 								</div>
 								<input type="text" class="input input-nice active" value="" placeholder="搜索关键字"/>
 							</div>
@@ -2649,7 +2679,7 @@
 								<div class="addons">
 									<button class="btn btn-theme border">搜索</button>
 									<button class="btn btn-theme border">其他</button>
-									<button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down fsize-12"></i></button>
+									<button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
 								</div>
 							</div>
 						</div>
@@ -2978,9 +3008,13 @@
 							<i class="iconfont icon-add"></i>
 							<br/>
 							<i class="iconfont icon-down"></i>
+							<i class="iconfont icon-down-min"></i>
 							<i class="iconfont icon-right"></i>
+							<i class="iconfont icon-right-min"></i>
 							<i class="iconfont icon-up"></i>
+							<i class="iconfont icon-up-min"></i>
 							<i class="iconfont icon-left"></i>
+							<i class="iconfont icon-left-min"></i>
 							<br/>
 							<i class="iconfont icon-ok"></i>
 							<i class="iconfont icon-error"></i>
@@ -3073,9 +3107,13 @@
 							<i class="iconfont icon-done"></i>
 							<i class="iconfont icon-delete"></i>
 							<i class="iconfont icon-left"></i>
+							<i class="iconfont icon-left-min"></i>
 							<i class="iconfont icon-right"></i>
+							<i class="iconfont icon-right-min"></i>
 							<i class="iconfont icon-down"></i>
+							<i class="iconfont icon-down-min"></i>
 							<i class="iconfont icon-up"></i>
+							<i class="iconfont icon-up-min"></i>
 							<i class="iconfont icon-radio"></i>
 							<i class="iconfont icon-radio-hover"></i>
 							<i class="iconfont icon-radio-checked"></i>

@@ -37,10 +37,10 @@
 			z-index: @zindex-selectbox-after;
 			top: 0px;
 			right: 0px;
-			width: 30px;
+			width: 24px;
 			height: 100%;
-			line-height: @height-select - 3;
-			color: @color-gray-dark;
+			line-height: @height-select - 2;
+			color: @color-gray-darker;
 			text-align: center;
 			
 			.comm-iconfont( @icon-select-right, 14px );
@@ -53,6 +53,7 @@
 			padding: 0px;
 			margin: 0px;
 			border: 0px;
+			border-right: 15px solid transparent;
 			font-size: @fontsize-select-text;	//unit( @fontsize-select-text, em );
 			background-color: transparent;
 			vertical-align: middle;
@@ -227,7 +228,7 @@
 	.@{prefix}select-box {
 		height: @height-select-min;
 		&:after {
-			line-height: @height-select-min - 3;
+			line-height: @height-select-min - 2;
 		}
 		.@{prefix}select-text {
 			height: @height-select-min;
@@ -257,7 +258,7 @@
 	.@{prefix}select-box {
 		height: @height-select-big;
 		&:after {
-			line-height: @height-select-big - 3;
+			line-height: @height-select-big - 2;
 		}
 		.@{prefix}select-text {
 			height: @height-select-big;
