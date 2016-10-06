@@ -18,12 +18,14 @@
 		
 		.prefix-border-radius(0);
 		
-		&:first-child {
+		&:first-child,
+		&.btn-first {
 			margin-left: 0;
 			
 			.prefix-border-left-radius(@radius-btn);
 		}
-		&:last-child {
+		&:last-child,
+		&.btn-last {
 			.prefix-border-right-radius(@radius-btn);
 		}
 	}
@@ -43,18 +45,20 @@
 		
 		.prefix-border-radius(0);
 		
-		&:first-child {
+		&:first-child,
+		&.btn-first {
 			.prefix-border-left-radius(0);
 			.prefix-border-top-radius(@radius-btn);
 		}
-		&:last-child {
+		&:last-child,
+		&.btn-last {
 			.prefix-border-right-radius(0);
 			.prefix-border-bottom-radius(@radius-btn);
 		}
 	}
 	
 }
-.@{prefix}btngroup-full {
+.@{prefix}btngroup-table {
 	display: table;
 	border-collapse: separate;
 	width: 100%;
@@ -77,4 +81,7 @@
 			.prefix-border-right-radius(@radius-btn);
 		}
 	}
+}
+.@{prefix}btngroup-full {
+	width: 100%;
 }

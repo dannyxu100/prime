@@ -1411,13 +1411,13 @@
 				</div>
 				<br/>
 					
-				<h3>.btngroup-full > .btn</h3>
+				<h3>.btngroup-table > .btn</h3>
 				<div>.btn只能使用a标签</div>
 				<br/>
 				<div class="grid">
 					<div class="grid-row" style="margin-bottom:5px;">
 						<div class="cell-12-12">
-							<div class="btngroup btngroup-full">
+							<div class="btngroup btngroup-table">
 								<a class="btn" href="javascript:;">左栏</a>
 								<a class="btn" href="javascript:;">中间</a>
 								<a class="btn" href="javascript:;">右栏</a>
@@ -1427,13 +1427,13 @@
 				</div>
 				<br/>
 				
-				<h3>.btngroup-full > .btngroup > .btn</h3>
+				<h3>.btngroup-table > .btngroup > .btn</h3>
 				<div>由于button标签不支持table-cell两端对齐，必须多嵌套一层.btngroup</div>
 				<br/>
 				<div class="grid">
 					<div class="grid-row" style="margin-bottom:5px;">
 						<div class="cell-12-12">
-							<div class="btngroup btngroup-full">
+							<div class="btngroup btngroup-table">
 								<div class="btngroup">
 									<button class="btn">左栏</button>
 								</div>
@@ -1478,7 +1478,7 @@
 				<br/>
 				<div class="grid">
 					<div class="grid-row" style="margin-bottom:5px;">
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu">
 								<a class="popmenu-item" href="javascript:;">新建</a>
 								<a class="popmenu-item" href="javascript:;">打开</a>
@@ -1488,7 +1488,7 @@
 							</div>
 						</div>
 						
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu">
 								<div class="popmenu-item">
 									<div class="hd"></div>
@@ -1519,12 +1519,12 @@
 							</div>
 						</div>
 						
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 						</div>
 					</div>
 					
 					<div class="grid-row" style="margin-bottom:5px;">
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu popmenu-selectable">
 								<div class="popmenu-item">名称排序</div>
 								<div class="popmenu-item">价格排序</div>
@@ -1535,7 +1535,7 @@
 							</div>
 						</div>
 						
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu">
 								<div class="popmenu-item">
 									<div class="hd">复制</div>
@@ -1564,7 +1564,7 @@
 							</div>
 						</div>
 						
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu">
 								<div class="popmenu-item">
 									<div class="hd">复制</div>
@@ -1593,9 +1593,15 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<br/>
 					
+				<h3>.popmenu-icon</h3>
+				<div>自定义图标</div>
+				<br/>
+				<div class="grid">
 					<div class="grid-row" style="margin-bottom:5px;">
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-4 demo-popmenuopen">
 							<div class="popmenu popmenu-icon">
 								<a class="popmenu-item" href="javascript:;">
 									<i class="icon iconfont icon-user-inverse"></i>
@@ -1615,8 +1621,17 @@
 								</a>
 							</div>
 						</div>
-						
-						<div class="cell-12-4 demo-popmenu">
+					</div>
+				</div>
+				<br/>
+				
+				
+				<h3>popmenu .popmenu-sub .popmenu-item</h3>
+				<div>多级嵌套菜单，向左弹出.popmenu-tree-left，向上弹出.popmenu-tree-top，显示箭头.hassub</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-6 demo-popmenuopen">
 							<div class="popmenu popmenu-tree">
 								<div class="popmenu-item hassub">
 									<span>市场部门</span>
@@ -1673,7 +1688,7 @@
 							</div>
 						</div>
 						
-						<div class="cell-12-4 demo-popmenu">
+						<div class="cell-12-6 demo-popmenuopen">
 							<div class="popmenu popmenu-tree-left popmenu-tree-top">
 								<div class="popmenu-item hassub">
 									<span>市场部门</span>
@@ -1730,7 +1745,172 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<br/>
 					
+				<h3>.popmenu-big | .popmenu-min</h3>
+				<div>大尺寸、小尺寸</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-4 demo-popmenuopen">
+							<div class="popmenu popmenu-min">
+								<a class="popmenu-item" href="javascript:;">新建</a>
+								<a class="popmenu-item" href="javascript:;">打开</a>
+								<a class="popmenu-item" href="javascript:;">保存</a>
+								<div class="split"></div>
+								<a class="popmenu-item" href="javascript:;">退出</a>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenuopen">
+							<div class="popmenu popmenu-big">
+								<a class="popmenu-item" href="javascript:;">新建</a>
+								<a class="popmenu-item" href="javascript:;">打开</a>
+								<a class="popmenu-item" href="javascript:;">保存</a>
+								<div class="split"></div>
+								<a class="popmenu-item" href="javascript:;">退出</a>
+							</div>
+						</div>
+						
+						<div class="cell-12-4 demo-popmenuopen">
+						</div>
+					</div>
+					
+				</div>
+				<br/>
+
+				<h3>.btngroup .popmenu</h3>
+				<div>弹出菜单按钮组，.popmenu必须放在.btngroup子元素的最后</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-5-1 demo-popmenuopen">
+							<div class="btngroup">
+								<button class="btn btn-last btn-popmenu">
+									<span>默认</span> <i class="iconfont icon-down"></i>
+								</button>
+							
+								<div class="popmenu active">
+									<a class="popmenu-item" href="javascript:;">新建</a>
+									<a class="popmenu-item" href="javascript:;">打开</a>
+									<a class="popmenu-item" href="javascript:;">保存</a>
+									<div class="split"></div>
+									<a class="popmenu-item" href="javascript:;">退出</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-5-1">
+							<div class="btngroup">
+								<button class="btn btn-last btn-popmenu active">
+									<span>激活</span>
+									<i class="iconfont icon-down"></i>
+								</button>
+								
+								<div class="popmenu active">
+									<a class="popmenu-item" href="javascript:;">新建</a>
+									<a class="popmenu-item" href="javascript:;">打开</a>
+									<a class="popmenu-item" href="javascript:;">保存</a>
+									<div class="split"></div>
+									<a class="popmenu-item" href="javascript:;">退出</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-5-1">
+							<div class="btngroup">
+								<button class="btn btn-popmenu-icon">
+									<i class="iconfont icon-down"></i>
+								</button>
+								<button class="btn btn-last">提交</button>
+								
+								<div class="popmenu">
+									<a class="popmenu-item" href="javascript:;">新建</a>
+									<a class="popmenu-item" href="javascript:;">打开</a>
+									<a class="popmenu-item" href="javascript:;">保存</a>
+									<div class="split"></div>
+									<a class="popmenu-item" href="javascript:;">退出</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-5-1">
+							<div class="btngroup">
+								<button class="btn">提交</button>
+								<button class="btn btn-last btn-popmenu-icon btn-popmenu-left btn-popmenu-top">
+									<i class="iconfont icon-up"></i>
+								</button>
+								
+								<div class="popmenu">
+									<a class="popmenu-item" href="javascript:;">新建</a>
+									<a class="popmenu-item" href="javascript:;">打开</a>
+									<a class="popmenu-item" href="javascript:;">保存</a>
+									<div class="split"></div>
+									<a class="popmenu-item" href="javascript:;">退出</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-5-1">
+						</div>
+					</div>
+					
+					<div class="grid-row" style="margin-bottom:5px;">
+						<div class="cell-12-6 demo-popmenuopen">
+							<div class="btngroup btngroup-full">
+								<button class="btn btn-last btn-full btn-popmenu active">
+									<span>自适应按钮组100%宽度</span> <i class="iconfont icon-down"></i>
+								</button>
+								
+								<div class="popmenu popmenu-full active">
+									<a class="popmenu-item" href="javascript:;">新建</a>
+									<a class="popmenu-item" href="javascript:;">打开</a>
+									<a class="popmenu-item" href="javascript:;">保存</a>
+									<div class="split"></div>
+									<a class="popmenu-item" href="javascript:;">退出</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="cell-12-6 demo-popmenuopen">
+							<div class="btngroup">
+								<button class="btn btn-last btn-popmenu active">
+									<span>内容居中</span> <i class="iconfont icon-down"></i>
+								</button>
+								
+								<div class="popmenu popmenu-full active">
+									<div class="popmenu-item">
+										<div class="hd"></div>
+										<div class="md">后退</div>
+										<div class="ft"></div>
+									</div>
+									<div class="popmenu-item">
+										<div class="hd"></div>
+										<div class="md">暂停</div>
+										<div class="ft"></div>
+									</div>
+									<div class="popmenu-item">
+										<div class="hd"></div>
+										<div class="md">前进</div>
+										<div class="ft"></div>
+									</div>
+									<div class="split"></div>
+									<div class="popmenu-item">
+										<div class="hd"></div>
+										<div class="md">弹出</div>
+										<div class="ft"></div>
+									</div>
+									<div class="popmenu-item">
+										<div class="hd"></div>
+										<div class="md">字幕</div>
+										<div class="ft"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+					</div>
 				</div>
 				<br/>
 
@@ -2149,6 +2329,49 @@
 				</div>
 			</div>
 			
+			<!-- 标签页 -->
+			<div class="section">
+				<h2>标签页</h2>
+				<h3>.tabs</h3>
+				<div></div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:10px;">
+						<div class="cell-12-6">
+							<div class="tabs">
+								<ul class="tabs-navs">
+									<li class="tabs-nav">首页</li>
+									<li class="tabs-nav active">基本信息</li>
+									<li class="tabs-nav">详情</li>
+									<li class="tabs-nav">其他</li>
+								</ul>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				<br/>
+				
+				<h3>.tabs.tabs-min</h3>
+				<div>小尺寸</div>
+				<br/>
+				<div class="grid">
+					<div class="grid-row" style="margin-bottom:10px;">
+						<div class="cell-12-6">
+							<div class="tabs tabs-min">
+								<ul class="tabs-navs">
+									<li class="tabs-nav active">首页</li>
+									<li class="tabs-nav">基本信息</li>
+									<li class="tabs-nav">详情</li>
+									<li class="tabs-nav">更多 <i class="iconfont icon-down"></i></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br/>
+			</div>
+				
 			<!-- 输入框 -->
 			<div class="section">
 				<h2>输入框</h2>
@@ -2776,6 +2999,7 @@
 							<i class="iconfont icon-search"></i>
 							<i class="iconfont icon-trash"></i>
 							<i class="iconfont icon-unlock"></i>
+							<i class="iconfont icon-lock"></i>
 							<br/>
 							<i class="iconfont icon-window"></i>
 							<i class="iconfont icon-window-inverse"></i>

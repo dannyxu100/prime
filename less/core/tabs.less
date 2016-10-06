@@ -1,0 +1,102 @@
+//====================================================
+//
+//		tabs
+//
+//====================================================
+
+
+//设置标签页按钮尺寸
+.tabs-nav-size(@paddingtb; @paddinglr; @fontsize; @height; @lineheight; @fontweight:@fontweight-def) {
+	padding: @paddingtb @paddinglr;
+	height: @height;
+	line-height: @lineheight;
+	font-size: @fontsize;	//unit( @fontsize, em );
+	font-weight: @fontweight;
+	
+}
+
+//设置标签页按钮样式
+.tabs-nav-style(@bgcolor; @bordercolor; @color; @radius:@radius-tabs) {
+	color: @color;
+	background-color: @bgcolor;
+	border-color: @bordercolor;
+	border-bottom-color: @bordercolor-tabs-navs;
+	
+	.prefix-border-top-radius(@radius);
+}
+
+
+//默认标签页
+.@{prefix}tabs {
+	position: relative;
+	z-index: @zindex-tabs;
+	
+	.@{prefix}tabs-navs {
+		padding: 0;
+		margin: 0;
+		border: none;
+		border-bottom: @borderwidth-tabs-navs solid @bordercolor-tabs-navs;
+		background-color: @bgcolor-tabs-navs;
+		cursor: @cursor-pointer;
+		
+		.comm-inlineblock-clearspace();
+		
+		.@{prefix}tabs-nav {
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+			margin-left: 3px;
+			margin-bottom: -@borderwidth-tabs-navs;
+			border: 1px solid transparent;
+			
+			.tabs-nav-size(@padding-tabs-nav-tb; @padding-tabs-nav-lr; @fontsize-tabs-nav; @height-tabs-nav; @lineheight-tabs-nav);
+			.tabs-nav-style(@bgcolor-tabs-nav; @bordercolor-tabs-nav; @color-tabs-nav);
+			.prefix-transition();
+			
+			&:first-child {
+				margin-left: 0;
+			}
+			
+			&:hover,
+			&.hover {
+				color: @color-tabs-nav-hover;
+				border-color: @bordercolor-tabs-nav-hover;
+				background-color: @bgcolor-tabs-nav-hover;
+				z-index: @zindex-tabs-nav-hover;
+				border-bottom-color: @bordercolor-tabs-navs;
+				
+				.prefix-box-shadow(0 -1px 3px rgba(0, 0, 0, .05));
+			}
+			&:active,
+			&.active {
+				color: @color-tabs-nav-active;
+				border-color: @bordercolor-tabs-nav-active;
+				background-color: @bgcolor-tabs-nav-active;
+				z-index: @zindex-tabs-nav-active;
+				border-bottom-color: transparent;
+				
+				.prefix-box-shadow(0 -2px 3px rgba(0, 0, 0, .06));
+				
+				&:focus,
+				&.focus {
+					border-color: @bordercolor-tabs-nav-active;
+					z-index: @zindex-tabs-nav-active;
+					
+					.prefix-tabfocus();
+				}
+			}
+			&.active {
+				cursor: @cursor-def;
+			}
+		}
+	}
+	
+}
+
+.@{prefix}tabs-min {
+	.@{prefix}tabs-navs {
+		.@{prefix}tabs-nav {
+			.tabs-nav-size(@padding-tabs-nav-min-tb; @padding-tabs-nav-min-lr; @fontsize-tabs-nav-min; @height-tabs-nav-min; @lineheight-tabs-nav-min);
+		}
+	}
+}

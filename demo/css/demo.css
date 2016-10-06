@@ -108,10 +108,14 @@ h1 {
 	background:center url(../img/bg-3.png);
 }
 
-.demo-popmenu {
+.demo-popmenuopen {
 	position: relative;
 	height: 260px;
 }
+.demo-popmenuopen > .popmenu {
+	display: block;
+}
+
 .demo-dlg {
 	position: relative;
 	height: 400px;
