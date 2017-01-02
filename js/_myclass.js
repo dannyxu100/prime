@@ -31,6 +31,6 @@
 		return MyClass;
 	})();
 
-	win.MyClass = MyClass;
+	win.myclass = MyClass;
 
 })(window, document);

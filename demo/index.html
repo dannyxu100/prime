@@ -8,12 +8,12 @@
 		<link rel="stylesheet/less" type="text/css" href="../less/prime.less" />
 		<script src="../less.min.js"></script>
 		-->
-		<link href="../build/prime.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../build/prime.css" />
 		<!--
-		<link href="../build/prime.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../build/prime.min.css" />
 		-->
 		
-		<link href="css/demo.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<style>
 			
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
@@ -42,8 +42,8 @@
 		</style>
 	</head>
 	
-	<body>
-		<div class="wapper">
+	<body id="mainbody">
+		<div class="wrapper">
 			<!-- prime -->
 			<div class="section">
 				<cite>https://github.com/dannyxu100/prime</cite>
@@ -2058,51 +2058,6 @@
 				</div>
 				<br/>
 				
-				<h3>.checkbox-min | .radio-min</h3>
-				<div>小尺寸</div>
-				<br/>
-				<div class="grid">
-					<div class="grid-row" style="margin-bottom:5px;">
-						<div class="cell-12-4">
-							<label class="checkbox checkbox-full checkbox-min">
-								<input type="checkbox" name="mustchk" value="mustchk" />
-								<span class="checkbox-text">注册协议《居然没人看过》</span>
-							</label>
-							<label class="checkbox checkbox-full checkbox-min hover">
-								<input type="checkbox" name="mustchk" value="mustchk" />
-								<span class="checkbox-text">注册协议《居然没人看过》</span>
-							</label>
-							<label class="checkbox checkbox-full checkbox-min disabled">
-								<input type="checkbox" name="mustchk" value="mustchk" disabled />
-								<span class="checkbox-text">注册协议《居然没人看过》</span>
-							</label>
-							<label class="checkbox checkbox-full checkbox-min checked">
-								<input type="checkbox" name="mustchk" value="mustchk" checked />
-								<span class="checkbox-text">注册协议《居然没人看过》</span>
-							</label>
-						</div>
-						<div class="cell-12-4">
-							<label class="radio radio-full radio-min">
-								<input type="radio" name="mustchk2" value="mustchk2"/>
-								<span class="radio-text">但这TM却是必须选</span>
-							</label>
-							<label class="radio radio-full radio-min hover">
-								<input type="radio" name="mustchk2" value="mustchk2"/>
-								<span class="radio-text">但这TM却是必须选</span>
-							</label>
-							<label class="radio radio-full radio-min disabled">
-								<input type="radio" name="mustchk2" value="mustchk2" disabled />
-								<span class="radio-text">但这TM却是必须选</span>
-							</label>
-							<label class="radio radio-full radio-min checked">
-								<input type="radio" name="mustchk2" value="mustchk2" checked />
-								<span class="radio-text">但这TM却是必须选</span>
-							</label>
-						</div>
-					</div>
-				</div>
-				<br/>
-				
 				<h3>.checkbox-theme .radio-theme | *-key  | *-light  | *-nice </h3>
 				<div>其他风格按钮</div>
 				<br/>
@@ -2716,10 +2671,10 @@
 						<div class="cell-12-12">
 							<div class="inputgroup" style="width:528px">
 								<div class="addons">
-									<button class="btn btn-nice border">搜索</button>
-									<button class="btn btn-nice border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
+									<button class="btn btn-theme border">搜索</button>
+									<button class="btn btn-theme border" style="padding:8px 3px;"><i class="iconfont icon-down-min"></i></button>
 								</div>
-								<input type="text" class="input input-nice active" value="" placeholder="搜索关键字"/>
+								<input type="text" class="input input-theme active" value="" placeholder="搜索关键字"/>
 							</div>
 						</div>
 					</div>
@@ -2757,9 +2712,9 @@
 						<div class="cell-12-12">
 							<div class="inputgroup inputgroup-full">
 								<div class="addons">
-									<button class="btn btn-key btn-big border"><i class="iconfont icon-search"></i> 搜索</button>
+									<button class="btn btn-theme btn-big border"><i class="iconfont icon-search"></i> 搜索</button>
 								</div>
-								<input type="text" class="input input-key input-big active" value="" placeholder="搜索关键字"/>
+								<input type="text" class="input input-theme input-big active" value="" placeholder="搜索关键字"/>
 							</div>
 						</div>
 					</div>
@@ -2822,11 +2777,11 @@
 								<div class="formsub">
 									<div class="formitem">
 										<label class="label">性别</label>
-										<label class="radio radio-nice checked">
+										<label class="radio radio-theme checked">
 											<input type="radio" id="formgender1" name="formgender" value="man" checked/>
 											<span class="radio-text">男</span>
 										</label>
-										<label class="radio radio-nice">
+										<label class="radio radio-theme">
 											<input type="radio" id="formgender2" name="formgender" value="woman" />
 											<span class="radio-text">女</span>
 										</label>
@@ -2866,7 +2821,7 @@
 								</div>
 								
 								<div style="padding-left:85px;">
-									<button type="submit" class="btn btn-nice">保存</button>
+									<button type="submit" class="btn btn-theme">保存</button>
 								</div>
 							</form>
 						</div>
@@ -3305,6 +3260,8 @@
 		
 		<script src="../js/prime.js"></script>
 		<script src="../js/finder.js"></script>
+		<script src="../dev_document/js/sizzle.js"></script>
+		<!-- <script src="../dev_document/js/jquery-3.1.0.js"></script> -->
 		<script src="js/demo.js"></script>
 	</body>
 </html>
