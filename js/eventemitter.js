@@ -1,7 +1,7 @@
 'use strict';
 
 //自定义类插件
-(function(Prime, win, doc, undefined){
+(function( Prime, win, doc, undefined ){
 	//局部变量
 	var isstring = Prime.isstring,
 		isfunction = Prime.isfunction,
@@ -13,7 +13,7 @@
 	
 	//插件类
 	//事件代理类
-	var EventEmitter = (function(win, doc, undefined){
+	var EventEmitter = (function( win, doc, undefined ){
 		doc	= doc || {};
 		
 		var root = doc.documentElement || {},
@@ -42,7 +42,7 @@
 				return !W3C_MODEL 
 				&& !isNative 
 				&& (elem === doc || elem === win) ? root : elem;
-			}
+			},
 			// events that we consider to be 'native', anything not in this list will
 			// be treated as a custom event
 			standardNativeEvents = 'click dblclick mouseup mousedown contextmenu '		// mouse buttons
@@ -295,7 +295,7 @@
 					handler = condition 
 						? function (event) {
 							var target = findTarget(event, this); 	// deleated event
-							if (condition.apply(target, arguments)) {
+							if ( target && condition.apply(target, arguments) ) {
 								if (event){
 									event.currentTarget = target;
 								}
@@ -358,14 +358,12 @@
 				}
 				return checkNamespaces.length === c;
 			};
-
 			// match by element, original fn (opt), handler fn (opt)
 			RegEntry.prototype.matches = function (checkElement, checkOriginal, checkHandler) {
 				return this.element === checkElement 
 					&& (!checkOriginal || this.original === checkOriginal) 
 					&& (!checkHandler || this.handler === checkHandler);
 			};
-
 			return RegEntry;
 		}());
 		//事件登记管理
@@ -418,8 +416,8 @@
 				},
 				put: function (entry) {
 					var has = !entry.root && !this.has(entry.elem, entry.type, null, false),
-						key = (entry.root ? 'r' : '$') + entry.type,
-						(map[key] || (map[key] = [])).push(entry);
+						key = (entry.root ? 'r' : '$') + entry.type;
+					(map[key] || (map[key] = [])).push(entry);
 					return has;
 				},
 				del: function (entry) {
@@ -448,7 +446,7 @@
 		
 		// we attach this listener to each DOM event that we need to listen to, only once
 		// per event type per DOM element
-		function rootListener(event, type) {
+		function rootListener( event, type ) {
 			if ( !W3C_MODEL && type && event && event.propertyName != '_on' + type ){
 				return;
 			}
@@ -504,12 +502,12 @@
 		};
 		//触发事件
 		var fireListener = W3C_MODEL 
-		? function (isNative, type, elem) {					// modern browsers, do a proper dispatchEvent()
+		? function ( isNative, type, elem ) {					// modern browsers, do a proper dispatchEvent()
 			var evt = doc.createEvent(isNative ? 'HTMLEvents' : 'UIEvents');
 			evt[isNative ? 'initEvent' : 'initUIEvent'](type, true, true, win, 1);
 			elem.dispatchEvent(evt);
 		} 
-		: function (isNative, type, elem) {					// old browser use onpropertychange, just increment a custom property to trigger the event
+		: function ( isNative, type, elem ) {					// old browser use onpropertychange, just increment a custom property to trigger the event
 			elem = targetElement(elem, isNative);
 			isNative ? elem.fireEvent('on' + type, doc.createEventObject()) : elem['_on' + type]++;
 		};
@@ -551,10 +549,10 @@
 		}
 		//事件委托
 		function delegate ( selector, fn ){
-			var findtarget = function(){
+			var findtarget = function( target, root ){
 				var array = isstring( selector ) ? selectorEngine( selector, root ) : selector, i;
 				for( ; target && target !== root; target = target.parentNode ){
-					for( i = array.length; i++ ){
+					for( i = array.length; i--; ){
 						if( array[i] === target ){
 							return target;
 						}
@@ -583,7 +581,7 @@
 		}
 		//绑定事件
 		EventEmitter.on = function( elem, events, selector, fn ){
-			var type, fnOriginal, args, types;
+			var type, fnOriginal, args, types, i, entry, first;
 			if( undefined === selector && 'object' === typeof events ){
 				for( type in events ){
 					if( events.hasOwnProperty(type) ){
@@ -596,7 +594,7 @@
 			if( !isfunction(selector) ){
 				fnOriginal = fn;
 				args = slice.call( arguments, 4 );
-				fn = detegate( selector, fnOriginal, selectorEngine )
+				fn = delegate( selector, fnOriginal, selectorEngine )
 			} else {
 				args = slice.call( arguments, 3 );
 				fn = fnOriginal = selector;
@@ -609,11 +607,11 @@
 			}
 
 			for ( i = types.length; i--; ) {								// add new handler to the registry and check if it's the first for this element/type
-				first = registry.put(entry = new RegEntry(
+				first = Registry.put(entry = new RegEntry(
 					elem, 
 					types[i].replace( nameRegex, '' ), 						// event type
 					fn,
-					originalFn,
+					fnOriginal,
 					str2arr( types[i].replace(namespaceRegex, ''), '.' ), 	// namespaces
 					args,
 					false													// not root
@@ -624,7 +622,7 @@
 			}
 			return elem;
 		}
-		//绑定一次性事件
+		//追加事件（弃用）
 		EventEmitter.add = function ( elem, events, fn, delfn) {
 			return on.apply( null, !isstring(fn) 
 				? slice.call(arguments) 
@@ -720,26 +718,58 @@
 		EventEmitter.event = Event;
 		
 		
+		
+		// for IE, clean up on unload to avoid leaks
+		if (win.attachEvent) {
+			var cleanup = function () {
+				var i, entries = Registry.entries();
+				for (i in entries) {
+					if (entries[i].type && entries[i].type !== 'unload'){
+						off(entries[i].element, entries[i].type);
+					}
+				}
+				win.detachEvent('onunload', cleanup);
+				win.CollectGarbage && win.CollectGarbage();
+			};
+			win.attachEvent('onunload', cleanup)
+		}
+
 		setSelectorEngine();
+		
+		
 		return EventEmitter;
-	})(win, doc);
+	})( win, doc );
 	
 	
 	
+	
+	
+	if( undefined !== Prime.find ){
+		EventEmitter.selector( Prime.find );
+	}
+	function combine( method, type ){
+		var _args = type ? [type] : []
+		return function () {
+			for ( var i = 0, l = this.length; i < l; i++ ) {
+				if ( !arguments.length && method == 'on' && type ){
+					method = 'fire';
+				}
+				EventEmitter[method].apply( this, [this[i]].concat(_args, slice.call(arguments, 0)) );
+			}
+			return this;
+		}
+	}
 	
 	//扩展原型
 	Prime.__struct__.extend({
-		plugin1: PluginName
+		on: combine( 'on' ),
+		one: combine( 'one' ),
+		// clone: combine( 'clone' ),
+		fire: combine( 'fire' ),
+		off: combine( 'off' ),
 	});
 	
 	//扩展类静态成员
-	Prime.extend({
-		pluginhander: function(){
-			var p = Prime();
-			//TODO:
-			
-			return p.plugin1();
-		}
-	});
+	// Prime.extend({});
 	
-})(Prime, window, document);
+})( Prime, window, document );

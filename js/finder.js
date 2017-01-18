@@ -43,6 +43,7 @@
 			matches,
 			contains,
 			classCache = createCache(),
+			tokenCache = createCache(),
 			compilerCache = createCache(),
 			
 			arr=[],
@@ -541,6 +542,18 @@
 					//返回缓存的分组结构groups
 					tokenCache( selector, groups ).slice( 0 );
 		};
+		
+		//合并还原为选择器
+		function toSelector( tokens ) {
+			var i = 0,
+				len = tokens.length,
+				selector = "";
+			for ( ; i < len; i++ ) {
+				selector += tokens[i].value;
+			}
+			return selector;
+		}
+
 		
 		// Support: Chrome 14-35+
 		// Always assume duplicates if they aren't passed to the comparison function

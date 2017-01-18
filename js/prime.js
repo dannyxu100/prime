@@ -55,8 +55,8 @@
 	function createcache(maxlen){
 		var keys = [];
 		function cache( key, value ){
-			if( key.push[ key+' ' ] > maxlen ){		//key加一个空格符，与原型属性做一下区分，避免原型属性被修改
-				delete cache[ key.shift() ];
+			if( keys.push[ key+' ' ] > maxlen ){		//key加一个空格符，与原型属性做一下区分，避免原型属性被修改
+				delete cache[ keys.shift() ];
 			}
 			return ( cache[ key+' ' ] = value );
 		}
