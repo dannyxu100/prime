@@ -139,18 +139,20 @@
 				log: false,
 				error: false
 			},
-			config: function(setting){					//配置函数
+			config: function( setting ){				//配置函数
 				Prime.extend(Prime.setting, setting);
 			},
 			
 			log: function( msg ) {						//统一入口控制台输出
-				if(Prime.setting.log){
+				if( Prime.setting.log ){
 					console.log( '> ' + msg );
 				}
 			},
-			error: function( msg ) {					//统一入口异常抛出
-				if(Prime.setting.error){
-					throw new Error( '错误: ' + msg );
+			error: function( type, msg ) {				//统一入口异常抛出
+				if( Prime.setting.error ){
+					throw new Error( type +'：'+ msg );
+				} else {
+					Prime.log( msg );
 				}
 			},
 			trim: function( text ) {

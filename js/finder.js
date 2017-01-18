@@ -2,7 +2,8 @@
 
 (function(Prime, win, doc, undefined){
 	//局部变量
-	var createCache = Prime.createcache,
+	var error = Prime.error,
+		createCache = Prime.createcache,
 		rquickExpr4Prime = /^(?:\s*(<[\w\W]+>)[^>]*|#([\w-]+))$/,
 		rootPrime;
 	
@@ -420,11 +421,6 @@
 			return document;
 		};
 		
-		//错误信息
-		Finder.error = function( msg ) {
-			throw new Error( "表达式错误: " + msg );
-		};
-		
 		//对结果集去重排序
 		Finder.uniqueSort = function( results ) {
 			var elem,
@@ -541,7 +537,7 @@
 				//需要实际匹配得到分组
 				soFar ? 
 					//有多余的就抛出错误
-					Finder.error( selector ) :
+					error( "表达式错误", selector ) :
 					//返回缓存的分组结构groups
 					tokenCache( selector, groups ).slice( 0 );
 		};
