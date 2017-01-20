@@ -8,6 +8,7 @@
 		rootPrime;
 	
 	//插件类
+	//选择器类
 	var Finder = (function(win, doc, undefined){
 		/* nodeType 编码参考表
 			1	Element	代表元素
