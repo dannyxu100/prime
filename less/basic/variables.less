@@ -1,490 +1,490 @@
 //====================================================
 //
-//		variables
+//      variables
 //
 //====================================================
 
 //prime类名前缀（一般用于自定义样式库和解决css类名冲突）
-@prefix:				~"";
+@prefix:                ~"";
 
 //颜色
-@color-theme-darker:	#027FA2;
-@color-theme-dark:		#319DBB;
-@color-theme:			#05C3F9;
-@color-theme-light:		#43D3FC;
-@color-theme-lighter:	#74DEFC;
-@color-theme-lightest:	#D8F6FE;
+@color-theme-darker:    #027FA2;
+@color-theme-dark:      #319DBB;
+@color-theme:           #05C3F9;
+@color-theme-light:     #43D3FC;
+@color-theme-lighter:   #74DEFC;
+@color-theme-lightest:  #D8F6FE;
 
-@color-key-darker:		#A22613;
-@color-key-dark:		#BB5D4F;
-@color-key:				#F95339;		//#FF735D;
-@color-key-light:		#FB6C56;		//#FC7E6A;
+@color-key-darker:      #A22613;
+@color-key-dark:        #BB5D4F;
+@color-key:             #F95339;        //#FF735D;
+@color-key-light:       #FB6C56;        //#FC7E6A;
 
-@color-light-darkest:	#FFD301;
-@color-light-darker:	#FFF201;
-@color-light-dark:		#FFFF01;
-@color-light:			#FFFF41;
-@color-light-light:		#FFFF73;
-@color-light-lighter:	#FFFFC5;
+@color-light-darkest:   #FFD301;
+@color-light-darker:    #FFF201;
+@color-light-dark:      #FFFF01;
+@color-light:           #FFFF41;
+@color-light-light:     #FFFF73;
+@color-light-lighter:   #FFFFC5;
 
-@color-nice-darker:		#00814D;
-@color-nice-dark:		#269568;
-@color-nice:			#01C677;
-@color-nice-light:		#39E39E;
-@color-nice-lighter:	#67E3B1;
+@color-nice-darker:     #00814D;
+@color-nice-dark:       #269568;
+@color-nice:            #01C677;
+@color-nice-light:      #39E39E;
+@color-nice-lighter:    #67E3B1;
 
-@color-black-darker:		#000;
-@color-black-dark:			#222;
-@color-black:				#333;
-@color-black-light:			#444;
-@color-black-lighter:		#666;
+@color-black-darker:        #000;
+@color-black-dark:          #222;
+@color-black:               #333;
+@color-black-light:         #444;
+@color-black-lighter:       #666;
 
-@color-white-darker:		#F3F3F3;
-@color-white-dark:			#F5F5F5;
-@color-white:				#F7F7F7;
-@color-white-light:			#FAFAFA;
-@color-white-lighter:		#FFF;
+@color-white-darker:        #F3F3F3;
+@color-white-dark:          #F5F5F5;
+@color-white:               #F7F7F7;
+@color-white-light:         #FAFAFA;
+@color-white-lighter:       #FFF;
 
-@color-gray-darker:			#999;
-@color-gray-dark:			#AAA;
-@color-gray:				#BBB;
-@color-gray-light:			#CCC;
-@color-gray-lighter:		#DDD;
-@color-gray-lightest:		#EEE;
+@color-gray-darker:         #999;
+@color-gray-dark:           #AAA;
+@color-gray:                #BBB;
+@color-gray-light:          #CCC;
+@color-gray-lighter:        #DDD;
+@color-gray-lightest:       #EEE;
 
-@color-def:				@color-black;
-@color-weak:			@color-gray-darker;
-@color-title:			inherit;
-@color-hr:				@color-gray-lighter;
-@color-small:			@color-gray-darker;
+@color-def:             @color-black;
+@color-weak:            @color-gray-darker;
+@color-title:           inherit;
+@color-hr:              @color-gray-lighter;
+@color-small:           @color-gray-darker;
 
-@color-link:			@color-theme-dark;
-@color-link-hover:		@color-theme-darker;
+@color-link:            @color-theme-dark;
+@color-link-hover:      @color-theme-darker;
 
-@bgcolor-def:			@color-white-light;
-@bgcolor-weak:			@color-white;
+@bgcolor-def:           @color-white-light;
+@bgcolor-weak:          @color-white;
 
 //布局
-@grid-columns-12:		12;		//偶数等分12列
-@grid-columns-5:		5;		//奇数等分5列
-@grid-columns-7:		7;		//奇数等分7列
-@padding-grid-lr:		2px;
+@grid-columns-12:       12;     //偶数等分12列
+@grid-columns-5:        5;      //奇数等分5列
+@grid-columns-7:        7;      //奇数等分7列
+@padding-grid-lr:       2px;
 
 //控件
-@height-control:				35px;
-@height-control-min:			28px;
-@height-control-big:			45px;
+@height-control:                35px;
+@height-control-min:            28px;
+@height-control-big:            45px;
 
-@fontsize-control:				14px;
-@fontsize-control-min:			12px;
-@fontsize-control-big:			16px;
+@fontsize-control:              14px;
+@fontsize-control-min:          12px;
+@fontsize-control-big:          16px;
 
-@padding-control-tb:			8px;		//上下内间距
-@padding-control-lr:			18px;		//左右内间距
-@padding-control-min-tb:		6px;
-@padding-control-min-lr:		14px;
-@padding-control-big-tb:		10px;
-@padding-control-big-lr:		30px;
+@padding-control-tb:            8px;        //上下内间距
+@padding-control-lr:            18px;       //左右内间距
+@padding-control-min-tb:        6px;
+@padding-control-min-lr:        14px;
+@padding-control-big-tb:        10px;
+@padding-control-big-lr:        30px;
 
 //字体
-@fontfamily-ios:		-apple-system, sf_ui_textlight;
-@fontfamily-en:			"ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial;
-@fontfamily-zh:			"Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
-@fontfamily-sys:		sans-serif;
-// @fontfamily-def:		-apple-system, sf_ui_textlight, "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
-@fontfamily-def:		~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}";
-@fontfamily-title:		inherit;
-@fontfamily-html:		"Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontfamily-ios:        -apple-system, sf_ui_textlight;
+@fontfamily-en:         "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial;
+@fontfamily-zh:         "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei";
+@fontfamily-sys:        sans-serif;
+// @fontfamily-def:     -apple-system, sf_ui_textlight, "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei UI", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+@fontfamily-def:        ~"@{fontfamily-ios}, @{fontfamily-en}, @{fontfamily-zh}, @{fontfamily-sys}";
+@fontfamily-title:      inherit;
+@fontfamily-html:       "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-@fontfamily-icon:		"iconfont";
+@fontfamily-icon:       "iconfont";
 
 
 //图标（特殊符号）
-@icon-done:						"\e60b";
-@icon-delete:					"\e608";
+@icon-done:                     "\e60b";
+@icon-delete:                   "\e608";
 
-@icon-checkboxbefore:			"\e620";
-@icon-checkboxafter:			"\e621";
-@icon-checkboxafter-checked:	"\e622";
-@icon-radiobefore:				"\e64b";
-@icon-radioafter:				"\e64c";
-@icon-radioafter-checked:		"\e64a";
+@icon-checkboxbefore:           "\e620";
+@icon-checkboxafter:            "\e621";
+@icon-checkboxafter-checked:    "\e622";
+@icon-radiobefore:              "\e64b";
+@icon-radioafter:               "\e64c";
+@icon-radioafter-checked:       "\e64a";
 
-@icon-left:						"\e603";
-@icon-left-min:					"\e61f";
-@icon-right:					"\e601";
-@icon-right-min:				"\e652";
-@icon-down:						"\e600";
-@icon-down-min:					"\e64d";
-@icon-up:						"\e602";
-@icon-up-min:					"\e615";
+@icon-left:                     "\e603";
+@icon-left-min:                 "\e61f";
+@icon-right:                    "\e601";
+@icon-right-min:                "\e652";
+@icon-down:                     "\e600";
+@icon-down-min:                 "\e64d";
+@icon-up:                       "\e602";
+@icon-up-min:                   "\e615";
 
-@icon-snow:						"*";
+@icon-snow:                     "*";
 
 
 
 //排版
-@defpx:					16;
-@rem2px:				1/@defpx;	// 1/16 = 0.0625;
+@defpx:                 16;
+@rem2px:                1/@defpx;   // 1/16 = 0.0625;
 
-@fontsize-s:			0.75;	// 12px
-@fontsize-def:			0.875;	// 14px
-@fontsize-m:			1;		// 16px
-@fontsize-l:			1.125;	// 18px
-@fontsize-xl:			1.5;	// 24px
-@fontsize-xxl:			1.875;	// 30px
-@fontsize-xxxl:			2.25;	// 36px
+@fontsize-s:            0.75;   // 12px
+@fontsize-def:          0.875;  // 14px
+@fontsize-m:            1;      // 16px
+@fontsize-l:            1.125;  // 18px
+@fontsize-xl:           1.5;    // 24px
+@fontsize-xxl:          1.875;  // 30px
+@fontsize-xxxl:         2.25;   // 36px
 
-@fontweight-def:		400;		//==normal
-@fontweight-bold:		700;		//==bold
-@fontweight-title:		500;		//==Medium
+@fontweight-def:        400;        //==normal
+@fontweight-bold:       700;        //==bold
+@fontweight-title:      500;        //==Medium
 
-@lineheight-def:		1.5;
-@lineheight-auto:    	floor(@fontsize-def/@rem2px * @lineheight-def);	//动态行高，根据字体大小计算
-@lineheight-title:		1.1;
+@lineheight-def:        1.5;
+@lineheight-auto:       floor(@fontsize-def/@rem2px * @lineheight-def); //动态行高，根据字体大小计算
+@lineheight-title:      1.1;
 
 //边框
-@borderstyle-def:		solid;
-@borderstyle-dotted:	dotted;
-@borderstyle-double:	double;
-@borderstyle-dashed:	dashed;
+@borderstyle-def:       solid;
+@borderstyle-dotted:    dotted;
+@borderstyle-double:    double;
+@borderstyle-dashed:    dashed;
 
 //z层级
-@zindex-def:			0;
-@zindex-bg:				1;
-@zindex-control:		100;
-@zindex-layer:			1000;
+@zindex-def:            0;
+@zindex-bg:             1;
+@zindex-control:        100;
+@zindex-layer:          1000;
 
 //倒角
-@radius-def:			.3em;
-@radius-1:				.1em;
-@radius-2:				.2em;
-@radius-3:				.3em;
-@radius-4:				.4em;
-@radius-5:				.5em;
-@radius-6:				.6em;
-@radius-7:				.7em;
-@radius-8:				.8em;
-@radius-9:				.9em;
-@radius-10:				1em;
+@radius-def:            .3em;
+@radius-1:              .1em;
+@radius-2:              .2em;
+@radius-3:              .3em;
+@radius-4:              .4em;
+@radius-5:              .5em;
+@radius-6:              .6em;
+@radius-7:              .7em;
+@radius-8:              .8em;
+@radius-9:              .9em;
+@radius-10:             1em;
 
 //指针样式
-// auto			:　			默认值 。浏览器根据当前情况自动确定鼠标光标类型。
-// all-scroll		:　	IE6.0	有上下左右四个箭头，中间有一个圆点的光标。用于标示页面可以向上下左右任何方向滚动。
-// col-resize		:　	IE6.0	有左右两个箭头，中间由竖线分隔开的光标。用于标示项目或标题栏可以被水平改变尺寸。
-// crosshair		:　			简单的十字线光标。
-// default			:　			客户端平台的默认光标。通常是一个箭头。
-// hand			:　			竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样。
-// move			:　			十字箭头光标。用于标示对象可被移动。
-// help			:　			带有问号标记的箭头。用于标示有帮助信息存在。
-// no-drop			:　	IE6.0	带有一个被斜线贯穿的圆圈的手形光标。用于标示被拖起的对象不允许在光标的当前位置被放下。
-// not-allowed		:　	IE6.0	禁止标记(一个被斜线贯穿的圆圈)光标。用于标示请求的操作不允许被执行。
-// pointer			:　	IE6.0	和 hand 一样。竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样。
-// progress		:　	IE6.0	带有沙漏标记的箭头光标。用于标示一个进程正在后台运行。
-// row-resize		:　	IE6.0	有上下两个箭头，中间由横线分隔开的光标。用于标示项目或标题栏可以被垂直改变尺寸。
-// text			:　			用于标示可编辑的水平文本的光标。通常是大写字母 I 的形状。
-// vertical-text	:　	IE6.0	用于标示可编辑的垂直文本的光标。通常是大写字母 I 旋转90度的形状。
-// wait			:　			用于标示程序忙用户需要等待的光标。通常是沙漏或手表的形状。
-// *-resize		:　			用于标示对象可被改变尺寸方向的箭头光标。
-							// w-resize | s-resize | n-resize | e-resize | ne-resize | sw-resize | se-resize | nw-resize
-// url ( url )		:　	IE6.0	用户自定义光标。使用绝对或相对 url 地址指定光标文件(后缀为 .cur 或者 .ani )。
-@cursor-def:			default;
-@cursor-pointer:		pointer;
-@cursor-no:				not-allowed;
-@cursor-loading:		wait;
+// auto         :　          默认值 。浏览器根据当前情况自动确定鼠标光标类型。
+// all-scroll       :　  IE6.0   有上下左右四个箭头，中间有一个圆点的光标。用于标示页面可以向上下左右任何方向滚动。
+// col-resize       :　  IE6.0   有左右两个箭头，中间由竖线分隔开的光标。用于标示项目或标题栏可以被水平改变尺寸。
+// crosshair        :　          简单的十字线光标。
+// default          :　          客户端平台的默认光标。通常是一个箭头。
+// hand         :　          竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样。
+// move         :　          十字箭头光标。用于标示对象可被移动。
+// help         :　          带有问号标记的箭头。用于标示有帮助信息存在。
+// no-drop          :　  IE6.0   带有一个被斜线贯穿的圆圈的手形光标。用于标示被拖起的对象不允许在光标的当前位置被放下。
+// not-allowed      :　  IE6.0   禁止标记(一个被斜线贯穿的圆圈)光标。用于标示请求的操作不允许被执行。
+// pointer          :　  IE6.0   和 hand 一样。竖起一只手指的手形光标。就像通常用户将光标移到超链接上时那样。
+// progress     :　  IE6.0   带有沙漏标记的箭头光标。用于标示一个进程正在后台运行。
+// row-resize       :　  IE6.0   有上下两个箭头，中间由横线分隔开的光标。用于标示项目或标题栏可以被垂直改变尺寸。
+// text         :　          用于标示可编辑的水平文本的光标。通常是大写字母 I 的形状。
+// vertical-text    :　  IE6.0   用于标示可编辑的垂直文本的光标。通常是大写字母 I 旋转90度的形状。
+// wait         :　          用于标示程序忙用户需要等待的光标。通常是沙漏或手表的形状。
+// *-resize     :　          用于标示对象可被改变尺寸方向的箭头光标。
+                            // w-resize | s-resize | n-resize | e-resize | ne-resize | sw-resize | se-resize | nw-resize
+// url ( url )      :　  IE6.0   用户自定义光标。使用绝对或相对 url 地址指定光标文件(后缀为 .cur 或者 .ani )。
+@cursor-def:            default;
+@cursor-pointer:        pointer;
+@cursor-no:             not-allowed;
+@cursor-loading:        wait;
 
 
 //按钮
-@height-btn:				@height-control;
-@height-btn-min:			@height-control-min;
-@height-btn-big:			@height-control-big;
+@height-btn:                @height-control;
+@height-btn-min:            @height-control-min;
+@height-btn-big:            @height-control-big;
 
-@lineheight-btn:			@height-btn - @padding-control-tb*2 - 2px;
-@lineheight-btn-min:		@height-btn-min - @padding-control-min-tb*2 - 2px;
-@lineheight-btn-big:		@height-btn-big - @padding-control-big-tb*2 - 2px;
+@lineheight-btn:            @height-btn - @padding-control-tb*2 - 2px;
+@lineheight-btn-min:        @height-btn-min - @padding-control-min-tb*2 - 2px;
+@lineheight-btn-big:        @height-btn-big - @padding-control-big-tb*2 - 2px;
 
-@fontsize-btn:				@fontsize-control;
-@fontsize-btn-min:			@fontsize-control-min;
-@fontsize-btn-big:			@fontsize-control-big;
+@fontsize-btn:              @fontsize-control;
+@fontsize-btn-min:          @fontsize-control-min;
+@fontsize-btn-big:          @fontsize-control-big;
 
-@padding-btn-tb:			@padding-control-tb;		//按钮上下内间距
-@padding-btn-lr:			@padding-control-lr;		//按钮左右内间距
-@padding-btn-min-tb:		@padding-control-min-tb;
-@padding-btn-min-lr:		@padding-control-min-lr;
-@padding-btn-big-tb:		@padding-control-big-tb;
-@padding-btn-big-lr:		@padding-control-big-lr;
+@padding-btn-tb:            @padding-control-tb;        //按钮上下内间距
+@padding-btn-lr:            @padding-control-lr;        //按钮左右内间距
+@padding-btn-min-tb:        @padding-control-min-tb;
+@padding-btn-min-lr:        @padding-control-min-lr;
+@padding-btn-big-tb:        @padding-control-big-tb;
+@padding-btn-big-lr:        @padding-control-big-lr;
 
-@radius-btn:				@radius-def;
-@zindex-btn:				@zindex-control;
-@zindex-btnhover:			@zindex-control + 10;
+@radius-btn:                @radius-def;
+@zindex-btn:                @zindex-control;
+@zindex-btnhover:           @zindex-control + 10;
 
 
 //气泡菜单
-@bgcolor-popmenu:						@color-white-lighter;
-@bordercolor-popmenu:					@color-gray-lighter;
-@color-popmenu:							@color-black;
+@bgcolor-popmenu:                       @color-white-lighter;
+@bordercolor-popmenu:                   @color-gray-lighter;
+@color-popmenu:                         @color-black;
 
-@color-popmenu-item-selected:			@color-black-darker;
-@bgcolor-popmenu-item-selected:			@color-gray-lightest;
+@color-popmenu-item-selected:           @color-black-darker;
+@bgcolor-popmenu-item-selected:         @color-gray-lightest;
 
-@color-popmenu-icon-selected:			@color-theme-darker;
-@color-popmenu-icon-hassub:				@color-theme-dark;
+@color-popmenu-icon-selected:           @color-theme-darker;
+@color-popmenu-icon-hassub:             @color-theme-dark;
 
-@minwidth-popmenu:						160px;
-@minwidth-popmenu-min:					140px;
-@minwidth-popmenu-big:					180px;
-@height-popmenu-item:					28px;
-@height-popmenu-min-item:				26px;
-@height-popmenu-big-item:				30px;
-@height-popmenu-split:					10px;
+@minwidth-popmenu:                      160px;
+@minwidth-popmenu-min:                  140px;
+@minwidth-popmenu-big:                  180px;
+@height-popmenu-item:                   28px;
+@height-popmenu-min-item:               26px;
+@height-popmenu-big-item:               30px;
+@height-popmenu-split:                  10px;
 
-@padding-popmenu-tb:					5px;
-@padding-popmenu-item-l:				15px;
-@padding-popmenu-item-r:				15px;
-@padding-popmenu-selectable-item-r:		35px;
-@padding-popmenu-icon-item-l:			40px;
-@padding-popmenu-tree-item-l:			35px;
-@padding-popmenu-tree-item-r:			35px;
+@padding-popmenu-tb:                    5px;
+@padding-popmenu-item-l:                15px;
+@padding-popmenu-item-r:                15px;
+@padding-popmenu-selectable-item-r:     35px;
+@padding-popmenu-icon-item-l:           40px;
+@padding-popmenu-tree-item-l:           35px;
+@padding-popmenu-tree-item-r:           35px;
 
-@fontsize-popmenu:						@fontsize-control;
-@fontsize-popmenu-min:					@fontsize-control-min;
-@fontsize-popmenu-big:					@fontsize-control-big;
-@fontsize-popmenu-icon:					14px;
-@fontsize-popmenu-icon-selected:		14px;
-@fontsize-popmenu-icon-hassub:			12px;
-			
-@zindex-popmenu:						@zindex-control;
-@zindex-popmenu-active:					@zindex-popmenu + 10;
-@zindex-popmenu-hover:					@zindex-popmenu + 20;
-		
-@radius-popmenu:						@radius-def;
+@fontsize-popmenu:                      @fontsize-control;
+@fontsize-popmenu-min:                  @fontsize-control-min;
+@fontsize-popmenu-big:                  @fontsize-control-big;
+@fontsize-popmenu-icon:                 14px;
+@fontsize-popmenu-icon-selected:        14px;
+@fontsize-popmenu-icon-hassub:          12px;
 
-@icon-popmenu-selected:					@icon-done;
-@icon-popmenu-sub-left:					@icon-left-min;
-@icon-popmenu-sub-right:				@icon-right-min;
+@zindex-popmenu:                        @zindex-control;
+@zindex-popmenu-active:                 @zindex-popmenu + 10;
+@zindex-popmenu-hover:                  @zindex-popmenu + 20;
+
+@radius-popmenu:                        @radius-def;
+
+@icon-popmenu-selected:                 @icon-done;
+@icon-popmenu-sub-left:                 @icon-left-min;
+@icon-popmenu-sub-right:                @icon-right-min;
 
 
 
 //下拉框
-@color-select-item-selected:	@color-black-light;
-@bgcolor-select-item-selected:	@color-theme-lightest;
+@color-select-item-selected:    @color-black-light;
+@bgcolor-select-item-selected:  @color-theme-lightest;
 
-@height-select:					@height-control;
-@height-select-min:				@height-control-min;
-@height-select-big:				@height-control-big;
+@height-select:                 @height-control;
+@height-select-min:             @height-control-min;
+@height-select-big:             @height-control-big;
 
-@zindex-select:					@zindex-control;
-@zindex-select-hover:			@zindex-select + 10;
-@zindex-selectbox:				@zindex-control + 20;
-@zindex-selectbox-after:		@zindex-selectbox + 10;
-@zindex-selectlist:				@zindex-control + 10;
-	
-@lineheight-select:				@height-select - 2px;
-@lineheight-select-min:			@height-select-min - 2px;
-@lineheight-select-big:			@height-select-big - 2px;
-		
-@height-select-list:			300px;
-@height-select-split:			10px;
-	
-@height-select-item:			28px;
-@height-select-min-item:		26px;
-@height-select-big-item:		30px;
+@zindex-select:                 @zindex-control;
+@zindex-select-hover:           @zindex-select + 10;
+@zindex-selectbox:              @zindex-control + 20;
+@zindex-selectbox-after:        @zindex-selectbox + 10;
+@zindex-selectlist:             @zindex-control + 10;
 
-@fontsize-select-text:			@fontsize-control;
-@fontsize-select-min-text:		@fontsize-control-min;
-@fontsize-select-big-text:		@fontsize-control-big;
+@lineheight-select:             @height-select - 2px;
+@lineheight-select-min:         @height-select-min - 2px;
+@lineheight-select-big:         @height-select-big - 2px;
 
-@fontsize-select-list:			@fontsize-control-min;
-@fontsize-select-min-list:		@fontsize-control-min;
-@fontsize-select-big-list:		@fontsize-control;
+@height-select-list:            300px;
+@height-select-split:           10px;
 
-@padding-select-l:				15px;
-@padding-select-r:				5px;
+@height-select-item:            28px;
+@height-select-min-item:        26px;
+@height-select-big-item:        30px;
 
-@radius-select:					@radius-def;
-@radius-select-list:			@radius-def;
+@fontsize-select-text:          @fontsize-control;
+@fontsize-select-min-text:      @fontsize-control-min;
+@fontsize-select-big-text:      @fontsize-control-big;
 
-@icon-select-right:				@icon-right-min;
-@icon-select-down:				@icon-down-min;
-@icon-select-up:				@icon-up-min;
+@fontsize-select-list:          @fontsize-control-min;
+@fontsize-select-min-list:      @fontsize-control-min;
+@fontsize-select-big-list:      @fontsize-control;
+
+@padding-select-l:              15px;
+@padding-select-r:              5px;
+
+@radius-select:                 @radius-def;
+@radius-select-list:            @radius-def;
+
+@icon-select-right:             @icon-right-min;
+@icon-select-down:              @icon-down-min;
+@icon-select-up:                @icon-up-min;
 
 
 
 //单选复选框
-@fontsize-checkboxradio-text:		@fontsize-control;
+@fontsize-checkboxradio-text:       @fontsize-control;
 
-@zindex-checkboxradio-before:		@zindex-control;
-@zindex-checkboxradio-after:		@zindex-checkboxradio-before + 10;
+@zindex-checkboxradio-before:       @zindex-control;
+@zindex-checkboxradio-after:        @zindex-checkboxradio-before + 10;
 
-@padding-checkboxradio-tb:			3px;
-@padding-checkboxradio-l:			25px;
-@padding-checkboxradio-r:			10px;
+@padding-checkboxradio-tb:          3px;
+@padding-checkboxradio-l:           25px;
+@padding-checkboxradio-r:           10px;
 
-@height-checkbox:					20px;
-@height-radio:						20px;
+@height-checkbox:                   20px;
+@height-radio:                      20px;
 
-@fontsize-checkboxicon:				18px;
-@fontsize-radioicon:				19px;
+@fontsize-checkboxicon:             18px;
+@fontsize-radioicon:                19px;
 
-@color-checkbox-checked:			@color-black-light;
-@color-radio-checked:				@color-black-light;
-	
-@radius-checkboxbefore:				@radius-def;
+@color-checkbox-checked:            @color-black-light;
+@color-radio-checked:               @color-black-light;
+
+@radius-checkboxbefore:             @radius-def;
 
 
 //表格
-@color-table:				@color-black-light;
-@fontsize-table:			@fontsize-def;
+@color-table:               @color-black-light;
+@fontsize-table:            @fontsize-def;
 
-@radius-table:				@radius-def;
+@radius-table:              @radius-def;
 
 
 //标签页
-@bgcolor-tabs-navs:					transparent;
-@borderwidth-tabs-navs:				1px;
-@bordercolor-tabs-navs:				@color-gray-lighter;
+@bgcolor-tabs-navs:                 transparent;
+@borderwidth-tabs-navs:             1px;
+@bordercolor-tabs-navs:             @color-gray-lighter;
 
-@color-tabs-nav:					@color-theme-dark;
-@color-tabs-nav-hover:				@color-black-lighter;
-@color-tabs-nav-active:				@color-black;
+@color-tabs-nav:                    @color-theme-dark;
+@color-tabs-nav-hover:              @color-black-lighter;
+@color-tabs-nav-active:             @color-black;
 
-@bgcolor-tabs-nav:					transparent;
-@bgcolor-tabs-nav-hover:			@color-white-lighter;
-@bgcolor-tabs-nav-active:			@color-white-lighter;
+@bgcolor-tabs-nav:                  transparent;
+@bgcolor-tabs-nav-hover:            @color-white-lighter;
+@bgcolor-tabs-nav-active:           @color-white-lighter;
 
-@bordercolor-tabs-nav:				transparent;
-@bordercolor-tabs-nav-hover:		@color-white-dark;
-@bordercolor-tabs-nav-active:		@color-gray-lighter;
+@bordercolor-tabs-nav:              transparent;
+@bordercolor-tabs-nav-hover:        @color-white-dark;
+@bordercolor-tabs-nav-active:       @color-gray-lighter;
 
-@fontsize-tabs-nav:					14px;
-@fontsize-tabs-nav-min:				12px;
+@fontsize-tabs-nav:                 14px;
+@fontsize-tabs-nav-min:             12px;
 
-@padding-tabs-nav-tb:				15px;
-@padding-tabs-nav-lr:				15px;
-@padding-tabs-nav-min-tb:			8px;
-@padding-tabs-nav-min-lr:			15px;
+@padding-tabs-nav-tb:               15px;
+@padding-tabs-nav-lr:               15px;
+@padding-tabs-nav-min-tb:           8px;
+@padding-tabs-nav-min-lr:           15px;
 
-@height-tabs-nav:					50px;
-@height-tabs-nav-min:				32px;
-	
-@lineheight-tabs-nav:				@height-tabs-nav - @padding-tabs-nav-tb*2 - 2px;
-@lineheight-tabs-nav-min:			@height-tabs-nav-min - @padding-tabs-nav-min-tb*2 - 2px;
+@height-tabs-nav:                   50px;
+@height-tabs-nav-min:               32px;
 
-@zindex-tabs:						@zindex-bg;
-@zindex-tabs-nav:					@zindex-control;
-@zindex-tabs-nav-hover:				@zindex-tabs-nav + 10;
-@zindex-tabs-nav-active:			@zindex-tabs-nav + 20;
+@lineheight-tabs-nav:               @height-tabs-nav - @padding-tabs-nav-tb*2 - 2px;
+@lineheight-tabs-nav-min:           @height-tabs-nav-min - @padding-tabs-nav-min-tb*2 - 2px;
 
-@radius-tab-nav:					@radius-def;
+@zindex-tabs:                       @zindex-bg;
+@zindex-tabs-nav:                   @zindex-control;
+@zindex-tabs-nav-hover:             @zindex-tabs-nav + 10;
+@zindex-tabs-nav-active:            @zindex-tabs-nav + 20;
+
+@radius-tab-nav:                    @radius-def;
 
 
 //标签
-@padding-tag-tb:			.3em;
-@padding-tag-lr:			.5em;
+@padding-tag-tb:            .3em;
+@padding-tag-lr:            .5em;
 
-@height-tag:				inherit;
-@lineheight-tag:			1;
-@fontsize-tag:				.7em;
+@height-tag:                inherit;
+@lineheight-tag:            1;
+@fontsize-tag:              .7em;
 
-@color-tag:					@color-white-lighter;
-@bgcolor-tag:				@color-gray-dark;
-@bordercolor-tag:			transparent;
+@color-tag:                 @color-white-lighter;
+@bgcolor-tag:               @color-gray-dark;
+@bordercolor-tag:           transparent;
 
-@radius-tag:				@radius-def;
+@radius-tag:                @radius-def;
 
 
 //输入框
-@width-input:				160px;
-@height-input:				@height-control;
-@width-textarea:			@width-input;
-@height-textarea:			@height-control * 3;
-@height-input-min:			@height-control-min;
-@height-input-big:			@height-control-big;
+@width-input:               160px;
+@height-input:              @height-control;
+@width-textarea:            @width-input;
+@height-textarea:           @height-control * 3;
+@height-input-min:          @height-control-min;
+@height-input-big:          @height-control-big;
 
-@padding-input:				4px;
-@padding-input-l:			15px;
+@padding-input:             4px;
+@padding-input-l:           15px;
 
-@lineheight-input:			@height-control - @padding-input*2 - 2px;
-@lineheight-input-min:		@height-control-min - @padding-input*2 - 2px;
-@lineheight-input-big:		@height-control-big - @padding-input*2 - 2px;
+@lineheight-input:          @height-control - @padding-input*2 - 2px;
+@lineheight-input-min:      @height-control-min - @padding-input*2 - 2px;
+@lineheight-input-big:      @height-control-big - @padding-input*2 - 2px;
 
-@fontsize-input:			@fontsize-control;
-@fontsize-input-min:		@fontsize-control-min;
-@fontsize-input-big:		@fontsize-control-big;
+@fontsize-input:            @fontsize-control;
+@fontsize-input-min:        @fontsize-control-min;
+@fontsize-input-big:        @fontsize-control-big;
 
-@bordercolor-input:			@color-gray-lighter;
-@bgcolor-input:				@color-white-lighter;
-@shadowcolor-input:			rgba(0, 0, 0, .05);
-@bordercolor-input-focus:	@color-gray;
-@shadowcolor-input-focus:	rgba(0, 0, 0, .09);
+@bordercolor-input:         @color-gray-lighter;
+@bgcolor-input:             @color-white-lighter;
+@shadowcolor-input:         rgba(0, 0, 0, .05);
+@bordercolor-input-focus:   @color-gray;
+@shadowcolor-input-focus:   rgba(0, 0, 0, .09);
 
-@bordercolor-input-theme:			@bordercolor-input;
-@bgcolor-input-theme:				@bgcolor-input;
-@bordercolor-input-theme-focus:		@color-theme;
-@shadowcolor-input-theme-focus:		rgba(5, 195, 249, .2);		//@color-theme #05C3F9
+@bordercolor-input-theme:           @bordercolor-input;
+@bgcolor-input-theme:               @bgcolor-input;
+@bordercolor-input-theme-focus:     @color-theme;
+@shadowcolor-input-theme-focus:     rgba(5, 195, 249, .2);      //@color-theme #05C3F9
 
-@bordercolor-input-key:				@bordercolor-input;
-@bgcolor-input-key:					@bgcolor-input;
-@bordercolor-input-key-focus:		@color-key;
-@shadowcolor-input-key-focus:		rgba(249, 83, 57, .2);		//@color-key #F95339
+@bordercolor-input-key:             @bordercolor-input;
+@bgcolor-input-key:                 @bgcolor-input;
+@bordercolor-input-key-focus:       @color-key;
+@shadowcolor-input-key-focus:       rgba(249, 83, 57, .2);      //@color-key #F95339
 
-@bordercolor-input-light:			@bordercolor-input;
-@bgcolor-input-light:				@bgcolor-input;
-@bordercolor-input-light-focus:		@color-light-darkest;
-@shadowcolor-input-light-focus:		rgba(255, 211, 1, .2);		//@color-light #FFFF01
+@bordercolor-input-light:           @bordercolor-input;
+@bgcolor-input-light:               @bgcolor-input;
+@bordercolor-input-light-focus:     @color-light-darkest;
+@shadowcolor-input-light-focus:     rgba(255, 211, 1, .2);      //@color-light #FFFF01
 
-@bordercolor-input-nice:			@bordercolor-input;
-@bgcolor-input-nice:				@bgcolor-input;
-@bordercolor-input-nice-focus:		@color-nice;
-@shadowcolor-input-nice-focus:		rgba(1, 198, 119, .2);		//@color-light #01C677
+@bordercolor-input-nice:            @bordercolor-input;
+@bgcolor-input-nice:                @bgcolor-input;
+@bordercolor-input-nice-focus:      @color-nice;
+@shadowcolor-input-nice-focus:      rgba(1, 198, 119, .2);      //@color-light #01C677
 
-@radius-input:						@radius-def;
+@radius-input:                      @radius-def;
 
 
 //组合输入框
-@zindex-inputgroup-input:				@zindex-control;
-@zindex-inputgroup-input-focus:			@zindex-inputgroup-input + 20;
-@zindex-inputgroup-addons:				@zindex-inputgroup-input + 10;
-@zindex-inputgroup-addons-btn:			@zindex-control;
-@zindex-inputgroup-addons-btn-hover:	@zindex-inputgroup-addons-btn + 10;
+@zindex-inputgroup-input:               @zindex-control;
+@zindex-inputgroup-input-focus:         @zindex-inputgroup-input + 20;
+@zindex-inputgroup-addons:              @zindex-inputgroup-input + 10;
+@zindex-inputgroup-addons-btn:          @zindex-control;
+@zindex-inputgroup-addons-btn-hover:    @zindex-inputgroup-addons-btn + 10;
 
 
 //表单
-@padding-form:				0;
-@margin-form-t:				0;
-@margin-form-b:				0;
-@margin-form-sub-t:			5px;
-@margin-form-sub-b:			30px;
-@margin-form-item-t:		0;
-@margin-form-item-b:		15px;
+@padding-form:              0;
+@margin-form-t:             0;
+@margin-form-b:             0;
+@margin-form-sub-t:         5px;
+@margin-form-sub-b:         30px;
+@margin-form-item-t:        0;
+@margin-form-item-b:        15px;
 
-@fontsize-formlabel:		14px;
-@width-formlabel:			70px;
-@margin-formlabel-l:		0px;
-@margin-formlabel-r:		15px;
+@fontsize-formlabel:        14px;
+@width-formlabel:           70px;
+@margin-formlabel-l:        0px;
+@margin-formlabel-r:        15px;
 
-@color-formmust:			@color-key;
-@icon-form-must:			@icon-snow;
+@color-formmust:            @color-key;
+@icon-form-must:            @icon-snow;
 
 //遮罩层
-@bgcolor-mask:				@color-black-darker;
-@zindex-mask:				@zindex-layer;
+@bgcolor-mask:              @color-black-darker;
+@zindex-mask:               @zindex-layer;
 
 
 //对话框
-@zindex-dlg:				@zindex-layer;
-@zindex-dlgmask:			@zindex-dlg;
-@zindex-dlgwrapper:			@zindex-dlg + 10;
-@zindex-dlgtitle:			@zindex-bg;
-@zindex-dlgclose:			@zindex-dlgtitle + 10;
+@zindex-dlg:                @zindex-layer;
+@zindex-dlgmask:            @zindex-dlg;
+@zindex-dlgwrapper:         @zindex-dlg + 10;
+@zindex-dlgtitle:           @zindex-bg;
+@zindex-dlgclose:           @zindex-dlgtitle + 10;
 
-@color-dlgtitle:			@color-black-lighter;
-@fontsize-dlgtitle:			@fontsize-m;
-@fontweight-dlgtitle:		@fontweight-bold;
+@color-dlgtitle:            @color-black-lighter;
+@fontsize-dlgtitle:         @fontsize-m;
+@fontweight-dlgtitle:       @fontweight-bold;
 
-@icon-dlgclose:				@icon-delete;
+@icon-dlgclose:             @icon-delete;
 
-@radius-dlg:				@radius-def;
+@radius-dlg:                @radius-def;
 
 
 
