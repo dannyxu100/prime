@@ -1,35 +1,41 @@
 //====================================================
 //
-//		grid
+//      grid
 //
 //====================================================
 
 //栅栏布局
 .@{prefix}grid {
-	width: 100%;
+    width: 100%;
 }
 .@{prefix}grid-row,
 .@{prefix}grid-row-full {
-	.comm-clearfix();
+    .comm-clearfix();
+}
+.@{prefix}grid-row {
+    margin-top: @grid-rowspace*2;
+    &:first-child {
+        margin-top: 0;
+    }
 }
 
 .make-cell( @columns ) {
-	.loop( @size ) {
-		@item: ~".@{prefix}cell-@{columns}-@{size}";
-		.loop( @size + 1, @item );					//传入第一个类名
-	}
-	.loop( @size, @list ) when ( @size <= @columns ) {
-		@item: ~".@{prefix}cell-@{columns}-@{size}";
-		.loop( @size + 1, ~"@{list}, @{item}" );	//串连类名，连续定义
-	}
-	.loop( @size, @list ) when ( @size > @columns ) {
-		@{list} {
-			position: relative;
-			float: left;
-			padding: 0 @padding-grid-lr;
-		}
-	}
-	.loop( 1 );		//启动
+    .loop( @size ) {
+        @item: ~".@{prefix}cell-@{columns}-@{size}";
+        .loop( @size + 1, @item );                  //传入第一个类名
+    }
+    .loop( @size, @list ) when ( @size <= @columns ) {
+        @item: ~".@{prefix}cell-@{columns}-@{size}";
+        .loop( @size + 1, ~"@{list}, @{item}" );    //串连类名，连续定义
+    }
+    .loop( @size, @list ) when ( @size > @columns ) {
+        @{list} {
+            position: relative;
+            float: left;
+            padding: 0 @grid-colspace;
+        }
+    }
+    .loop( 1 );     //启动
 }
 .make-cell( @grid-columns-5 );
 .make-cell( @grid-columns-7 );
@@ -37,13 +43,13 @@
 
 
 .make-cellwidth( @columns ) {
-	.loop( @size ) when ( @size <= @columns ) {
-		.@{prefix}cell-@{columns}-@{size} {
-			width: percentage( @size/@columns );
-		}
-		.loop( @size + 1 );
-	}
-	.loop( 1 );		//启动
+    .loop( @size ) when ( @size <= @columns ) {
+        .@{prefix}cell-@{columns}-@{size} {
+            width: percentage( @size/@columns );
+        }
+        .loop( @size + 1 );
+    }
+    .loop( 1 );     //启动
 }
 .make-cellwidth( @grid-columns-5 );
 .make-cellwidth( @grid-columns-7 );
@@ -51,14 +57,17 @@
 
 
 [class^="cell-"]:first-child {
-	padding-left: 0;
+    padding-left: 0;
 }
 [class^="cell-"]:last-child {
-	padding-right: 0;
+    padding-right: 0;
 }
 
-.@{prefix}grid-row-full > [class^="cell-"] {
-	padding: 0 !important;
+.@{prefix}grid-row-full {
+    margin: 0 !important;
+    & > [class^="cell-"] {
+        padding: 0 !important;
+    }
 }
 
 

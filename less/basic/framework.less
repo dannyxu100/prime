@@ -5,11 +5,11 @@
 //====================================================
 
 *{
-	.prefix-box-sizing(border-box);
+	.prefix-box-sizing();
 }
 *:after,
 *:before{
-	.prefix-box-sizing(border-box);
+	.prefix-box-sizing();
 }
 
 html{
@@ -63,7 +63,7 @@ body{
 	font-weight: @fontweight-title;
 	line-height: @lineheight-title;
 	margin: unit(@lineheight-auto, px) 0 unit(@lineheight-auto / 2, px);
-	
+
 	&>small,
 	&>.small {
 		font-weight: normal;
@@ -111,7 +111,7 @@ input::-ms-clear {
 
 /* 修正placeholder颜色 */
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #ddd;  
+    color: #ddd;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: #ddd;
