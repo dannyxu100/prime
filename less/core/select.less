@@ -13,7 +13,7 @@
 	width: 120px;
 	vertical-align: middle;
 	cursor: @cursor-pointer;
-	
+
 	.prefix-transition();
 
 	.@{prefix}select-box {
@@ -27,10 +27,10 @@
 		background-color: @color-white-lighter;
 		font-size: @fontsize-select-text;	//unit( @fontsize-select-text, em );
 		overflow: hidden;
-		
+
 		.prefix-border-radius(@radius-select);
 		.prefix-transition();
-		
+
 		&:after {
 			display: block;
 			position: absolute;
@@ -42,10 +42,10 @@
 			line-height: @height-select - 2;
 			color: @color-gray-darker;
 			text-align: center;
-			
+
 			.comm-iconfont( @icon-select-right, 14px );
 		}
-		
+
 		.@{prefix}select-text {
 			width: 100%;
 			height: @height-select;
@@ -58,9 +58,9 @@
 			background-color: transparent;
 			vertical-align: middle;
 			cursor: pointer;
-			
+
 			.comm-textoverflow();
-			
+
 			&:focus {
 				outline: none;
 			}
@@ -70,7 +70,7 @@
 			}
 		}
 	}
-	
+
 	.@{prefix}select-list {
 		display: none;
 		width: 100%;
@@ -86,10 +86,10 @@
 		font-size: @fontsize-select-list;	//unit( @fontsize-select-list, em );
 		overflow-x: hidden;
 		overflow-y: auto;
-		
+
 		.prefix-border-bottom-radius(@radius-select-list);
 		.prefix-transition();
-		
+
 		.@{prefix}select-item {
 			display: block;
 			height: @height-select-item;
@@ -100,18 +100,18 @@
 			color: @color-black-light;
 			background-color: @color-white-lighter;
 			overflow: hidden;
-			
+
 			.comm-textoverflow();
 			.prefix-transition(all linear .08s);
 			.prefix-selecttext(none);
-			
+
 			&:hover {
 				color: @color-black-dark;
-				background-color: @color-white;
+				background-color: @color-white-normal;
 			}
 			&:active,
 			&.active {
-				color: @color-black;
+				color: @color-black-normal;
 				background-color: @color-white-dark;
 				.prefix-box-shadow(inset 0 1px 2px rgba(0, 0, 0, .08));
 			}
@@ -126,7 +126,7 @@
 				&:active,
 				&.active,
 				&.selected {
-					color: @color-gray;
+					color: @color-gray-normal;
 					cursor: @cursor-no;
 					background-color: @color-white-lighter;
 					.prefix-box-shadow(none);
@@ -143,16 +143,16 @@
 	&:active,
 	&.active {
 		z-index: @zindex-select-hover;
-		
+
 		.@{prefix}select-box,
 		.@{prefix}select-list {
 			border-color: @color-gray-light;
 		}
 	}
-	&:hover, 
+	&:hover,
 	&.hover {
 		z-index: @zindex-select-hover;
-		
+
 		.@{prefix}select-box {
 			.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 		}
@@ -162,17 +162,17 @@
 		.@{prefix}select-box {
 			background-color: @color-white-light;
 			border-bottom-color: @color-gray-lighter;
-			
+
 			.prefix-border-bottom-radius(0);
 			.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
-			
+
 			&:after {
 				content: @icon-select-down;
 			}
 		}
 		.@{prefix}select-list {
 			display: block;
-			
+
 			.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 		}
 	}
@@ -182,7 +182,7 @@
 			bottom: 0;
 			margin-bottom: 35px;
 			border-bottom: 0;
-			
+
 			.prefix-border-top-radius(@radius-select-list);
 			.prefix-border-bottom-radius(0);
 		}
@@ -192,17 +192,17 @@
 		.@{prefix}select-box {
 			border-top-color: @color-gray-lighter;
 			border-bottom-color: @color-gray-light;
-			
+
 			.prefix-border-top-radius(0);
 			.prefix-border-bottom-radius(@radius-select);
-			
+
 			&:after {
 				content: @icon-select-up;
 			}
 		}
 	}
-	
-	
+
+
 }
 
 .@{prefix}select-full {
@@ -219,7 +219,7 @@
 .@{prefix}select-min {
 	height: @height-select-min;
 	font-size: @fontsize-select-min-text;	//unit( @fontsize-select-min-text, em );
-	
+
 	&.top {
 		.@{prefix}select-list {
 			margin-bottom: @height-select-min;
@@ -236,10 +236,10 @@
 			font-size: @fontsize-select-min-text;	//unit( @fontsize-select-min-text, em );
 		}
 	}
-	
+
 	.@{prefix}select-list {
 		font-size: @fontsize-select-min-list;	//unit( @fontsize-select-min-list, em );
-		
+
 		.@{prefix}select-item {
 			height: @height-select-min-item;
 			line-height: @height-select-min-item;
@@ -249,7 +249,7 @@
 .@{prefix}select-big {
 	height: @height-select-big;
 	font-size: @fontsize-select-big-text;	//unit( @fontsize-select-min-text, em );
-	
+
 	&.top {
 		.@{prefix}select-list {
 			margin-bottom: @height-select-big;
@@ -268,7 +268,7 @@
 	}
 	.@{prefix}select-list {
 		font-size: @fontsize-select-big-list;	//unit( @fontsize-select-big-list, em );
-		
+
 		.@{prefix}select-item {
 			height: @height-select-big-item;
 			line-height: @height-select-big-item;

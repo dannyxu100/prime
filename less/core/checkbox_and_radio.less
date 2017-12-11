@@ -13,7 +13,7 @@
 	border: 1px solid transparent;
 	vertical-align: middle;
 	cursor: @cursor-pointer;
-	
+
 	&:before,
 	&:after {
 		position: absolute;
@@ -21,7 +21,7 @@
 		left: 2px;
 		line-height: @height-checkbox;
 		text-align: center;
-		
+
 		.prefix-opacity(1);
 		.prefix-transition();
 	}
@@ -31,7 +31,7 @@
 	&:after {
 		z-index: @zindex-checkboxradio-after;
 	}
-	input[type="checkbox"], 
+	input[type="checkbox"],
 	input[type="radio"] {
 		display: none;
 	}
@@ -49,23 +49,23 @@
 	&.disabled,
 	&[disabled] {
 		cursor: not-allowed;
-		
+
 		.@{prefix}checkbox-text,
 		.@{prefix}radio-text {
 			color: @color-gray-light;
 		}
 	}
-	
+
 }
 .@{prefix}checkbox {
 	&:before {
 		color: @color-gray-light;
-		
+
 		.comm-iconfont( @icon-checkboxbefore, @fontsize-checkboxicon );
 	}
 	&:after {
 		display: none \9;		/* ie hack */
-		
+
 		.prefix-opacity(0);
 		.comm-iconfont( @icon-checkboxafter, @fontsize-checkboxicon );
 	}
@@ -73,13 +73,13 @@
 	&.hover {
 		&:before {
 			display: none \9;		/* ie hack */
-		
+
 			.prefix-opacity(0);
 		}
 		&:after {
 			display: block \9;		/* ie hack */
 			color: @color-checkbox-checked;
-			
+
 			.prefix-opacity(.8);
 		}
 	}
@@ -90,7 +90,7 @@
 		&:after {
 			display: block \9;		/* ie hack */
 			color: @color-checkbox-checked;
-			
+
 			.prefix-opacity(1);
 			.comm-iconfont( @icon-checkboxafter-checked, @fontsize-checkboxicon );
 		}
@@ -101,13 +101,13 @@
 		&:hover:before {
 			display: block \9;		/* ie hack */
 			color: @color-gray-lightest;
-			
+
 			.prefix-opacity(1);
 		}
 		&:after,
 		&:hover:after {
 			display: none \9;		/* ie hack */
-			
+
 			.prefix-opacity(0);
 		}
 	}
@@ -119,12 +119,12 @@
 	}
 	&:before {
 		color: @color-gray-light;
-		
+
 		.comm-iconfont( @icon-radiobefore, @fontsize-radioicon );
 	}
 	&:after {
 		display: none \9;		/* ie hack */
-		
+
 		.prefix-opacity(0);
 		.comm-iconfont( @icon-radioafter, @fontsize-radioicon );
 	}
@@ -132,13 +132,13 @@
 	&.hover {
 		&:before {
 			display: none \9;		/* ie hack */
-		
+
 			.prefix-opacity(0);
 		}
 		&:after {
 			display: block \9;		/* ie hack */
 			color: @color-radio-checked;
-			
+
 			.prefix-opacity(.8);
 		}
 	}
@@ -149,7 +149,7 @@
 		&:after {
 			display: block \9;		/* ie hack */
 			color: @color-radio-checked;
-			
+
 			.prefix-opacity(1);
 			.comm-iconfont( @icon-radioafter-checked, @fontsize-radioicon );
 		}
@@ -160,13 +160,13 @@
 		&:hover:before {
 			display: block \9;		/* ie hack */
 			color: @color-gray-lightest;
-			
+
 			.prefix-opacity(1);
 		}
 		&:after,
 		&:hover:after {
 			display: none \9;		/* ie hack */
-			
+
 			.prefix-opacity(0);
 		}
 	}
@@ -185,7 +185,7 @@
 .@{prefix}radio-key {
 	&.checked {
 		&:after {
-			color: @color-key;
+			color: @color-key-normal;
 		}
 	}
 }
@@ -201,7 +201,7 @@
 .@{prefix}radio-nice {
 	&.checked {
 		&:after {
-			color: @color-nice;
+			color: @color-nice-normal;
 		}
 	}
 }

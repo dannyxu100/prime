@@ -10,49 +10,49 @@
 //颜色
 @color-theme-darker:    #027FA2;
 @color-theme-dark:      #319DBB;
-@color-theme:           #05C3F9;
+@color-theme-normal:    #05C3F9;
 @color-theme-light:     #43D3FC;
 @color-theme-lighter:   #74DEFC;
 @color-theme-lightest:  #D8F6FE;
 
 @color-key-darker:      #A22613;
 @color-key-dark:        #BB5D4F;
-@color-key:             #F95339;        //#FF735D;
+@color-key-normal:      #F95339;        //#FF735D;
 @color-key-light:       #FB6C56;        //#FC7E6A;
 
 @color-light-darkest:   #FFD301;
 @color-light-darker:    #FFF201;
 @color-light-dark:      #FFFF01;
-@color-light:           #FFFF41;
+@color-light-normal:    #FFFF41;
 @color-light-light:     #FFFF73;
 @color-light-lighter:   #FFFFC5;
 
 @color-nice-darker:     #00814D;
 @color-nice-dark:       #269568;
-@color-nice:            #01C677;
+@color-nice-normal:     #01C677;
 @color-nice-light:      #39E39E;
 @color-nice-lighter:    #67E3B1;
 
 @color-black-darker:        #000;
 @color-black-dark:          #222;
-@color-black:               #333;
+@color-black-normal:        #333;
 @color-black-light:         #444;
 @color-black-lighter:       #666;
 
 @color-white-darker:        #F3F3F3;
 @color-white-dark:          #F5F5F5;
-@color-white:               #F7F7F7;
+@color-white-normal:        #F7F7F7;
 @color-white-light:         #FAFAFA;
 @color-white-lighter:       #FFF;
 
 @color-gray-darker:         #999;
 @color-gray-dark:           #AAA;
-@color-gray:                #BBB;
+@color-gray-normal:         #BBB;
 @color-gray-light:          #CCC;
 @color-gray-lighter:        #DDD;
 @color-gray-lightest:       #EEE;
 
-@color-def:             @color-black;
+@color-def:             @color-black-normal;
 @color-weak:            @color-gray-darker;
 @color-title:           inherit;
 @color-hr:              @color-gray-lighter;
@@ -62,7 +62,7 @@
 @color-link-hover:      @color-theme-darker;
 
 @bgcolor-def:           @color-white-light;
-@bgcolor-weak:          @color-white;
+@bgcolor-weak:          @color-white-normal;
 
 //布局
 @grid-columns-12:       12;     //偶数等分12列
@@ -222,7 +222,7 @@
 //气泡菜单
 @bgcolor-popmenu:                       @color-white-lighter;
 @bordercolor-popmenu:                   @color-gray-lighter;
-@color-popmenu:                         @color-black;
+@color-popmenu:                         @color-black-normal;
 
 @color-popmenu-item-selected:           @color-black-darker;
 @bgcolor-popmenu-item-selected:         @color-gray-lightest;
@@ -346,7 +346,7 @@
 
 @color-tabs-nav:                    @color-theme-dark;
 @color-tabs-nav-hover:              @color-black-lighter;
-@color-tabs-nav-active:             @color-black;
+@color-tabs-nav-active:             @color-black-normal;
 
 @bgcolor-tabs-nav:                  transparent;
 @bgcolor-tabs-nav-hover:            @color-white-lighter;
@@ -415,28 +415,28 @@
 @bordercolor-input:         @color-gray-lighter;
 @bgcolor-input:             @color-white-lighter;
 @shadowcolor-input:         rgba(0, 0, 0, .05);
-@bordercolor-input-focus:   @color-gray;
+@bordercolor-input-focus:   @color-gray-normal;
 @shadowcolor-input-focus:   rgba(0, 0, 0, .09);
 
 @bordercolor-input-theme:           @bordercolor-input;
 @bgcolor-input-theme:               @bgcolor-input;
-@bordercolor-input-theme-focus:     @color-theme;
-@shadowcolor-input-theme-focus:     rgba(5, 195, 249, .2);      //@color-theme #05C3F9
+@bordercolor-input-theme-focus:     @color-theme-normal;
+@shadowcolor-input-theme-focus:     rgba(5, 195, 249, .2);      //@color-theme-normal #05C3F9
 
 @bordercolor-input-key:             @bordercolor-input;
 @bgcolor-input-key:                 @bgcolor-input;
-@bordercolor-input-key-focus:       @color-key;
-@shadowcolor-input-key-focus:       rgba(249, 83, 57, .2);      //@color-key #F95339
+@bordercolor-input-key-focus:       @color-key-normal;
+@shadowcolor-input-key-focus:       rgba(249, 83, 57, .2);      //@color-key-normal #F95339
 
 @bordercolor-input-light:           @bordercolor-input;
 @bgcolor-input-light:               @bgcolor-input;
 @bordercolor-input-light-focus:     @color-light-darkest;
-@shadowcolor-input-light-focus:     rgba(255, 211, 1, .2);      //@color-light #FFFF01
+@shadowcolor-input-light-focus:     rgba(255, 211, 1, .2);      //@color-light-normal #FFFF01
 
 @bordercolor-input-nice:            @bordercolor-input;
 @bgcolor-input-nice:                @bgcolor-input;
-@bordercolor-input-nice-focus:      @color-nice;
-@shadowcolor-input-nice-focus:      rgba(1, 198, 119, .2);      //@color-light #01C677
+@bordercolor-input-nice-focus:      @color-nice-normal;
+@shadowcolor-input-nice-focus:      rgba(1, 198, 119, .2);      //@color-light-normal #01C677
 
 @radius-input:                      @radius-def;
 
@@ -463,7 +463,7 @@
 @margin-formlabel-l:        0px;
 @margin-formlabel-r:        15px;
 
-@color-formmust:            @color-key;
+@color-formmust:            @color-key-normal;
 @icon-form-must:            @icon-snow;
 
 //遮罩层

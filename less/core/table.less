@@ -9,7 +9,7 @@
 	border-collapse: collapse;			//边框合并为一个单一的边框，忽略 border-spacing 和 empty-cells 属性
 	color: @color-table;
 	font-size: unit(@fontsize-table, em);
-	
+
 	&>caption {
 		padding: 8px 15px;
 		color: @color-gray-darker;
@@ -27,7 +27,7 @@
 	&>tbody {
 
 	}
-	
+
 	&>thead>tr,
 	&>tbody>tr,
 	&>tfoot>tr,
@@ -78,7 +78,7 @@
 			// border-width: 0px 1px 1px 0px;
 		}
 	}
-	
+
 	&>thead,
 	&>tbody:first-child {
 		&>tr:first-child {
@@ -98,14 +98,14 @@
 			}
 		}
 	}
-	
+
 }
 .@{prefix}table-grid-border {
 	display: inline-table;
 	border: 1px solid @color-gray-lighter;
-	
+
 	.prefix-border-radius(@radius-table);
-	
+
 	.@{prefix}table {
 		width: 100%;
 	}
@@ -126,11 +126,11 @@
 }
 .@{prefix}table-diff {
   > tbody > tr:nth-of-type(even) {
-    background-color: @color-white;
+    background-color: @color-white-normal;
   }
 }
 .@{prefix}table-hover {
   &>tbody>tr:hover {
-    background-color: @color-white;
+    background-color: @color-white-normal;
   }
 }

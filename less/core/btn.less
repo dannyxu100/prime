@@ -33,11 +33,11 @@
 	background-color: @color-white-lighter;		//@color-white-darker;
 	cursor: @cursor-pointer;
 	white-space: nowrap;
-	
+
 	.button-size(@padding-btn-tb; @padding-btn-lr; @fontsize-btn; @height-btn; @lineheight-btn; @radius-btn);
 	.prefix-selecttext(none);
 	.prefix-transition();
-	
+
 	&,
 	&:active,
 	&.active,
@@ -46,7 +46,7 @@
 		&.focus {
 			border-color: @color-gray-light;
 			z-index: @zindex-btnhover;
-			
+
 			.prefix-tabfocus();
 		}
 	}
@@ -58,7 +58,7 @@
 		background-color: @color-white-lighter;
 		text-decoration: none;
 		z-index: @zindex-btnhover;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .05));
 	}
 	&:focus,
@@ -76,7 +76,7 @@
 		border-color: @color-gray-light;
 		background-color: @color-white-light;
 		z-index: @zindex-btnhover;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
 	}
 	&:active {
@@ -104,14 +104,14 @@
 			border-color: transparent;
 			background-color: @color-white-dark;
 			cursor: @cursor-no;
-			
+
 			.prefix-opacity(.55);
 			.prefix-box-shadow(none) !important;
 		}
 	}
 	a& {
 		text-decoration: none;
-	
+
 		&.disabled,
 		fieldset[disabled] & {
 			pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
@@ -133,25 +133,25 @@
 
 
 .@{prefix}btn-inverse {
-	color: @color-white;
+	color: @color-white-normal;
 	border-color: @color-black-lighter;
 	background-color: @color-black-lighter;
 
 	&.border {
-		border-color:  @color-black;
+		border-color:  @color-black-normal;
 	}
 	&:focus,
 	&.focus {
 		color: @color-white-lighter;
-		border-color: @color-black;
+		border-color: @color-black-normal;
 		background-color: @color-black-light;
 	}
 	&:hover,
 	&.hover	{
 		color: @color-white-lighter;
-		border-color:  @color-black;
+		border-color:  @color-black-normal;
 		background-color: @color-black-light;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
 	&:active,
@@ -160,8 +160,8 @@
 	.open > .dropdown-toggle& {
 		color: @color-white-light;
 		border-color: @color-black-dark;
-		background-color: @color-black;
-		
+		background-color: @color-black-normal;
+
 		.prefix-box-shadow(inset 0 1px 5px rgba(0, 0, 0, .5));
 
 		&:hover,
@@ -169,7 +169,7 @@
 		&.focus {
 			color: @color-white-lighter;
 			border-color: @color-black-dark;
-			background-color: @color-black;
+			background-color: @color-black-normal;
 		}
 	}
 	&.disabled,
@@ -187,34 +187,34 @@
 		}
 	}
 	.badge {
-		color: @color-white;
-		background-color: @color-black;
+		color: @color-white-normal;
+		background-color: @color-black-normal;
 	}
 }
 
 
 
 .@{prefix}btn-theme {
-	color: @color-white;
-	border-color: @color-theme;
-	background-color: @color-theme;
+	color: @color-white-normal;
+	border-color: @color-theme-normal;
+	background-color: @color-theme-normal;
 
 	&.border {
-		border-color: @color-theme;
+		border-color: @color-theme-normal;
 	}
 	&:focus,
 	&.focus {
 		color: @color-white-lighter;
-		border-color: @color-theme;
+		border-color: @color-theme-normal;
 		background-color: @color-theme-light;
 	}
-	
+
 	&:hover,
 	&.hover	{
 		color: @color-white-lighter;
 		border-color:  @color-theme-light;
 		background-color: @color-theme-lighter;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
@@ -222,16 +222,16 @@
 	&.loading,
 	.open > .dropdown-toggle& {
 		color: @color-white-light;
-		border-color: @color-theme;
+		border-color: @color-theme-normal;
 		background-color: @color-theme-light;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
 		&:hover,
 		&:focus,
 		&.focus {
 			color: @color-white-lighter;
-			border-color: @color-theme;
+			border-color: @color-theme-normal;
 			background-color: @color-theme-light;
 		}
 	}
@@ -250,31 +250,31 @@
 		}
 	}
 	.badge {
-		color: @color-white;
-		background-color: @color-theme;
+		color: @color-white-normal;
+		background-color: @color-theme-normal;
 	}
 }
 
 .@{prefix}btn-key {
-	color: @color-white;
-	border-color: @color-key;
-	background-color: @color-key;
+	color: @color-white-normal;
+	border-color: @color-key-normal;
+	background-color: @color-key-normal;
 
 	&.border {
-		border-color:  @color-key;
+		border-color:  @color-key-normal;
 	}
 	&:focus,
 	&.focus {
 		color: @color-white-light;
-		border-color: @color-key;
+		border-color: @color-key-normal;
 		background-color: @color-key-light;
 	}
 	&:hover,
 	&.hover	{
 		color: @color-white-light;
-		border-color:  @color-key;
+		border-color:  @color-key-normal;
 		background-color: @color-key-light;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
@@ -282,16 +282,16 @@
 	&.loading,
 	.open > .dropdown-toggle& {
 		color: @color-white-light;
-		border-color: @color-key;
+		border-color: @color-key-normal;
 		background-color: @color-key-light;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
 
 		&:hover,
 		&:focus,
 		&.focus {
 			color: @color-white-light;
-			border-color: @color-key;
+			border-color: @color-key-normal;
 			background-color: @color-key-light;
 		}
 	}
@@ -316,15 +316,15 @@
 		}
 	}
 	.badge {
-		color: @color-white;
-		background-color: @color-key;
+		color: @color-white-normal;
+		background-color: @color-key-normal;
 	}
 }
 
 .@{prefix}btn-light {
-	color: @color-black;
-	border-color: @color-light;
-	background-color: @color-light;
+	color: @color-black-normal;
+	border-color: @color-light-normal;
+	background-color: @color-light-normal;
 
 	&.border {
 		border-color:  @color-light-darker;
@@ -340,17 +340,17 @@
 		color: @color-black-dark;
 		border-color:  @color-light-darker;
 		background-color: @color-light-light;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .06));
 	}
 	&:active,
 	&.active,
 	&.loading,
 	.open > .dropdown-toggle& {
-		color: @color-black;
+		color: @color-black-normal;
 		border-color: @color-light-darker;
 		background-color: @color-light-light;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .06));
 
 		&:hover,
@@ -382,31 +382,31 @@
 		}
 	}
 	.badge {
-		color: @color-black;
-		background-color: @color-light;
+		color: @color-black-normal;
+		background-color: @color-light-normal;
 	}
 }
 
 .@{prefix}btn-nice {
-	color: @color-white;
-	border-color: @color-nice;
-	background-color: @color-nice;
+	color: @color-white-normal;
+	border-color: @color-nice-normal;
+	background-color: @color-nice-normal;
 
 	&.border {
-		border-color:  @color-nice;
+		border-color:  @color-nice-normal;
 	}
 	&:focus,
 	&.focus {
 		color: @color-white-lighter;
-		border-color: @color-nice;
+		border-color: @color-nice-normal;
 		background-color: @color-nice-light;
 	}
 	&:hover,
 	&.hover	{
 		color: @color-white-lighter;
-		border-color:  @color-nice;
+		border-color:  @color-nice-normal;
 		background-color: @color-nice-lighter;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
 	}
 	&:active,
@@ -414,16 +414,16 @@
 	&.loading,
 	.open > .dropdown-toggle& {
 		color: @color-white-light;
-		border-color: @color-nice;
+		border-color: @color-nice-normal;
 		background-color: @color-nice-light;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
 		&:hover,
 		&:focus,
 		&.focus {
 			color: @color-white-lighter;
-			border-color: @color-nice;
+			border-color: @color-nice-normal;
 			background-color: @color-nice-light;
 		}
 	}
@@ -442,8 +442,8 @@
 		}
 	}
 	.badge {
-		color: @color-white;
-		background-color: @color-nice;
+		color: @color-white-normal;
+		background-color: @color-nice-normal;
 	}
 }
 
@@ -464,7 +464,7 @@
 		color: @color-white-light;
 		border-color: @color-white-light;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .3));
 	}
 	&:active,
@@ -474,7 +474,7 @@
 		color: @color-gray-light;
 		border-color: @color-gray-light;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(inset 0 2px 5px rgba(0, 0, 0, .3));
 
 		&:hover,
@@ -497,7 +497,7 @@
 			color: @color-gray-lightest;
 			border-color: @color-gray-lightest;
 			background-color: transparent;
-			
+
 			.prefix-opacity(.8);
 		}
 	}
@@ -516,15 +516,15 @@
 	&:focus,
 	&.focus {
 		color: @color-black-light;
-		border-color: @color-black;
+		border-color: @color-black-normal;
 		background-color: transparent;
 	}
 	&:hover,
 	&.hover	{
 		color: @color-black-light;
-		border-color: @color-black;
+		border-color: @color-black-normal;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
 	}
 	&:active,
@@ -532,16 +532,16 @@
 	&.loading,
 	.open > .dropdown-toggle& {
 		color: @color-black-lighter;
-		border-color: @color-black;
+		border-color: @color-black-normal;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .3));
 
 		&:hover,
 		&:focus,
 		&.focus {
 			color: @color-black-lighter;
-			border-color: @color-black;
+			border-color: @color-black-normal;
 			background-color: transparent;
 		}
 	}
@@ -595,7 +595,7 @@
 		color: @color-theme-light;
 		border-color: transparent;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(none);
 	}
 	&:active,
@@ -605,7 +605,7 @@
 		color: @color-theme-dark;
 		border-color: transparent;
 		background-color: transparent;
-		
+
 		.prefix-box-shadow(none);
 
 		&:hover,
@@ -638,6 +638,6 @@
 		}
 	}
 	.badge {
-		color: @color-theme;
+		color: @color-theme-normal;
 	}
 }

@@ -11,7 +11,7 @@
 	font-size: @fontsize;	//unit(@fontsize, em);
 	font-weight: @fontweight;
 	padding: @padding-tb 0 @padding-tb;
-	
+
 	.@{prefix}popmenu-item {
 		height: @height-item;
 		line-height: @lineheight-item;
@@ -24,9 +24,9 @@
 .popmenu-style(@bordercolor; @bgcolor; @radius) {
 	border-color: @bordercolor;
 	background-color: @bgcolor;
-	
+
 	.prefix-border-radius(@radius);
-	
+
 }
 
 //默认菜单
@@ -40,11 +40,11 @@
 	margin: 0;
 	border: 1px solid transparent;
 	text-align: left;
-	
+
 	.popmenu-size(@minwidth-popmenu; @height-popmenu-item; @height-popmenu-item; @fontsize-popmenu; @fontweight-def; @padding-popmenu-tb; @padding-popmenu-item-l; @padding-popmenu-item-r);
 	.popmenu-style(@bordercolor-popmenu; @bgcolor-popmenu; @radius-popmenu);
 	.prefix-box-shadow(0 5px 20px rgba(0, 0, 0, .08));
-	
+
 	&:active,
 	&.active {
 		z-index: @zindex-popmenu-active;
@@ -63,12 +63,12 @@
 		background-color: @color-white-lighter;
 		text-decoration: none;
 		cursor: @cursor-pointer;
-		
+
 		.comm-textoverflow();
 		.prefix-transition(all linear .08s);
 		.prefix-selecttext(none);
 		.comm-clearfix();
-		
+
 		& .icon,
 		& .hd {
 			position: absolute;
@@ -93,7 +93,7 @@
 			color: lighten(@color-popmenu, 30%);
 			font-size: 0.65em;
 		}
-		
+
 		&:hover {
 			color: @color-black-dark;
 			background-color: @color-white-dark;
@@ -101,18 +101,18 @@
 		&:active,
 		&.active,
 		&.selected {
-			color: @color-black;
+			color: @color-black-normal;
 			background-color: @color-gray-lightest;
-			
+
 			.prefix-box-shadow(inset 0 1px 2px rgba(0, 0, 0, .08));
 		}
 		&.selected {
 			color: @color-popmenu-item-selected;
 			background-color: @bgcolor-popmenu-item-selected;
 			cursor: @cursor-def;
-			
+
 			.prefix-box-shadow(none);
-			
+
 			&:after {
 				position: absolute;
 				top: 0;
@@ -121,7 +121,7 @@
 				line-height: @height-popmenu-item;
 				color: @color-popmenu-icon-selected;
 				display: none \9;		/* ie hack */
-				
+
 				.prefix-opacity(0);
 				.comm-iconfont( @icon-popmenu-selected, @fontsize-popmenu-icon-selected );
 			}
@@ -135,7 +135,7 @@
 				line-height: @height-popmenu-item;
 				color: @color-popmenu-icon-hassub;
 				display: none;
-				
+
 				.comm-iconfont( @icon-popmenu-sub-right, @fontsize-popmenu-icon-hassub );
 			}
 		}
@@ -146,7 +146,7 @@
 			&.active,
 			&.selected,
 			&.hassub {
-				color: @color-gray;
+				color: @color-gray-normal;
 				cursor: @cursor-no;
 				background-color: @color-white-lighter;
 				.prefix-box-shadow(none);
@@ -163,11 +163,11 @@
 .@{prefix}popmenu-selectable {
 	.@{prefix}popmenu-item {
 		padding-right: @padding-popmenu-selectable-item-r;
-		
+
 		&.selected {
 			&:after {
 				display: block \9;		/* ie hack */
-				
+
 				.prefix-opacity(1);
 			}
 		}
@@ -176,7 +176,7 @@
 .@{prefix}popmenu-icon {
 	.@{prefix}popmenu-item {
 		padding-left: @padding-popmenu-icon-item-l;
-		
+
 		& .icon {
 			color: @color-black-lighter;
 			font-size: @fontsize-popmenu-icon;
@@ -191,7 +191,7 @@
 .@{prefix}popmenu-tree-top {
 	.@{prefix}popmenu-item {
 		padding-right: @padding-popmenu-tree-item-r;
-		
+
 		&>.popmenu-sub {
 			top: 0;
 			left: 100%;

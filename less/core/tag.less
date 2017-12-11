@@ -30,27 +30,27 @@
 	vertical-align: baseline;
 	cursor: @cursor-def;
 	white-space: nowrap;
-	
+
 	.tag-size(@padding-tag-tb; @padding-tag-lr);
 	.tag-style(@color-tag; @bgcolor-tag; @bordercolor-tag);
 	.prefix-transition();
-	
+
 }
 
 .@{prefix}tag-theme {
-	.tag-style(@color-white; @color-theme; transparent);
+	.tag-style(@color-white-normal; @color-theme-normal; transparent);
 }
 
 .@{prefix}tag-key {
-	.tag-style(@color-white; @color-key; transparent);
+	.tag-style(@color-white-normal; @color-key-normal; transparent);
 }
 
 .@{prefix}tag-light {
-	.tag-style(@color-black-light; @color-light; transparent);
+	.tag-style(@color-black-light; @color-light-normal; transparent);
 }
 
 .@{prefix}tag-nice {
-	.tag-style(@color-white; @color-nice; transparent);
+	.tag-style(@color-white-normal; @color-nice-normal; transparent);
 }
 
 
