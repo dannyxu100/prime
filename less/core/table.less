@@ -7,27 +7,17 @@
 //默认表格
 .@{prefix}table {
 	border-collapse: collapse;			//边框合并为一个单一的边框，忽略 border-spacing 和 empty-cells 属性
-	color: @color-table;
+    color: @color-def-table;
 	font-size: unit(@fontsize-table, em);
+    background: @bgcolor-def-table;
 
 	&>caption {
 		padding: 8px 15px;
-		color: @color-gray-darker;
+        color: @color-caption-table;
 		text-align: left;
+        font-weight: @fontweight-bold;
+        background: @bgcolor-caption-table;
 	}
-	&>thead {
-
-	}
-	&>tfoot {
-
-	}
-	&>tbody {
-
-	}
-	&>tbody {
-
-	}
-
 	&>thead>tr,
 	&>tbody>tr,
 	&>tfoot>tr,
@@ -39,11 +29,29 @@
 		&>th {
 			padding: 8px 15px;
 			text-align: left;
-			border-bottom: 1px solid @color-gray-lighter;
-			color: @color-black-dark;
+            border-bottom: 1px solid @bordercolor-def-table;
+            color: @color-head-table;
 			font-weight: @fontweight-bold;
 		}
 	}
+    &>thead>tr {
+        &>th,
+        &>td {
+            color: @color-head-table;
+}
+    }
+    &>tbody>tr {
+        &>th,
+        &>td {
+            color: @color-body-table;
+        }
+    }
+    &>tfoot>tr {
+        &>th,
+        &>td {
+            color: @color-foot-table;
+        }
+    }
 }
 
 .@{prefix}table-full {
@@ -56,16 +64,16 @@
 	&>tfoot>tr,
 	&>tr {
 		&>th {
-			border-bottom: 1px solid @color-gray-lighter;
+            border-bottom: 1px solid @bordercolor-def-table;
 		}
 		&>td {
-			border-top: 1px solid @color-gray-lighter;
+            border-top: 1px solid @bordercolor-def-table;
 		}
 	}
 }
 .@{prefix}table-grid {
 	&>caption {
-		border-bottom: 1px solid @color-gray-lighter;
+        border-bottom: 1px solid @bordercolor-head-table;
 	}
 	&>thead>tr,
 	&>tbody>tr,
@@ -73,7 +81,7 @@
 	&>tr {
 		&>th,
 		&>td {
-			border: 1px solid @color-gray-lighter;
+            border: 1px solid @bordercolor-def-table;
 			border-width: 1px 0 0 1px;
 			// border-width: 0px 1px 1px 0px;
 		}
@@ -102,8 +110,8 @@
 }
 .@{prefix}table-grid-border {
 	display: inline-table;
-	border: 1px solid @color-gray-lighter;
-
+    border: 3px solid @bordercolor-box-table;
+    overflow: hidden;
 	.prefix-border-radius(@radius-table);
 
 	.@{prefix}table {
@@ -126,11 +134,14 @@
 }
 .@{prefix}table-diff {
   > tbody > tr:nth-of-type(even) {
-    background-color: @color-white-normal;
+    background-color: @bgcolor-diff-table;
   }
 }
 .@{prefix}table-hover {
   &>tbody>tr:hover {
-    background-color: @color-white-normal;
-  }
+        background-color: @bgcolor-hover-table;
+        &>td {
+            color: @color-hover-table;
+        }
+    }
 }
