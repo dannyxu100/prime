@@ -37,7 +37,7 @@ week
 	font-weight: @fontweight;
 	padding: @padding;
 	padding-left: @paddingl;
-	
+
 	.prefix-border-radius(@radius);
 }
 
@@ -45,7 +45,7 @@ week
 .input-style(@bordercolor; @bgcolor; @bordercolorfocus; @shadowcolorfocus) {
 	border-color: @bordercolor;
 	background-color: @bgcolor;
-	
+
 	&:focus,
 	&.active {
 		border-color: @bordercolorfocus;
@@ -61,11 +61,11 @@ week
 	width: @width-input;
 	border: 1px solid transparent;
 	vertical-align: middle;
-	
+
 	.input-style(@bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadowcolor-input-focus);
 	.prefix-transition();
 	.prefix-box-shadow(inset 0 2px 3px @shadowcolor-input);
-	
+
 	&:focus,
 	&.active {
 		outline: none;
@@ -77,13 +77,13 @@ week
 		color: @color-gray-darker;
 		border-color: @color-gray-lightest;
 		background: @color-white-dark;
-		
+
 		.prefix-box-shadow(none);
 		.prefix-selecttext(none);
-		
+
 		&:focus,
 		&.active {
-			
+
 		}
 	}
 	&.disabled,
@@ -98,18 +98,18 @@ week
 }
 .@{prefix}textarea {
 	.input-size(@height-textarea; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
-	
+
 	resize: none;
 }
 .@{prefix}input-full,
 .@{prefix}textarea-full {
 	width: 100%;
 }
-.@{prefix}input-min {
-	.input-size(@height-input-min; @lineheight-input-min; @fontsize-input-min; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+.@{prefix}input-small {
+	.input-size(@height-input-small; @lineheight-input-small; @fontsize-input-small; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 }
-.@{prefix}input-big {
-	.input-size(@height-input-big; @lineheight-input-big; @fontsize-input-big; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+.@{prefix}input-large {
+	.input-size(@height-input-large; @lineheight-input-large; @fontsize-input-large; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
 }
 .@{prefix}input-theme,
 .@{prefix}textarea-theme {

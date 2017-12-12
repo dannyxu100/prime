@@ -12,7 +12,7 @@
 	line-height: @lineheight;
 	font-size: @fontsize;	//unit( @fontsize, em );
 	font-weight: @fontweight;
-	
+
 }
 
 //设置标签页按钮样式
@@ -21,7 +21,7 @@
 	background-color: @bgcolor;
 	border-color: @bordercolor;
 	border-bottom-color: @bordercolor-tabs-navs;
-	
+
 	.prefix-border-top-radius(@radius);
 }
 
@@ -30,7 +30,7 @@
 .@{prefix}tabs {
 	position: relative;
 	z-index: @zindex-tabs;
-	
+
 	.@{prefix}tabs-navs {
 		padding: 0;
 		margin: 0;
@@ -38,9 +38,9 @@
 		border-bottom: @borderwidth-tabs-navs solid @bordercolor-tabs-navs;
 		background-color: @bgcolor-tabs-navs;
 		cursor: @cursor-pointer;
-		
+
 		.comm-inlineblock-clearspace();
-		
+
 		.@{prefix}tabs-nav {
 			display: inline-block;
 			position: relative;
@@ -49,22 +49,22 @@
 			margin-left: 3px;
 			margin-bottom: -@borderwidth-tabs-navs;
 			border: 1px solid transparent;
-			
+
 			.tabs-nav-size(@padding-tabs-nav-tb; @padding-tabs-nav-lr; @fontsize-tabs-nav; @height-tabs-nav; @lineheight-tabs-nav);
 			.tabs-nav-style(@bgcolor-tabs-nav; @bordercolor-tabs-nav; @color-tabs-nav);
 			.prefix-transition();
 			.prefix-selecttext(none);
-			
+
 			&:first-child {
 				margin-left: 0;
 			}
-			
+
 			&:hover,
 			&.hover {
 				.tabs-nav-style(@bgcolor-tabs-nav-hover; @bordercolor-tabs-nav-hover; @color-tabs-nav-hover);
 				z-index: @zindex-tabs-nav-hover;
 				border-bottom-color: @bordercolor-tabs-navs;
-				
+
 				.prefix-box-shadow(0 -1px 3px rgba(0, 0, 0, .05));
 			}
 			&:active,
@@ -72,14 +72,14 @@
 				.tabs-nav-style(@bgcolor-tabs-nav-active; @bordercolor-tabs-nav-active; @color-tabs-nav-active);
 				z-index: @zindex-tabs-nav-active;
 				border-bottom-color: transparent;
-				
+
 				.prefix-box-shadow(0 -2px 3px rgba(0, 0, 0, .06));
-				
+
 				&:focus,
 				&.focus {
 					border-color: @bordercolor-tabs-nav-active;
 					z-index: @zindex-tabs-nav-active;
-					
+
 					.prefix-tabfocus();
 				}
 			}
@@ -88,13 +88,13 @@
 			}
 		}
 	}
-	
+
 }
 
-.@{prefix}tabs-min {
+.@{prefix}tabs-small {
 	.@{prefix}tabs-navs {
 		.@{prefix}tabs-nav {
-			.tabs-nav-size(@padding-tabs-nav-min-tb; @padding-tabs-nav-min-lr; @fontsize-tabs-nav-min; @height-tabs-nav-min; @lineheight-tabs-nav-min);
+			.tabs-nav-size(@padding-tabs-nav-small-tb; @padding-tabs-nav-small-lr; @fontsize-tabs-nav-small; @height-tabs-nav-small; @lineheight-tabs-nav-small);
 		}
 	}
 }

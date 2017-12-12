@@ -73,19 +73,19 @@
 
 //控件
 @height-control:                35px;
-@height-control-min:            28px;
-@height-control-big:            45px;
+@height-control-small:          28px;
+@height-control-large:          45px;
 
 @fontsize-control:              14px;
-@fontsize-control-min:          12px;
-@fontsize-control-big:          16px;
+@fontsize-control-small:        12px;
+@fontsize-control-large:        16px;
 
 @padding-control-tb:            8px;        //上下内间距
 @padding-control-lr:            18px;       //左右内间距
-@padding-control-min-tb:        6px;
-@padding-control-min-lr:        14px;
-@padding-control-big-tb:        10px;
-@padding-control-big-lr:        30px;
+@padding-control-small-tb:      6px;
+@padding-control-small-lr:      14px;
+@padding-control-large-tb:      10px;
+@padding-control-large-lr:      30px;
 
 //字体
 @fontfamily-ios:        -apple-system, sf_ui_textlight;
@@ -197,23 +197,23 @@
 
 //按钮
 @height-btn:                @height-control;
-@height-btn-min:            @height-control-min;
-@height-btn-big:            @height-control-big;
+@height-btn-small:          @height-control-small;
+@height-btn-large:          @height-control-large;
 
 @lineheight-btn:            @height-btn - @padding-control-tb*2 - 2px;
-@lineheight-btn-min:        @height-btn-min - @padding-control-min-tb*2 - 2px;
-@lineheight-btn-big:        @height-btn-big - @padding-control-big-tb*2 - 2px;
+@lineheight-btn-small:      @height-btn-small - @padding-control-small-tb*2 - 2px;
+@lineheight-btn-large:      @height-btn-large - @padding-control-large-tb*2 - 2px;
 
 @fontsize-btn:              @fontsize-control;
-@fontsize-btn-min:          @fontsize-control-min;
-@fontsize-btn-big:          @fontsize-control-big;
+@fontsize-btn-small:        @fontsize-control-small;
+@fontsize-btn-large:        @fontsize-control-large;
 
 @padding-btn-tb:            @padding-control-tb;        //按钮上下内间距
 @padding-btn-lr:            @padding-control-lr;        //按钮左右内间距
-@padding-btn-min-tb:        @padding-control-min-tb;
-@padding-btn-min-lr:        @padding-control-min-lr;
-@padding-btn-big-tb:        @padding-control-big-tb;
-@padding-btn-big-lr:        @padding-control-big-lr;
+@padding-btn-small-tb:      @padding-control-small-tb;
+@padding-btn-small-lr:      @padding-control-small-lr;
+@padding-btn-large-tb:      @padding-control-large-tb;
+@padding-btn-large-lr:      @padding-control-large-lr;
 
 @radius-btn:                @radius-def;
 @zindex-btn:                @zindex-control;
@@ -232,11 +232,11 @@
 @color-popmenu-icon-hassub:             @color-theme-dark;
 
 @minwidth-popmenu:                      160px;
-@minwidth-popmenu-min:                  140px;
-@minwidth-popmenu-big:                  180px;
+@minwidth-popmenu-small:                140px;
+@minwidth-popmenu-large:                180px;
 @height-popmenu-item:                   28px;
-@height-popmenu-min-item:               26px;
-@height-popmenu-big-item:               30px;
+@height-popmenu-small-item:             26px;
+@height-popmenu-large-item:             30px;
 @height-popmenu-split:                  10px;
 
 @padding-popmenu-tb:                    5px;
@@ -248,8 +248,8 @@
 @padding-popmenu-tree-item-r:           35px;
 
 @fontsize-popmenu:                      @fontsize-control;
-@fontsize-popmenu-min:                  @fontsize-control-min;
-@fontsize-popmenu-big:                  @fontsize-control-big;
+@fontsize-popmenu-small:                @fontsize-control-small;
+@fontsize-popmenu-large:                @fontsize-control-large;
 @fontsize-popmenu-icon:                 14px;
 @fontsize-popmenu-icon-selected:        14px;
 @fontsize-popmenu-icon-hassub:          12px;
@@ -271,8 +271,8 @@
 @bgcolor-select-item-selected:  @color-theme-lightest;
 
 @height-select:                 @height-control;
-@height-select-min:             @height-control-min;
-@height-select-big:             @height-control-big;
+@height-select-small:           @height-control-small;
+@height-select-large:           @height-control-large;
 
 @zindex-select:                 @zindex-control;
 @zindex-select-hover:           @zindex-select + 10;
@@ -281,23 +281,23 @@
 @zindex-selectlist:             @zindex-control + 10;
 
 @lineheight-select:             @height-select - 2px;
-@lineheight-select-min:         @height-select-min - 2px;
-@lineheight-select-big:         @height-select-big - 2px;
+@lineheight-select-small:       @height-select-small - 2px;
+@lineheight-select-large:       @height-select-large - 2px;
 
 @height-select-list:            300px;
 @height-select-split:           10px;
 
 @height-select-item:            28px;
-@height-select-min-item:        26px;
-@height-select-big-item:        30px;
+@height-select-small-item:      26px;
+@height-select-large-item:      30px;
 
 @fontsize-select-text:          @fontsize-control;
-@fontsize-select-min-text:      @fontsize-control-min;
-@fontsize-select-big-text:      @fontsize-control-big;
+@fontsize-select-small-text:    @fontsize-control-small;
+@fontsize-select-large-text:    @fontsize-control-large;
 
-@fontsize-select-list:          @fontsize-control-min;
-@fontsize-select-min-list:      @fontsize-control-min;
-@fontsize-select-big-list:      @fontsize-control;
+@fontsize-select-list:          @fontsize-control-small;
+@fontsize-select-small-list:    @fontsize-control-small;
+@fontsize-select-large-list:    @fontsize-control;
 
 @padding-select-l:              15px;
 @padding-select-r:              5px;
@@ -344,8 +344,8 @@
 @bordercolor-box-table:     @color-gray-lighter;
 @bordercolor-head-table:    @color-gray-lighter;
 @bgcolor-def-table:         @color-white-lighter;
-@bgcolor-diff-table:        @color-white;
-@bgcolor-hover-table:       @color-white;
+@bgcolor-diff-table:        @color-white-normal;
+@bgcolor-hover-table:       @color-white-normal;
 @bgcolor-caption-table:     @color-white-lighter;
 @fontsize-table:            @fontsize-def;
 
@@ -370,18 +370,18 @@
 @bordercolor-tabs-nav-active:       @color-gray-lighter;
 
 @fontsize-tabs-nav:                 14px;
-@fontsize-tabs-nav-min:             12px;
+@fontsize-tabs-nav-small:           12px;
 
 @padding-tabs-nav-tb:               15px;
 @padding-tabs-nav-lr:               15px;
-@padding-tabs-nav-min-tb:           8px;
-@padding-tabs-nav-min-lr:           15px;
+@padding-tabs-nav-small-tb:         8px;
+@padding-tabs-nav-small-lr:         15px;
 
 @height-tabs-nav:                   50px;
-@height-tabs-nav-min:               32px;
+@height-tabs-nav-small:             32px;
 
 @lineheight-tabs-nav:               @height-tabs-nav - @padding-tabs-nav-tb*2 - 2px;
-@lineheight-tabs-nav-min:           @height-tabs-nav-min - @padding-tabs-nav-min-tb*2 - 2px;
+@lineheight-tabs-nav-small:         @height-tabs-nav-small - @padding-tabs-nav-small-tb*2 - 2px;
 
 @zindex-tabs:                       @zindex-bg;
 @zindex-tabs-nav:                   @zindex-control;
@@ -411,19 +411,19 @@
 @height-input:              @height-control;
 @width-textarea:            @width-input;
 @height-textarea:           @height-control * 3;
-@height-input-min:          @height-control-min;
-@height-input-big:          @height-control-big;
+@height-input-small:        @height-control-small;
+@height-input-large:        @height-control-large;
 
 @padding-input:             4px;
 @padding-input-l:           15px;
 
 @lineheight-input:          @height-control - @padding-input*2 - 2px;
-@lineheight-input-min:      @height-control-min - @padding-input*2 - 2px;
-@lineheight-input-big:      @height-control-big - @padding-input*2 - 2px;
+@lineheight-input-small:    @height-control-small - @padding-input*2 - 2px;
+@lineheight-input-large:    @height-control-large - @padding-input*2 - 2px;
 
 @fontsize-input:            @fontsize-control;
-@fontsize-input-min:        @fontsize-control-min;
-@fontsize-input-big:        @fontsize-control-big;
+@fontsize-input-small:      @fontsize-control-small;
+@fontsize-input-large:      @fontsize-control-large;
 
 @bordercolor-input:         @color-gray-lighter;
 @bgcolor-input:             @color-white-lighter;

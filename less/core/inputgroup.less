@@ -10,19 +10,19 @@
 	border-collapse: separate;
 	position: relative;
 	width: 220px;
-	
+
 	.@{prefix}input {
 		display: table-cell;
 		position: relative;
 		z-index: @zindex-inputgroup-input;
 		width: 100%;
 		margin-left: -1px;
-		
+
 		.prefix-border-left-radius(0);
-		
+
 		&:first-child {
 			margin-left: 0;
-			
+
 			.prefix-border-left-radius(@radius-input);
 			.prefix-border-right-radius(0);
 		}
@@ -36,13 +36,13 @@
 		position: relative;
 		z-index: @zindex-inputgroup-addons;
 		width: 1%;
-		
+
 		.comm-inlineblock-clearspace();
-		
+
 		.@{prefix}text,
 		.@{prefix}btn {
 			.prefix-border-radius(0);
-			
+
 			&:last-child {
 				.prefix-border-right-radius(@radius-input);
 			}
@@ -56,15 +56,15 @@
 			color: @color-weak;
 			background-color: @bgcolor-weak;
 		}
-		.@{prefix}text-min {
-			height: @height-input-min;
-			line-height: @height-input-min - 4px*2;
-			font-size: @fontsize-input-min;
+		.@{prefix}text-small {
+			height: @height-input-small;
+			line-height: @height-input-small - 4px*2;
+			font-size: @fontsize-input-small;
 		}
-		.@{prefix}text-big {
-			height: @height-input-big;
-			line-height: @height-input-big - 4px*2;
-			font-size: @fontsize-input-big;
+		.@{prefix}text-large {
+			height: @height-input-large;
+			line-height: @height-input-large - 4px*2;
+			font-size: @fontsize-input-large;
 		}
 		.@{prefix}btn {
 			margin-left: -1px;
@@ -82,7 +82,7 @@
 			}
 			.@{prefix}text {
 				margin-right: 1px;		//抵消后面input的margin-left:-1px;
-				
+
 				&:first-child {
 					padding-left: 15px;
 				}
