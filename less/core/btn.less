@@ -1,129 +1,128 @@
 //====================================================
 //
-//		btn
+//      btn
 //
 //====================================================
 
 //设置按钮尺寸
 .button-size(@paddingtb; @paddinglr; @fontsize; @height; @lineheight; @radius; @fontweight:@fontweight-def) {
-	padding: @paddingtb @paddinglr;
-	height: @height;
-	line-height: @lineheight;
-	font-size: @fontsize;	//unit( @fontsize, em );
-	font-weight: @fontweight;
-	.prefix-border-radius(@radius);
+    padding: @paddingtb @paddinglr;
+    height: @height;
+    line-height: @lineheight;
+    font-size: @fontsize;   //unit( @fontsize, em );
+    font-weight: @fontweight;
+    .prefix-border-radius(@radius);
 }
 
 
 //默认按钮
 .@{prefix}btn,
 .@{prefix}btn-def {
-	display: inline-block;
-	position: relative;
-	z-index: @zindex-btn;
-	height: @height-btn;
-	margin-bottom: 0; 						// For input.btn
-	// font-weight: @fontweight-bold;
-	text-align: center;
-	vertical-align: middle;
-	touch-action: manipulation;				//支持手势操作
-	color: @color-black-light;
-	background-image: none; 				// Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-	border: 1px solid @color-gray-lighter;		//transparent;
-	background-color: @color-white-lighter;		//@color-white-darker;
-	cursor: @cursor-pointer;
-	white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    z-index: @zindex-btn;
+    margin-bottom: 0;                           // For input.btn
+    // font-weight: @fontweight-bold;
+    text-align: center;
+    vertical-align: middle;
+    color: @color-def-btn;
+    background-image: none;                     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    border: 1px solid @bordercolor-def-btn;     //transparent;
+    background-color: @bgcolor-def-btn;
+    cursor: @cursor-pointer;
+    white-space: nowrap;
+    touch-action: manipulation;                 //支持手势操作
 
-	.button-size(@padding-btn-tb; @padding-btn-lr; @fontsize-btn; @height-btn; @lineheight-btn; @radius-btn);
-	.prefix-selecttext(none);
-	.prefix-transition();
+    .button-size(@padding-btn-tb; @padding-btn-lr; @fontsize-btn; @height-btn; @lineheight-btn; @radius-btn);
+    .prefix-selecttext(none);
+    .prefix-transition();
 
-	&,
-	&:active,
-	&.active,
-	&.loading {
-		&:focus,
-		&.focus {
-			border-color: @color-gray-light;
-			z-index: @zindex-btnhover;
+    &,
+    &:active,
+    &.active,
+    &.loading {
+        &:focus,
+        &.focus {
+            border-color: @bordercolor-focus-btn;
+            z-index: @zindex-active-btn;
 
-			.prefix-tabfocus();
-		}
-	}
+            .prefix-tabfocus();
+        }
+    }
 
-	&:hover,
-	&.hover {
-		color: @color-black-dark;
-		border-color: @color-gray-light;
-		background-color: @color-white-lighter;
-		text-decoration: none;
-		z-index: @zindex-btnhover;
+    &:hover,
+    &.hover {
+        color: @color-hover-btn;
+        border-color: @bordercolor-hover-btn;
+        background-color: @bgcolor-hover-btn;
+        text-decoration: none;
+        z-index: @zindex-active-btn;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .05));
-	}
-	&:focus,
-	&.focus {
-		color: @color-black-dark;
-		border-color: @color-gray-light;
-		background-color: @color-white-lighter;
-		text-decoration: none;
-		z-index: @zindex-btnhover;
-	}
-	&:active,
-	&.active,
-	&.loading {
-		color: @color-black-lighter;
-		border-color: @color-gray-light;
-		background-color: @color-white-light;
-		z-index: @zindex-btnhover;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .05));
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn;
+        border-color: @bordercolor-focus-btn;
+        background-color: @bgcolor-focus-btn;
+        text-decoration: none;
+        z-index: @zindex-active-btn;
+    }
+    &:active,
+    &.active,
+    &.loading {
+        color: @color-active-btn;
+        border-color: @bordercolor-active-btn;
+        background-color: @bgcolor-active-btn;
+        z-index: @zindex-active-btn;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
-	}
-	&:active {
-		background-image: none;
-	}
-	&.active {
-		cursor: @cursor-def;
-	}
-	&.loading {
-		cursor: @cursor-loading;
-	}
-	&.border {
-		border-color: @color-gray-light;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-black-lighter;
-			border-color: transparent;
-			background-color: @color-white-dark;
-			cursor: @cursor-no;
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+    }
+    &:active {
+        background-image: none;
+    }
+    &.active {
+        cursor: @cursor-def;
+    }
+    &.loading {
+        cursor: @cursor-loading;
+    }
+    &.border {
+        border-color: @bordercolor-active-btn;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-disabled-btn;
+            border-color: @bordercolor-disabled-btn;
+            background-color: @bgcolor-disabled-btn;
+            cursor: @cursor-no;
 
-			.prefix-opacity(.55);
-			.prefix-box-shadow(none) !important;
-		}
-	}
-	a& {
-		text-decoration: none;
+            .prefix-opacity(.55);
+            .prefix-box-shadow(none) !important;
+        }
+    }
+    a& {
+        text-decoration: none;
 
-		&.disabled,
-		fieldset[disabled] & {
-			pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
-		}
-	}
+        &.disabled,
+        fieldset[disabled] & {
+            pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
+        }
+    }
 }
 
 .@{prefix}btn-small {
-	.button-size(@padding-btn-small-tb; @padding-btn-small-lr; @fontsize-btn-small; @height-btn-small; @lineheight-btn-small; @radius-btn);
+    .button-size(@padding-btn-small-tb; @padding-btn-small-lr; @fontsize-btn-small; @height-btn-small; @lineheight-btn-small; @radius-btn);
 }
 .@{prefix}btn-large {
-	.button-size(@padding-btn-large-tb; @padding-btn-large-lr; @fontsize-btn-large; @height-btn-large; @lineheight-btn-large; @radius-btn);
+    .button-size(@padding-btn-large-tb; @padding-btn-large-lr; @fontsize-btn-large; @height-btn-large; @lineheight-btn-large; @radius-btn);
 }
 
 .@{prefix}btn-full {
@@ -133,511 +132,511 @@
 
 
 .@{prefix}btn-inverse {
-	color: @color-white-normal;
-	border-color: @color-black-lighter;
-	background-color: @color-black-lighter;
+    color: @color-white-normal;
+    border-color: @color-black-lighter;
+    background-color: @color-black-lighter;
 
-	&.border {
-		border-color:  @color-black-normal;
-	}
-	&:focus,
-	&.focus {
-		color: @color-white-lighter;
-		border-color: @color-black-normal;
-		background-color: @color-black-light;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-white-lighter;
-		border-color:  @color-black-normal;
-		background-color: @color-black-light;
+    &.border {
+        border-color:  @color-black-normal;
+    }
+    &:focus,
+    &.focus {
+        color: @color-white-lighter;
+        border-color: @color-black-normal;
+        background-color: @color-black-light;
+    }
+    &:hover,
+    &.hover {
+        color: @color-white-lighter;
+        border-color:  @color-black-normal;
+        background-color: @color-black-light;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-white-light;
-		border-color: @color-black-dark;
-		background-color: @color-black-normal;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-white-light;
+        border-color: @color-black-dark;
+        background-color: @color-black-normal;
 
-		.prefix-box-shadow(inset 0 1px 5px rgba(0, 0, 0, .5));
+        .prefix-box-shadow(inset 0 1px 5px rgba(0, 0, 0, .5));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-white-lighter;
-			border-color: @color-black-dark;
-			background-color: @color-black-normal;
-		}
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-white-lighter;
-			border-color: transparent;
-			background-color: @color-black-light;
-		}
-	}
-	.badge {
-		color: @color-white-normal;
-		background-color: @color-black-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-white-lighter;
+            border-color: @color-black-dark;
+            background-color: @color-black-normal;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-white-lighter;
+            border-color: transparent;
+            background-color: @color-black-light;
+        }
+    }
+    .badge {
+        color: @color-white-normal;
+        background-color: @color-black-normal;
+    }
 }
 
 
 
 .@{prefix}btn-theme {
-	color: @color-white-normal;
-	border-color: @color-theme-normal;
-	background-color: @color-theme-normal;
+    color: @color-white-normal;
+    border-color: @color-theme-normal;
+    background-color: @color-theme-normal;
 
-	&.border {
-		border-color: @color-theme-normal;
-	}
-	&:focus,
-	&.focus {
-		color: @color-white-lighter;
-		border-color: @color-theme-normal;
-		background-color: @color-theme-light;
-	}
+    &.border {
+        border-color: @color-theme-normal;
+    }
+    &:focus,
+    &.focus {
+        color: @color-white-lighter;
+        border-color: @color-theme-normal;
+        background-color: @color-theme-light;
+    }
 
-	&:hover,
-	&.hover	{
-		color: @color-white-lighter;
-		border-color:  @color-theme-light;
-		background-color: @color-theme-lighter;
+    &:hover,
+    &.hover {
+        color: @color-white-lighter;
+        border-color:  @color-theme-light;
+        background-color: @color-theme-lighter;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-white-light;
-		border-color: @color-theme-normal;
-		background-color: @color-theme-light;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-white-light;
+        border-color: @color-theme-normal;
+        background-color: @color-theme-light;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-white-lighter;
-			border-color: @color-theme-normal;
-			background-color: @color-theme-light;
-		}
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-white-lighter;
-			border-color: transparent;
-			background-color: @color-theme-light;
-		}
-	}
-	.badge {
-		color: @color-white-normal;
-		background-color: @color-theme-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-white-lighter;
+            border-color: @color-theme-normal;
+            background-color: @color-theme-light;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-white-lighter;
+            border-color: transparent;
+            background-color: @color-theme-light;
+        }
+    }
+    .badge {
+        color: @color-white-normal;
+        background-color: @color-theme-normal;
+    }
 }
 
 .@{prefix}btn-key {
-	color: @color-white-normal;
-	border-color: @color-key-normal;
-	background-color: @color-key-normal;
+    color: @color-white-normal;
+    border-color: @color-key-normal;
+    background-color: @color-key-normal;
 
-	&.border {
-		border-color:  @color-key-normal;
-	}
-	&:focus,
-	&.focus {
-		color: @color-white-light;
-		border-color: @color-key-normal;
-		background-color: @color-key-light;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-white-light;
-		border-color:  @color-key-normal;
-		background-color: @color-key-light;
+    &.border {
+        border-color:  @color-key-normal;
+    }
+    &:focus,
+    &.focus {
+        color: @color-white-light;
+        border-color: @color-key-normal;
+        background-color: @color-key-light;
+    }
+    &:hover,
+    &.hover {
+        color: @color-white-light;
+        border-color:  @color-key-normal;
+        background-color: @color-key-light;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-white-light;
-		border-color: @color-key-normal;
-		background-color: @color-key-light;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-white-light;
+        border-color: @color-key-normal;
+        background-color: @color-key-light;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-white-light;
-			border-color: @color-key-normal;
-			background-color: @color-key-light;
-		}
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-white-light;
-			border-color: transparent;
-			background-color: @color-key-light;
-		}
-	}
-	.badge {
-		color: @color-white-normal;
-		background-color: @color-key-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-white-light;
+            border-color: @color-key-normal;
+            background-color: @color-key-light;
+        }
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-white-light;
+            border-color: transparent;
+            background-color: @color-key-light;
+        }
+    }
+    .badge {
+        color: @color-white-normal;
+        background-color: @color-key-normal;
+    }
 }
 
 .@{prefix}btn-light {
-	color: @color-black-normal;
-	border-color: @color-light-normal;
-	background-color: @color-light-normal;
+    color: @color-black-normal;
+    border-color: @color-light-normal;
+    background-color: @color-light-normal;
 
-	&.border {
-		border-color:  @color-light-darker;
-	}
-	&:focus,
-	&.focus {
-		color: @color-black-dark;
-		border-color: @color-light-darker;
-		background-color: @color-light-light;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-black-dark;
-		border-color:  @color-light-darker;
-		background-color: @color-light-light;
+    &.border {
+        border-color:  @color-light-darker;
+    }
+    &:focus,
+    &.focus {
+        color: @color-black-dark;
+        border-color: @color-light-darker;
+        background-color: @color-light-light;
+    }
+    &:hover,
+    &.hover {
+        color: @color-black-dark;
+        border-color:  @color-light-darker;
+        background-color: @color-light-light;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .06));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-black-normal;
-		border-color: @color-light-darker;
-		background-color: @color-light-light;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .06));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-black-normal;
+        border-color: @color-light-darker;
+        background-color: @color-light-light;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .06));
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .06));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-black-dark;
-			border-color: @color-light-darker;
-			background-color: @color-light-light;
-		}
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		background-image: none;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-black-dark;
-			border-color: transparent;
-			background-color: @color-light-light;
-		}
-	}
-	.badge {
-		color: @color-black-normal;
-		background-color: @color-light-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-black-dark;
+            border-color: @color-light-darker;
+            background-color: @color-light-light;
+        }
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-black-dark;
+            border-color: transparent;
+            background-color: @color-light-light;
+        }
+    }
+    .badge {
+        color: @color-black-normal;
+        background-color: @color-light-normal;
+    }
 }
 
 .@{prefix}btn-nice {
-	color: @color-white-normal;
-	border-color: @color-nice-normal;
-	background-color: @color-nice-normal;
+    color: @color-white-normal;
+    border-color: @color-nice-normal;
+    background-color: @color-nice-normal;
 
-	&.border {
-		border-color:  @color-nice-normal;
-	}
-	&:focus,
-	&.focus {
-		color: @color-white-lighter;
-		border-color: @color-nice-normal;
-		background-color: @color-nice-light;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-white-lighter;
-		border-color:  @color-nice-normal;
-		background-color: @color-nice-lighter;
+    &.border {
+        border-color:  @color-nice-normal;
+    }
+    &:focus,
+    &.focus {
+        color: @color-white-lighter;
+        border-color: @color-nice-normal;
+        background-color: @color-nice-light;
+    }
+    &:hover,
+    &.hover {
+        color: @color-white-lighter;
+        border-color:  @color-nice-normal;
+        background-color: @color-nice-lighter;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-white-light;
-		border-color: @color-nice-normal;
-		background-color: @color-nice-light;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-white-light;
+        border-color: @color-nice-normal;
+        background-color: @color-nice-light;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-white-lighter;
-			border-color: @color-nice-normal;
-			background-color: @color-nice-light;
-		}
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-white-lighter;
-			border-color: transparent;
-			background-color: @color-nice-light;
-		}
-	}
-	.badge {
-		color: @color-white-normal;
-		background-color: @color-nice-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-white-lighter;
+            border-color: @color-nice-normal;
+            background-color: @color-nice-light;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-white-lighter;
+            border-color: transparent;
+            background-color: @color-nice-light;
+        }
+    }
+    .badge {
+        color: @color-white-normal;
+        background-color: @color-nice-normal;
+    }
 }
 
 .@{prefix}btn-border {
-	border-width: 2px;
-	color: @color-gray-light;
-	border-color: @color-gray-light;
-	background-color: transparent;
+    border-width: 2px;
+    color: @color-gray-light;
+    border-color: @color-gray-light;
+    background-color: transparent;
 
-	&:focus,
-	&.focus {
-		color: @color-white-light;
-		border-color: @color-white-light;
-		background-color: transparent;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-white-light;
-		border-color: @color-white-light;
-		background-color: transparent;
+    &:focus,
+    &.focus {
+        color: @color-white-light;
+        border-color: @color-white-light;
+        background-color: transparent;
+    }
+    &:hover,
+    &.hover {
+        color: @color-white-light;
+        border-color: @color-white-light;
+        background-color: transparent;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .3));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-gray-light;
-		border-color: @color-gray-light;
-		background-color: transparent;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .3));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-gray-light;
+        border-color: @color-gray-light;
+        background-color: transparent;
 
-		.prefix-box-shadow(inset 0 2px 5px rgba(0, 0, 0, .3));
+        .prefix-box-shadow(inset 0 2px 5px rgba(0, 0, 0, .3));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-gray-light;
-			border-color: @color-gray-light;
-			background-color: transparent;
-		}
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-gray-lightest;
-			border-color: @color-gray-lightest;
-			background-color: transparent;
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-gray-light;
+            border-color: @color-gray-light;
+            background-color: transparent;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-gray-lightest;
+            border-color: @color-gray-lightest;
+            background-color: transparent;
 
-			.prefix-opacity(.8);
-		}
-	}
-	.badge {
-		color: @color-gray-lightest;
-		background-color: transparent;
-	}
+            .prefix-opacity(.8);
+        }
+    }
+    .badge {
+        color: @color-gray-lightest;
+        background-color: transparent;
+    }
 }
 
 .@{prefix}btn-border-inverse {
-	border-width: 2px;
-	color: @color-black-lighter;
-	border-color: @color-black-lighter;
-	background-color: transparent;
+    border-width: 2px;
+    color: @color-black-lighter;
+    border-color: @color-black-lighter;
+    background-color: transparent;
 
-	&:focus,
-	&.focus {
-		color: @color-black-light;
-		border-color: @color-black-normal;
-		background-color: transparent;
-	}
-	&:hover,
-	&.hover	{
-		color: @color-black-light;
-		border-color: @color-black-normal;
-		background-color: transparent;
+    &:focus,
+    &.focus {
+        color: @color-black-light;
+        border-color: @color-black-normal;
+        background-color: transparent;
+    }
+    &:hover,
+    &.hover {
+        color: @color-black-light;
+        border-color: @color-black-normal;
+        background-color: transparent;
 
-		.prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-black-lighter;
-		border-color: @color-black-normal;
-		background-color: transparent;
+        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-black-lighter;
+        border-color: @color-black-normal;
+        background-color: transparent;
 
-		.prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .3));
+        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .3));
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-black-lighter;
-			border-color: @color-black-normal;
-			background-color: transparent;
-		}
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-black-lighter;
-			border-color: @color-black-lighter;
-			background-color: transparent;
-		}
-	}
-	.badge {
-		color: @color-black-light;
-		background-color: transparent;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-black-lighter;
+            border-color: @color-black-normal;
+            background-color: transparent;
+        }
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-black-lighter;
+            border-color: @color-black-lighter;
+            background-color: transparent;
+        }
+    }
+    .badge {
+        color: @color-black-light;
+        background-color: transparent;
+    }
 }
 
 .@{prefix}btn-border,
 .@{prefix}btn-border-inverse {
-	line-height: @lineheight-btn - 2px;
+    line-height: @lineheight-btn - 2px;
 }
 .@{prefix}btn-border.@{prefix}btn-small,
 .@{prefix}btn-border-inverse.@{prefix}btn-small {
-	line-height: @lineheight-btn-small - 2px;
+    line-height: @lineheight-btn-small - 2px;
 }
 .@{prefix}btn-border.@{prefix}btn-large,
 .@{prefix}btn-border-inverse.@{prefix}btn-large {
-	line-height: @lineheight-btn-large - 2px;
+    line-height: @lineheight-btn-large - 2px;
 }
 
 .@{prefix}btn-link {
-	color: @color-theme-dark;
-	border-color: transparent;
-	background-color: transparent;
+    color: @color-theme-dark;
+    border-color: transparent;
+    background-color: transparent;
 
-	&:focus,
-	&.focus {
-		color: @color-theme-light;
-		border-color: transparent;
-		background-color: transparent;
-	}
-	&:hover,
-	&.hover	{
-		text-decoration: underline;
-		color: @color-theme-light;
-		border-color: transparent;
-		background-color: transparent;
+    &:focus,
+    &.focus {
+        color: @color-theme-light;
+        border-color: transparent;
+        background-color: transparent;
+    }
+    &:hover,
+    &.hover {
+        text-decoration: underline;
+        color: @color-theme-light;
+        border-color: transparent;
+        background-color: transparent;
 
-		.prefix-box-shadow(none);
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		color: @color-theme-dark;
-		border-color: transparent;
-		background-color: transparent;
+        .prefix-box-shadow(none);
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        color: @color-theme-dark;
+        border-color: transparent;
+        background-color: transparent;
 
-		.prefix-box-shadow(none);
+        .prefix-box-shadow(none);
 
-		&:hover,
-		&:focus,
-		&.focus {
-			color: @color-theme-dark;
-			border-color: transparent;
-			background-color: transparent;
-		}
-	}
-	&:active,
-	&.active,
-	&.loading,
-	.open > .dropdown-toggle& {
-		text-decoration: none;
-		color: @color-theme-dark;
-	}
-	&.disabled,
-	&[disabled],
-	fieldset[disabled] & {
-		&,
-		&:hover,
-		&:focus,
-		&.focus,
-		&:active,
-		&.active {
-			color: @color-theme-dark;
-			background-color: transparent;
-			text-decoration: line-through;
-		}
-	}
-	.badge {
-		color: @color-theme-normal;
-	}
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-theme-dark;
+            border-color: transparent;
+            background-color: transparent;
+        }
+    }
+    &:active,
+    &.active,
+    &.loading,
+    .open > .dropdown-toggle& {
+        text-decoration: none;
+        color: @color-theme-dark;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &,
+        &:hover,
+        &:focus,
+        &.focus,
+        &:active,
+        &.active {
+            color: @color-theme-dark;
+            background-color: transparent;
+            text-decoration: line-through;
+        }
+    }
+    .badge {
+        color: @color-theme-normal;
+    }
 }
