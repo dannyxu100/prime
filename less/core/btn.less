@@ -194,44 +194,44 @@
 
 
 .@{prefix}btn-theme {
-    color: @color-white-normal;
-    border-color: @color-theme-normal;
-    background-color: @color-theme-normal;
+    color: @color-def-btn-theme;
+    border-color: @bordercolor-def-btn-theme;
+    background-color: @bgcolor-def-btn-theme;
 
     &.border {
-        border-color: @color-theme-normal;
+        border-color: @bordercolor-def-btn-theme;
     }
     &:focus,
     &.focus {
-        color: @color-white-lighter;
-        border-color: @color-theme-normal;
-        background-color: @color-theme-light;
+        color: @color-focus-btn-theme;
+        border-color: @bordercolor-focus-btn-theme;
+        background-color: @bgcolor-focus-btn-theme;
     }
 
     &:hover,
     &.hover {
-        color: @color-white-lighter;
-        border-color:  @color-theme-light;
-        background-color: @color-theme-lighter;
+        color: @color-hover-btn-theme;
+        border-color: @bordercolor-hover-btn-theme;
+        background-color: @bgcolor-hover-btn-theme;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+        .prefix-box-shadow(@shadow-hover-btn-theme);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-white-light;
-        border-color: @color-theme-normal;
-        background-color: @color-theme-light;
+        color: @color-active-btn-theme;
+        border-color: @bordercolor-active-btn-theme;
+        background-color: @bgcolor-active-btn-theme;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(@shadow-active-btn-theme);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-white-lighter;
-            border-color: @color-theme-normal;
-            background-color: @color-theme-light;
+            color: @color-focus-btn-theme;
+            border-color: @bordercolor-focus-btn-theme;
+            background-color: @bgcolor-focus-btn-theme;
         }
     }
     &.disabled,
@@ -243,9 +243,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-white-lighter;
-            border-color: transparent;
-            background-color: @color-theme-light;
+            color: @color-disabled-btn-theme;
+            border-color: @bordercolor-disabled-btn-theme;
+            background-color: @bgcolor-disabled-btn-theme;
         }
     }
     .badge {
@@ -255,43 +255,43 @@
 }
 
 .@{prefix}btn-key {
-    color: @color-white-normal;
-    border-color: @color-key-normal;
-    background-color: @color-key-normal;
+    color: @color-def-btn-key;
+    border-color: @bordercolor-def-btn-key;
+    background-color: @bgcolor-def-btn-key;
 
     &.border {
-        border-color:  @color-key-normal;
+        border-color:  @bordercolor-active-btn-key;
     }
     &:focus,
     &.focus {
-        color: @color-white-light;
-        border-color: @color-key-normal;
-        background-color: @color-key-light;
+        color: @color-focus-btn-key;
+        border-color: @bordercolor-focus-btn-key;
+        background-color: @bgcolor-focus-btn-key;
     }
     &:hover,
     &.hover {
-        color: @color-white-light;
-        border-color:  @color-key-normal;
-        background-color: @color-key-light;
+        color: @color-hover-btn-key;
+        border-color: @bordercolor-hover-btn-key;
+        background-color: @bgcolor-hover-btn-key;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+        .prefix-box-shadow(@shadow-hover-btn-key);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-white-light;
-        border-color: @color-key-normal;
-        background-color: @color-key-light;
+        color: @color-active-btn-key;
+        border-color: @bordercolor-active-btn-key;
+        background-color: @bgcolor-active-btn-key;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .2));
+        .prefix-box-shadow(@shadow-active-btn-key);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-white-light;
-            border-color: @color-key-normal;
-            background-color: @color-key-light;
+            color: @color-focus-btn-key;
+            border-color: @bordercolor-focus-btn-key;
+            background-color: @bgcolor-focus-btn-key;
         }
     }
     &:active,
@@ -309,9 +309,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-white-light;
-            border-color: transparent;
-            background-color: @color-key-light;
+            color: @color-disabled-btn-key;
+            border-color: @bordercolor-disabled-btn-key;
+            background-color: @bgcolor-disabled-btn-key;
         }
     }
     .badge {
@@ -321,43 +321,43 @@
 }
 
 .@{prefix}btn-light {
-    color: @color-black-normal;
-    border-color: @color-light-normal;
-    background-color: @color-light-normal;
+    color: @color-def-btn-light;
+    border-color: @bordercolor-def-btn-light;
+    background-color: @bgcolor-def-btn-light;
 
     &.border {
-        border-color:  @color-light-darker;
+        border-color: @bordercolor-active-btn-light;
     }
     &:focus,
     &.focus {
-        color: @color-black-dark;
-        border-color: @color-light-darker;
-        background-color: @color-light-light;
+        color: @color-focus-btn-light;
+        border-color: @bordercolor-focus-btn-light;
+        background-color: @bgcolor-focus-btn-light;
     }
     &:hover,
     &.hover {
-        color: @color-black-dark;
-        border-color:  @color-light-darker;
-        background-color: @color-light-light;
+        color: @color-hover-btn-light;
+        border-color: @bordercolor-hover-btn-light;
+        background-color: @bgcolor-hover-btn-light;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .06));
+        .prefix-box-shadow(@shadow-hover-btn-light);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-black-normal;
-        border-color: @color-light-darker;
-        background-color: @color-light-light;
+        color: @color-active-btn-light;
+        border-color: @bordercolor-active-btn-light;
+        background-color: @bgcolor-active-btn-light;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .06));
+        .prefix-box-shadow(@shadow-active-btn-light);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-black-dark;
-            border-color: @color-light-darker;
-            background-color: @color-light-light;
+            color: @color-focus-btn-light;
+            border-color: @bordercolor-focus-btn-light;
+            background-color: @bgcolor-focus-btn-light;
         }
     }
     &:active,
@@ -375,9 +375,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-black-dark;
-            border-color: transparent;
-            background-color: @color-light-light;
+            color: @color-disabled-btn-light;
+            border-color: @bordercolor-disabled-btn-light;
+            background-color: @bgcolor-disabled-btn-light;
         }
     }
     .badge {
@@ -387,43 +387,43 @@
 }
 
 .@{prefix}btn-nice {
-    color: @color-white-normal;
-    border-color: @color-nice-normal;
-    background-color: @color-nice-normal;
+    color: @color-def-btn-nice;
+    border-color: @bordercolor-def-btn-nice;
+    background-color: @bgcolor-def-btn-nice;
 
     &.border {
-        border-color:  @color-nice-normal;
+        border-color: @bordercolor-active-btn-nice;
     }
     &:focus,
     &.focus {
-        color: @color-white-lighter;
-        border-color: @color-nice-normal;
-        background-color: @color-nice-light;
+        color: @color-focus-btn-nice;
+        border-color: @bordercolor-focus-btn-nice;
+        background-color: @bgcolor-focus-btn-nice;
     }
     &:hover,
     &.hover {
-        color: @color-white-lighter;
-        border-color:  @color-nice-normal;
-        background-color: @color-nice-lighter;
+        color: @color-hover-btn-nice;
+        border-color: @bordercolor-hover-btn-nice;
+        background-color: @bgcolor-hover-btn-nice;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .08));
+        .prefix-box-shadow(@shadow-hover-btn-nice);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-white-light;
-        border-color: @color-nice-normal;
-        background-color: @color-nice-light;
+        color: @color-active-btn-nice;
+        border-color: @bordercolor-active-btn-nice;
+        background-color: @bgcolor-active-btn-nice;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(@shadow-active-btn-nice);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-white-lighter;
-            border-color: @color-nice-normal;
-            background-color: @color-nice-light;
+            color: @color-focus-btn-nice;
+            border-color: @bordercolor-focus-btn-nice;
+            background-color: @bgcolor-focus-btn-nice;
         }
     }
     &.disabled,
@@ -435,9 +435,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-white-lighter;
-            border-color: transparent;
-            background-color: @color-nice-light;
+            color: @color-disabled-btn-nice;
+            border-color: @bordercolor-disabled-btn-nice;
+            background-color: @bgcolor-disabled-btn-nice;
         }
     }
     .badge {
