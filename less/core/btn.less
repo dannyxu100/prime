@@ -58,7 +58,7 @@
         text-decoration: none;
         z-index: @zindex-active-btn;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .05));
+        .prefix-box-shadow(@shadow-hover-btn);
     }
     &:focus,
     &.focus {
@@ -76,7 +76,7 @@
         background-color: @bgcolor-active-btn;
         z-index: @zindex-active-btn;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .08));
+        .prefix-box-shadow(@shadow-active-btn);
     }
     &:active {
         background-image: none;
@@ -105,7 +105,7 @@
             cursor: @cursor-no;
 
             .prefix-opacity(.55);
-            .prefix-box-shadow(none) !important;
+            .prefix-box-shadow(@shadow-disabled-btn) !important;
         }
     }
     a& {
@@ -132,43 +132,43 @@
 
 
 .@{prefix}btn-inverse {
-    color: @color-white-normal;
-    border-color: @color-black-lighter;
-    background-color: @color-black-lighter;
+    color: @color-def-btn-inverse;
+    border-color: @bordercolor-def-btn-inverse;
+    background-color: @bgcolor-def-btn-inverse;
 
     &.border {
-        border-color:  @color-black-normal;
+        border-color:  @bordercolor-active-btn-inverse;
     }
     &:focus,
     &.focus {
-        color: @color-white-lighter;
-        border-color: @color-black-normal;
-        background-color: @color-black-light;
+        color: @color-focus-btn-inverse;
+        border-color: @bordercolor-focus-btn-inverse;
+        background-color: @bgcolor-focus-btn-inverse;
     }
     &:hover,
     &.hover {
-        color: @color-white-lighter;
-        border-color:  @color-black-normal;
-        background-color: @color-black-light;
+        color: @color-hover-btn-inverse;
+        border-color:  @bordercolor-hover-btn-inverse;
+        background-color: @bgcolor-hover-btn-inverse;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(@shadow-hover-btn-inverse);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-white-light;
-        border-color: @color-black-dark;
-        background-color: @color-black-normal;
+        color: @color-active-btn-inverse;
+        border-color: @bordercolor-active-btn-inverse;
+        background-color: @bgcolor-active-btn-inverse;
 
-        .prefix-box-shadow(inset 0 1px 5px rgba(0, 0, 0, .5));
+        .prefix-box-shadow(@shadow-active-btn-inverse);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-white-lighter;
-            border-color: @color-black-dark;
-            background-color: @color-black-normal;
+            color: @color-focus-btn-inverse;
+            border-color: @bordercolor-focus-btn-inverse;
+            background-color: @bgcolor-focus-btn-inverse;
         }
     }
     &.disabled,
@@ -180,9 +180,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-white-lighter;
-            border-color: transparent;
-            background-color: @color-black-light;
+            color: @color-disabled-btn-inverse;
+            border-color: @bordercolor-disabled-btn-inverse;
+            background-color: @bgcolor-disabled-btn-inverse;
         }
     }
     .badge {
