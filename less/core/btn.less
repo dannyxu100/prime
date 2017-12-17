@@ -447,41 +447,41 @@
 }
 
 .@{prefix}btn-border {
-    border-width: 2px;
-    color: @color-gray-light;
-    border-color: @color-gray-light;
-    background-color: transparent;
+    border-width: @borderwidth-def-btn-border;
+    color: @color-def-btn-border;
+    border-color: @bordercolor-def-btn-border;
+    background-color: @bgcolor-def-btn-border;
 
     &:focus,
     &.focus {
-        color: @color-white-light;
-        border-color: @color-white-light;
-        background-color: transparent;
+        color: @color-focus-btn-border;
+        border-color: @bordercolor-focus-btn-border;
+        background-color: @bgcolor-focus-btn-border;
     }
     &:hover,
     &.hover {
-        color: @color-white-light;
-        border-color: @color-white-light;
-        background-color: transparent;
+        color: @color-hover-btn-border;
+        border-color: @bordercolor-hover-btn-border;
+        background-color: @bgcolor-hover-btn-border;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .3));
+        .prefix-box-shadow(@shadow-hover-btn-border);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-gray-light;
-        border-color: @color-gray-light;
-        background-color: transparent;
+        color: @color-active-btn-border;
+        border-color: @bordercolor-active-btn-border;
+        background-color: @bgcolor-active-btn-border;
 
-        .prefix-box-shadow(inset 0 2px 5px rgba(0, 0, 0, .3));
+        .prefix-box-shadow(@shadow-active-btn-border);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-gray-light;
-            border-color: @color-gray-light;
-            background-color: transparent;
+            color: @color-focus-btn-border;
+            border-color: @bordercolor-focus-btn-border;
+            background-color: @bgcolor-focus-btn-border;
         }
     }
     &.disabled,
@@ -493,9 +493,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-gray-lightest;
-            border-color: @color-gray-lightest;
-            background-color: transparent;
+            color: @color-disabled-btn-border;
+            border-color: @bordercolor-disabled-btn-border;
+            background-color: @bgcolor-disabled-btn-border;
 
             .prefix-opacity(.8);
         }
@@ -507,41 +507,41 @@
 }
 
 .@{prefix}btn-border-inverse {
-    border-width: 2px;
-    color: @color-black-lighter;
-    border-color: @color-black-lighter;
-    background-color: transparent;
+    border-width: @borderwidth-def-btn-border;
+    color: @color-def-btn-borderinverse;
+    border-color: @bordercolor-def-btn-borderinverse;
+    background-color: @bgcolor-def-btn-borderinverse;
 
     &:focus,
     &.focus {
-        color: @color-black-light;
-        border-color: @color-black-normal;
-        background-color: transparent;
+        color: @color-focus-btn-borderinverse;
+        border-color: @bordercolor-focus-btn-borderinverse;
+        background-color: @bgcolor-focus-btn-borderinverse;
     }
     &:hover,
     &.hover {
-        color: @color-black-light;
-        border-color: @color-black-normal;
-        background-color: transparent;
+        color: @color-hover-btn-borderinverse;
+        border-color: @bordercolor-hover-btn-borderinverse;
+        background-color: @bgcolor-hover-btn-borderinverse;
 
-        .prefix-box-shadow(0 4px 10px rgba(0, 0, 0, .15));
+        .prefix-box-shadow(@shadow-hover-btn-borderinverse);
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-black-lighter;
-        border-color: @color-black-normal;
-        background-color: transparent;
+        color: @color-active-btn-borderinverse;
+        border-color: @bordercolor-active-btn-borderinverse;
+        background-color: @bgcolor-active-btn-borderinverse;
 
-        .prefix-box-shadow(inset 0 1px 3px rgba(0, 0, 0, .3));
+        .prefix-box-shadow(@shadow-active-btn-borderinverse);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-black-lighter;
-            border-color: @color-black-normal;
-            background-color: transparent;
+            color: @color-focus-btn-borderinverse;
+            border-color: @bordercolor-focus-btn-borderinverse;
+            background-color: @bgcolor-focus-btn-borderinverse;
         }
     }
     &.disabled,
@@ -553,9 +553,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-black-lighter;
-            border-color: @color-black-lighter;
-            background-color: transparent;
+            color: @color-disabled-btn-borderinverse;
+            border-color: @bordercolor-disabled-btn-borderinverse;
+            background-color: @bgcolor-disabled-btn-borderinverse;
         }
     }
     .badge {
@@ -566,34 +566,34 @@
 
 .@{prefix}btn-border,
 .@{prefix}btn-border-inverse {
-    line-height: @lineheight-btn - 2px;
+    line-height: @lineheight-btn - @borderwidth-def-btn-border;
 }
 .@{prefix}btn-border.@{prefix}btn-small,
 .@{prefix}btn-border-inverse.@{prefix}btn-small {
-    line-height: @lineheight-btn-small - 2px;
+    line-height: @lineheight-btn-small - @borderwidth-def-btn-border;
 }
 .@{prefix}btn-border.@{prefix}btn-large,
 .@{prefix}btn-border-inverse.@{prefix}btn-large {
-    line-height: @lineheight-btn-large - 2px;
+    line-height: @lineheight-btn-large - @borderwidth-def-btn-border;
 }
 
 .@{prefix}btn-link {
-    color: @color-theme-dark;
-    border-color: transparent;
-    background-color: transparent;
+    color: @color-def-btn-link;
+    border-color: @bordercolor-def-btn-link;
+    background-color: @bgcolor-def-btn-link;
 
     &:focus,
     &.focus {
-        color: @color-theme-light;
-        border-color: transparent;
-        background-color: transparent;
+        color: @color-focus-btn-link;
+        border-color: @bordercolor-focus-btn-link;
+        background-color: @bgcolor-focus-btn-link;
     }
     &:hover,
     &.hover {
+        color: @color-hover-btn-link;
+        border-color: @bordercolor-hover-btn-link;
+        background-color: @bgcolor-hover-btn-link;
         text-decoration: underline;
-        color: @color-theme-light;
-        border-color: transparent;
-        background-color: transparent;
 
         .prefix-box-shadow(none);
     }
@@ -601,26 +601,28 @@
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
-        color: @color-theme-dark;
-        border-color: transparent;
-        background-color: transparent;
+        color: @color-active-btn-link;
+        border-color: @bordercolor-active-btn-link;
+        background-color: @bgcolor-active-btn-link;
 
         .prefix-box-shadow(none);
 
         &:hover,
         &:focus,
         &.focus {
-            color: @color-theme-dark;
-            border-color: transparent;
-            background-color: transparent;
+            color: @color-focus-btn-link;
+            border-color: @bordercolor-focus-btn-link;
+            background-color: @bgcolor-focus-btn-link;
         }
     }
     &:active,
     &.active,
     &.loading,
     .open > .dropdown-toggle& {
+        color: @color-active-btn-link;
+        border-color: @bordercolor-active-btn-link;
+        background-color: @bgcolor-active-btn-link;
         text-decoration: none;
-        color: @color-theme-dark;
     }
     &.disabled,
     &[disabled],
@@ -631,8 +633,9 @@
         &.focus,
         &:active,
         &.active {
-            color: @color-theme-dark;
-            background-color: transparent;
+            color: @color-disabled-btn-link;
+            border-color: @bordercolor-disabled-btn-link;
+            background-color: @bgcolor-disabled-btn-link;
             text-decoration: line-through;
         }
     }

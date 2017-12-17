@@ -7,7 +7,7 @@ $.config({
 $(function(){
 	// $.log('启用日志输出');
 	// $.error('启用异常输出');
-	
+
 	/* Finder */
 	// var $btns = $('.btn');
 	// var $btns = $('.btn');
@@ -20,8 +20,8 @@ $(function(){
 	// var $btns8 = Sizzle('form[method], .section:not(hidden) .btn:odd:not(hidden)');
 	// var $wrapper = Sizzle('#mainbody>.wrapper:first');
 	// var obj = finder();
-	
-	
+
+
 	/* EventEmitter */
 	var $body = $(document.body),
 		$btns = $('.btn');
@@ -35,5 +35,5 @@ $(function(){
 	$body.on('mouseenter', '.btn.hover', function(){
 		console.log('hover event');
 	});
-	debugger;
+	// debugger;
 });

@@ -1,87 +1,82 @@
 //====================================================
 //
-//		btngroup
+//      btngroup
 //
 //====================================================
 
 //按钮组
 .@{prefix}btngroup {
-	display: inline-block;
-	position: relative;
-	
-	& > .@{prefix}btngroup,
-	& > .@{prefix}btn {
-		display: inline-block;
-		position: relative;
-		float: left;
-		margin-left: -1px;
-		
-		.prefix-border-radius(0);
-		
-		&:first-child,
-		&.btn-first {
-			margin-left: 0;
-			
-			.prefix-border-left-radius(@radius-btn);
-		}
-		&:last-child,
-		&.btn-last {
-			.prefix-border-right-radius(@radius-btn);
-		}
-	}
-	
+    display: inline-block;
+    position: relative;
+    & > .@{prefix}btngroup,
+    & > .@{prefix}btn {
+        display: inline-block;
+        position: relative;
+        float: left;
+        margin-left: -1px;
+        .prefix-border-radius(0);
+        &:first-of-type {
+            margin-left: 0;
+            .prefix-border-radius(@radius-btn 0 0 @radius-btn);
+        }
+        &:last-of-type {
+            .prefix-border-radius(0 @radius-btn @radius-btn 0);
+        }
+        &:only-of-type {
+            .prefix-border-radius(@radius-btn @radius-btn @radius-btn @radius-btn);
+        }
+    }
+
 }
 .@{prefix}btngroup-list {
-	display: block;
-		
-	& > .@{prefix}btngroup,
-	& > .@{prefix}btn {
-		display: inline-block;
-		position: relative;
-		float: none;
-		width: 100%;
-		margin-left: 0;
-		margin-top: -1px;
-		
-		.prefix-border-radius(0);
-		
-		&:first-child,
-		&.btn-first {
-			.prefix-border-left-radius(0);
-			.prefix-border-top-radius(@radius-btn);
-		}
-		&:last-child,
-		&.btn-last {
-			.prefix-border-right-radius(0);
-			.prefix-border-bottom-radius(@radius-btn);
-		}
-	}
-	
+    display: block;
+    & > .@{prefix}btngroup,
+    & > .@{prefix}btn {
+        display: inline-block;
+        position: relative;
+        float: none;
+        width: 100%;
+        margin-left: 0;
+        margin-top: -1px;
+        .prefix-border-radius(0);
+        &:first-of-type {
+            .prefix-border-radius(@radius-btn @radius-btn 0 0);
+        }
+        &:last-of-type {
+            .prefix-border-radius(0 0 @radius-btn @radius-btn);
+        }
+        &:only-of-type {
+            .prefix-border-radius(@radius-btn @radius-btn @radius-btn @radius-btn);
+        }
+    }
+
 }
 .@{prefix}btngroup-table {
-	display: table;
-	border-collapse: separate;
-	width: 100%;
-	
-	& > .@{prefix}btngroup,
-	& > .@{prefix}btn {
-		display: table-cell;
-		float: none;
-		width: 1%;
-	}
-	& > .@{prefix}btngroup {
-		& > .@{prefix}btn {
-			width: 100%;
-			.prefix-border-radius(0);
-		}
-		&:first-child > .@{prefix}btn {
-			.prefix-border-left-radius(@radius-btn);
-		}
-		&:last-child > .@{prefix}btn {
-			.prefix-border-right-radius(@radius-btn);
-		}
-	}
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    & > .@{prefix}btngroup,
+    & > .@{prefix}btn {
+        display: table-cell;
+        float: none;
+        width: 1%;
+    }
+    & > .@{prefix}btngroup {
+        & > .@{prefix}btn {
+            width: 100%;
+            .prefix-border-radius(0);
+        }
+        &:first-of-type > .@{prefix}btn {
+            .prefix-border-radius(@radius-btn 0 0 @radius-btn);
+        }
+        &:last-of-type > .@{prefix}btn {
+            .prefix-border-radius(0 @radius-btn @radius-btn 0);
+        }
+        &:only-child > .@{prefix}btn {
+            .prefix-border-radius(@radius-btn @radius-btn @radius-btn @radius-btn);
+        }
+    }
 }
 .@{prefix}btngroup-full {
-	width: 100%;
+    width: 100%;
 }

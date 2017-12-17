@@ -1,214 +1,413 @@
 //====================================================
 //
-//		checkbox and radio
+//      checkbox and radio
 //
 //====================================================
 
 //选择框
 .@{prefix}checkbox,
 .@{prefix}radio {
-	display: inline-block;
-	position: relative;
-	padding: @padding-checkboxradio-tb @padding-checkboxradio-r @padding-checkboxradio-tb @padding-checkboxradio-l;
-	border: 1px solid transparent;
-	vertical-align: middle;
-	cursor: @cursor-pointer;
+    display: inline-block;
+    position: relative;
+    padding: @padding-chkradio-tb @padding-chkradio-r @padding-chkradio-tb @padding-chkradio-l;
+    // border: 1px solid transparent;
+    // border: 1px solid #f7f7f7;
+    vertical-align: middle;
+    font-size: 0;
+    cursor: @cursor-pointer;
 
-	&:before,
-	&:after {
-		position: absolute;
-		top: 7px;
-		left: 2px;
-		line-height: @height-checkbox;
-		text-align: center;
+    input[type="checkbox"],
+    input[type="radio"] {
+        display: none;
+    }
+    .@{prefix}checkbox-text,
+    .@{prefix}radio-text {
+        display: inline-block;
+        line-height: @height-chkradio;
+        font-size: @fontsize-chkradio;
+        vertical-align: middle;
+    }
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 4px;
+        line-height: 1;
+        font-size: @fontsize-chkradio;
+        text-align: center;
+        content: "";
 
-		.prefix-opacity(1);
-		.prefix-transition();
-	}
-	&:before {
-		z-index: @zindex-checkboxradio-before;
-	}
-	&:after {
-		z-index: @zindex-checkboxradio-after;
-	}
-	input[type="checkbox"],
-	input[type="radio"] {
-		display: none;
-	}
-	.@{prefix}checkbox-text,
-	.@{prefix}radio-text {
-		display: inline-block;
-		height: @height-checkbox;
-		line-height: @height-checkbox;
-		font-size: @fontsize-checkboxradio-text;
-		vertical-align: middle;
-	}
-	&.checked {
-		cursor: @cursor-def;
-	}
-	&.disabled,
-	&[disabled] {
-		cursor: not-allowed;
-
-		.@{prefix}checkbox-text,
-		.@{prefix}radio-text {
-			color: @color-gray-light;
-		}
-	}
+        .prefix-opacity(1);
+        .prefix-transition();
+    }
+    &:before {
+        z-index: @zindex-chkradio-before;
+    }
+    &:after {
+        z-index: @zindex-chkradio-after;
+    }
+    &.checked {
+        cursor: @cursor-def;
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        &:before,
+        &:hover:before {
+            .prefix-opacity(.6);
+        }
+    }
 
 }
 .@{prefix}checkbox {
-	&:before {
-		color: @color-gray-light;
-
-		.comm-iconfont( @icon-checkboxbefore, @fontsize-checkboxicon );
-	}
-	&:after {
-		display: none \9;		/* ie hack */
-
-		.prefix-opacity(0);
-		.comm-iconfont( @icon-checkboxafter, @fontsize-checkboxicon );
-	}
-	&:hover,
-	&.hover {
-		&:before {
-			display: none \9;		/* ie hack */
-
-			.prefix-opacity(0);
-		}
-		&:after {
-			display: block \9;		/* ie hack */
-			color: @color-checkbox-checked;
-
-			.prefix-opacity(.8);
-		}
-	}
-	&.checked {
-		&:before {
-			.prefix-opacity(0);
-		}
-		&:after {
-			display: block \9;		/* ie hack */
-			color: @color-checkbox-checked;
-
-			.prefix-opacity(1);
-			.comm-iconfont( @icon-checkboxafter-checked, @fontsize-checkboxicon );
-		}
-	}
-	&.disabled,
-	&[disabled] {
-		&:before,
-		&:hover:before {
-			display: block \9;		/* ie hack */
-			color: @color-gray-lightest;
-
-			.prefix-opacity(1);
-		}
-		&:after,
-		&:hover:after {
-			display: none \9;		/* ie hack */
-
-			.prefix-opacity(0);
-		}
-	}
+    .@{prefix}checkbox-text {
+        color: @color-chkradio;
+    }
+    &:before {
+        // color: @color-gray-light;
+        // .comm-iconfont( @icon-checkboxbefore, @fontsize-checkboxicon );
+        width: 16px;
+        height: 16px;
+        border: @borderwidth-chkradio-before solid @bordercolor-chkradio-before;
+        background: @bgcolor-chkradio-before;
+        .prefix-border-radius(@radius-chkradio-chk-before);
+    }
+    &:after {
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        display: none \9;       /* ie hack */
+        .prefix-opacity(0);
+        .comm-iconfont(@icon-chkradio-after, @fontsize-chkradio);
+    }
+    &:hover,
+    &.hover {
+        .@{prefix}checkbox-text {
+            color: @color-hover-chkradio;
+        }
+        &:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-hover-chkradio-before;
+            background: @bgcolor-hover-chkradio-before;
+            // display: none \9;       /* ie hack */
+            // .prefix-opacity(0);
+        }
+        &:after {
+            color: @color-hover-chkradio-after;
+            display: block \9;      /* ie hack */
+            .prefix-opacity(.8);
+        }
+    }
+    &.checked {
+        .@{prefix}checkbox-text {
+            color: @color-checked-chkradio;
+        }
+        &:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-checked-chkradio-before;
+            background: @bgcolor-checked-chkradio-before;
+            // .prefix-opacity(0);
+        }
+        &:after {
+            color: @color-checked-chkradio-after;
+            display: block \9;      /* ie hack */
+            .prefix-opacity(1);
+            // .comm-iconfont( @icon-checkboxafter-checked, @fontsize-checkboxicon );
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        .@{prefix}checkbox-text {
+            color: @color-disabled-chkradio;
+        }
+        &:before,
+        &:hover:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-disabled-chkradio-before;
+            background: @bgcolor-disabled-chkradio-before;
+            // color: @color-gray-lightest;
+            // display: block \9;      /* ie hack */
+        }
+        &:after,
+        &:hover:after {
+            display: none \9;       /* ie hack */
+            .prefix-opacity(0);
+        }
+    }
 }
 .@{prefix}radio {
-	&:before,
-	&:after {
-		left: 1px;
-	}
-	&:before {
-		color: @color-gray-light;
-
-		.comm-iconfont( @icon-radiobefore, @fontsize-radioicon );
-	}
-	&:after {
-		display: none \9;		/* ie hack */
-
-		.prefix-opacity(0);
-		.comm-iconfont( @icon-radioafter, @fontsize-radioicon );
-	}
-	&:hover,
-	&.hover {
-		&:before {
-			display: none \9;		/* ie hack */
-
-			.prefix-opacity(0);
-		}
-		&:after {
-			display: block \9;		/* ie hack */
-			color: @color-radio-checked;
-
-			.prefix-opacity(.8);
-		}
-	}
-	&.checked {
-		&:before {
-			.prefix-opacity(0);
-		}
-		&:after {
-			display: block \9;		/* ie hack */
-			color: @color-radio-checked;
-
-			.prefix-opacity(1);
-			.comm-iconfont( @icon-radioafter-checked, @fontsize-radioicon );
-		}
-	}
-	&.disabled,
-	&[disabled] {
-		&:before,
-		&:hover:before {
-			display: block \9;		/* ie hack */
-			color: @color-gray-lightest;
-
-			.prefix-opacity(1);
-		}
-		&:after,
-		&:hover:after {
-			display: none \9;		/* ie hack */
-
-			.prefix-opacity(0);
-		}
-	}
+    .@{prefix}radio-text {
+        color: @color-chkradio;
+    }
+    &:before {
+        left: 3px;
+        // color: @color-gray-light;
+        // .comm-iconfont( @icon-radiobefore, @fontsize-radioicon );
+        width: 17px;
+        height: 17px;
+        border: @borderwidth-chkradio-before solid @bordercolor-chkradio-before;
+        background: @bgcolor-chkradio-before;
+        .prefix-border-radius(@radius-chkradio-radio-before);
+    }
+    &:after {
+        top: 11px;
+        left: 9px;
+        width: 5px;
+        height: 5px;
+        display: none \9;       /* ie hack */
+        .prefix-opacity(0);
+        // .comm-iconfont( @icon-radioafter, @fontsize-radioicon );
+        background: @bgcolor-chkradio-after;
+        .prefix-border-radius(@radius-chkradio-radio-before);
+    }
+    &:hover,
+    &.hover {
+        .@{prefix}radio-text {
+            color: @color-hover-chkradio;
+        }
+        &:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-hover-chkradio-before;
+            background: @bgcolor-hover-chkradio-before;
+            // display: none \9;       /* ie hack */
+            // .prefix-opacity(0);
+        }
+        &:after {
+            background: @bgcolor-hover-chkradio-after;
+            display: block \9;      /* ie hack */
+            .prefix-opacity(.8);
+        }
+    }
+    &.checked {
+        .@{prefix}radio-text {
+            color: @color-checked-chkradio;
+        }
+        &:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-checked-chkradio-before;
+            background: @bgcolor-checked-chkradio-before;
+            // .prefix-opacity(0);
+        }
+        &:after {
+            background: @bgcolor-checked-chkradio-after;
+            display: block \9;      /* ie hack */
+            .prefix-opacity(1);
+            // .comm-iconfont( @icon-radioafter-checked, @fontsize-radioicon );
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        .@{prefix}radio-text {
+            color: @color-disabled-chkradio;
+        }
+        &:before,
+        &:hover:before {
+            border: @borderwidth-chkradio-before solid @bordercolor-disabled-chkradio-before;
+            color: @color-gray-lightest;
+            // display: block \9;      /* ie hack */
+            // .prefix-opacity(1);
+        }
+        &:after,
+        &:hover:after {
+            background: @bgcolor-disabled-chkradio-after;
+            display: none \9;       /* ie hack */
+            .prefix-opacity(0);
+        }
+    }
 }
 
 
 .@{prefix}checkbox-theme,
 .@{prefix}radio-theme {
-	&.checked {
-		&:after {
-			color: @color-theme-normal;
-		}
-	}
+    &:before {
+        border-color: @bordercolor-chkradio-theme-before;
+        background: @bgcolor-chkradio-theme-before;
+    }
+    &:hover,
+    &.hover {
+        &:before {
+            border-color: @bordercolor-hover-chkradio-theme-before;
+            background: @bgcolor-hover-chkradio-theme-before;
+        }
+        &:after {
+            color: @color-hover-chkradio-theme-after;
+        }
+    }
+    &.checked {
+        &:before {
+            border-color: @bordercolor-checked-chkradio-theme-before;
+            background: @bgcolor-checked-chkradio-theme-before;
+        }
+        &:after {
+            color: @color-checked-chkradio-theme-after;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        &:before,
+        &:hover:before {
+            border-color: @bordercolor-disabled-chkradio-theme-before;
+            background: @bgcolor-disabled-chkradio-theme-before;
+        }
+    }
 }
+.@{prefix}radio-theme {
+    &:hover,
+    &.hover {
+        &:after {
+            background: @bgcolor-hover-chkradio-theme-after;
+        }
+    }
+    &.checked {
+        &:after {
+            background: @bgcolor-checked-chkradio-theme-after;
+        }
+    }
+}
+
 .@{prefix}checkbox-key,
 .@{prefix}radio-key {
-	&.checked {
-		&:after {
-			color: @color-key-normal;
-		}
-	}
+    &:before {
+        border-color: @bordercolor-chkradio-key-before;
+        background: @bgcolor-chkradio-key-before;
+    }
+    &:hover,
+    &.hover {
+        &:before {
+            border-color: @bordercolor-hover-chkradio-key-before;
+            background: @bgcolor-hover-chkradio-key-before;
+        }
+        &:after {
+            color: @color-hover-chkradio-key-after;
+        }
+    }
+    &.checked {
+        &:before {
+            border-color: @bordercolor-checked-chkradio-key-before;
+            background: @bgcolor-checked-chkradio-key-before;
+        }
+        &:after {
+            color: @color-checked-chkradio-key-after;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        &:before,
+        &:hover:before {
+            border-color: @bordercolor-disabled-chkradio-key-before;
+            background: @bgcolor-disabled-chkradio-key-before;
+        }
+    }
 }
+.@{prefix}radio-key {
+    &:hover,
+    &.hover {
+        &:after {
+            background: @bgcolor-hover-chkradio-key-after;
+        }
+    }
+    &.checked {
+        &:after {
+            background: @bgcolor-checked-chkradio-key-after;
+        }
+    }
+}
+
 .@{prefix}checkbox-light,
 .@{prefix}radio-light {
-	&.checked {
-		&:after {
-			color: @color-light-darkest;
-		}
-	}
+    &:before {
+        border-color: @bordercolor-chkradio-light-before;
+        background: @bgcolor-chkradio-light-before;
+    }
+    &:hover,
+    &.hover {
+        &:before {
+            border-color: @bordercolor-hover-chkradio-light-before;
+            background: @bgcolor-hover-chkradio-light-before;
+        }
+        &:after {
+            color: @color-hover-chkradio-light-after;
+        }
+    }
+    &.checked {
+        &:before {
+            border-color: @bordercolor-checked-chkradio-light-before;
+            background: @bgcolor-checked-chkradio-light-before;
+        }
+        &:after {
+            color: @color-checked-chkradio-light-after;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        &:before,
+        &:hover:before {
+            border-color: @bordercolor-disabled-chkradio-light-before;
+            background: @bgcolor-disabled-chkradio-light-before;
+        }
+    }
 }
+.@{prefix}radio-light {
+    &:hover,
+    &.hover {
+        &:after {
+            background: @bgcolor-hover-chkradio-light-after;
+        }
+    }
+    &.checked {
+        &:after {
+            background: @bgcolor-checked-chkradio-light-after;
+        }
+    }
+}
+
 .@{prefix}checkbox-nice,
 .@{prefix}radio-nice {
-	&.checked {
-		&:after {
-			color: @color-nice-normal;
-		}
-	}
+    &:before {
+        border-color: @bordercolor-chkradio-nice-before;
+        background: @bgcolor-chkradio-nice-before;
+    }
+    &:hover,
+    &.hover {
+        &:before {
+            border-color: @bordercolor-hover-chkradio-nice-before;
+            background: @bgcolor-hover-chkradio-nice-before;
+        }
+        &:after {
+            color: @color-hover-chkradio-nice-after;
+        }
+    }
+    &.checked {
+        &:before {
+            border-color: @bordercolor-checked-chkradio-nice-before;
+            background: @bgcolor-checked-chkradio-nice-before;
+        }
+        &:after {
+            color: @color-checked-chkradio-nice-after;
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        &:before,
+        &:hover:before {
+            border-color: @bordercolor-disabled-chkradio-nice-before;
+            background: @bgcolor-disabled-chkradio-nice-before;
+        }
+    }
+}
+.@{prefix}radio-nice {
+    &:hover,
+    &.hover {
+        &:after {
+            background: @bgcolor-hover-chkradio-nice-after;
+        }
+    }
+    &.checked {
+        &:after {
+            background: @bgcolor-checked-chkradio-nice-after;
+        }
+    }
 }
 
 
 .@{prefix}checkbox.@{prefix}checkbox-full,
 .@{prefix}radio.@{prefix}radio-full {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }

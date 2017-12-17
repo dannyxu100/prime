@@ -68,12 +68,12 @@
 //
 // Source: http://nicolasgallagher.com/micro-clearfix-hack/
 .comm-clearfix() {
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		content: " "; 		// for 1
 		display: table; 	// for 2
 	}
-	&:after {
+	&::after {
 		clear: both;
 	}
 	& {

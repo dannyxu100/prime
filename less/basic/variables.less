@@ -215,6 +215,10 @@
 @padding-btn-large-tb:      @padding-control-large-tb;
 @padding-btn-large-lr:      @padding-control-large-lr;
 
+@radius-btn:                @radius-def;
+@zindex-btn:                @zindex-control;
+@zindex-active-btn:         @zindex-control + 10;
+
 @color-def-btn:                         @color-black-light;
 @color-hover-btn:                       @color-black-dark;
 @color-focus-btn:                       @color-black-dark;
@@ -341,15 +345,91 @@
 @shadow-active-btn-nice:                0 2px 5px rgba(0, 0, 0, .2);
 @shadow-disabled-btn-nice:              none;
 
-@radius-btn:                @radius-def;
-@zindex-btn:                @zindex-control;
-@zindex-active-btn:         @zindex-control + 10;
+@borderwidth-def-btn-border:            2px;
+@color-def-btn-border:                  @color-gray-light;
+@color-hover-btn-border:                @color-white-light;
+@color-focus-btn-border:                @color-white-light;
+@color-active-btn-border:               @color-gray-light;
+@color-disabled-btn-border:             @color-gray-lightest;
+@bordercolor-def-btn-border:            @color-gray-light;
+@bordercolor-hover-btn-border:          @color-white-light;
+@bordercolor-focus-btn-border:          @color-white-light;
+@bordercolor-active-btn-border:         @color-gray-light;
+@bordercolor-disabled-btn-border:       @color-gray-lightest;
+@bgcolor-def-btn-border:                transparent;
+@bgcolor-hover-btn-border:              transparent;
+@bgcolor-focus-btn-border:              transparent;
+@bgcolor-active-btn-border:             transparent;
+@bgcolor-disabled-btn-border:           transparent;
+@shadow-def-btn-border:                 none;
+@shadow-hover-btn-border:               0 4px 10px rgba(0, 0, 0, .5);
+@shadow-focus-btn-border:               none;
+@shadow-active-btn-border:              0 2px 5px rgba(0, 0, 0, .5);
+@shadow-disabled-btn-border:            none;
+
+@color-def-btn-borderinverse:                  @color-black-lighter;
+@color-hover-btn-borderinverse:                @color-black-light;
+@color-focus-btn-borderinverse:                @color-black-lighter;
+@color-active-btn-borderinverse:               @color-black-lighter;
+@color-disabled-btn-borderinverse:             @color-black-lighter;
+@bordercolor-def-btn-borderinverse:            @color-black-lighter;
+@bordercolor-hover-btn-borderinverse:          @color-black-normal;
+@bordercolor-focus-btn-borderinverse:          @color-black-normal;
+@bordercolor-active-btn-borderinverse:         @color-black-normal;
+@bordercolor-disabled-btn-borderinverse:       @color-black-lighter;
+@bgcolor-def-btn-borderinverse:                transparent;
+@bgcolor-hover-btn-borderinverse:              transparent;
+@bgcolor-focus-btn-borderinverse:              transparent;
+@bgcolor-active-btn-borderinverse:             transparent;
+@bgcolor-disabled-btn-borderinverse:           transparent;
+@shadow-def-btn-borderinverse:                 none;
+@shadow-hover-btn-borderinverse:               0 4px 10px rgba(0, 0, 0, .3);
+@shadow-focus-btn-borderinverse:               none;
+@shadow-active-btn-borderinverse:              0 2px 5px rgba(0, 0, 0, .3);
+@shadow-disabled-btn-borderinverse:            none;
+
+@color-def-btn-link:                     @color-theme-dark;
+@color-hover-btn-link:                   @color-theme-light;
+@color-focus-btn-link:                   @color-theme-dark;
+@color-active-btn-link:                  @color-theme-dark;
+@color-disabled-btn-link:                @color-theme-dark;
+@bordercolor-def-btn-link:               transparent;
+@bordercolor-hover-btn-link:             transparent;
+@bordercolor-focus-btn-link:             transparent;
+@bordercolor-active-btn-link:            transparent;
+@bordercolor-disabled-btn-link:          transparent;
+@bgcolor-def-btn-link:                   transparent;
+@bgcolor-hover-btn-link:                 transparent;
+@bgcolor-focus-btn-link:                 transparent;
+@bgcolor-active-btn-link:                transparent;
+@bgcolor-disabled-btn-link:              transparent;
+@shadow-def-btn-link:                    none;
+@shadow-hover-btn-link:                  none;
+@shadow-focus-btn-link:                  none;
+@shadow-active-btn-link:                 none;
+@shadow-disabled-btn-link:               none;
+
 
 
 //气泡菜单
-@bgcolor-popmenu:                       @color-white-lighter;
+@color-def-popmenu:                     @color-black-normal;
+@color-hover-popmenu:                   @color-black-dark;
+@color-active-popmenu:                  @color-black-normal;
+@color-disabled-popmenu:                @color-gray-normal;
+@color-icon-popmenu:                    @color-black-lighter;
+
+@bgcolor-def-popmenu:                   @color-white-lighter;
+@bgcolor-hover-popmenu:                 @color-white-dark;
+@bgcolor-active-popmenu:                @color-gray-lightest;
+@bgcolor-disabled-popmenu:              @color-white-lighter;
+
 @bordercolor-popmenu:                   @color-gray-lighter;
-@color-popmenu:                         @color-black-normal;
+@bordercolor-top-popmenu-split:         @color-gray-lightest;
+@bordercolor-bottom-popmenu-split:      @color-white-lighter;
+
+@borderwidth-popmenu:                   1px;
+@borderwidth-top-popmenu-split:         1px;
+@borderwidth-bottom-popmenu-split:      1px;
 
 @color-popmenu-item-selected:           @color-black-darker;
 @bgcolor-popmenu-item-selected:         @color-gray-lightest;
@@ -358,8 +438,21 @@
 @color-popmenu-icon-hassub:             @color-theme-dark;
 
 @minwidth-popmenu:                      160px;
-@minwidth-popmenu-small:                140px;
-@minwidth-popmenu-large:                180px;
+@minwidth-small-popmenu:                140px;
+@minwidth-large-popmenu:                180px;
+
+@fontsize-popmenu:                      @fontsize-control;
+@fontsize-popmenu-small:                @fontsize-control-small;
+@fontsize-popmenu-large:                @fontsize-control-large;
+
+@fontweight-popmenu:                    @fontweight-def;
+@fontweight-popmenu-small:              @fontweight-def;
+@fontweight-popmenu-large:              @fontweight-def;
+
+@fontsize-popmenu-icon:                 14px;
+@fontsize-popmenu-icon-selected:        14px;
+@fontsize-popmenu-icon-hassub:          14px;
+
 @height-popmenu-item:                   28px;
 @height-popmenu-small-item:             26px;
 @height-popmenu-large-item:             30px;
@@ -373,16 +466,9 @@
 @padding-popmenu-tree-item-l:           35px;
 @padding-popmenu-tree-item-r:           35px;
 
-@fontsize-popmenu:                      @fontsize-control;
-@fontsize-popmenu-small:                @fontsize-control-small;
-@fontsize-popmenu-large:                @fontsize-control-large;
-@fontsize-popmenu-icon:                 14px;
-@fontsize-popmenu-icon-selected:        14px;
-@fontsize-popmenu-icon-hassub:          12px;
-
-@zindex-popmenu:                        @zindex-control;
-@zindex-popmenu-active:                 @zindex-popmenu + 10;
-@zindex-popmenu-hover:                  @zindex-popmenu + 20;
+@zindex-def-popmenu:                    @zindex-control;
+@zindex-active-popmenu:                 @zindex-def-popmenu + 10;
+@zindex-hover-popmenu:                  @zindex-def-popmenu + 20;
 
 @radius-popmenu:                        @radius-def;
 
@@ -438,25 +524,98 @@
 
 
 //单选复选框
-@fontsize-checkboxradio-text:       @fontsize-control;
+@fontsize-chkradio:                 @fontsize-control;
+@zindex-chkradio-before:            @zindex-control;
+@zindex-chkradio-after:             @zindex-chkradio-before + 10;
+@padding-chkradio-tb:               3px;
+@padding-chkradio-l:                25px;
+@padding-chkradio-r:                10px;
+@height-chkradio:                   20px;
+@borderwidth-chkradio-before:               2px;
+@radius-chkradio-chk-before:                .2em;
+@radius-chkradio-radio-before:              1em;
+@icon-chkradio-after:                       @icon-done;
 
-@zindex-checkboxradio-before:       @zindex-control;
-@zindex-checkboxradio-after:        @zindex-checkboxradio-before + 10;
+@color-chkradio:                            @color-black-dark;
+@color-hover-chkradio:                      @color-black-dark;
+@color-checked-chkradio:                    @color-black-dark;
+@color-disabled-chkradio:                   @color-gray-light;
 
-@padding-checkboxradio-tb:          3px;
-@padding-checkboxradio-l:           25px;
-@padding-checkboxradio-r:           10px;
+@bordercolor-chkradio-before:               @color-gray-normal;
+@bordercolor-hover-chkradio-before:         @color-gray-lighter;
+@bordercolor-checked-chkradio-before:       @color-gray-darker;
+@bordercolor-disabled-chkradio-before:      @color-gray-lighter;
+@bgcolor-chkradio-before:                   transparent;
+@bgcolor-hover-chkradio-before:             transparent;
+@bgcolor-checked-chkradio-before:           transparent;
+@bgcolor-disabled-chkradio-before:          transparent;
+@bgcolor-chkradio-after:                    transparent;
+@bgcolor-hover-chkradio-after:              @color-black-lighter;
+@bgcolor-checked-chkradio-after:            @color-black-dark;
+@bgcolor-disabled-chkradio-after:           transparent;
+@color-hover-chkradio-after:                @color-black-dark;
+@color-checked-chkradio-after:              @color-black-darker;
 
-@height-checkbox:                   20px;
-@height-radio:                      20px;
+@bordercolor-chkradio-theme-before:                 @color-theme-normal;
+@bordercolor-hover-chkradio-theme-before:           @color-theme-light;
+@bordercolor-checked-chkradio-theme-before:         @color-theme-normal;
+@bordercolor-disabled-chkradio-theme-before:        @color-theme-light;
+@bgcolor-chkradio-theme-before:                     transparent;
+@bgcolor-hover-chkradio-theme-before:               transparent;
+@bgcolor-checked-chkradio-theme-before:             @color-theme-normal;
+@bgcolor-disabled-chkradio-theme-before:            transparent;
+@bgcolor-chkradio-theme-after:                      transparent;
+@bgcolor-hover-chkradio-theme-after:                @color-theme-darker;
+@bgcolor-checked-chkradio-theme-after:              @color-white-light;
+@bgcolor-disabled-chkradio-theme-after:             transparent;
+@color-hover-chkradio-theme-after:                  @color-theme-darker;
+@color-checked-chkradio-theme-after:                @color-white-light;
 
-@fontsize-checkboxicon:             18px;
-@fontsize-radioicon:                19px;
+@bordercolor-chkradio-key-before:                   @color-key-normal;
+@bordercolor-hover-chkradio-key-before:             @color-key-light;
+@bordercolor-checked-chkradio-key-before:           @color-key-normal;
+@bordercolor-disabled-chkradio-key-before:          @color-key-light;
+@bgcolor-chkradio-key-before:                       transparent;
+@bgcolor-hover-chkradio-key-before:                 transparent;
+@bgcolor-checked-chkradio-key-before:               @color-key-normal;
+@bgcolor-disabled-chkradio-key-before:              transparent;
+@bgcolor-chkradio-key-after:                        transparent;
+@bgcolor-hover-chkradio-key-after:                  @color-key-darker;
+@bgcolor-checked-chkradio-key-after:                @color-white-light;
+@bgcolor-disabled-chkradio-key-after:               transparent;
+@color-hover-chkradio-key-after:                    @color-key-darker;
+@color-checked-chkradio-key-after:                  @color-white-light;
 
-@color-checkbox-checked:            @color-black-light;
-@color-radio-checked:               @color-black-light;
+@bordercolor-chkradio-light-before:                 @color-light-darker;
+@bordercolor-hover-chkradio-light-before:           @color-light-darker;
+@bordercolor-checked-chkradio-light-before:         @color-light-darker;
+@bordercolor-disabled-chkradio-light-before:        @color-light-darker;
+@bgcolor-chkradio-light-before:                     transparent;
+@bgcolor-hover-chkradio-light-before:               transparent;
+@bgcolor-checked-chkradio-light-before:             @color-light-darker;
+@bgcolor-disabled-chkradio-light-before:            transparent;
+@bgcolor-chkradio-light-after:                      transparent;
+@bgcolor-hover-chkradio-light-after:                @color-black-light;
+@bgcolor-checked-chkradio-light-after:              @color-black-dark;
+@bgcolor-disabled-chkradio-light-after:             transparent;
+@color-hover-chkradio-light-after:                  @color-black-light;
+@color-checked-chkradio-light-after:                @color-black-dark;
 
-@radius-checkboxbefore:             @radius-def;
+@bordercolor-chkradio-nice-before:                  @color-nice-darker;
+@bordercolor-hover-chkradio-nice-before:            @color-nice-normal;
+@bordercolor-checked-chkradio-nice-before:          @color-nice-dark;
+@bordercolor-disabled-chkradio-nice-before:         @color-nice-normal;
+@bgcolor-chkradio-nice-before:                      transparent;
+@bgcolor-hover-chkradio-nice-before:                transparent;
+@bgcolor-checked-chkradio-nice-before:              @color-nice-dark;
+@bgcolor-disabled-chkradio-nice-before:             transparent;
+@bgcolor-chkradio-nice-after:                       transparent;
+@bgcolor-hover-chkradio-nice-after:                 @color-nice-darker;
+@bgcolor-checked-chkradio-nice-after:               @color-white-light;
+@bgcolor-disabled-chkradio-nice-after:              transparent;
+@color-hover-chkradio-nice-after:                   @color-nice-darker;
+@color-checked-chkradio-nice-after:                 @color-white-light;
+
 
 
 //表格
