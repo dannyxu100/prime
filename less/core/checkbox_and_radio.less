@@ -87,7 +87,7 @@
             color: @color-hover-chkradio;
         }
         &:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-hover-chkradio-before;
+            border-color: @bordercolor-hover-chkradio-before;
             background: @bgcolor-hover-chkradio-before;
             // display: none \9;       /* ie hack */
             // .prefix-opacity(0);
@@ -103,7 +103,7 @@
             color: @color-checked-chkradio;
         }
         &:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-checked-chkradio-before;
+            border-color: @bordercolor-checked-chkradio-before;
             background: @bgcolor-checked-chkradio-before;
             // .prefix-opacity(0);
         }
@@ -121,7 +121,7 @@
         }
         &:before,
         &:hover:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-disabled-chkradio-before;
+            border-color: @bordercolor-disabled-chkradio-before;
             background: @bgcolor-disabled-chkradio-before;
             // color: @color-gray-lightest;
             // display: block \9;      /* ie hack */
@@ -152,10 +152,10 @@
         left: 9px;
         width: 5px;
         height: 5px;
+        background: @bgcolor-chkradio-after;
         display: none \9;       /* ie hack */
         .prefix-opacity(0);
         // .comm-iconfont( @icon-radioafter, @fontsize-radioicon );
-        background: @bgcolor-chkradio-after;
         .prefix-border-radius(@radius-chkradio-radio-before);
     }
     &:hover,
@@ -164,7 +164,7 @@
             color: @color-hover-chkradio;
         }
         &:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-hover-chkradio-before;
+            border-color: @bordercolor-hover-chkradio-before;
             background: @bgcolor-hover-chkradio-before;
             // display: none \9;       /* ie hack */
             // .prefix-opacity(0);
@@ -180,7 +180,7 @@
             color: @color-checked-chkradio;
         }
         &:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-checked-chkradio-before;
+            border-color: @bordercolor-checked-chkradio-before;
             background: @bgcolor-checked-chkradio-before;
             // .prefix-opacity(0);
         }
@@ -198,7 +198,7 @@
         }
         &:before,
         &:hover:before {
-            border: @borderwidth-chkradio-before solid @bordercolor-disabled-chkradio-before;
+            border-color: @bordercolor-disabled-chkradio-before;
             color: @color-gray-lightest;
             // display: block \9;      /* ie hack */
             // .prefix-opacity(1);
