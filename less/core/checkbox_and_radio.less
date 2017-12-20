@@ -14,6 +14,7 @@
     // border: 1px solid #f7f7f7;
     vertical-align: middle;
     font-size: 0;
+    color: @color-chkradio;
     cursor: @cursor-pointer;
 
     input[type="checkbox"],
@@ -55,7 +56,7 @@
         cursor: not-allowed;
         &:before,
         &:hover:before {
-            .prefix-opacity(.6);
+            .prefix-opacity(.5);
         }
     }
 
@@ -95,7 +96,7 @@
         &:after {
             color: @color-hover-chkradio-after;
             display: block \9;      /* ie hack */
-            .prefix-opacity(.8);
+            .prefix-opacity(1);
         }
     }
     &.checked {
@@ -172,7 +173,7 @@
         &:after {
             background: @bgcolor-hover-chkradio-after;
             display: block \9;      /* ie hack */
-            .prefix-opacity(.8);
+            .prefix-opacity(1);
         }
     }
     &.checked {
