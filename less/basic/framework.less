@@ -125,6 +125,20 @@ textarea::-webkit-input-placeholder {
     color: #ddd;
 }
 
+/* 修正selection颜色 */
+::-moz-selection{
+	background: @color-theme-normal;
+	color: @color-white-lighter;
+}
+::-webkit-selection{
+	background: @color-theme-normal;
+	color: @color-white-lighter;
+}
+::selection{
+	background: @color-theme-normal;
+	color: @color-white-lighter;
+}
+
 //修正iconfont
 .iconfont {
 	display: inline-block;
