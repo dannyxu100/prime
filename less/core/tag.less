@@ -1,64 +1,70 @@
 //====================================================
 //
-//		tag
+//      tag
 //
 //====================================================
 
 //设置标签尺寸
 .tag-size(@paddingtb; @paddinglr; @height:@height-tag; @lineheight:@lineheight-tag; @fontsize:@fontsize-tag; @fontweight:@fontweight-def) {
-	padding: @paddingtb @paddinglr;
-	height: @height;
-	line-height: @lineheight;
-	font-size: @fontsize;	//unit( @fontsize, em );
-	font-weight: @fontweight;
+    padding: @paddingtb @paddinglr;
+    height: @height;
+    line-height: @lineheight;
+    font-size: @fontsize;   //unit( @fontsize, em );
+    font-weight: @fontweight;
 }
 
 //设置标签风格
 .tag-style(@color; @bgcolor; @bordercolor; @radius:@radius-def) {
-	color: @color;
-	background-color: @bgcolor;
-	border: 1px solid @bordercolor;
-	.prefix-border-radius(@radius);
+    color: @color;
+    background-color: @bgcolor;
+    border: 1px solid @bordercolor;
+    .prefix-border-radius(@radius);
 }
 
 //默认按钮
 .@{prefix}tag,
 .@{prefix}tag-def {
-	display: inline-block;
-	position: relative;
-	text-align: center;
-	vertical-align: baseline;
-	cursor: @cursor-def;
-	white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    vertical-align: baseline;
+    cursor: @cursor-def;
+    white-space: nowrap;
 
-	.tag-size(@padding-tag-tb; @padding-tag-lr);
-	.tag-style(@color-tag; @bgcolor-tag; @bordercolor-tag);
-	.prefix-transition();
+    .tag-size(@padding-tag-tb; @padding-tag-lr);
+    .tag-style(@color-tag; @bgcolor-tag; @bordercolor-tag);
+    .prefix-transition();
 
 }
 
 .@{prefix}tag-theme {
-	.tag-style(@color-white-normal; @color-theme-normal; transparent);
+    .tag-style(@color-white-normal; @color-theme-normal; transparent);
 }
 
 .@{prefix}tag-key {
-	.tag-style(@color-white-normal; @color-key-normal; transparent);
+    .tag-style(@color-white-normal; @color-key-normal; transparent);
 }
 
 .@{prefix}tag-light {
-	.tag-style(@color-black-light; @color-light-normal; transparent);
+    .tag-style(@color-black-light; @color-light-normal; transparent);
 }
 
 .@{prefix}tag-nice {
-	.tag-style(@color-white-normal; @color-nice-normal; transparent);
+    .tag-style(@color-white-normal; @color-nice-normal; transparent);
+}
+
+.@{prefix}tag-black {
+    .tag-style(@color-white-normal; @color-black-normal; transparent);
 }
 
 
 .@{prefix}tag-full {
-	display: block;
-	width: 100%;
+    display: block;
+    width: 100%;
 }
 .@{prefix}tag-circle {
-	.prefix-border-radius(1em);
+    padding-left: @padding-tag-circle-lr;
+    padding-right: @padding-tag-circle-lr;
+    .prefix-border-radius(1em);
 }
 

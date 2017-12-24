@@ -29,14 +29,14 @@
     background-image: none;                     // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     border: 1px solid @bordercolor-def-btn;     //transparent;
     background-color: @bgcolor-def-btn;
+    // .prefix-gradient(@bgcolor-def-btn);
     cursor: @cursor-pointer;
     white-space: nowrap;
     touch-action: manipulation;                 //支持手势操作
-
     .button-size(@padding-btn-tb; @padding-btn-lr; @fontsize-btn; @height-btn; @lineheight-btn; @radius-btn);
     .prefix-selecttext(none);
     .prefix-transition();
-
+    .prefix-box-shadow(@shadow-def-btn);
     &,
     &:active,
     &.active,
@@ -44,20 +44,17 @@
         &:focus,
         &.focus {
             border-color: @bordercolor-focus-btn;
-            z-index: @zindex-active-btn;
-
+            z-index: @zindex-focus-btn;
             .prefix-tabfocus();
         }
     }
-
     &:hover,
     &.hover {
         color: @color-hover-btn;
         border-color: @bordercolor-hover-btn;
         background-color: @bgcolor-hover-btn;
         text-decoration: none;
-        z-index: @zindex-active-btn;
-
+        z-index: @zindex-hover-btn;
         .prefix-box-shadow(@shadow-hover-btn);
     }
     &:focus,
@@ -66,17 +63,22 @@
         border-color: @bordercolor-focus-btn;
         background-color: @bgcolor-focus-btn;
         text-decoration: none;
-        z-index: @zindex-active-btn;
+        z-index: @zindex-focus-btn;
+        .prefix-box-shadow(@shadow-focus-btn);
     }
     &:active,
     &.active,
     &.loading {
-        color: @color-active-btn;
-        border-color: @bordercolor-active-btn;
-        background-color: @bgcolor-active-btn;
-        z-index: @zindex-active-btn;
-
-        .prefix-box-shadow(@shadow-active-btn);
+        &,
+        &:hover,
+        &:focus,
+        &.focus {
+            color: @color-active-btn;
+            border-color: @bordercolor-active-btn;
+            background-color: @bgcolor-active-btn;
+            z-index: @zindex-active-btn;
+            .prefix-box-shadow(@shadow-active-btn);
+        }
     }
     &:active {
         background-image: none;
@@ -103,14 +105,12 @@
             border-color: @bordercolor-disabled-btn;
             background-color: @bgcolor-disabled-btn;
             cursor: @cursor-no;
-
             .prefix-opacity(.55);
             .prefix-box-shadow(@shadow-disabled-btn) !important;
         }
     }
     a& {
         text-decoration: none;
-
         &.disabled,
         fieldset[disabled] & {
             pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
@@ -135,40 +135,35 @@
     color: @color-def-btn-inverse;
     border-color: @bordercolor-def-btn-inverse;
     background-color: @bgcolor-def-btn-inverse;
-
+    .prefix-box-shadow(@shadow-def-btn-inverse);
     &.border {
         border-color:  @bordercolor-active-btn-inverse;
-    }
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-inverse;
-        border-color: @bordercolor-focus-btn-inverse;
-        background-color: @bgcolor-focus-btn-inverse;
     }
     &:hover,
     &.hover {
         color: @color-hover-btn-inverse;
         border-color:  @bordercolor-hover-btn-inverse;
         background-color: @bgcolor-hover-btn-inverse;
-
         .prefix-box-shadow(@shadow-hover-btn-inverse);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-inverse;
+        border-color: @bordercolor-focus-btn-inverse;
+        background-color: @bgcolor-focus-btn-inverse;
+        .prefix-box-shadow(@shadow-focus-btn-inverse);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-inverse;
-        border-color: @bordercolor-active-btn-inverse;
-        background-color: @bgcolor-active-btn-inverse;
-
-        .prefix-box-shadow(@shadow-active-btn-inverse);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-inverse;
-            border-color: @bordercolor-focus-btn-inverse;
-            background-color: @bgcolor-focus-btn-inverse;
+            color: @color-active-btn-inverse;
+            border-color: @bordercolor-active-btn-inverse;
+            background-color: @bgcolor-active-btn-inverse;
+            .prefix-box-shadow(@shadow-active-btn-inverse);
         }
     }
     &.disabled,
@@ -183,6 +178,7 @@
             color: @color-disabled-btn-inverse;
             border-color: @bordercolor-disabled-btn-inverse;
             background-color: @bgcolor-disabled-btn-inverse;
+            .prefix-box-shadow(@shadow-disabled-btn-inverse);
         }
     }
     .badge {
@@ -197,41 +193,35 @@
     color: @color-def-btn-theme;
     border-color: @bordercolor-def-btn-theme;
     background-color: @bgcolor-def-btn-theme;
-
+    .prefix-box-shadow(@shadow-def-btn-theme);
     &.border {
         border-color: @bordercolor-def-btn-theme;
+    }
+    &:hover,
+    &.hover {
+        color: @color-hover-btn-theme;
+        border-color: @bordercolor-hover-btn-theme;
+        background-color: @bgcolor-hover-btn-theme;
+        .prefix-box-shadow(@shadow-hover-btn-theme);
     }
     &:focus,
     &.focus {
         color: @color-focus-btn-theme;
         border-color: @bordercolor-focus-btn-theme;
         background-color: @bgcolor-focus-btn-theme;
-    }
-
-    &:hover,
-    &.hover {
-        color: @color-hover-btn-theme;
-        border-color: @bordercolor-hover-btn-theme;
-        background-color: @bgcolor-hover-btn-theme;
-
-        .prefix-box-shadow(@shadow-hover-btn-theme);
+        .prefix-box-shadow(@shadow-focus-btn-theme);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-theme;
-        border-color: @bordercolor-active-btn-theme;
-        background-color: @bgcolor-active-btn-theme;
-
-        .prefix-box-shadow(@shadow-active-btn-theme);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-theme;
-            border-color: @bordercolor-focus-btn-theme;
-            background-color: @bgcolor-focus-btn-theme;
+            color: @color-active-btn-theme;
+            border-color: @bordercolor-active-btn-theme;
+            background-color: @bgcolor-active-btn-theme;
+            .prefix-box-shadow(@shadow-active-btn-theme);
         }
     }
     &.disabled,
@@ -246,6 +236,7 @@
             color: @color-disabled-btn-theme;
             border-color: @bordercolor-disabled-btn-theme;
             background-color: @bgcolor-disabled-btn-theme;
+            .prefix-box-shadow(@shadow-disabled-btn-theme);
         }
     }
     .badge {
@@ -258,46 +249,40 @@
     color: @color-def-btn-key;
     border-color: @bordercolor-def-btn-key;
     background-color: @bgcolor-def-btn-key;
-
+    .prefix-box-shadow(@shadow-def-btn-key);
     &.border {
         border-color:  @bordercolor-active-btn-key;
-    }
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-key;
-        border-color: @bordercolor-focus-btn-key;
-        background-color: @bgcolor-focus-btn-key;
     }
     &:hover,
     &.hover {
         color: @color-hover-btn-key;
         border-color: @bordercolor-hover-btn-key;
         background-color: @bgcolor-hover-btn-key;
-
         .prefix-box-shadow(@shadow-hover-btn-key);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-key;
+        border-color: @bordercolor-focus-btn-key;
+        background-color: @bgcolor-focus-btn-key;
+        .prefix-box-shadow(@shadow-focus-btn-key);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-key;
-        border-color: @bordercolor-active-btn-key;
-        background-color: @bgcolor-active-btn-key;
-
-        .prefix-box-shadow(@shadow-active-btn-key);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-key;
-            border-color: @bordercolor-focus-btn-key;
-            background-color: @bgcolor-focus-btn-key;
+            color: @color-active-btn-key;
+            border-color: @bordercolor-active-btn-key;
+            background-color: @bgcolor-active-btn-key;
+            .prefix-box-shadow(@shadow-active-btn-key);
         }
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
+    &.loading {
         background-image: none;
     }
     &.disabled,
@@ -312,6 +297,7 @@
             color: @color-disabled-btn-key;
             border-color: @bordercolor-disabled-btn-key;
             background-color: @bgcolor-disabled-btn-key;
+            .prefix-box-shadow(@shadow-disabled-btn-key);
         }
     }
     .badge {
@@ -324,46 +310,40 @@
     color: @color-def-btn-light;
     border-color: @bordercolor-def-btn-light;
     background-color: @bgcolor-def-btn-light;
-
+    .prefix-box-shadow(@shadow-def-btn-light);
     &.border {
         border-color: @bordercolor-active-btn-light;
-    }
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-light;
-        border-color: @bordercolor-focus-btn-light;
-        background-color: @bgcolor-focus-btn-light;
     }
     &:hover,
     &.hover {
         color: @color-hover-btn-light;
         border-color: @bordercolor-hover-btn-light;
         background-color: @bgcolor-hover-btn-light;
-
         .prefix-box-shadow(@shadow-hover-btn-light);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-light;
+        border-color: @bordercolor-focus-btn-light;
+        background-color: @bgcolor-focus-btn-light;
+       .prefix-box-shadow(@shadow-focus-btn-light);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-light;
-        border-color: @bordercolor-active-btn-light;
-        background-color: @bgcolor-active-btn-light;
-
-        .prefix-box-shadow(@shadow-active-btn-light);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-light;
-            border-color: @bordercolor-focus-btn-light;
-            background-color: @bgcolor-focus-btn-light;
+            color: @color-active-btn-light;
+            border-color: @bordercolor-active-btn-light;
+            background-color: @bgcolor-active-btn-light;
+            .prefix-box-shadow(@shadow-active-btn-light);
         }
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
+    &.loading {
         background-image: none;
     }
     &.disabled,
@@ -378,6 +358,7 @@
             color: @color-disabled-btn-light;
             border-color: @bordercolor-disabled-btn-light;
             background-color: @bgcolor-disabled-btn-light;
+            .prefix-box-shadow(@shadow-disabled-btn-light);
         }
     }
     .badge {
@@ -390,40 +371,35 @@
     color: @color-def-btn-nice;
     border-color: @bordercolor-def-btn-nice;
     background-color: @bgcolor-def-btn-nice;
-
+    .prefix-box-shadow(@shadow-def-btn-nice);
     &.border {
         border-color: @bordercolor-active-btn-nice;
-    }
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-nice;
-        border-color: @bordercolor-focus-btn-nice;
-        background-color: @bgcolor-focus-btn-nice;
     }
     &:hover,
     &.hover {
         color: @color-hover-btn-nice;
         border-color: @bordercolor-hover-btn-nice;
         background-color: @bgcolor-hover-btn-nice;
-
         .prefix-box-shadow(@shadow-hover-btn-nice);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-nice;
+        border-color: @bordercolor-focus-btn-nice;
+        background-color: @bgcolor-focus-btn-nice;
+        .prefix-box-shadow(@shadow-focus-btn-nice);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-nice;
-        border-color: @bordercolor-active-btn-nice;
-        background-color: @bgcolor-active-btn-nice;
-
-        .prefix-box-shadow(@shadow-active-btn-nice);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-nice;
-            border-color: @bordercolor-focus-btn-nice;
-            background-color: @bgcolor-focus-btn-nice;
+            color: @color-active-btn-nice;
+            border-color: @bordercolor-active-btn-nice;
+            background-color: @bgcolor-active-btn-nice;
+            .prefix-box-shadow(@shadow-active-btn-nice);
         }
     }
     &.disabled,
@@ -438,6 +414,7 @@
             color: @color-disabled-btn-nice;
             border-color: @bordercolor-disabled-btn-nice;
             background-color: @bgcolor-disabled-btn-nice;
+            .prefix-box-shadow(@shadow-disabled-btn-nice);
         }
     }
     .badge {
@@ -451,37 +428,32 @@
     color: @color-def-btn-border;
     border-color: @bordercolor-def-btn-border;
     background-color: @bgcolor-def-btn-border;
-
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-border;
-        border-color: @bordercolor-focus-btn-border;
-        background-color: @bgcolor-focus-btn-border;
-    }
+    .prefix-box-shadow(@shadow-def-btn-border);
     &:hover,
     &.hover {
         color: @color-hover-btn-border;
         border-color: @bordercolor-hover-btn-border;
         background-color: @bgcolor-hover-btn-border;
-
         .prefix-box-shadow(@shadow-hover-btn-border);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-border;
+        border-color: @bordercolor-focus-btn-border;
+        background-color: @bgcolor-focus-btn-border;
+        .prefix-box-shadow(@shadow-focus-btn-border);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-border;
-        border-color: @bordercolor-active-btn-border;
-        background-color: @bgcolor-active-btn-border;
-
-        .prefix-box-shadow(@shadow-active-btn-border);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-border;
-            border-color: @bordercolor-focus-btn-border;
-            background-color: @bgcolor-focus-btn-border;
+            color: @color-active-btn-border;
+            border-color: @bordercolor-active-btn-border;
+            background-color: @bgcolor-active-btn-border;
+            .prefix-box-shadow(@shadow-active-btn-border);
         }
     }
     &.disabled,
@@ -496,12 +468,11 @@
             color: @color-disabled-btn-border;
             border-color: @bordercolor-disabled-btn-border;
             background-color: @bgcolor-disabled-btn-border;
-
-            .prefix-opacity(.8);
+            .prefix-box-shadow(@shadow-disabled-btn-border);
         }
     }
     .badge {
-        color: @color-gray-lightest;
+        color: @color-gray-lighter;
         background-color: transparent;
     }
 }
@@ -511,37 +482,32 @@
     color: @color-def-btn-borderinverse;
     border-color: @bordercolor-def-btn-borderinverse;
     background-color: @bgcolor-def-btn-borderinverse;
-
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-borderinverse;
-        border-color: @bordercolor-focus-btn-borderinverse;
-        background-color: @bgcolor-focus-btn-borderinverse;
-    }
+    .prefix-box-shadow(@shadow-def-btn-borderinverse);
     &:hover,
     &.hover {
         color: @color-hover-btn-borderinverse;
         border-color: @bordercolor-hover-btn-borderinverse;
         background-color: @bgcolor-hover-btn-borderinverse;
-
         .prefix-box-shadow(@shadow-hover-btn-borderinverse);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-borderinverse;
+        border-color: @bordercolor-focus-btn-borderinverse;
+        background-color: @bgcolor-focus-btn-borderinverse;
+        .prefix-box-shadow(@shadow-focus-btn-borderinverse);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-borderinverse;
-        border-color: @bordercolor-active-btn-borderinverse;
-        background-color: @bgcolor-active-btn-borderinverse;
-
-        .prefix-box-shadow(@shadow-active-btn-borderinverse);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-borderinverse;
-            border-color: @bordercolor-focus-btn-borderinverse;
-            background-color: @bgcolor-focus-btn-borderinverse;
+            color: @color-active-btn-borderinverse;
+            border-color: @bordercolor-active-btn-borderinverse;
+            background-color: @bgcolor-active-btn-borderinverse;
+            .prefix-box-shadow(@shadow-active-btn-borderinverse);
         }
     }
     &.disabled,
@@ -556,6 +522,7 @@
             color: @color-disabled-btn-borderinverse;
             border-color: @bordercolor-disabled-btn-borderinverse;
             background-color: @bgcolor-disabled-btn-borderinverse;
+            .prefix-box-shadow(@shadow-disabled-btn-borderinverse);
         }
     }
     .badge {
@@ -581,48 +548,35 @@
     color: @color-def-btn-link;
     border-color: @bordercolor-def-btn-link;
     background-color: @bgcolor-def-btn-link;
-
-    &:focus,
-    &.focus {
-        color: @color-focus-btn-link;
-        border-color: @bordercolor-focus-btn-link;
-        background-color: @bgcolor-focus-btn-link;
-    }
+    .prefix-box-shadow(@shadow-def-btn-link);
     &:hover,
     &.hover {
         color: @color-hover-btn-link;
         border-color: @bordercolor-hover-btn-link;
         background-color: @bgcolor-hover-btn-link;
         text-decoration: underline;
-
-        .prefix-box-shadow(none);
+        .prefix-box-shadow(@shadow-hover-btn-link);
+    }
+    &:focus,
+    &.focus {
+        color: @color-focus-btn-link;
+        border-color: @bordercolor-focus-btn-link;
+        background-color: @bgcolor-focus-btn-link;
+        .prefix-box-shadow(@shadow-focus-btn-link);
     }
     &:active,
     &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-link;
-        border-color: @bordercolor-active-btn-link;
-        background-color: @bgcolor-active-btn-link;
-
-        .prefix-box-shadow(none);
-
+    &.loading {
+        &,
         &:hover,
         &:focus,
         &.focus {
-            color: @color-focus-btn-link;
-            border-color: @bordercolor-focus-btn-link;
-            background-color: @bgcolor-focus-btn-link;
+            color: @color-active-btn-link;
+            border-color: @bordercolor-active-btn-link;
+            background-color: @bgcolor-active-btn-link;
+            text-decoration: none;
+            .prefix-box-shadow(@shadow-active-btn-link);
         }
-    }
-    &:active,
-    &.active,
-    &.loading,
-    .open > .dropdown-toggle& {
-        color: @color-active-btn-link;
-        border-color: @bordercolor-active-btn-link;
-        background-color: @bgcolor-active-btn-link;
-        text-decoration: none;
     }
     &.disabled,
     &[disabled],
@@ -637,6 +591,7 @@
             border-color: @bordercolor-disabled-btn-link;
             background-color: @bgcolor-disabled-btn-link;
             text-decoration: line-through;
+            .prefix-box-shadow(@shadow-disabled-btn-link);
         }
     }
     .badge {

@@ -1,6 +1,6 @@
 //====================================================
 //
-//		input
+//      input
 //
 //====================================================
 
@@ -30,100 +30,136 @@ week
 
 
 //设置输入框尺寸
-.input-size(@height; @lineheight; @fontsize; @fontweight; @padding; @paddingl; @radius) {
-	height: @height;
-	line-height: @lineheight;
-	font-size: @fontsize;	//unit(@fontsize, em);
-	font-weight: @fontweight;
-	padding: @padding;
-	padding-left: @paddingl;
-
-	.prefix-border-radius(@radius);
+.input-size(@height; @lineheight; @fontsize; @fontweight; @radius) {
+    height: @height;
+    line-height: @lineheight;
+    font-size: @fontsize;   //unit(@fontsize, em);
+    font-weight: @fontweight;
+    .prefix-border-radius(@radius);
 }
 
 //设置输入框风格
-.input-style(@bordercolor; @bgcolor; @bordercolorfocus; @shadowcolorfocus) {
-	border-color: @bordercolor;
-	background-color: @bgcolor;
-
-	&:focus,
-	&.active {
-		border-color: @bordercolorfocus;
-		.prefix-box-shadow(inset 0 2px 4px @shadowcolorfocus);
-	}
+.input-style(@color; @bordercolor; @bgcolor; @bordercolorfocus; @shadowfocus) {
+    color: @color;
+    border-color: @bordercolor;
+    background-color: @bgcolor;
+    &:focus,
+    &.active {
+        border-color: @bordercolorfocus;
+        .prefix-box-shadow(@shadowfocus);
+    }
 }
 
 //默认输入框
 .@{prefix}input,
 .@{prefix}textarea {
-	padding: 4px;
-	padding-left: 15px;
-	width: @width-input;
-	border: 1px solid transparent;
-	vertical-align: middle;
-
-	.input-style(@bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadowcolor-input-focus);
-	.prefix-transition();
-	.prefix-box-shadow(inset 0 2px 3px @shadowcolor-input);
-
-	&:focus,
-	&.active {
-		outline: none;
-	}
-	&.readonly,
-	&[readonly],
-	&.disabled,
-	&[disabled] {
-		color: @color-gray-darker;
-		border-color: @color-gray-lightest;
-		background: @color-white-dark;
-
-		.prefix-box-shadow(none);
-		.prefix-selecttext(none);
-
-		&:focus,
-		&.active {
-
-		}
-	}
-	&.disabled,
-	&[disabled] {
-		color: @color-gray-light;
-		cursor: @cursor-no;
-	}
+    width: @width-input;
+    border-width: @borderwidth-input;
+    padding-top: @paddingtop-input - @borderwidth-input;
+    padding-bottom: @paddingright-input - @borderwidth-input;
+    padding-right: @paddingbottom-input - @borderwidth-input;
+    padding-left: @paddingleft-input - @borderwidth-input;
+    border: transparent;
+    border-style: solid;
+    vertical-align: middle;
+    .input-style(@color-input; @bordercolor-input; @bgcolor-input; @bordercolor-input-focus; @shadow-input-focus);
+    .prefix-transition(border-color linear .15s);
+    .prefix-box-shadow(@shadow-input);
+    &:focus,
+    &.active {
+        outline: none;
+    }
+    &.readonly,
+    &[readonly],
+    &.disabled,
+    &[disabled] {
+        &,
+        &:focus,
+        &.active {
+            border-style: dotted;
+            border-color: @color-gray-light;
+            // background: @color-white-dark;
+            .prefix-box-shadow(none);
+            .prefix-selecttext(none);
+        }
+    }
+    &.disabled,
+    &[disabled] {
+        color: @color-gray-darker;
+        cursor: @cursor-no;
+    }
 }
 .@{prefix}input {
-	.input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
-	.comm-textoverflow();
+    border-width: 0px 0px @borderwidth-input 0px;
+    .input-size(@height-input; @lineheight-input; @fontsize-input; @fontweight-def; @radius-input);
+    .comm-textoverflow();
+    &:focus,
+    &.active {
+        border-width: 0px 0px @borderwidth-focus-input 0px;
+        padding-bottom: @paddingbottom-input - @borderwidth-focus-input;
+    }
+    &.readonly,
+    &[readonly],
+    &.disabled,
+    &[disabled] {
+        &,
+        &:focus,
+        &.active {
+            border-width: 0px 0px @borderwidth-input 0px;
+            padding-bottom: @paddingbottom-input - @borderwidth-input;
+        }
+    }
 }
 .@{prefix}textarea {
-	.input-size(@height-textarea; @lineheight-input; @fontsize-input; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
-
-	resize: none;
+    border-width: @borderwidth-input;
+    resize: none;
+    .input-size(@height-textarea; @lineheight-input; @fontsize-input; @fontweight-def; @radius-textarea);
+    &:focus,
+    &.active {
+        border-width: @borderwidth-focus-input;
+        padding-top: @paddingtop-input - @borderwidth-focus-input;
+        padding-bottom: @paddingright-input - @borderwidth-focus-input;
+        padding-right: @paddingbottom-input - @borderwidth-focus-input;
+        padding-left: @paddingleft-input - @borderwidth-focus-input;
+    }
+    &.readonly,
+    &[readonly],
+    &.disabled,
+    &[disabled] {
+        &,
+        &:focus,
+        &.active {
+            border-width: 1px 1px 1px 1px;
+            padding-top: @paddingtop-input - @borderwidth-input;
+            padding-bottom: @paddingright-input - @borderwidth-input;
+            padding-right: @paddingbottom-input - @borderwidth-input;
+            padding-left: @paddingleft-input - @borderwidth-input;
+        }
+    }
 }
 .@{prefix}input-full,
 .@{prefix}textarea-full {
-	width: 100%;
+    width: 100%;
 }
 .@{prefix}input-small {
-	.input-size(@height-input-small; @lineheight-input-small; @fontsize-input-small; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+    .input-size(@height-input-small; @lineheight-input; @fontsize-input-small; @fontweight-def; @radius-input);
 }
 .@{prefix}input-large {
-	.input-size(@height-input-large; @lineheight-input-large; @fontsize-input-large; @fontweight-def; @padding-input; @padding-input-l; @radius-input);
+    .input-size(@height-input-large; @lineheight-input; @fontsize-input-large; @fontweight-def; @radius-input);
 }
 .@{prefix}input-theme,
 .@{prefix}textarea-theme {
-	.input-style(@bordercolor-input-theme; @bgcolor-input-theme; @bordercolor-input-theme-focus; @shadowcolor-input-theme-focus);
+    .input-style(@color-input; @bordercolor-input-theme; @bgcolor-input-theme; @bordercolor-input-theme-focus; @shadow-input-theme-focus);
 }
 .@{prefix}input-key,
 .@{prefix}textarea-key {
-	.input-style(@bordercolor-input-key; @bgcolor-input-key; @bordercolor-input-key-focus; @shadowcolor-input-key-focus);
+    .input-style(@color-input; @bordercolor-input-key; @bgcolor-input-key; @bordercolor-input-key-focus; @shadow-input-key-focus);
 }
 .@{prefix}input-light,
 .@{prefix}textarea-light {
-	.input-style(@bordercolor-input-light; @bgcolor-input-light; @bordercolor-input-light-focus; @shadowcolor-input-light-focus);
+    .input-style(@color-input; @bordercolor-input-light; @bgcolor-input-light; @bordercolor-input-light-focus; @shadow-input-light-focus);
 }
 .@{prefix}input-nice,
 .@{prefix}textarea-nice {
-	.input-style(@bordercolor-input-nice; @bgcolor-input-nice; @bordercolor-input-nice-focus; @shadowcolor-input-nice-focus);
+    .input-style(@color-input; @bordercolor-input-nice; @bgcolor-input-nice; @bordercolor-input-nice-focus; @shadow-input-nice-focus);
 }

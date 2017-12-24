@@ -8,51 +8,51 @@
 @prefix:                ~"";
 
 //颜色
-@color-theme-darker:        #027FA2;
-@color-theme-dark:          #319DBB;
-@color-theme-normal:        #05C3F9;
-@color-theme-light:         #43D3FC;
-@color-theme-lighter:       #74DEFC;
-@color-theme-lightest:      #D8F6FE;
+@color-theme-lightest:        rgb(216, 246, 254);
+@color-theme-lighter:         rgb(116, 222, 252);
+@color-theme-light:           rgb(67, 211, 252);
+@color-theme-normal:          rgb(5, 195, 249);
+@color-theme-dark:            rgb(49, 157, 187);
+@color-theme-darker:          rgb(2, 127, 162);
 
-@color-key-darker:          #A22613;
-@color-key-dark:            #BB5D4F;
-@color-key-normal:          #F95339;        //#FF735D;
-@color-key-light:           #FB6C56;        //#FC7E6A;
+@color-key-light:             rgb(251, 108, 86);
+@color-key-normal:            rgb(249, 83, 57);
+@color-key-dark:              rgb(187, 93, 79);
+@color-key-darker:            rgb(162, 38, 19);
 
-@color-light-darkest:       #FFD301;
-@color-light-darker:        #FFF201;
-@color-light-dark:          #FFFF01;
-@color-light-normal:        #FFFF41;
-@color-light-light:         #FFFF73;
-@color-light-lighter:       #FFFFC5;
+@color-light-lightest:        rgb(255, 255, 197);
+@color-light-lighter:         rgb(255, 255, 115);
+@color-light-light:           rgb(255, 255, 65);
+@color-light-normal:          rgb(255, 255, 1);
+@color-light-dark:            rgb(255, 242, 1);
+@color-light-darker:          rgb(255, 211, 1);
 
-@color-nice-darker:         #00814D;
-@color-nice-dark:           #269568;
-@color-nice-normal:         #01C677;
-@color-nice-light:          #39E39E;
-@color-nice-lighter:        #67E3B1;
+@color-nice-lighter:          rgb(103, 227, 177);
+@color-nice-light:            rgb(57, 227, 158);
+@color-nice-normal:           rgb(1, 198, 119);
+@color-nice-dark:             rgb(38, 149, 104);
+@color-nice-darker:           rgb(0, 129, 77);
 
-@color-black-darker:        #000;
-@color-black-dark:          #222;
-@color-black-normal:        #333;
-@color-black-light:         #444;
-@color-black-lighter:       #666;
+@color-black-light:           rgb(102, 102, 102);
+@color-black-normal:          rgb(68, 68, 68);
+@color-black-dark:            rgb(51, 51, 51);
+@color-black-darker:          rgb(34, 34, 34);
+@color-black-darkest:         rgb(0, 0, 0);
 
-@color-white-darker:        #F3F3F3;
-@color-white-dark:          #F5F5F5;
-@color-white-normal:        #F7F7F7;
-@color-white-light:         #FAFAFA;
-@color-white-lighter:       #FFF;
+@color-gray-lighter:          rgb(238, 238, 238);
+@color-gray-light:            rgb(221, 221, 221);
+@color-gray-normal:           rgb(204, 204, 204);
+@color-gray-dark:             rgb(187, 187, 187);
+@color-gray-darker:           rgb(170, 170, 170);
+@color-gray-darkest:          rgb(153, 153, 153);
 
-@color-gray-darker:         #999;
-@color-gray-dark:           #AAA;
-@color-gray-normal:         #BBB;
-@color-gray-light:          #CCC;
-@color-gray-lighter:        #DDD;
-@color-gray-lightest:       #EEE;
+@color-white-light:           rgb(255, 255, 255);
+@color-white-normal:          rgb(250, 250, 250);
+@color-white-dark:            rgb(247, 247, 247);
+@color-white-darker:          rgb(245, 245, 245);
+@color-white-darkest:         rgb(243, 243, 243);
 
-@color-def:             @color-black-normal;
+@color-def:             @color-black-dark;
 @color-weak:            @color-gray-darker;
 @color-title:           inherit;
 @color-hr:              @color-gray-lighter;
@@ -61,8 +61,8 @@
 @color-link:            @color-theme-dark;
 @color-link-hover:      @color-theme-darker;
 
-@bgcolor-def:           @color-white-light;
-@bgcolor-weak:          @color-white-normal;
+@bgcolor-def:           @color-white-normal;
+@bgcolor-weak:          @color-white-dark;
 
 //布局
 @grid-columns-12:       12;     //偶数等分12列
@@ -217,174 +217,92 @@
 
 @radius-btn:                @radius-def;
 @zindex-btn:                @zindex-control;
-@zindex-active-btn:         @zindex-control + 10;
+@zindex-hover-btn:          @zindex-control + 10;
+@zindex-focus-btn:          @zindex-control + 20;
+@zindex-active-btn:         @zindex-control + 20;
 
-@color-def-btn:                         @color-black-light;
-@color-hover-btn:                       @color-black-dark;
-@color-focus-btn:                       @color-black-dark;
-@color-active-btn:                      @color-black-lighter;
-@color-disabled-btn:                    @color-black-lighter;
-@bordercolor-def-btn:                   @color-gray-lighter;
-@bordercolor-hover-btn:                 @color-gray-light;
-@bordercolor-focus-btn:                 @color-gray-light;
+@color-def-btn:                         @color-black-normal;
+@color-hover-btn:                       @color-black-darker;
+@color-focus-btn:                       @color-black-darker;
+@color-active-btn:                      @color-black-light;
+@color-disabled-btn:                    @color-black-light;
+@bordercolor-def-btn:                   @color-gray-light;
+@bordercolor-hover-btn:                 @color-gray-normal;
+@bordercolor-focus-btn:                 @color-gray-normal;
 @bordercolor-active-btn:                @color-gray-light;
 @bordercolor-disabled-btn:              transparent;
-@bgcolor-def-btn:                       @color-white-lighter;
-@bgcolor-hover-btn:                     @color-white-lighter;
-@bgcolor-focus-btn:                     @color-white-lighter;
-@bgcolor-active-btn:                    @color-white-light;
-@bgcolor-disabled-btn:                  @color-white-dark;
-@shadow-def-btn:                        none;
-@shadow-hover-btn:                      0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn:                      none;
-@shadow-active-btn:                     0 1px 3px rgba(0, 0, 0, .1);
+@bgcolor-def-btn:                       @color-white-light;
+@bgcolor-hover-btn:                     @color-white-light;
+@bgcolor-focus-btn:                     @color-white-light;
+@bgcolor-active-btn:                    @color-white-normal;
+@bgcolor-disabled-btn:                  @color-white-darker;
+@shadow-def-btn:                        0 1px 3px rgba(0, 0, 0, .05);
+@shadow-hover-btn:                      0 3px 10px rgba(0, 0, 0, .1);
+@shadow-focus-btn:                      0 0 0 3px rgba(0, 0, 0, .1);
+@shadow-active-btn:                     0 2px 5px rgba(0, 0, 0, .1);
 @shadow-disabled-btn:                   none;
 
-@color-def-btn-inverse:                 @color-white-normal;
-@color-hover-btn-inverse:               @color-white-lighter;
-@color-focus-btn-inverse:               @color-white-lighter;
-@color-active-btn-inverse:              @color-white-light;
-@color-disabled-btn-inverse:            @color-white-lighter;
-@bordercolor-def-btn-inverse:           @color-gray-lighter;
-@bordercolor-hover-btn-inverse:         @color-black-normal;
-@bordercolor-focus-btn-inverse:         @color-black-normal;
+@color-def-btn-inverse:                 @color-white-dark;
+@color-hover-btn-inverse:               @color-white-light;
+@color-focus-btn-inverse:               @color-white-light;
+@color-active-btn-inverse:              @color-white-normal;
+@color-disabled-btn-inverse:            @color-white-light;
+@bordercolor-def-btn-inverse:           @color-black-light;
+@bordercolor-hover-btn-inverse:         @color-black-light;
+@bordercolor-focus-btn-inverse:         @color-black-light;
 @bordercolor-active-btn-inverse:        @color-black-dark;
-@bordercolor-disabled-btn-inverse:      transparent;
-@bgcolor-def-btn-inverse:               @color-black-lighter;
-@bgcolor-hover-btn-inverse:             @color-black-light;
-@bgcolor-focus-btn-inverse:             @color-black-light;
-@bgcolor-active-btn-inverse:            @color-black-normal;
+@bordercolor-disabled-btn-inverse:      @color-black-light;
+@bgcolor-def-btn-inverse:               @color-black-light;
+@bgcolor-hover-btn-inverse:             @color-black-normal;
+@bgcolor-focus-btn-inverse:             @color-black-normal;
+@bgcolor-active-btn-inverse:            @color-black-dark;
 @bgcolor-disabled-btn-inverse:          @color-black-light;
-@shadow-def-btn-inverse:                none;
-@shadow-hover-btn-inverse:              0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn-inverse:              none;
-@shadow-active-btn-inverse:             0 2px 5px rgba(0, 0, 0, .2);
+@shadow-def-btn-inverse:                0 1px 3px rgba(0, 0, 0, .15);
+@shadow-hover-btn-inverse:              0 3px 10px rgba(0, 0, 0, .3);
+@shadow-focus-btn-inverse:              0 0 0 3px rgba(0, 0, 0, .15);
+@shadow-active-btn-inverse:             0 2px 5px rgba(0, 0, 0, .3);
 @shadow-disabled-btn-inverse:           none;
 
-@color-def-btn-theme:                   @color-white-normal;
-@color-hover-btn-theme:                 @color-white-lighter;
-@color-focus-btn-theme:                 @color-white-lighter;
-@color-active-btn-theme:                @color-white-light;
-@color-disabled-btn-theme:              @color-white-lighter;
-@bordercolor-def-btn-theme:             @color-theme-normal;
-@bordercolor-hover-btn-theme:           @color-theme-light;
-@bordercolor-focus-btn-theme:           @color-theme-normal;
-@bordercolor-active-btn-theme:          @color-theme-normal;
-@bordercolor-disabled-btn-theme:        transparent;
-@bgcolor-def-btn-theme:                 @color-theme-normal;
-@bgcolor-hover-btn-theme:               @color-theme-light;
-@bgcolor-focus-btn-theme:               @color-theme-lighter;
-@bgcolor-active-btn-theme:              @color-theme-light;
-@bgcolor-disabled-btn-theme:            @color-theme-light;
-@shadow-def-btn-theme:                  none;
-@shadow-hover-btn-theme:                0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn-theme:                none;
-@shadow-active-btn-theme:               0 2px 5px rgba(0, 0, 0, .2);
-@shadow-disabled-btn-theme:             none;
-
-@color-def-btn-key:                     @color-white-normal;
-@color-hover-btn-key:                   @color-white-light;
-@color-focus-btn-key:                   @color-white-light;
-@color-active-btn-key:                  @color-white-light;
-@color-disabled-btn-key:                @color-white-light;
-@bordercolor-def-btn-key:               @color-key-normal;
-@bordercolor-hover-btn-key:             @color-key-normal;
-@bordercolor-focus-btn-key:             @color-key-normal;
-@bordercolor-active-btn-key:            @color-key-normal;
-@bordercolor-disabled-btn-key:          transparent;
-@bgcolor-def-btn-key:                   @color-key-normal;
-@bgcolor-hover-btn-key:                 @color-key-light;
-@bgcolor-focus-btn-key:                 @color-key-light;
-@bgcolor-active-btn-key:                @color-key-light;
-@bgcolor-disabled-btn-key:              @color-key-light;
-@shadow-def-btn-key:                    none;
-@shadow-hover-btn-key:                  0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn-key:                  none;
-@shadow-active-btn-key:                 0 2px 5px rgba(0, 0, 0, .2);
-@shadow-disabled-btn-key:               none;
-
-@color-def-btn-light:                   @color-black-normal;
-@color-hover-btn-light:                 @color-black-dark;
-@color-focus-btn-light:                 @color-black-dark;
-@color-active-btn-light:                @color-black-normal;
-@color-disabled-btn-light:              @color-black-dark;
-@bordercolor-def-btn-light:             @color-light-normal;
-@bordercolor-hover-btn-light:           @color-light-darker;
-@bordercolor-focus-btn-light:           @color-light-darker;
-@bordercolor-active-btn-light:          @color-light-darker;
-@bordercolor-disabled-btn-light:        transparent;
-@bgcolor-def-btn-light:                 @color-light-normal;
-@bgcolor-hover-btn-light:               @color-light-light;
-@bgcolor-focus-btn-light:               @color-light-light;
-@bgcolor-active-btn-light:              @color-light-light;
-@bgcolor-disabled-btn-light:            @color-light-light;
-@shadow-def-btn-light:                  none;
-@shadow-hover-btn-light:                0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn-light:                none;
-@shadow-active-btn-light:               0 2px 5px rgba(0, 0, 0, .2);
-@shadow-disabled-btn-light:             none;
-
-@color-def-btn-nice:                    @color-white-normal;
-@color-hover-btn-nice:                  @color-white-lighter;
-@color-focus-btn-nice:                  @color-white-lighter;
-@color-active-btn-nice:                 @color-white-light;
-@color-disabled-btn-nice:               @color-white-lighter;
-@bordercolor-def-btn-nice:              @color-nice-normal;
-@bordercolor-hover-btn-nice:            @color-nice-normal;
-@bordercolor-focus-btn-nice:            @color-nice-normal;
-@bordercolor-active-btn-nice:           @color-nice-normal;
-@bordercolor-disabled-btn-nice:         transparent;
-@bgcolor-def-btn-nice:                  @color-nice-normal;
-@bgcolor-hover-btn-nice:                @color-nice-lighter;
-@bgcolor-focus-btn-nice:                @color-nice-light;
-@bgcolor-active-btn-nice:               @color-nice-light;
-@bgcolor-disabled-btn-nice:             @color-nice-light;
-@shadow-def-btn-nice:                   none;
-@shadow-hover-btn-nice:                 0 4px 10px rgba(0, 0, 0, .15);
-@shadow-focus-btn-nice:                 none;
-@shadow-active-btn-nice:                0 2px 5px rgba(0, 0, 0, .2);
-@shadow-disabled-btn-nice:              none;
-
-@borderwidth-def-btn-border:            1px;
+@borderwidth-def-btn-border:            2px;
 @color-def-btn-border:                  @color-gray-light;
-@color-hover-btn-border:                @color-white-light;
-@color-focus-btn-border:                @color-white-light;
+@color-hover-btn-border:                @color-white-normal;
+@color-focus-btn-border:                @color-white-normal;
 @color-active-btn-border:               @color-gray-light;
-@color-disabled-btn-border:             @color-gray-lightest;
+@color-disabled-btn-border:             @color-gray-lighter;
 @bordercolor-def-btn-border:            @color-gray-light;
-@bordercolor-hover-btn-border:          @color-white-light;
-@bordercolor-focus-btn-border:          @color-white-light;
+@bordercolor-hover-btn-border:          @color-white-normal;
+@bordercolor-focus-btn-border:          @color-white-normal;
 @bordercolor-active-btn-border:         @color-gray-light;
-@bordercolor-disabled-btn-border:       @color-gray-lightest;
+@bordercolor-disabled-btn-border:       @color-gray-lighter;
 @bgcolor-def-btn-border:                transparent;
 @bgcolor-hover-btn-border:              transparent;
 @bgcolor-focus-btn-border:              transparent;
 @bgcolor-active-btn-border:             transparent;
 @bgcolor-disabled-btn-border:           transparent;
 @shadow-def-btn-border:                 none;
-@shadow-hover-btn-border:               0 4px 10px rgba(0, 0, 0, .5);
-@shadow-focus-btn-border:               none;
+@shadow-hover-btn-border:               0 5px 15px rgba(0, 0, 0, .5);
+@shadow-focus-btn-border:               0 3px 10px rgba(0, 0, 0, .3);
 @shadow-active-btn-border:              0 2px 5px rgba(0, 0, 0, .5);
 @shadow-disabled-btn-border:            none;
 
-@color-def-btn-borderinverse:                  @color-black-lighter;
-@color-hover-btn-borderinverse:                @color-black-light;
-@color-focus-btn-borderinverse:                @color-black-lighter;
-@color-active-btn-borderinverse:               @color-black-lighter;
-@color-disabled-btn-borderinverse:             @color-black-lighter;
-@bordercolor-def-btn-borderinverse:            @color-black-lighter;
-@bordercolor-hover-btn-borderinverse:          @color-black-normal;
-@bordercolor-focus-btn-borderinverse:          @color-black-normal;
-@bordercolor-active-btn-borderinverse:         @color-black-normal;
-@bordercolor-disabled-btn-borderinverse:       @color-black-lighter;
+@color-def-btn-borderinverse:                  @color-black-light;
+@color-hover-btn-borderinverse:                @color-black-normal;
+@color-focus-btn-borderinverse:                @color-black-light;
+@color-active-btn-borderinverse:               @color-black-light;
+@color-disabled-btn-borderinverse:             @color-black-light;
+@bordercolor-def-btn-borderinverse:            @color-black-light;
+@bordercolor-hover-btn-borderinverse:          @color-black-dark;
+@bordercolor-focus-btn-borderinverse:          @color-black-dark;
+@bordercolor-active-btn-borderinverse:         @color-black-dark;
+@bordercolor-disabled-btn-borderinverse:       @color-black-light;
 @bgcolor-def-btn-borderinverse:                transparent;
 @bgcolor-hover-btn-borderinverse:              transparent;
 @bgcolor-focus-btn-borderinverse:              transparent;
 @bgcolor-active-btn-borderinverse:             transparent;
 @bgcolor-disabled-btn-borderinverse:           transparent;
 @shadow-def-btn-borderinverse:                 none;
-@shadow-hover-btn-borderinverse:               0 4px 10px rgba(0, 0, 0, .3);
-@shadow-focus-btn-borderinverse:               none;
+@shadow-hover-btn-borderinverse:               0 5px 15px rgba(0, 0, 0, .15);
+@shadow-focus-btn-borderinverse:               0 3px 10px rgba(0, 0, 0, .15);
 @shadow-active-btn-borderinverse:              0 2px 5px rgba(0, 0, 0, .3);
 @shadow-disabled-btn-borderinverse:            none;
 
@@ -409,30 +327,114 @@
 @shadow-active-btn-link:                 none;
 @shadow-disabled-btn-link:               none;
 
+@color-def-btn-theme:                   @color-white-dark;
+@color-hover-btn-theme:                 @color-white-light;
+@color-focus-btn-theme:                 @color-white-light;
+@color-active-btn-theme:                @color-white-light;
+@color-disabled-btn-theme:              @color-white-light;
+@bordercolor-def-btn-theme:             @color-theme-normal;
+@bordercolor-hover-btn-theme:           @color-theme-normal;
+@bordercolor-focus-btn-theme:           @color-theme-normal;
+@bordercolor-active-btn-theme:          @color-theme-normal;
+@bordercolor-disabled-btn-theme:        @color-theme-normal;
+@bgcolor-def-btn-theme:                 @color-theme-normal;
+@bgcolor-hover-btn-theme:               @color-theme-light;
+@bgcolor-focus-btn-theme:               @color-theme-light;
+@bgcolor-active-btn-theme:              @color-theme-light;
+@bgcolor-disabled-btn-theme:            @color-theme-normal;
+@shadow-def-btn-theme:                  0 1px 3px fade(@color-theme-dark, 50%);
+@shadow-hover-btn-theme:                0 3px 10px fade(@color-theme-dark, 50%);
+@shadow-focus-btn-theme:                0 0 0 3px fade(@color-theme-dark, 30%);
+@shadow-active-btn-theme:               0 2px 5px fade(@color-theme-dark, 40%);
+@shadow-disabled-btn-theme:             none;
+
+@color-def-btn-key:                     @color-white-dark;
+@color-hover-btn-key:                   @color-white-normal;
+@color-focus-btn-key:                   @color-white-normal;
+@color-active-btn-key:                  @color-white-normal;
+@color-disabled-btn-key:                @color-white-normal;
+@bordercolor-def-btn-key:               @color-key-normal;
+@bordercolor-hover-btn-key:             @color-key-normal;
+@bordercolor-focus-btn-key:             @color-key-normal;
+@bordercolor-active-btn-key:            @color-key-normal;
+@bordercolor-disabled-btn-key:          transparent;
+@bgcolor-def-btn-key:                   @color-key-normal;
+@bgcolor-hover-btn-key:                 @color-key-light;
+@bgcolor-focus-btn-key:                 @color-key-light;
+@bgcolor-active-btn-key:                @color-key-light;
+@bgcolor-disabled-btn-key:              @color-key-normal;
+@shadow-def-btn-key:                    0 1px 3px fade(@color-key-dark, 50%);
+@shadow-hover-btn-key:                  0 3px 10px fade(@color-key-dark, 50%);
+@shadow-focus-btn-key:                  0 0 0 3px fade(@color-key-dark, 30%);
+@shadow-active-btn-key:                 0 2px 5px fade(@color-key-dark, 40%);
+@shadow-disabled-btn-key:               none;
+
+@color-def-btn-light:                   @color-black-dark;
+@color-hover-btn-light:                 @color-black-darker;
+@color-focus-btn-light:                 @color-black-darker;
+@color-active-btn-light:                @color-black-dark;
+@color-disabled-btn-light:              @color-black-dark;
+@bordercolor-def-btn-light:             @color-light-normal;
+@bordercolor-hover-btn-light:           @color-light-normal;
+@bordercolor-focus-btn-light:           @color-light-normal;
+@bordercolor-active-btn-light:          @color-light-normal;
+@bordercolor-disabled-btn-light:        @color-light-normal;
+@bgcolor-def-btn-light:                 @color-light-normal;
+@bgcolor-hover-btn-light:               @color-light-light;
+@bgcolor-focus-btn-light:               @color-light-light;
+@bgcolor-active-btn-light:              @color-light-light;
+@bgcolor-disabled-btn-light:            @color-light-normal;
+@shadow-def-btn-light:                  0 1px 3px fade(@color-black-light, 20%);
+@shadow-hover-btn-light:                0 3px 10px fade(@color-black-light, 30%);
+@shadow-focus-btn-light:                0 0 0 3px fade(@color-black-light, 20%);
+@shadow-active-btn-light:               0 2px 5px fade(@color-black-light, 20%);
+@shadow-disabled-btn-light:             none;
+
+@color-def-btn-nice:                    @color-white-dark;
+@color-hover-btn-nice:                  @color-white-light;
+@color-focus-btn-nice:                  @color-white-light;
+@color-active-btn-nice:                 @color-white-normal;
+@color-disabled-btn-nice:               @color-white-light;
+@bordercolor-def-btn-nice:              @color-nice-normal;
+@bordercolor-hover-btn-nice:            @color-nice-light;
+@bordercolor-focus-btn-nice:            @color-nice-dark;
+@bordercolor-active-btn-nice:           @color-nice-dark;
+@bordercolor-disabled-btn-nice:         @color-nice-normal;
+@bgcolor-def-btn-nice:                  @color-nice-normal;
+@bgcolor-hover-btn-nice:                @color-nice-light;
+@bgcolor-focus-btn-nice:                @color-nice-dark;
+@bgcolor-active-btn-nice:               @color-nice-dark;
+@bgcolor-disabled-btn-nice:             @color-nice-normal;
+@shadow-def-btn-nice:                   0 1px 3px fade(@color-nice-dark, 50%);
+@shadow-hover-btn-nice:                 0 3px 10px fade(@color-nice-dark, 40%);
+@shadow-focus-btn-nice:                 0 0 0 3px fade(@color-nice-dark, 20%);
+@shadow-active-btn-nice:                0 2px 5px fade(@color-nice-dark, 40%);
+@shadow-disabled-btn-nice:              none;
+
 
 
 //气泡菜单
-@color-def-popmenu:                     @color-black-normal;
-@color-hover-popmenu:                   @color-black-dark;
-@color-active-popmenu:                  @color-black-normal;
+@color-def-popmenu:                     @color-black-dark;
+@color-hover-popmenu:                   @color-black-darker;
+@color-active-popmenu:                  @color-black-dark;
 @color-disabled-popmenu:                @color-gray-normal;
-@color-icon-popmenu:                    @color-black-lighter;
+@color-icon-popmenu:                    @color-black-light;
 
-@bgcolor-def-popmenu:                   @color-white-lighter;
-@bgcolor-hover-popmenu:                 @color-white-dark;
-@bgcolor-active-popmenu:                @color-gray-lightest;
-@bgcolor-disabled-popmenu:              @color-white-lighter;
+@bgcolor-def-popmenu:                   @color-white-light;
+@bgcolor-hover-popmenu:                 @color-white-darker;
+@bgcolor-active-popmenu:                @color-gray-lighter;
+@bgcolor-disabled-popmenu:              @color-white-light;
 
 @bordercolor-popmenu:                   @color-gray-lighter;
-@bordercolor-top-popmenu-split:         @color-gray-lightest;
-@bordercolor-bottom-popmenu-split:      @color-white-lighter;
+@bordercolor-top-popmenu-split:         @color-gray-lighter;
+@bordercolor-bottom-popmenu-split:      @color-white-light;
 
 @borderwidth-popmenu:                   1px;
 @borderwidth-top-popmenu-split:         1px;
 @borderwidth-bottom-popmenu-split:      1px;
 
-@color-popmenu-item-selected:           @color-black-darker;
-@bgcolor-popmenu-item-selected:         @color-gray-lightest;
+@color-popmenu-item-selected:           @color-black-darkest;
+@bgcolor-popmenu-item-selected:         @color-gray-lighter;
 
 @color-popmenu-icon-selected:           @color-theme-darker;
 @color-popmenu-icon-hassub:             @color-theme-dark;
@@ -479,7 +481,7 @@
 
 
 //下拉框
-@color-select-item-selected:    @color-black-light;
+@color-select-item-selected:    @color-black-normal;
 @bgcolor-select-item-selected:  @color-theme-lightest;
 
 @height-select:                 @height-control;
@@ -536,9 +538,9 @@
 @radius-chkradio-radio-before:              1em;
 @icon-chkradio-after:                       @icon-done;
 
-@color-chkradio:                            @color-black-dark;
-@color-hover-chkradio:                      @color-black-dark;
-@color-checked-chkradio:                    @color-black-dark;
+@color-chkradio:                            @color-black-darker;
+@color-hover-chkradio:                      @color-black-darker;
+@color-checked-chkradio:                    @color-black-darker;
 @color-disabled-chkradio:                   @color-gray-light;
 
 @bordercolor-chkradio-before:               @color-gray-normal;
@@ -550,11 +552,11 @@
 @bgcolor-checked-chkradio-before:           transparent;
 @bgcolor-disabled-chkradio-before:          transparent;
 @bgcolor-chkradio-after:                    transparent;
-@bgcolor-hover-chkradio-after:              @color-black-lighter;
-@bgcolor-checked-chkradio-after:            @color-black-dark;
+@bgcolor-hover-chkradio-after:              @color-black-light;
+@bgcolor-checked-chkradio-after:            @color-black-darker;
 @bgcolor-disabled-chkradio-after:           transparent;
-@color-hover-chkradio-after:                @color-black-dark;
-@color-checked-chkradio-after:              @color-black-darker;
+@color-hover-chkradio-after:                @color-black-darker;
+@color-checked-chkradio-after:              @color-black-darkest;
 
 @bordercolor-chkradio-theme-before:                 @color-theme-normal;
 @bordercolor-hover-chkradio-theme-before:           @color-theme-light;
@@ -566,10 +568,10 @@
 @bgcolor-disabled-chkradio-theme-before:            transparent;
 @bgcolor-chkradio-theme-after:                      transparent;
 @bgcolor-hover-chkradio-theme-after:                @color-theme-darker;
-@bgcolor-checked-chkradio-theme-after:              @color-white-light;
+@bgcolor-checked-chkradio-theme-after:              @color-white-normal;
 @bgcolor-disabled-chkradio-theme-after:             transparent;
 @color-hover-chkradio-theme-after:                  @color-theme-darker;
-@color-checked-chkradio-theme-after:                @color-white-light;
+@color-checked-chkradio-theme-after:                @color-white-normal;
 
 @bordercolor-chkradio-key-before:                   @color-key-normal;
 @bordercolor-hover-chkradio-key-before:             @color-key-light;
@@ -581,10 +583,10 @@
 @bgcolor-disabled-chkradio-key-before:              transparent;
 @bgcolor-chkradio-key-after:                        transparent;
 @bgcolor-hover-chkradio-key-after:                  @color-key-darker;
-@bgcolor-checked-chkradio-key-after:                @color-white-light;
+@bgcolor-checked-chkradio-key-after:                @color-white-normal;
 @bgcolor-disabled-chkradio-key-after:               transparent;
 @color-hover-chkradio-key-after:                    @color-key-darker;
-@color-checked-chkradio-key-after:                  @color-white-light;
+@color-checked-chkradio-key-after:                  @color-white-normal;
 
 @bordercolor-chkradio-light-before:                 @color-light-darker;
 @bordercolor-hover-chkradio-light-before:           @color-light-darker;
@@ -595,11 +597,11 @@
 @bgcolor-checked-chkradio-light-before:             @color-light-darker;
 @bgcolor-disabled-chkradio-light-before:            transparent;
 @bgcolor-chkradio-light-after:                      transparent;
-@bgcolor-hover-chkradio-light-after:                @color-black-light;
-@bgcolor-checked-chkradio-light-after:              @color-black-dark;
+@bgcolor-hover-chkradio-light-after:                @color-black-normal;
+@bgcolor-checked-chkradio-light-after:              @color-black-darker;
 @bgcolor-disabled-chkradio-light-after:             transparent;
-@color-hover-chkradio-light-after:                  @color-black-light;
-@color-checked-chkradio-light-after:                @color-black-dark;
+@color-hover-chkradio-light-after:                  @color-black-normal;
+@color-checked-chkradio-light-after:                @color-black-darker;
 
 @bordercolor-chkradio-nice-before:                  @color-nice-darker;
 @bordercolor-hover-chkradio-nice-before:            @color-nice-normal;
@@ -611,27 +613,27 @@
 @bgcolor-disabled-chkradio-nice-before:             transparent;
 @bgcolor-chkradio-nice-after:                       transparent;
 @bgcolor-hover-chkradio-nice-after:                 @color-nice-darker;
-@bgcolor-checked-chkradio-nice-after:               @color-white-light;
+@bgcolor-checked-chkradio-nice-after:               @color-white-normal;
 @bgcolor-disabled-chkradio-nice-after:              transparent;
 @color-hover-chkradio-nice-after:                   @color-nice-darker;
-@color-checked-chkradio-nice-after:                 @color-white-light;
+@color-checked-chkradio-nice-after:                 @color-white-normal;
 
 
 
 //表格
-@color-def-table:                   @color-black-light;
+@color-def-table:                   @color-black-normal;
 @color-caption-table:               @color-gray-darker;
-@color-head-table:                  @color-black-dark;
-@color-body-table:                  @color-black-dark;
-@color-foot-table:                  @color-black-dark;
-@color-hover-table:                 @color-black-darker;
+@color-head-table:                  @color-black-darker;
+@color-body-table:                  @color-black-darker;
+@color-foot-table:                  @color-black-darker;
+@color-hover-table:                 @color-black-darkest;
 @bordercolor-def-table:             @color-gray-lighter;
 @bordercolor-box-table:             @color-gray-lighter;
 @bordercolor-head-table:            @color-gray-lighter;
-@bgcolor-def-table:                 @color-white-lighter;
-@bgcolor-diff-table:                @color-white-normal;
-@bgcolor-hover-table:               @color-white-normal;
-@bgcolor-caption-table:             @color-white-lighter;
+@bgcolor-def-table:                 @color-white-light;
+@bgcolor-diff-table:                @color-white-dark;
+@bgcolor-hover-table:               @color-white-dark;
+@bgcolor-caption-table:             @color-white-light;
 @fontsize-table:                    @fontsize-def;
 
 @radius-table:                      @radius-def;
@@ -642,13 +644,13 @@
 @borderwidth-tabs-navs:             1px;
 @bordercolor-tabs-navs:             @color-gray-lighter;
 
-@color-tabs-nav:                    @color-gray-dark;
-@color-tabs-nav-hover:              @color-black-lighter;
-@color-tabs-nav-active:             @color-black-lighter;
+@color-tabs-nav:                    @color-gray-normal;
+@color-tabs-nav-hover:              @color-black-light;
+@color-tabs-nav-active:             @color-black-light;
 
 @bgcolor-tabs-nav:                  transparent;
 @bgcolor-tabs-nav-hover:            transparent;
-@bgcolor-tabs-nav-active:           @color-white-lighter;
+@bgcolor-tabs-nav-active:           @color-white-light;
 
 @borderwidth-tabs-nav:              2px;
 @bordercolor-tabs-nav:              transparent;
@@ -678,14 +680,15 @@
 
 
 //标签
-@padding-tag-tb:            .3em;
-@padding-tag-lr:            .5em;
+@padding-tag-tb:            .25em;
+@padding-tag-lr:            .45em;
+@padding-tag-circle-lr:     .52em;
 
 @height-tag:                inherit;
 @lineheight-tag:            1;
-@fontsize-tag:              .7em;
+@fontsize-tag:              .75em;
 
-@color-tag:                 @color-white-lighter;
+@color-tag:                 @color-white-light;
 @bgcolor-tag:               @color-gray-dark;
 @bordercolor-tag:           transparent;
 
@@ -700,44 +703,50 @@
 @height-input-small:        @height-control-small;
 @height-input-large:        @height-control-large;
 
-@padding-input:             4px;
-@padding-input-l:           15px;
+@borderwidth-input:         1px;
+@borderwidth-focus-input:   2px;
 
-@lineheight-input:          @height-control - @padding-input*2 - 2px;
-@lineheight-input-small:    @height-control-small - @padding-input*2 - 2px;
-@lineheight-input-large:    @height-control-large - @padding-input*2 - 2px;
+@paddingtop-input:          4px;
+@paddingbottom-input:       4px;
+@paddingleft-input:         15px;
+@paddingright-input:        4px;
+
+@lineheight-input:          @lineheight-def;
 
 @fontsize-input:            @fontsize-control;
 @fontsize-input-small:      @fontsize-control-small;
 @fontsize-input-large:      @fontsize-control-large;
 
-@bordercolor-input:         @color-gray-lighter;
-@bgcolor-input:             @color-white-lighter;
-@shadowcolor-input:         rgba(0, 0, 0, .05);
-@bordercolor-input-focus:   @color-gray-normal;
-@shadowcolor-input-focus:   rgba(0, 0, 0, .09);
+@color-input:               @color-black-light;
+@bordercolor-input:         @color-gray-light;
+@bgcolor-input:             transparent;
+@shadow-input:              none;//inset 0 2px 3px rgba(0, 0, 0, .05);
+@bordercolor-input-focus:   @color-black-light;
+@shadow-input-focus:        none;//inset 0 2px 4px rgba(0, 0, 0, .09);
 
 @bordercolor-input-theme:           @bordercolor-input;
 @bgcolor-input-theme:               @bgcolor-input;
 @bordercolor-input-theme-focus:     @color-theme-normal;
-@shadowcolor-input-theme-focus:     rgba(5, 195, 249, .2);      //@color-theme-normal #05C3F9
+@shadow-input-theme-focus:          none;//inset 0 2px 4px rgba(5, 195, 249, .2);      //@color-theme-normal #05C3F9
 
 @bordercolor-input-key:             @bordercolor-input;
 @bgcolor-input-key:                 @bgcolor-input;
 @bordercolor-input-key-focus:       @color-key-normal;
-@shadowcolor-input-key-focus:       rgba(249, 83, 57, .2);      //@color-key-normal #F95339
+@shadow-input-key-focus:            none;//inset 0 2px 4px rgba(249, 83, 57, .2);      //@color-key-normal #F95339
 
 @bordercolor-input-light:           @bordercolor-input;
 @bgcolor-input-light:               @bgcolor-input;
-@bordercolor-input-light-focus:     @color-light-darkest;
-@shadowcolor-input-light-focus:     rgba(255, 211, 1, .2);      //@color-light-normal #FFFF01
+@bordercolor-input-light-focus:     @color-light-darker;
+@shadow-input-light-focus:          none;//inset 0 2px 4px rgba(255, 211, 1, .2);      //@color-light-normal #FFFF01
 
 @bordercolor-input-nice:            @bordercolor-input;
 @bgcolor-input-nice:                @bgcolor-input;
 @bordercolor-input-nice-focus:      @color-nice-normal;
-@shadowcolor-input-nice-focus:      rgba(1, 198, 119, .2);      //@color-light-normal #01C677
+@shadow-input-nice-focus:           none;//inset 0 2px 4px rgba(1, 198, 119, .2);      //@color-light-normal #01C677
 
-@radius-input:                      @radius-def;
+// @radius-input:                      @radius-def;
+@radius-input:                      0em;
+@radius-textarea:                   @radius-def;
 
 
 //组合输入框
@@ -746,6 +755,7 @@
 @zindex-inputgroup-addons:              @zindex-inputgroup-input + 10;
 @zindex-inputgroup-addons-btn:          @zindex-control;
 @zindex-inputgroup-addons-btn-hover:    @zindex-inputgroup-addons-btn + 10;
+@radius-inputgroup:                     @radius-def;
 
 
 //表单
@@ -766,7 +776,7 @@
 @icon-form-must:            @icon-snow;
 
 //遮罩层
-@bgcolor-mask:              @color-black-darker;
+@bgcolor-mask:              @color-black-darkest;
 @zindex-mask:               @zindex-layer;
 
 
@@ -777,7 +787,7 @@
 @zindex-dlgtitle:           @zindex-bg;
 @zindex-dlgclose:           @zindex-dlgtitle + 10;
 
-@color-dlgtitle:            @color-black-lighter;
+@color-dlgtitle:            @color-black-light;
 @fontsize-dlgtitle:         @fontsize-m;
 @fontweight-dlgtitle:       @fontweight-bold;
 

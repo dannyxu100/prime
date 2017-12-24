@@ -127,6 +127,13 @@
 
 	outline: none;
 }
+//浏览器默认样式
+.prefix-appearance(@mode:none) {
+	// firefox
+    -moz-appearance: @mode;
+    // webkit
+	-webkit-appearance: @mode;
+}
 
 
 //投影
@@ -139,4 +146,68 @@
 	-ms-box-shadow: @shadow;		//IE11
 	-moz-box-shadow: @shadow;		//firefox
 	box-shadow: @shadow;
+}
+
+
+.prefix-keyframes (@name, @frames) {
+    @-webkit-keyframes @name { @frames(); }
+    @-moz-keyframes @name { @frames(); }
+    @-ms-keyframes @name { @frames();}
+    @-o-keyframes @name { @frames(); }
+    @keyframes @name { @frames(); }
+}
+.prefix-transform(@attr) {
+    -webkit-transform:@attr;
+    -moz-transform:@attr;
+    -o-transform:@attr;
+    -ms-transform:@attr;
+    transform:@attr;
+}
+.prefix-transformorigin(@attr) {
+    -webkit-transform-origin:@attr;
+    -moz-transform-origin:@attr;
+    -o-transform-origin:@attr;
+    -ms-transform-origin:@attr;
+    transform-origin:@attr;
+}
+.prefix-animation(@attr){
+    -webkit-animation:@attr;
+    -moz-animation:@attr;
+    -ms-animation:@attr;
+    -o-animation:@attr;
+    animation:@attr;
+}
+//线性渐变背景
+.prefix-gradient(@angle:top,@start:#000,@stop:#0000ff){
+	background: -webkit-linear-gradient(@angle,@start,@stop);
+	background: -moz-linear-gradient(@angle,@start,@stop);
+	background: -o-linear-gradient(@angle,@start,@stop);
+	background: linear-gradient(@angle,@start,@stop);
+}
+//镜像渐变背景
+.prefix-gradient-radial(@positionorangle:bottom left,@shapeorsize:circle,@color_stop1:#000000,@color_stop2:#d2f726 ,@color_stop3:#dd2222 ){
+	background: -moz-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
+	background: -webkit-radial-gradient(@positionorangle,@shapeorsize, @color_stop1,@color_stop2,@color_stop3);
+}
+
+
+.prefix-placeholder(@color: #999, @fontsize: 14px) {
+    &::-webkit-input-placeholder {      /* WebKit browsers */
+        color: @color;
+        font-size: @fontsize;
+    }
+    &:-moz-placeholder {                /* Mozilla Firefox 4 to 18 */
+        color: @color;
+        font-size: @fontsize;
+        opacity: 1;  //Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526
+    }
+    &::-moz-placeholder {               /* Mozilla Firefox 19+ */
+        color: @color;
+        font-size: @fontsize;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {           /* Internet Explorer 10+ */
+        color: @color;
+        font-size: @fontsize;
+    }
 }
