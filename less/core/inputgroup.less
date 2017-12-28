@@ -10,7 +10,8 @@
     border-collapse: separate;
     position: relative;
     width: 220px;
-
+    .prefix-border-radius(@radius-inputgroup @radius-inputgroup @radius-inputgroup @radius-inputgroup);
+    .prefix-box-shadow(@shadow-inputgroup);
     .@{prefix}input {
         display: table-cell;
         position: relative;
@@ -96,6 +97,7 @@
         .@{prefix}btn {
             position: relative;
             margin-left: -1px;
+            .prefix-box-shadow(none);
         }
         &:first-child {
             .@{prefix}text,

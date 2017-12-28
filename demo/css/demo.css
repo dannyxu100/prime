@@ -117,12 +117,15 @@ h1 {
 
 .bgimg-light {
     background:center url(../img/bg-1.png);
+    padding: 20px;
 }
 .bgimg-dark {
     background:center url(../img/bg-2.png);
+    padding: 20px;
 }
 .bgimg-gray {
     background:center url(../img/bg-3.png);
+    padding: 20px;
 }
 
 .demo-popmenuopen {

@@ -8,16 +8,13 @@
 .@{prefix}form {
 	margin: @margin-form-t 0 @margin-form-b;
 	padding: @padding-form;
-	
 	.@{prefix}formsub {
 		margin: @margin-form-sub-t 0 @margin-form-sub-b;
 	}
 	.@{prefix}formitem,
 	.@{prefix}formitem-line {
 		margin: @margin-form-item-t 0 @margin-form-item-b;
-		
 		.comm-inlineblock-clearspace();
-		
 		&>.label {
 			display: inline-block;
 			min-width: @width-formlabel;
@@ -25,8 +22,9 @@
 			line-height: @height-control;
 			margin-left: @margin-formlabel-l;
 			margin-right: @margin-formlabel-r;
+			color: @color-formlabel;
 			font-size: @fontsize-formlabel;
-			vertical-align: middle;
+			vertical-align: top;
 		}
 		&>small,
 		&>.small {
